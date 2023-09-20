@@ -1,0 +1,44 @@
+{
+    "puechaseSalesDetails": [
+        {
+            "widgetClass": "widget-round secondary",
+            "svgIcon1": "cart",
+            "svgIcon2": "halfcircle",
+            "number": "10,000",
+            "title": "Purchase",
+            "growthClass": "font-secondary f-w-500",
+            "iconClass": "icon-arrow-up icon-rotate me-1",
+            "growthNumber": "+50%"
+        },
+        {
+            "widgetClass": "widget-round primary",
+            "svgIcon1": "tag",
+            "svgIcon2": "halfcircle",
+            "number": "4,200",
+            "title": "Sales",
+            "growthClass": "font-primary f-w-500",
+            "iconClass": "icon-arrow-up icon-rotate me-1",
+            "growthNumber": "+70%"
+        },
+        {
+            "widgetClass": "widget-round warning",
+            "svgIcon1": "return-box",
+            "svgIcon2": "halfcircle",
+            "number": "7000",
+            "title": "Sales return",
+            "growthClass": "font-warning f-w-500",
+            "iconClass": "icon-arrow-down icon-rotate me-1",
+            "growthNumber": "-20%"
+        },
+        {
+            "widgetClass": "widget-round success",
+            "svgIcon1": "rate",
+            "svgIcon2": "halfcircle",
+            "number": "5700",
+            "title": "Purchase rate",
+            "growthClass": "font-success f-w-500",
+            "iconClass": "icon-arrow-up icon-rotate me-1",
+            "growthNumber": "+70%"
+        }
+    ]
+}
