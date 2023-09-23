@@ -18,7 +18,7 @@
                 />
                 <div class="media-body">
                   <h6 class="f-w-600">
-                    <nuxt-link :to="`/student/job/details/${jobs.id}`">{{
+                    <nuxt-link :to="`/student/job/detail/${jobs.id}`">{{
                       jobs.title
                     }}</nuxt-link>
 
@@ -57,7 +57,7 @@
               </button>
               <nuxt-link
                 class="btn btn-light"
-                :to="`/student/job/details/${jobs.id}`"
+                :to="`/student/job/detail/${jobs.id}`"
                 >Cancel</nuxt-link
               >
             </div>

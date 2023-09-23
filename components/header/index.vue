@@ -74,6 +74,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .w-100 {
-  width: 100vw;
+  width: 100vw !important;
 }
 </style>

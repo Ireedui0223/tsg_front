@@ -19,7 +19,7 @@
               />
               <div class="media-body">
                 <h6 class="f-w-600">
-                  <nuxt-link :to="`/student/details/${j.id}`">{{
+                  <nuxt-link :to="`/student/job/detail/${j.id}`">{{
                     j.title
                   }}</nuxt-link>
 

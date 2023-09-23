@@ -18,32 +18,34 @@
                 />
                 <div class="media-body">
                   <h6 class="f-w-600">
-                    <nuxt-link :to="`/student/job/details/${jobs.id}`">{{
+                    <nuxt-link :to="`/student/job/detail/${jobs.id}`">{{
                       jobs.title
                     }}</nuxt-link>
                     <span class="pull-right">
                       <nuxt-link
-                        :to="`/job/apply/${jobs.id}`"
+                        :to="`/student/job/apply/${jobs.id}`"
                         class="btn btn-primary"
                         >Apply</nuxt-link
                       >
                     </span>
                   </h6>
-                  <p>
-                    {{ jobs.company }}, <span>{{ jobs.country }}</span
-                    ><span
-                      class="ms-1"
-                      v-html="stars(jobs.stars)"
-                    ></span>
-                  </p>
+                  <nuxt-link :to="`/company/detail/${jobs.companyId}`">
+                    <p>
+                      {{ jobs.company }}
+                      <span
+                        class="ms-1"
+                        v-html="stars(jobs.stars)"
+                      ></span>
+                    </p>
+                  </nuxt-link>
                 </div>
               </div>
               <div class="job-description">
-                <h6>Job Description</h6>
+                <h6>Ажлийн танилцуулга</h6>
                 <p v-html="jobs.description"></p>
               </div>
               <div class="job-description">
-                <h6>Responsibilities</h6>
+                <h6>Гол үүрэг хариуцлагууд</h6>
                 <ul>
                   <li
                     v-for="(r, index) in jobs.resp"
@@ -53,7 +55,7 @@
                 </ul>
               </div>
               <div class="job-description">
-                <h6>Requirements</h6>
+                <h6>Шаардлага</h6>
                 <ul>
                   <li
                     v-for="(rq, index) in jobs.reqs"
@@ -63,7 +65,7 @@
                 </ul>
               </div>
               <div class="job-description">
-                <h6>Required Skills</h6>
+                <h6>Ур чадвар</h6>
                 <ul>
                   <li>
                     Proficient understanding of web markup, including HTML5,
@@ -75,20 +77,6 @@
                     v-text="ski.title"
                   ></li>
                 </ul>
-              </div>
-              <div class="job-description">
-                <button
-                  class="btn btn-primary m-r-10"
-                  type="button"
-                >
-                  <span><i class="fa fa-check"></i></span> Save this job
-                </button>
-                <button
-                  class="btn btn-primary"
-                  type="button"
-                >
-                  <span><i class="fa fa-share-alt"></i></span> Share
-                </button>
               </div>
             </div>
           </div>
