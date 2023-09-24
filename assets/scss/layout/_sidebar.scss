@@ -1368,11 +1368,6 @@
       margin-left: $sidebar-compact-width;
       width: calc(100% - $sidebar-compact-width);
 
-      &.close_icon {
-        margin-left: 90px;
-        width: calc(100% - 90px);
-      }
-
       .header-wrapper {
         .logo-wrapper {
           display: none;
@@ -1519,7 +1514,6 @@
 
             ~ .page-body,
             ~ footer {
-              margin-left: 90px;
               transition: 0.5s;
             }
 
@@ -2666,9 +2660,6 @@
     }
 
     .page-header {
-      margin-left: 90px;
-      width: calc(100% - 90px);
-
       .header-wrapper {
         .logo-wrapper {
           display: none;
@@ -2682,14 +2673,6 @@
     }
 
     .page-body-wrapper {
-      .page-body {
-        margin-left: 90px;
-      }
-
-      .footer {
-        margin-left: 90px;
-      }
-
       div.sidebar-wrapper {
         > div {
           width: 90px;

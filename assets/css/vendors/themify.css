@@ -7,6 +7,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 [class^=icon-],
 [class*=" icon-"] {
   font-family: "themify";
@@ -18,7 +19,7 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  *margin-right: 0.3em;
+  margin-right: 0.3em;
 }
 
 [class^=icon-]:before,
@@ -48,6 +49,7 @@ a [class*=" icon-"] {
   text-align: right;
   padding-right: 0.2857142857em;
 }
+
 [class^=icon-].icon-fixed-width.icon-large,
 [class*=" icon-"].icon-fixed-width.icon-large {
   width: 1.4285714286em;
@@ -57,9 +59,11 @@ a [class*=" icon-"] {
   margin-left: 2.1428571429em;
   list-style-type: none;
 }
-.icons-ul > li {
+
+.icons-ul>li {
   position: relative;
 }
+
 .icons-ul .icon-li {
   position: absolute;
   left: -2.1428571429em;
@@ -96,6 +100,7 @@ a [class*=" icon-"] {
 .icon-2x {
   font-size: 2em;
 }
+
 .icon-2x.icon-border {
   border-width: 2px;
   -webkit-border-radius: 4px;
@@ -106,6 +111,7 @@ a [class*=" icon-"] {
 .icon-3x {
   font-size: 3em;
 }
+
 .icon-3x.icon-border {
   border-width: 3px;
   -webkit-border-radius: 5px;
@@ -116,6 +122,7 @@ a [class*=" icon-"] {
 .icon-4x {
   font-size: 4em;
 }
+
 .icon-4x.icon-border {
   border-width: 4px;
   -webkit-border-radius: 6px;
@@ -126,6 +133,7 @@ a [class*=" icon-"] {
 .icon-5x {
   font-size: 5em;
 }
+
 .icon-5x.icon-border {
   border-width: 5px;
   -webkit-border-radius: 7px;
@@ -145,6 +153,7 @@ a [class*=" icon-"] {
 [class*=" icon-"].pull-left {
   margin-right: 0.3em;
 }
+
 [class^=icon-].pull-right,
 [class*=" icon-"].pull-right {
   margin-left: 0.3em;
@@ -161,6 +170,7 @@ a [class*=" icon-"] {
   line-height: 2em;
   vertical-align: -35%;
 }
+
 .icon-stack [class^=icon-],
 .icon-stack [class*=" icon-"] {
   display: block;
@@ -170,11 +180,12 @@ a [class*=" icon-"] {
   height: 100%;
   font-size: 1em;
   line-height: inherit;
-  *line-height: 2em;
+  line-height: 2em;
 }
+
 .icon-stack .icon-stack-base {
   font-size: 2em;
-  *line-height: 1em;
+  line-height: 1em;
 }
 
 /* Animated rotating icon */
@@ -197,42 +208,52 @@ a .icon-spin {
   0% {
     -moz-transform: rotate(0deg);
   }
+
   100% {
     -moz-transform: rotate(359deg);
   }
 }
+
 @-webkit-keyframes spin {
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(359deg);
   }
 }
+
 @-o-keyframes spin {
   0% {
     -o-transform: rotate(0deg);
   }
+
   100% {
     -o-transform: rotate(359deg);
   }
 }
+
 @-ms-keyframes spin {
   0% {
     -ms-transform: rotate(0deg);
   }
+
   100% {
     -ms-transform: rotate(359deg);
   }
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(359deg);
   }
 }
+
 /* Icon rotations and mirroring */
 .icon-rotate-90:before {
   -webkit-transform: rotate(90deg);
@@ -278,7 +299,11 @@ a .icon-spin {
 }
 
 /* ensure rotation occurs inside anchor tags */
-a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, a .icon-flip-horizontal:before, a .icon-flip-vertical:before {
+a .icon-rotate-90:before,
+a .icon-rotate-180:before,
+a .icon-rotate-270:before,
+a .icon-flip-horizontal:before,
+a .icon-flip-vertical:before {
   display: inline-block;
 }
 

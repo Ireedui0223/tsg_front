@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout>
     <Head>
-      <Title>Cuba</Title>
+      <Title>TSG</Title>
     </Head>
 
     <NuxtPage />
