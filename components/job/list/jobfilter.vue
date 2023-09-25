@@ -22,66 +22,30 @@
       :class="active ? '' : 'show'"
       id="collapseOne"
       aria-labelledby="headingOne"
-      data-bs-parent="#accordionExample"
     >
-      <div class="card-body filter-cards-view animate-chk">
-        <div class="checkbox-animated mt-2">
-          <label
-            class="d-block"
-            for="chk-ani"
-          >
+      <div class="card-body">
+        <div
+          v-for="(work, index) in workTime"
+          :key="`work_time_${index}`"
+          class="mb-2"
+        >
+          <label :for="work.value">
             <input
-              class="checkbox_animated"
-              id="chk-ani"
-              type="checkbox"
-            />Бүтэн цагаар
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani1"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani1"
-              type="checkbox"
-            />Гэрээт
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani2"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani2"
-              type="checkbox"
-            />Цагийн ажил
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani3"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani3"
-              type="checkbox"
-            />Дадлагжих хөтөлбөр
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani4"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani4"
-              type="checkbox"
-            />Түр ажил
+              v-model="selectedTime"
+              type="radio"
+              class="radio_animated"
+              :id="work.value"
+              :value="work.value"
+              name="work_field"
+            />
+            {{ work.name }}
           </label>
         </div>
         <button
           class="btn btn-primary text-center"
           type="button"
         >
-          Find jobs
+          Ажил хайх
         </button>
       </div>
     </div>
@@ -100,7 +64,7 @@
           aria-controls="collapseTwo"
           @click="active1 = !active1"
         >
-          Location
+          Салбар
         </button>
       </h2>
     </div>
@@ -109,7 +73,6 @@
       :class="active1 ? '' : 'show'"
       id="collapseTwo"
       aria-labelledby="headingTwo"
-      data-bs-parent="#accordionExample"
     >
       <div class="card-body animate-chk">
         <div class="location-checkbox">
@@ -136,99 +99,7 @@
         class="btn btn-block btn-primary text-center"
         type="button"
       >
-        All Locations
-      </button>
-    </div>
-  </div>
-  <div class="card">
-    <div
-      class="card-header"
-      id="headingThree"
-    >
-      <h2 class="mb-0">
-        <button
-          class="btn btn-link btn-block text-start collapsed"
-          type="button"
-          data-bs-target="#collapseThree"
-          :aria-expanded="active2 ? 'false' : 'true'"
-          aria-controls="collapseThree"
-          @click="active2 = !active2"
-        >
-          Location1
-        </button>
-      </h2>
-    </div>
-    <div
-      class="collapse"
-      :class="active2 ? '' : 'show'"
-      id="collapseThree"
-      aria-labelledby="headingThree"
-      data-bs-parent="#accordionExample"
-    >
-      <div class="card-body animate-chk">
-        <div class="location-checkbox">
-          <label
-            class="d-block"
-            for="chk-ani6"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani6"
-              type="checkbox"
-            />
-            Автомашин, засвар үйлчилгээ
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani7"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani7"
-              type="checkbox"
-            />
-            San Francisco<span class="d-block">CA (252)</span>
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani8"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani8"
-              type="checkbox"
-            />
-            Washington<span class="d-block">DC (226)</span>
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani9"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani9"
-              type="checkbox"
-            />
-            Seattle<span class="d-block">WA (242)</span>
-          </label>
-          <label
-            class="d-block"
-            for="chk-ani10"
-          >
-            <input
-              class="checkbox_animated"
-              id="chk-ani10"
-              type="checkbox"
-            />
-            Chicago<span class="d-block">IL (187)</span>
-          </label>
-        </div>
-      </div>
-      <button
-        class="btn btn-block btn-primary text-center"
-        type="button"
-      >
-        All Locations
+        Салбар хайх
       </button>
     </div>
   </div>
@@ -240,6 +111,28 @@ export default {
       active: false,
       active1: false,
       active2: false,
+      workTime: [
+        {
+          selected: false,
+          name: 'Бүтэн цагаар',
+          value: 'full_time'
+        },
+        {
+          selected: false,
+          name: 'Гэрээт',
+          value: 'contract'
+        },
+        {
+          selected: false,
+          name: 'Цагийн ажил',
+          value: 'part_time'
+        },
+        {
+          selected: false,
+          name: 'Түр ажил',
+          value: 'hour_work'
+        }
+      ],
       fieldOfWorks: [
         {
           selected: true,
@@ -331,7 +224,9 @@ export default {
         { selected: false, name: 'Эрүүл мэнд', id: 'work_field_health' },
         { selected: false, name: 'Бусад', id: 'work_field_etc' }
       ],
-      selectedField: ''
+
+      selectedField: '',
+      selectedTime: ''
     };
   }
 };

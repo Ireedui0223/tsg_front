@@ -2,14 +2,14 @@
   <li class="profile-nav onhover-dropdown pe-0 py-0">
     <div class="media profile-media">
       <img
-        class="b-r-10"
-        src="/images/dashboard/profile.png"
-        alt=""
+        class="b-r-10 profile-image"
+        src="https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg"
+        alt="profile"
       />
       <div class="media-body">
-        <span>Emay Walter</span>
+        <span>Munkh-Ireedui</span>
         <p class="mb-0 font-roboto">
-          Admin <i class="middle fa fa-angle-down"></i>
+          Student <i class="middle fa fa-angle-down"></i>
         </p>
       </div>
     </div>
@@ -21,9 +21,9 @@
         >
       </li>
       <li>
-        <a @click="logout"
-          ><vue-feather type="log-in"></vue-feather><span>Log out</span></a
-        >
+        <a @click="logout">
+          <vue-feather type="log-in"></vue-feather><span>Log out</span>
+        </a>
       </li>
     </ul>
   </li>
@@ -41,3 +41,16 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.profile-image {
+  width: 35px;
+  height: 35px;
+}
+@media (max-width: 575px) {
+  .profile-image {
+    width: 25px;
+    height: 25px;
+  }
+}
+</style>

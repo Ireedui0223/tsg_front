@@ -220,60 +220,6 @@
         </div>
       </div>
     </div>
-    <div class="footer-container m-t-30">
-      <div class="top-footer m-b-20">
-        <div class="row">
-          <div class="col-lg-2 col-md-4 footer-logo">
-            <nuxt-link to="/">
-              <img
-                src="images/logo.png"
-                alt="images"
-              />
-            </nuxt-link>
-          </div>
-          <div class="col-lg-10 col-md-8 social-container">
-            <span>Follow Us:</span>
-            <ul class="list-social d-flex aln-center">
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  ><i class="icon-facebook"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  ><i class="icon-linkedin"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  ><i class="icon-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  ><i class="icon-pinterest"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/"
-                  target="_blank"
-                  ><i class="icon-instagram"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -490,44 +436,6 @@ export default {
   }
   .wrap-count {
     text-align: center;
-  }
-}
-.footer-container {
-  width: 80%;
-  margin: auto;
-  .top-footer {
-    .row {
-      .social-container {
-        display: flex;
-        justify-content: right;
-        align-items: center;
-        font-size: 0.9rem;
-        span {
-          font-size: 0.9rem;
-          font-weight: 500;
-          line-height: 1rem;
-          margin-right: 6px;
-        }
-        ul {
-          li {
-            width: 40px;
-            height: 40px;
-            padding: 11px 20px 1px 13px;
-            border-radius: 100%;
-            background: white;
-            margin-right: 8px;
-            &:hover {
-              background: var(--theme-deafult);
-              a {
-                i {
-                  color: white;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 </style>

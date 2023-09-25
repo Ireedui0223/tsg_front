@@ -10,9 +10,11 @@
       </div>
 
       <div class="page-body-wrapper">
-        <slot></slot>
-        <div>
-          <Footer></Footer>
+        <div class="body-container">
+          <slot></slot>
+          <div>
+            <Footer></Footer>
+          </div>
         </div>
       </div>
       <Teleport to="body">
@@ -81,3 +83,5 @@ export default {
   // },
 };
 </script>
+
+<style lang="scss" scoped></style>
