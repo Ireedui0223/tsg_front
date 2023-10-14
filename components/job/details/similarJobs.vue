@@ -1,6 +1,6 @@
 <template>
   <div class="header-faq">
-    <h6 class="mb-0 f-w-600">Similar jobs</h6>
+    <h6 class=" m-b-0 f-w-600">Similar jobs</h6>
   </div>
   <div class="row">
     <div

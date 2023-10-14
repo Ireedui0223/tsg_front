@@ -1,9 +1,9 @@
 <template>
     <div class="fade tab-pane" v-bind:class="(activeclass === 'pills_important') ? 'active show' : ''" id="pills-important"
         role="tabpanel" aria-labelledby="pills-important-tab">
-        <div class="card mb-0">
+        <div class="card  m-b-0">
             <div class="card-header d-flex">
-                <h6 class="f-w-600 mb-0"> Important</h6>
+                <h6 class="f-w-600  m-b-0"> Important</h6>
                 <ul>
                     <li>
                         <a class="grid-bookmark-view" href="#">
@@ -26,9 +26,9 @@
     </div>
     <div class="fade tab-pane" v-bind:class="(activeclass === 'pills_organization') ? 'active show' : ''"
         id="pills-organization" role="tabpanel" aria-labelledby="pills-organization-tab">
-        <div class="card mb-0">
+        <div class="card  m-b-0">
             <div class="card-header d-flex">
-                <h6 class="f-w-600 mb-0">Organization</h6>
+                <h6 class="f-w-600  m-b-0">Organization</h6>
                 <ul>
                     <li>
                         <a class="grid-bookmark-view" href="#">

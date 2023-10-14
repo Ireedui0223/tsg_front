@@ -3,10 +3,6 @@
 ==========================**/
 .user-profile {
   .hovercard {
-    .socialheader {
-      background: url(../images/social-app/social-image.png);
-    }
-
     .user-image {
       .share-icons {
         position: absolute;
@@ -41,11 +37,11 @@
     }
   }
   .card-footer {
-    >div {
+    > div {
       h3 {
         font-size: 16px;
       }
-    } 
+    }
   }
 }
 
@@ -342,7 +338,7 @@
       }
 
       span {
-        +span {
+        + span {
           color: $light-text;
         }
       }
@@ -371,7 +367,7 @@
 }
 
 .details-about {
-  +.details-about {
+  + .details-about {
     margin-top: 30px;
   }
 
@@ -411,7 +407,7 @@
 
 .activity-log {
   .my-activity {
-    +.my-activity {
+    + .my-activity {
       margin-top: 30px;
     }
 

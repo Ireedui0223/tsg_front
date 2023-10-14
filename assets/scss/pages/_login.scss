@@ -10,6 +10,8 @@
   margin: 0 auto;
   background: url('../images/login/login_bg.jpg');
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 30px 12px;
 
   .logo {
@@ -24,7 +26,7 @@
       padding: 10px 15px;
       margin: 0;
 
-      &+.btn {
+      & + .btn {
         margin-left: 5px;
       }
 
@@ -44,10 +46,10 @@
     background-color: $white;
 
     .theme-form {
-      .social{
-        i{
+      .social {
+        i {
           margin-right: 3px;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             margin-right: unset;
             margin-left: 3px;
           }
@@ -71,7 +73,7 @@
         position: relative;
 
         &:before {
-          content: "";
+          content: '';
           position: absolute;
           width: 65%;
           height: 2px;
@@ -131,12 +133,12 @@
 
     &.show {
       &:before {
-        content: "show";
+        content: 'show';
       }
     }
 
     &:before {
-      content: "hide";
+      content: 'hide';
     }
   }
 }

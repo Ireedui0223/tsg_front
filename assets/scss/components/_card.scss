@@ -28,14 +28,14 @@
     }
 
     h5 {
-      &:not(.mb-0),
+      &:not(.m-b-0),
       &:not(.m-0) {
         margin-bottom: 0;
         text-transform: $card-header-font-transform;
       }
     }
 
-    >span {
+    > span {
       font-size: $card-header-span-size;
       color: $card-header-span-color;
       margin-top: 5px;
@@ -157,7 +157,7 @@
 .page-body-wrapper {
   .card {
     .sub-title {
-      font-family:$font-rubik, $font-serif;
+      font-family: $font-rubik, $font-serif;
       font-weight: normal;
       color: $theme-body-sub-title-color;
     }
@@ -253,8 +253,8 @@
   .card-footer {
     padding: 0;
 
-    >div {
-      +div {
+    > div {
+      + div {
         border-left: 1px solid $light-semi-gray;
       }
 
@@ -288,89 +288,92 @@
 }
 
 .social {
-    &-profile {
-        text-align: center;
-        background-image: url(../images/dashboard-5/profile-bg.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        .card-body {
-            padding-left: 20px;
-            padding-right: 20px;
-            @media (max-width: 1399px) {
-                padding: 23px 15px;
-            }
-        }
+  &-profile {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .card-body {
+      padding-left: 20px;
+      padding-right: 20px;
+      @media (max-width: 1399px) {
+        padding: 23px 15px;
+      }
     }
-    &-details {
-        margin-top: 15px;
-        h5 {
-            a {
-                color: var(--body-font-color);
-            }
-        }
-        .social-follow {
-            column-count: 3;
-            column-gap: 30px;
-            margin-top: 25px;
-            @media (max-width: 1399px) {
-                column-gap: 23px;
-            }
-            li {
-                position: relative;
-                + li {
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        width: 1px;
-                        height: 14px;
-                        background-color: var(--recent-dashed-border);
-                        left: -15px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        [dir="rtl"] & {
-                            left: unset;
-                            right: -15px;
-                        }
-                    }
-                }
-            }
-        }
-        .card-social {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 10px;
-          margin-top: 15px;
-        }
+  }
+  &-details {
+    margin-top: 15px;
+    h5 {
+      a {
+        color: var(--body-font-color);
+      }
     }
-    &-img-wrap {
-        background: linear-gradient(253deg, var(--theme-deafult) 11.51%, rgba(115, 102, 255, 0) 82.07%);
-        display: inline-block;
-        border-radius: 100%;
-        padding: 2px;
+    .social-follow {
+      column-count: 3;
+      column-gap: 30px;
+      margin-top: 25px;
+      @media (max-width: 1399px) {
+        column-gap: 23px;
+      }
+      li {
         position: relative;
-        .edit-icon {
+        + li {
+          &::before {
             position: absolute;
-            right: 0;
-            bottom: 0;
-            svg {
-                width: 20px;
-                height: 20px;
-                border-radius: 100%;
-                border: 2px solid var(--white);
-                background: var(--white);
+            content: '';
+            width: 1px;
+            height: 14px;
+            background-color: var(--recent-dashed-border);
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            [dir='rtl'] & {
+              left: unset;
+              right: -15px;
             }
+          }
         }
+      }
     }
-    &-img {
-        padding: 5px;
-        background: var(--white);
+    .card-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+  }
+  &-img-wrap {
+    background: linear-gradient(
+      253deg,
+      var(--theme-deafult) 11.51%,
+      rgba(115, 102, 255, 0) 82.07%
+    );
+    display: inline-block;
+    border-radius: 100%;
+    padding: 2px;
+    position: relative;
+    .edit-icon {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      svg {
+        width: 20px;
+        height: 20px;
         border-radius: 100%;
-        img {
-          height: 68px;
-          border-radius: 100%;
-        }
+        border: 2px solid var(--white);
+        background: var(--white);
+      }
     }
+  }
+  &-img {
+    padding: 5px;
+    background: var(--white);
+    border-radius: 100%;
+    img {
+      height: 68px;
+      border-radius: 100%;
+    }
+  }
 }
 
 /**=====================

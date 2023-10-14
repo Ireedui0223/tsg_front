@@ -30,12 +30,12 @@
                           <nuxt-link to="/"> Нүүр хуудас </nuxt-link>
                         </li>
                         <li class="m-t-5">
-                          <nuxt-link to="student/profile">
+                          <nuxt-link to="/student/profile">
                             Хувийн мэдээлэл
                           </nuxt-link>
                         </li>
                         <li class="m-t-5">
-                          <nuxt-link to="student/job/list">
+                          <nuxt-link to="/student/job/list">
                             Ажлын зарууд
                           </nuxt-link>
                         </li>
@@ -55,7 +55,7 @@
                     </div>
                   </div>
                   <div class="col-md-6 social-container">
-                    <div class="ttl-info text-start ttl-sm-mb-0 icons">
+                    <div class="ttl-info text-start ttl-sm-  icons">
                       <h6><i class="fa fa-location-arrow"></i> Холбоо барих</h6>
                       <ul class="list-social d-flex aln-center">
                         <li>
@@ -104,7 +104,7 @@
         <div class="container-fluid m-t-20 p-t-4">
           <div class="row">
             <div class="col-md-12 footer-copyright text-center">
-              <p class="mb-0 p-t-5 p-b-5">
+              <p class="  p-t-5 p-b-5">
                 Copyright © 2021 Tsg Job Web. All Rights Reserved.
               </p>
             </div>

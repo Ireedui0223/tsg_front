@@ -4,7 +4,7 @@
       class="card-header"
       id="headingOne"
     >
-      <h2 class="mb-0">
+      <h2 class=" m-b-0">
         <button
           class="btn btn-link btn-block text-start"
           type="button"
@@ -55,7 +55,7 @@
       class="card-header"
       id="headingTwo"
     >
-      <h2 class="mb-0">
+      <h2 class=" m-b-0">
         <button
           class="btn btn-link btn-block text-start collapsed"
           type="button"

@@ -1,9 +1,9 @@
 <template>
   <div class="fade tab-pane" v-bind:class="(activeclass === 'pills_shared') ? 'active show' : ''" id="pills-shared"
     role="tabpanel" aria-labelledby="pills-shared-tab">
-    <div class="card mb-0">
+    <div class="card  m-b-0">
       <div class="card-header d-flex">
-        <h6 class="f-w-600 mb-0">Shared with me</h6>
+        <h6 class="f-w-600  m-b-0">Shared with me</h6>
         <ul>
           <li>
             <a class="grid-bookmark-view" href="#"><vue-feather type="grid"></vue-feather></a>

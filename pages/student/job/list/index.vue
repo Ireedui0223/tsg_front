@@ -28,7 +28,7 @@
                   alt=""
                 />
                 <div class="media-body">
-                  <h6 class="f-w-600">
+                  <p class="f-w-600 m-b-0">
                     <nuxt-link :to="`/student/job/detail/${job.id}`">{{
                       job.title
                     }}</nuxt-link>
@@ -43,7 +43,7 @@
                       v-else
                       >New</span
                     >
-                  </h6>
+                  </p>
                   <p>
                     {{ job.city
                     }}<span

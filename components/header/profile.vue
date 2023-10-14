@@ -8,7 +8,7 @@
       />
       <div class="media-body">
         <span>Munkh-Ireedui</span>
-        <p class="mb-0 font-roboto">
+        <p class=" m-b-0 font-roboto">
           Student <i class="middle fa fa-angle-down"></i>
         </p>
       </div>

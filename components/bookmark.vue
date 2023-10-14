@@ -10,7 +10,7 @@
           :class="bookmarkSearchBox ? 'flipped' : ''"
         >
           <div class="front">
-            <h6 class="f-18 mb-0 dropdown-title">Bookmark</h6>
+            <h6 class="f-18  m-b-0 dropdown-title">Bookmark</h6>
             <ul class="droplet-dropdown bookmark-dropdown">
               <li class="custom-scrollbar">
                 <div class="row">

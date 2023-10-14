@@ -41,13 +41,13 @@
           </div>
           <div class="heart-icon">
             <img
-              src="images/student/heart.png"
+              src="/images/student/heart.png"
               alt="images"
             />
           </div>
           <div class="like-icon">
             <img
-              src="images/student/like.png"
+              src="/images/student/like.png"
               alt="images"
             />
           </div>

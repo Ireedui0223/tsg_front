@@ -31,7 +31,8 @@ export default defineNuxtConfig({
       {
         autoImports: ['defineStore', 'acceptHMRUpdate']
       }
-    ]
+    ],
+    'nuxt-purgecss'
   ],
   // debug: false,
 

@@ -60,7 +60,7 @@
                         the animation (related to the browser bottom)<br><strong>data-wow-iteration: </strong>Number of
                         times the animation is repeated<br></p>
                     <pre
-                        class="mb-0">&lt;section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"&gt;<br /> &lt;/section&gt;<br /> &lt;section class="wow slideInRight" data-wow-offset="10" data-wow-iteration="10"&gt;<br /> &lt;/section&gt;</pre>
+                        class=" m-b-0">&lt;section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s"&gt;<br /> &lt;/section&gt;<br /> &lt;section class="wow slideInRight" data-wow-offset="10" data-wow-iteration="10"&gt;<br /> &lt;/section&gt;</pre>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@
                     <p><strong>mobile: </strong>Turn on/off wow.js on mobile devices.</p>
                     <p><strong>live: </strong>consatantly check for new WOW elements on the page.</p>
                     <pre
-                        class="mb-0">wow = new WOW(<br /> {<br /> boxClass: 'wow', // default<br /> animateClass: 'animated', // default<br /> offset: 0, // default<br /> mobile: true, // default<br /> live: true // default<br /> }<br /> )<br /> wow.init();</pre>
+                        class=" m-b-0">wow = new WOW(<br /> {<br /> boxClass: 'wow', // default<br /> animateClass: 'animated', // default<br /> offset: 0, // default<br /> mobile: true, // default<br /> live: true // default<br /> }<br /> )<br /> wow.init();</pre>
                 </div>
             </div>
         </div>

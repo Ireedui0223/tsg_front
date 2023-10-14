@@ -29,13 +29,13 @@
                     autocomplete="off"></textarea>
                 </div>
                 <div class="row">
-                  <div class="form-group col mb-0">
+                  <div class="form-group col  m-b-0">
                     <label>Group</label>
                     <select class="js-example-basic-single" id="bm-group">
                       <option value="bookmark">My Bookmarks</option>
                     </select>
                   </div>
-                  <div class="form-group col mb-0">
+                  <div class="form-group col  m-b-0">
                     <label>Collection</label>
                     <select class="js-example-disabled-results" id="bm-collection">
                       <option value="general">General</option>

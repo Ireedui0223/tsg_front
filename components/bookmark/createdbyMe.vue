@@ -1,9 +1,9 @@
 <template>
   <div class="tab-pane fade" v-bind:class="(activeclass === 'pills_created') ? 'active show' : ''" id="pills-created"
     role="tabpanel" aria-labelledby="pills-created-tab">
-    <div class="card mb-0">
+    <div class="card  m-b-0">
       <div class="card-header d-flex">
-        <h6 class="f-w-600 mb-0">Created by me</h6>
+        <h6 class="f-w-600  m-b-0">Created by me</h6>
         <ul>
           <li><a class="grid-bookmark-view" href="javascript:void(0);"><vue-feather type="grid"
                 @click="liststyle = !liststyle"></vue-feather></a></li>

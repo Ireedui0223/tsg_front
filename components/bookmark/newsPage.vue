@@ -2,9 +2,9 @@
   <div class="fade tab-pane" v-bind:class="(activeclass === 'pills_newsletter') ? 'active show' : ''" id="pills-newsletter"
     role="tabpanel" aria-labelledby="pills-newsletter-tab">
 
-    <div class="card mb-0">
+    <div class="card  ">
       <div class="card-header d-flex">
-        <h6 class="f-w-600 mb-0">Newsletter</h6>
+        <h6 class="f-w-600  ">Newsletter</h6>
         <ul>
           <li>
             <a class="grid-bookmark-view" href="#">

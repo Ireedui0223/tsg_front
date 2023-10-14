@@ -10,7 +10,7 @@
         <nav class="breadcrumb breadcrumb-icon"><a class="breadcrumb-item" href="javascript:void(0)">Home</a><a
             class="breadcrumb-item" href="javascript:void(0)">Library</a><span
             class="breadcrumb-item active">Bootstrap</span></nav>
-        <nav class="breadcrumb breadcrumb-no-divider mb-0"><a class="breadcrumb-item" href="javascript:void(0)">Home</a><a
+        <nav class="breadcrumb breadcrumb-no-divider  m-b-0"><a class="breadcrumb-item" href="javascript:void(0)">Home</a><a
             class="breadcrumb-item" href="javascript:void(0)">Library</a><span
             class="breadcrumb-item active">Bootstrap</span></nav>
     </div>

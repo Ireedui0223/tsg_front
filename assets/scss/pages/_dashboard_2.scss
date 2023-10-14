@@ -8,47 +8,7 @@
   top: 50%;
   transform: translateY(-50%);
 }
-.balance-widget {
-  background-image: url(../images/dashboard-2/balance-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: right;
-  .mobile-right-img {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    .left-mobile-img {
-      margin-right: -20px;
-    }
-    .mobile-img {
-      height: 130px;
-    }
-    [dir="rtl"] & {
-      right: unset;
-      left: 15px;
-    }
-    @media (max-width: 480px) {
-      right: 0;
-      .mobile-img {
-        height: 100px;
-      }
-      [dir="rtl"] & {
-        right: unset;
-        left: 0;
-      }
-    }
-  }
-  [dir="rtl"] & {
-    text-align: right;
-  }
-  &.card-body {
-    padding: 20px 15px;
-  }
-  .purchase-btn {
-    min-width: 170px;
-  }
-}
-.small-widget  {
+.small-widget {
   overflow: hidden;
   h4 {
     margin-bottom: -3px;
@@ -71,7 +31,7 @@
     top: 50%;
     position: absolute;
     transform: translateY(-50%);
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       right: unset;
       left: -12px;
       transform: translateY(-50%) scaleX(-1);
@@ -101,10 +61,10 @@
 }
 .appointment {
   .customer-table {
-    @media (max-width:1470px) {
+    @media (max-width: 1470px) {
       height: 268px;
     }
-    @media (max-width:1399px) {
+    @media (max-width: 1399px) {
       height: unset;
     }
   }
@@ -165,13 +125,13 @@
   @media (max-width: 1520px) {
     margin: -10px -16px 0;
   }
-  @media (max-width:1500px) {
+  @media (max-width: 1500px) {
     margin: -10px -14px 0;
   }
-  @media (max-width:1472px) {
+  @media (max-width: 1472px) {
     margin: -10px -20px 0;
   }
-  @media (max-width:1424px) {
+  @media (max-width: 1424px) {
     margin: -10px -25px 0;
   }
   .apexcharts-canvas {
@@ -201,7 +161,7 @@
   @media (max-width: 1199px) {
     bottom: 22px;
   }
-  @media (max-width: 480px) { 
+  @media (max-width: 480px) {
     width: calc(100% - 34px);
     left: 18px;
   }
@@ -212,13 +172,13 @@
 .overview-card {
   .balance-data {
     right: 12px;
-    [dir="rtl"] & {
+    [dir='rtl'] & {
       right: unset;
       left: 12px;
     }
     @media (max-width: 767px) {
       right: -40%;
-      [dir="rtl"] & {
+      [dir='rtl'] & {
         left: -40%;
       }
     }
@@ -269,9 +229,9 @@
       }
     }
     .apexcharts-legend.apexcharts-align-left {
-       .apexcharts-legend-series {
-          display: flex;
-       }
+      .apexcharts-legend-series {
+        display: flex;
+      }
     }
   }
 }
@@ -310,7 +270,8 @@
       }
     }
     tr {
-      td,th {
+      td,
+      th {
         padding: 12px 8px;
         vertical-align: middle;
         &:first-child {
@@ -328,14 +289,14 @@
       td {
         &:first-child {
           padding-left: 0;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             padding-left: unset;
             padding-right: 0;
           }
         }
-        &:last-child  {
+        &:last-child {
           padding-right: 0;
-          [dir="rtl"] & {
+          [dir='rtl'] & {
             padding-left: 0;
             padding-right: unset;
           }
@@ -470,7 +431,8 @@
   .frame-image {
     min-width: 62px;
     height: 62px;
-    border-color: var(--recent-border) var(--white) var(--white) var(--recent-border);
+    border-color: var(--recent-border) var(--white) var(--white)
+      var(--recent-border);
     border-width: 1px;
     border-style: solid;
     margin: 6px;
@@ -499,7 +461,6 @@
 .new-update {
   .media {
     .media-body {
-
       span,
       p {
         font-weight: 500;
@@ -508,15 +469,11 @@
   }
 }
 
-@each $activity-dot-name,
-$activity-dot-color in (primary, $primary-color),
-(secondary, $secondary-color),
-(success, $success-color),
-(danger, $danger-color),
-(info, $info-color),
-(light, $light-color),
-(dark, $dark-color),
-(warning, $warning-color) {
+@each $activity-dot-name, $activity-dot-color in (primary, $primary-color),
+  (secondary, $secondary-color), (success, $success-color),
+  (danger, $danger-color), (info, $info-color), (light, $light-color),
+  (dark, $dark-color), (warning, $warning-color)
+{
   .activity-dot-#{$activity-dot-name} {
     min-width: 6px;
     height: 6px;

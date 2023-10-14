@@ -7,19 +7,19 @@
   <div class="container-fluid">
     <div class="user-profile">
       <div class="row">
-        <indexProfile />
+        <IndexProfile />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import indexProfile from '@/components/users/profile/indexProfile.vue';
+import IndexProfile from '@/components/users/profile/indexProfile.vue';
 
 export default {
   name: 'userProfile',
   components: {
-    indexProfile
+    IndexProfile
   }
 };
 </script>
