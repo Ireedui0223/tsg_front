@@ -3,12 +3,12 @@
     <div class="media profile-media">
       <img
         class="b-r-10 profile-image"
-        src="https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg"
+        src="/images/student/profile.jpg"
         alt="profile"
       />
       <div class="media-body">
         <span>Munkh-Ireedui</span>
-        <p class=" m-b-0 font-roboto">
+        <p class="m-b-0 font-roboto">
           Student <i class="middle fa fa-angle-down"></i>
         </p>
       </div>
@@ -34,7 +34,7 @@ export default {
   name: 'Profile',
   methods: {
     logout: function () {
-      this.$router.replace('/auth/login');
+      this.$router.replace('/');
 
       useCookie('User').value = undefined;
     }

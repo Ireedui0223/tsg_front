@@ -70,19 +70,19 @@
                         Нууц үг хадгалах
                       </label>
                     </div>
-                    <nuxt-link
+                    <!-- <nuxt-link
                       class="link"
                       to="/authentication/forget_password"
                     >
                       Нууц үг мартсан?
-                    </nuxt-link>
+                    </nuxt-link> -->
                     <div class="text-end mt-3">
                       <button
                         class="btn btn-primary btn-block w-100"
                         type="submit"
                         @click.prevent="login"
                       >
-                        Бүртгүүлэх
+                        Нэвтрэх
                       </button>
                     </div>
                   </div>
@@ -138,9 +138,9 @@
   </div>
 </template>
 <script>
-definePageMeta({
-  layout: 'custom'
-});
+// definePageMeta({
+//   layout: 'custom'
+// });
 export default {
   name: 'login',
   data() {
@@ -195,7 +195,7 @@ export default {
           email: this.user.email.value,
           useer: true
         });
-        this.$router.push('/');
+        this.$router.push('/student');
       }
     },
     validEmail: function (email) {

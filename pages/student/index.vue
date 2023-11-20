@@ -23,7 +23,7 @@
         <div class="image-container">
           <div class="box-1">
             <img
-              src="/images/student/person1.png"
+              src="https://a0.anyrgb.com/pngimg/956/390/mongolian-pattern-happy-baby-mongols-bear-doll-wedding-doll-doll-cute-baby-doll-mongolian-barbie-doll-mongolia.png"
               width="100%"
             />
             <div class="circle-container">
@@ -33,7 +33,7 @@
           <div class="box-2">
             <img
               width="100%"
-              src="/images/student/person2.png"
+              src="/images/student/intro-girl.png"
             />
             <div class="circle-container">
               <div class="inlay-circle-2" />
@@ -347,6 +347,10 @@ export default {
         margin-right: -6%;
         flex-grow: 1;
         img {
+          width: 160px;
+          margin-top: 12px;
+          margin-right: 30px;
+          border-radius: 120px;
           position: absolute;
         }
         .circle-container {
@@ -371,13 +375,18 @@ export default {
         margin-top: 19.4%;
         margin-right: -11%;
         flex-grow: 1;
+        background: rgb(232, 231, 231, 0.5);
+        border-radius: 120px;
         img {
           position: absolute;
+          height: 100%;
+          width: auto;
+          margin-left: -60px;
         }
         .circle-container {
           animation: scaler 4s infinite ease-in-out alternate;
-          bottom: 0px;
-          right: -14px;
+          bottom: -14px;
+          right: -14px;;
           position: absolute;
           .inlay-circle-2 {
             width: 180px;
