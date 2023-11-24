@@ -1,0 +1,1 @@
+import{_ as t,r,f as s,o,c}from"./entry.d6e88b4d.js";const n={setup(){const e=r({count:0});return{...s(e)}}};function a(e,p,_,f,i,u){return o(),c("div",null,"register")}const d=t(n,[["render",a]]);export{d as default};
