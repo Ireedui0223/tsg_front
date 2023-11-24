@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/welcomeCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xl-12 col-md-6\">\n    <div class=\"card social-profile\">\n      <div class=\"card-body\">\n        <div class=\"social-img-wrap\">\n          <div class=\"social-img\">\n            <img\n              src=\"/images/dashboard-5/profile.png\"\n              alt=\"profile\"\n            />\n          </div>\n          <div class=\"edit-icon\">\n            <svg>\n              <use href=\"@/assets/svg/icon-sprite.svg#profile-check\"></use>\n            </svg>\n          </div>\n        </div>\n        <div class=\"social-details\">\n          <h5 class=\"mb-1\">\n            <a>\n              <NuxtLink to=\"/socialApp\">Brooklyn Simmons</NuxtLink>\n            </a>\n          </h5>\n          <span class=\"f-light\">@brookly.simmons</span>\n          <ul class=\"social-follow\">\n            <li>\n              <h5 class=\" m-b-0\">1,908</h5>\n              <span class=\"f-light\">Posts</span>\n            </li>\n            <li>\n              <h5 class=\" m-b-0\">34.0k</h5>\n              <span class=\"f-light\">Followers</span>\n            </li>\n            <li>\n              <h5 class=\" m-b-0\">897</h5>\n              <span class=\"f-light\">Following</span>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "start": 1700848825731,
+      "end": 1700848825918,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825919,
+      "end": 1700848825919,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-5/profile.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_1 + '#profile-check'\nconst _hoisted_2 = { class: \"col-xl-12 col-md-6\" }\nconst _hoisted_3 = { class: \"card social-profile\" }\nconst _hoisted_4 = { class: \"card-body\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"social-img-wrap\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"social-img\" }, [\n    /*#__PURE__*/_createElementVNode(\"img\", {\n      src: _imports_0,\n      alt: \"profile\"\n    })\n  ]),\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"edit-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", null, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ])\n  ])\n], -1)\nconst _hoisted_6 = { class: \"social-details\" }\nconst _hoisted_7 = { class: \"mb-1\" }\nconst _hoisted_8 = /*#__PURE__*/_createStaticVNode(\"<span class=\\\"f-light\\\">@brookly.simmons</span><ul class=\\\"social-follow\\\"><li><h5 class=\\\"m-b-0\\\">1,908</h5><span class=\\\"f-light\\\">Posts</span></li><li><h5 class=\\\"m-b-0\\\">34.0k</h5><span class=\\\"f-light\\\">Followers</span></li><li><h5 class=\\\"m-b-0\\\">897</h5><span class=\\\"f-light\\\">Following</span></li></ul>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createElementVNode(\"div\", _hoisted_4, [\n        _hoisted_5,\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createElementVNode(\"h5\", _hoisted_7, [\n            _createElementVNode(\"a\", null, [\n              _createVNode(_component_NuxtLink, { to: \"/socialApp\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Brooklyn Simmons\")\n                ]),\n                _: 1\n              })\n            ])\n          ]),\n          _hoisted_8\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825919,
+      "end": 1700848825920,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825921,
+      "end": 1700848825921,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825921,
+      "end": 1700848825922,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825922,
+      "end": 1700848825922,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825922,
+      "end": 1700848825922,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825922,
+      "end": 1700848825922,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825922,
+      "end": 1700848825922,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-5/profile.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_1 + '#profile-check'\nconst _hoisted_2 = { class: \"col-xl-12 col-md-6\" }\nconst _hoisted_3 = { class: \"card social-profile\" }\nconst _hoisted_4 = { class: \"card-body\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"social-img-wrap\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"social-img\" }, [\n    /*#__PURE__*/_createElementVNode(\"img\", {\n      src: _imports_0,\n      alt: \"profile\"\n    })\n  ]),\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"edit-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", null, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ])\n  ])\n], -1)\nconst _hoisted_6 = { class: \"social-details\" }\nconst _hoisted_7 = { class: \"mb-1\" }\nconst _hoisted_8 = /*#__PURE__*/_createStaticVNode(\"<span class=\\\"f-light\\\">@brookly.simmons</span><ul class=\\\"social-follow\\\"><li><h5 class=\\\"m-b-0\\\">1,908</h5><span class=\\\"f-light\\\">Posts</span></li><li><h5 class=\\\"m-b-0\\\">34.0k</h5><span class=\\\"f-light\\\">Followers</span></li><li><h5 class=\\\"m-b-0\\\">897</h5><span class=\\\"f-light\\\">Following</span></li></ul>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createElementVNode(\"div\", _hoisted_4, [\n        _hoisted_5,\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createElementVNode(\"h5\", _hoisted_7, [\n            _createElementVNode(\"a\", null, [\n              _createVNode(_component_NuxtLink, { to: \"/socialApp\" }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\"Brooklyn Simmons\")\n                ]),\n                _: 1\n              })\n            ])\n          ]),\n          _hoisted_8\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825922,
+      "end": 1700848825923,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825923,
+      "end": 1700848825923,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825923,
+      "end": 1700848825923,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825923,
+      "end": 1700848825923,
+      "order": "normal"
+    }
+  ]
+}

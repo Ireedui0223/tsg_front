@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/myCourseCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-5 col-ed-12 box-col-12\">\n        <div class=\"card course-card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">My Course</h5>\n                    <div class=\"card-header-right-icon\">\n                        <DropDown1 />\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"course-main-card\">\n                    <div class=\"course-wrapper\" v-for=\"course in courses\" :key=\"course\">\n                        <div class=\"course-icon-box\">\n                            <div class=\"icon-wrap\">\n                                <img :src=\"getImgURL(course.iconWrap)\" alt=\"clock vector\" />\n                            </div>\n                            <img class=\"arrow-bg\" :src=\"getImgURL(course.backArrow)\" alt=\"sqaure border arrow\" />\n                        </div>\n                        <h6 class=\"f-14\">{{ course.title }}</h6>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport DropDown1 from \"../base/dropDown1.vue\"\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\nimport {\n    courses\n} from \"@/data/dashboard/online.json\"\nexport default {\n    components: {\n        DropDown1\n    },\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n            courses: courses\n        };\n    },\n    methods: {\n        getImgURL(path) {\n            return \"/images/dashboard-3/\" + path\n        }\n    }\n};\n</script>\n    ",
+      "start": 1700848825691,
+      "end": 1700848825884,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825884,
+      "end": 1700848825884,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport DropDown1 from \"../base/dropDown1.vue\"\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\nimport {\n    courses\n} from \"@/data/dashboard/online.json\"\nconst _sfc_main = {\n    components: {\n        DropDown1\n    },\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n            courses: courses\n        };\n    },\n    methods: {\n        getImgURL(path) {\n            return \"/images/dashboard-3/\" + path\n        }\n    }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-5 col-ed-12 box-col-12\" }\nconst _hoisted_2 = { class: \"card course-card\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"My Course\", -1)\nconst _hoisted_6 = { class: \"card-header-right-icon\" }\nconst _hoisted_7 = { class: \"card-body pt-0\" }\nconst _hoisted_8 = { class: \"course-main-card\" }\nconst _hoisted_9 = { class: \"course-icon-box\" }\nconst _hoisted_10 = { class: \"icon-wrap\" }\nconst _hoisted_11 = [\"src\"]\nconst _hoisted_12 = [\"src\"]\nconst _hoisted_13 = { class: \"f-14\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createVNode(_component_DropDown1)\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_7, [\n        _createElementVNode(\"div\", _hoisted_8, [\n          (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.courses, (course) => {\n            return (_openBlock(), _createElementBlock(\"div\", {\n              class: \"course-wrapper\",\n              key: course\n            }, [\n              _createElementVNode(\"div\", _hoisted_9, [\n                _createElementVNode(\"div\", _hoisted_10, [\n                  _createElementVNode(\"img\", {\n                    src: $options.getImgURL(course.iconWrap),\n                    alt: \"clock vector\"\n                  }, null, 8, _hoisted_11)\n                ]),\n                _createElementVNode(\"img\", {\n                  class: \"arrow-bg\",\n                  src: $options.getImgURL(course.backArrow),\n                  alt: \"sqaure border arrow\"\n                }, null, 8, _hoisted_12)\n              ]),\n              _createElementVNode(\"h6\", _hoisted_13, _toDisplayString(course.title), 1)\n            ]))\n          }), 128))\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825884,
+      "end": 1700848825887,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825887,
+      "end": 1700848825887,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825887,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825889,
+      "end": 1700848825889,
+      "order": "normal"
+    }
+  ]
+}

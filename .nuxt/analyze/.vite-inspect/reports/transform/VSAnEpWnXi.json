@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/list/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <Breadcrumbs\n    title=\"Job List\"\n    main=\"Job Search\"\n  />\n  <div class=\"container-fluid\">\n    <div class=\"row\">\n      <jobtab />\n      <div class=\"col-xl-9 xl-60 text-start box-col-12\">\n        <div\n          class=\"card\"\n          v-for=\"(job, index) in jobslist\"\n          :key=\"index\"\n          :class=\"{ 'ribbon-vertical-left-wrapper': job.priority == 1 }\"\n        >\n          <div\n            v-if=\"job.priority == 1\"\n            class=\"ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary\"\n          >\n            <i class=\"icofont icofont-love\"></i>\n          </div>\n          <div class=\"job-search\">\n            <div class=\"card-body\">\n              <div class=\"media\">\n                <img\n                  class=\"img-40 img-fluid m-r-20\"\n                  :src=\"getImgUrl(job.image)\"\n                  alt=\"\"\n                />\n                <div class=\"media-body\">\n                  <p class=\"f-w-600 m-b-0\">\n                    <nuxt-link :to=\"`/student/job/detail/${job.id}`\">{{\n                      job.title\n                    }}</nuxt-link>\n\n                    <span\n                      class=\"pull-right\"\n                      v-if=\"job.date\"\n                      v-text=\"job.date\"\n                    ></span>\n                    <span\n                      class=\"badge badge-primary pull-right\"\n                      v-else\n                      >New</span\n                    >\n                  </p>\n                  <p>\n                    {{ job.city\n                    }}<span\n                      class=\"ms-1\"\n                      v-html=\"stars(job.stars)\"\n                    ></span>\n                  </p>\n                </div>\n              </div>\n              <p v-text=\"job.description\"></p>\n            </div>\n          </div>\n        </div>\n\n        <div class=\"job-pagination\">\n          <nav aria-label=\"Page navigation example\">\n            <ul class=\"pagination pagination-primary\">\n              <li class=\"page-item disabled\">\n                <a\n                  class=\"page-link\"\n                  href=\"#\"\n                  >Previous</a\n                >\n              </li>\n              <li class=\"page-item active\">\n                <a\n                  class=\"page-link\"\n                  href=\"#\"\n                  >1</a\n                >\n              </li>\n              <li class=\"page-item\">\n                <a\n                  class=\"page-link\"\n                  href=\"#\"\n                  >2</a\n                >\n              </li>\n              <li class=\"page-item\">\n                <a\n                  class=\"page-link\"\n                  href=\"#\"\n                  >3</a\n                >\n              </li>\n              <li class=\"page-item\">\n                <a\n                  class=\"page-link\"\n                  href=\"#\"\n                  >Next</a\n                >\n              </li>\n            </ul>\n          </nav>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { mapState } from 'pinia';\nimport jobtab from '@/components/job/list/jobTab.vue';\nimport { useJobStore } from '~~/store/jobs';\nexport default {\n  components: {\n    jobtab\n  },\n  computed: {\n    ...mapState(useJobStore, {\n      jobslist: 'jobs'\n    })\n  },\n\n  methods: {\n    getImgUrl(filename) {\n      return '/images/job-search/' + filename;\n    },\n    stars(count) {\n      var stars = '';\n\n      for (var i = 0; i < 5; i++) {\n        if (count > i) {\n          stars = stars + '<i class=\"fa fa-star font-warning\"></i>';\n        } else {\n          stars = stars + '<i class=\"fa fa-star font-warning-o\"></i>';\n        }\n      }\n\n      return stars;\n    }\n  }\n};\n</script>\n",
+      "start": 1700848819039,
+      "end": 1700848819351,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848819351,
+      "end": 1700848819351,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848819351,
+      "end": 1700848819351,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848819351,
+      "end": 1700848819351,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848819351,
+      "end": 1700848819351,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848819351,
+      "end": 1700848819351,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848819351,
+      "end": 1700848819352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848819352,
+      "end": 1700848819352,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { mapState } from 'pinia';\nimport jobtab from '@/components/job/list/jobTab.vue';\nimport { useJobStore } from '~~/store/jobs';\nconst _sfc_main = {\n  components: {\n    jobtab\n  },\n  computed: {\n    ...mapState(useJobStore, {\n      jobslist: 'jobs'\n    })\n  },\n\n  methods: {\n    getImgUrl(filename) {\n      return '/images/job-search/' + filename;\n    },\n    stars(count) {\n      var stars = '';\n\n      for (var i = 0; i < 5; i++) {\n        if (count > i) {\n          stars = stars + '<i class=\"fa fa-star font-warning\"></i>';\n        } else {\n          stars = stars + '<i class=\"fa fa-star font-warning-o\"></i>';\n        }\n      }\n\n      return stars;\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, createCommentVNode as _createCommentVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, withCtx as _withCtx, normalizeClass as _normalizeClass, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"col-xl-9 xl-60 text-start box-col-12\" }\nconst _hoisted_4 = {\n  key: 0,\n  class: \"ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary\"\n}\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"i\", { class: \"icofont icofont-love\" }, null, -1)\nconst _hoisted_6 = [\n  _hoisted_5\n]\nconst _hoisted_7 = { class: \"job-search\" }\nconst _hoisted_8 = { class: \"card-body\" }\nconst _hoisted_9 = { class: \"media\" }\nconst _hoisted_10 = [\"src\"]\nconst _hoisted_11 = { class: \"media-body\" }\nconst _hoisted_12 = { class: \"f-w-600 m-b-0\" }\nconst _hoisted_13 = [\"textContent\"]\nconst _hoisted_14 = {\n  key: 1,\n  class: \"badge badge-primary pull-right\"\n}\nconst _hoisted_15 = [\"innerHTML\"]\nconst _hoisted_16 = [\"textContent\"]\nconst _hoisted_17 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"job-pagination\\\"><nav aria-label=\\\"Page navigation example\\\"><ul class=\\\"pagination pagination-primary\\\"><li class=\\\"page-item disabled\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Previous</a></li><li class=\\\"page-item active\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">1</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">2</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">3</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Next</a></li></ul></nav></div>\", 1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_jobtab = _resolveComponent(\"jobtab\")\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Breadcrumbs, {\n      title: \"Job List\",\n      main: \"Job Search\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createVNode(_component_jobtab),\n        _createElementVNode(\"div\", _hoisted_3, [\n          (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.jobslist, (job, index) => {\n            return (_openBlock(), _createElementBlock(\"div\", {\n              class: _normalizeClass([\"card\", { 'ribbon-vertical-left-wrapper': job.priority == 1 }]),\n              key: index\n            }, [\n              (job.priority == 1)\n                ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, _hoisted_6))\n                : _createCommentVNode(\"\", true),\n              _createElementVNode(\"div\", _hoisted_7, [\n                _createElementVNode(\"div\", _hoisted_8, [\n                  _createElementVNode(\"div\", _hoisted_9, [\n                    _createElementVNode(\"img\", {\n                      class: \"img-40 img-fluid m-r-20\",\n                      src: $options.getImgUrl(job.image),\n                      alt: \"\"\n                    }, null, 8, _hoisted_10),\n                    _createElementVNode(\"div\", _hoisted_11, [\n                      _createElementVNode(\"p\", _hoisted_12, [\n                        _createVNode(_component_nuxt_link, {\n                          to: `/student/job/detail/${job.id}`\n                        }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(job.title), 1)\n                          ]),\n                          _: 2\n                        }, 1032, [\"to\"]),\n                        (job.date)\n                          ? (_openBlock(), _createElementBlock(\"span\", {\n                              key: 0,\n                              class: \"pull-right\",\n                              textContent: _toDisplayString(job.date)\n                            }, null, 8, _hoisted_13))\n                          : (_openBlock(), _createElementBlock(\"span\", _hoisted_14, \"New\"))\n                      ]),\n                      _createElementVNode(\"p\", null, [\n                        _createTextVNode(_toDisplayString(job.city), 1),\n                        _createElementVNode(\"span\", {\n                          class: \"ms-1\",\n                          innerHTML: $options.stars(job.stars)\n                        }, null, 8, _hoisted_15)\n                      ])\n                    ])\n                  ]),\n                  _createElementVNode(\"p\", {\n                    textContent: _toDisplayString(job.description)\n                  }, null, 8, _hoisted_16)\n                ])\n              ])\n            ], 2))\n          }), 128)),\n          _hoisted_17\n        ])\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848819352,
+      "end": 1700848819355,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848819355,
+      "end": 1700848819355,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819355,
+      "end": 1700848819355,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848819355,
+      "end": 1700848819355,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848819355,
+      "end": 1700848819355,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848819355,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848819356,
+      "end": 1700848819356,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848819356,
+      "end": 1700848819358,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848819358,
+      "end": 1700848819358,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848819358,
+      "end": 1700848819358,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848819358,
+      "end": 1700848819358,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848819358,
+      "end": 1700848819358,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport { mapState } from 'pinia';\nimport jobtab from '@/components/job/list/jobTab.vue';\nimport { useJobStore } from '~~/store/jobs';\nconst _sfc_main = {\n  components: {\n    jobtab\n  },\n  computed: {\n    ...mapState(useJobStore, {\n      jobslist: 'jobs'\n    })\n  },\n\n  methods: {\n    getImgUrl(filename) {\n      return '/images/job-search/' + filename;\n    },\n    stars(count) {\n      var stars = '';\n\n      for (var i = 0; i < 5; i++) {\n        if (count > i) {\n          stars = stars + '<i class=\"fa fa-star font-warning\"></i>';\n        } else {\n          stars = stars + '<i class=\"fa fa-star font-warning-o\"></i>';\n        }\n      }\n\n      return stars;\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, createCommentVNode as _createCommentVNode, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, withCtx as _withCtx, normalizeClass as _normalizeClass, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"col-xl-9 xl-60 text-start box-col-12\" }\nconst _hoisted_4 = {\n  key: 0,\n  class: \"ribbon ribbon-bookmark ribbon-vertical-left ribbon-secondary\"\n}\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"i\", { class: \"icofont icofont-love\" }, null, -1)\nconst _hoisted_6 = [\n  _hoisted_5\n]\nconst _hoisted_7 = { class: \"job-search\" }\nconst _hoisted_8 = { class: \"card-body\" }\nconst _hoisted_9 = { class: \"media\" }\nconst _hoisted_10 = [\"src\"]\nconst _hoisted_11 = { class: \"media-body\" }\nconst _hoisted_12 = { class: \"f-w-600 m-b-0\" }\nconst _hoisted_13 = [\"textContent\"]\nconst _hoisted_14 = {\n  key: 1,\n  class: \"badge badge-primary pull-right\"\n}\nconst _hoisted_15 = [\"innerHTML\"]\nconst _hoisted_16 = [\"textContent\"]\nconst _hoisted_17 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"job-pagination\\\"><nav aria-label=\\\"Page navigation example\\\"><ul class=\\\"pagination pagination-primary\\\"><li class=\\\"page-item disabled\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Previous</a></li><li class=\\\"page-item active\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">1</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">2</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">3</a></li><li class=\\\"page-item\\\"><a class=\\\"page-link\\\" href=\\\"#\\\">Next</a></li></ul></nav></div>\", 1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_jobtab = _resolveComponent(\"jobtab\")\n  const _component_nuxt_link = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Breadcrumbs, {\n      title: \"Job List\",\n      main: \"Job Search\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createVNode(_component_jobtab),\n        _createElementVNode(\"div\", _hoisted_3, [\n          (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.jobslist, (job, index) => {\n            return (_openBlock(), _createElementBlock(\"div\", {\n              class: _normalizeClass([\"card\", { 'ribbon-vertical-left-wrapper': job.priority == 1 }]),\n              key: index\n            }, [\n              (job.priority == 1)\n                ? (_openBlock(), _createElementBlock(\"div\", _hoisted_4, _hoisted_6))\n                : _createCommentVNode(\"\", true),\n              _createElementVNode(\"div\", _hoisted_7, [\n                _createElementVNode(\"div\", _hoisted_8, [\n                  _createElementVNode(\"div\", _hoisted_9, [\n                    _createElementVNode(\"img\", {\n                      class: \"img-40 img-fluid m-r-20\",\n                      src: $options.getImgUrl(job.image),\n                      alt: \"\"\n                    }, null, 8, _hoisted_10),\n                    _createElementVNode(\"div\", _hoisted_11, [\n                      _createElementVNode(\"p\", _hoisted_12, [\n                        _createVNode(_component_nuxt_link, {\n                          to: `/student/job/detail/${job.id}`\n                        }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(job.title), 1)\n                          ]),\n                          _: 2\n                        }, 1032, [\"to\"]),\n                        (job.date)\n                          ? (_openBlock(), _createElementBlock(\"span\", {\n                              key: 0,\n                              class: \"pull-right\",\n                              textContent: _toDisplayString(job.date)\n                            }, null, 8, _hoisted_13))\n                          : (_openBlock(), _createElementBlock(\"span\", _hoisted_14, \"New\"))\n                      ]),\n                      _createElementVNode(\"p\", null, [\n                        _createTextVNode(_toDisplayString(job.city), 1),\n                        _createElementVNode(\"span\", {\n                          class: \"ms-1\",\n                          innerHTML: $options.stars(job.stars)\n                        }, null, 8, _hoisted_15)\n                      ])\n                    ])\n                  ]),\n                  _createElementVNode(\"p\", {\n                    textContent: _toDisplayString(job.description)\n                  }, null, 8, _hoisted_16)\n                ])\n              ])\n            ], 2))\n          }), 128)),\n          _hoisted_17\n        ])\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848819358,
+      "end": 1700848819359,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848819359,
+      "end": 1700848819359,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848819359,
+      "end": 1700848819359,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848819359,
+      "end": 1700848819359,
+      "order": "normal"
+    }
+  ]
+}

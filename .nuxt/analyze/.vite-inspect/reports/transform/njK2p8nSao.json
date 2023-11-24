@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/allCampaignsCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xl-7\">\n        <div class=\"card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">All Campaigns</h5>\n                    <div class=\"card-header-right-icon\">\n                        <DropDown1 />\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0 campaign-table\">\n                <div class=\"recent-table table-responsive currency-table\">\n                    <table class=\"table\">\n                        <thead>\n                            <tr>\n                                <th class=\"f-light\">AD Platform</th>\n                                <th class=\"f-light\">Campaign</th>\n                                <th class=\"f-light\">GEO</th>\n                                <th class=\"f-light\">Profitability</th>\n                                <th class=\"f-light\">Max Participation Avai.</th>\n                                <th class=\"f-light\">Status</th>\n                                <th class=\"f-light\">Create</th>\n                            </tr>\n                        </thead>\n                        <tbody>\n                            <tr v-for=\"campaign in campaigns\" :key=\"campaign\">\n                                <td :class=\"campaign.tdBorderIcon\">\n                                    <div>\n                                        <div class=\"social-circle\">\n                                            <i :class=\"campaign.platformIcon\"></i>\n                                        </div>\n                                    </div>\n                                </td>\n                                <td>{{ campaign.campaign }}</td>\n                                <td>{{ campaign.geo }}</td>\n                                <td>\n                                    <div class=\"change-currency\">\n                                        <vue-feather :class=\"campaign.profitabilityIcon\"\n                                            :type=\"campaign.type\"></vue-feather>{{ campaign.profitability }}\n                                    </div>\n                                </td>\n                                <td>{{ campaign.maxParticipation }}</td>\n                                <td>\n                                    <button :class=\"campaign.statusClass\">{{ campaign.status }}</button>\n                                </td>\n                                <td>\n                                    <button class=\"plus-btn\">+</button>\n                                </td>\n                            </tr>\n                        </tbody>\n                    </table>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport DropDown1 from \"../base/dropDown1.vue\";\nimport {\n    campaigns\n} from \"@/data/dashboard/social.json\"\n\nexport default {\n    components: {\n        DropDown1,\n\n    },\n    data() {\n        return {\n            campaigns: campaigns\n        }\n    },\n}\n</script>\n    ",
+      "start": 1700848825819,
+      "end": 1700848825996,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825996,
+      "end": 1700848825996,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport DropDown1 from \"../base/dropDown1.vue\";\nimport {\n    campaigns\n} from \"@/data/dashboard/social.json\"\n\nconst _sfc_main = {\n    components: {\n        DropDown1,\n\n    },\n    data() {\n        return {\n            campaigns: campaigns\n        }\n    },\n}\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, normalizeClass as _normalizeClass, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xl-7\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"All Campaigns\", -1)\nconst _hoisted_6 = { class: \"card-header-right-icon\" }\nconst _hoisted_7 = { class: \"card-body pt-0 campaign-table\" }\nconst _hoisted_8 = { class: \"recent-table table-responsive currency-table\" }\nconst _hoisted_9 = { class: \"table\" }\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"thead\", null, [\n  /*#__PURE__*/_createElementVNode(\"tr\", null, [\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"AD Platform\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Campaign\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"GEO\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Profitability\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Max Participation Avai.\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Status\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Create\")\n  ])\n], -1)\nconst _hoisted_11 = { class: \"social-circle\" }\nconst _hoisted_12 = { class: \"change-currency\" }\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"td\", null, [\n  /*#__PURE__*/_createElementVNode(\"button\", { class: \"plus-btn\" }, \"+\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_vue_feather = _resolveComponent(\"vue-feather\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createVNode(_component_DropDown1)\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_7, [\n        _createElementVNode(\"div\", _hoisted_8, [\n          _createElementVNode(\"table\", _hoisted_9, [\n            _hoisted_10,\n            _createElementVNode(\"tbody\", null, [\n              (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.campaigns, (campaign) => {\n                return (_openBlock(), _createElementBlock(\"tr\", { key: campaign }, [\n                  _createElementVNode(\"td\", {\n                    class: _normalizeClass(campaign.tdBorderIcon)\n                  }, [\n                    _createElementVNode(\"div\", null, [\n                      _createElementVNode(\"div\", _hoisted_11, [\n                        _createElementVNode(\"i\", {\n                          class: _normalizeClass(campaign.platformIcon)\n                        }, null, 2)\n                      ])\n                    ])\n                  ], 2),\n                  _createElementVNode(\"td\", null, _toDisplayString(campaign.campaign), 1),\n                  _createElementVNode(\"td\", null, _toDisplayString(campaign.geo), 1),\n                  _createElementVNode(\"td\", null, [\n                    _createElementVNode(\"div\", _hoisted_12, [\n                      _createVNode(_component_vue_feather, {\n                        class: _normalizeClass(campaign.profitabilityIcon),\n                        type: campaign.type\n                      }, null, 8, [\"class\", \"type\"]),\n                      _createTextVNode(_toDisplayString(campaign.profitability), 1)\n                    ])\n                  ]),\n                  _createElementVNode(\"td\", null, _toDisplayString(campaign.maxParticipation), 1),\n                  _createElementVNode(\"td\", null, [\n                    _createElementVNode(\"button\", {\n                      class: _normalizeClass(campaign.statusClass)\n                    }, _toDisplayString(campaign.status), 3)\n                  ]),\n                  _hoisted_13\n                ]))\n              }), 128))\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825996,
+      "end": 1700848826000,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848826000,
+      "end": 1700848826000,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826000,
+      "end": 1700848826001,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826001,
+      "end": 1700848826001,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826001,
+      "end": 1700848826001,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826001,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826003,
+      "end": 1700848826003,
+      "order": "normal"
+    }
+  ]
+}

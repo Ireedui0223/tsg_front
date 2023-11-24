@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/modules/scrollbar/scrollbar.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getDocument } from 'ssr-window';\nimport $ from '../../shared/dom.js';\nimport { nextTick } from '../../shared/utils.js';\nimport createElementIfNotDefined from '../../shared/create-element-if-not-defined.js';\nexport default function Scrollbar({\n  swiper,\n  extendParams,\n  on,\n  emit\n}) {\n  const document = getDocument();\n  let isTouched = false;\n  let timeout = null;\n  let dragTimeout = null;\n  let dragStartPos;\n  let dragSize;\n  let trackSize;\n  let divider;\n  extendParams({\n    scrollbar: {\n      el: null,\n      dragSize: 'auto',\n      hide: false,\n      draggable: false,\n      snapOnRelease: true,\n      lockClass: 'swiper-scrollbar-lock',\n      dragClass: 'swiper-scrollbar-drag',\n      scrollbarDisabledClass: 'swiper-scrollbar-disabled',\n      horizontalClass: `swiper-scrollbar-horizontal`,\n      verticalClass: `swiper-scrollbar-vertical`\n    }\n  });\n  swiper.scrollbar = {\n    el: null,\n    dragEl: null,\n    $el: null,\n    $dragEl: null\n  };\n\n  function setTranslate() {\n    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;\n    const {\n      scrollbar,\n      rtlTranslate: rtl,\n      progress\n    } = swiper;\n    const {\n      $dragEl,\n      $el\n    } = scrollbar;\n    const params = swiper.params.scrollbar;\n    let newSize = dragSize;\n    let newPos = (trackSize - dragSize) * progress;\n\n    if (rtl) {\n      newPos = -newPos;\n\n      if (newPos > 0) {\n        newSize = dragSize - newPos;\n        newPos = 0;\n      } else if (-newPos + dragSize > trackSize) {\n        newSize = trackSize + newPos;\n      }\n    } else if (newPos < 0) {\n      newSize = dragSize + newPos;\n      newPos = 0;\n    } else if (newPos + dragSize > trackSize) {\n      newSize = trackSize - newPos;\n    }\n\n    if (swiper.isHorizontal()) {\n      $dragEl.transform(`translate3d(${newPos}px, 0, 0)`);\n      $dragEl[0].style.width = `${newSize}px`;\n    } else {\n      $dragEl.transform(`translate3d(0px, ${newPos}px, 0)`);\n      $dragEl[0].style.height = `${newSize}px`;\n    }\n\n    if (params.hide) {\n      clearTimeout(timeout);\n      $el[0].style.opacity = 1;\n      timeout = setTimeout(() => {\n        $el[0].style.opacity = 0;\n        $el.transition(400);\n      }, 1000);\n    }\n  }\n\n  function setTransition(duration) {\n    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;\n    swiper.scrollbar.$dragEl.transition(duration);\n  }\n\n  function updateSize() {\n    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;\n    const {\n      scrollbar\n    } = swiper;\n    const {\n      $dragEl,\n      $el\n    } = scrollbar;\n    $dragEl[0].style.width = '';\n    $dragEl[0].style.height = '';\n    trackSize = swiper.isHorizontal() ? $el[0].offsetWidth : $el[0].offsetHeight;\n    divider = swiper.size / (swiper.virtualSize + swiper.params.slidesOffsetBefore - (swiper.params.centeredSlides ? swiper.snapGrid[0] : 0));\n\n    if (swiper.params.scrollbar.dragSize === 'auto') {\n      dragSize = trackSize * divider;\n    } else {\n      dragSize = parseInt(swiper.params.scrollbar.dragSize, 10);\n    }\n\n    if (swiper.isHorizontal()) {\n      $dragEl[0].style.width = `${dragSize}px`;\n    } else {\n      $dragEl[0].style.height = `${dragSize}px`;\n    }\n\n    if (divider >= 1) {\n      $el[0].style.display = 'none';\n    } else {\n      $el[0].style.display = '';\n    }\n\n    if (swiper.params.scrollbar.hide) {\n      $el[0].style.opacity = 0;\n    }\n\n    if (swiper.params.watchOverflow && swiper.enabled) {\n      scrollbar.$el[swiper.isLocked ? 'addClass' : 'removeClass'](swiper.params.scrollbar.lockClass);\n    }\n  }\n\n  function getPointerPosition(e) {\n    if (swiper.isHorizontal()) {\n      return e.type === 'touchstart' || e.type === 'touchmove' ? e.targetTouches[0].clientX : e.clientX;\n    }\n\n    return e.type === 'touchstart' || e.type === 'touchmove' ? e.targetTouches[0].clientY : e.clientY;\n  }\n\n  function setDragPosition(e) {\n    const {\n      scrollbar,\n      rtlTranslate: rtl\n    } = swiper;\n    const {\n      $el\n    } = scrollbar;\n    let positionRatio;\n    positionRatio = (getPointerPosition(e) - $el.offset()[swiper.isHorizontal() ? 'left' : 'top'] - (dragStartPos !== null ? dragStartPos : dragSize / 2)) / (trackSize - dragSize);\n    positionRatio = Math.max(Math.min(positionRatio, 1), 0);\n\n    if (rtl) {\n      positionRatio = 1 - positionRatio;\n    }\n\n    const position = swiper.minTranslate() + (swiper.maxTranslate() - swiper.minTranslate()) * positionRatio;\n    swiper.updateProgress(position);\n    swiper.setTranslate(position);\n    swiper.updateActiveIndex();\n    swiper.updateSlidesClasses();\n  }\n\n  function onDragStart(e) {\n    const params = swiper.params.scrollbar;\n    const {\n      scrollbar,\n      $wrapperEl\n    } = swiper;\n    const {\n      $el,\n      $dragEl\n    } = scrollbar;\n    isTouched = true;\n    dragStartPos = e.target === $dragEl[0] || e.target === $dragEl ? getPointerPosition(e) - e.target.getBoundingClientRect()[swiper.isHorizontal() ? 'left' : 'top'] : null;\n    e.preventDefault();\n    e.stopPropagation();\n    $wrapperEl.transition(100);\n    $dragEl.transition(100);\n    setDragPosition(e);\n    clearTimeout(dragTimeout);\n    $el.transition(0);\n\n    if (params.hide) {\n      $el.css('opacity', 1);\n    }\n\n    if (swiper.params.cssMode) {\n      swiper.$wrapperEl.css('scroll-snap-type', 'none');\n    }\n\n    emit('scrollbarDragStart', e);\n  }\n\n  function onDragMove(e) {\n    const {\n      scrollbar,\n      $wrapperEl\n    } = swiper;\n    const {\n      $el,\n      $dragEl\n    } = scrollbar;\n    if (!isTouched) return;\n    if (e.preventDefault) e.preventDefault();else e.returnValue = false;\n    setDragPosition(e);\n    $wrapperEl.transition(0);\n    $el.transition(0);\n    $dragEl.transition(0);\n    emit('scrollbarDragMove', e);\n  }\n\n  function onDragEnd(e) {\n    const params = swiper.params.scrollbar;\n    const {\n      scrollbar,\n      $wrapperEl\n    } = swiper;\n    const {\n      $el\n    } = scrollbar;\n    if (!isTouched) return;\n    isTouched = false;\n\n    if (swiper.params.cssMode) {\n      swiper.$wrapperEl.css('scroll-snap-type', '');\n      $wrapperEl.transition('');\n    }\n\n    if (params.hide) {\n      clearTimeout(dragTimeout);\n      dragTimeout = nextTick(() => {\n        $el.css('opacity', 0);\n        $el.transition(400);\n      }, 1000);\n    }\n\n    emit('scrollbarDragEnd', e);\n\n    if (params.snapOnRelease) {\n      swiper.slideToClosest();\n    }\n  }\n\n  function events(method) {\n    const {\n      scrollbar,\n      touchEventsTouch,\n      touchEventsDesktop,\n      params,\n      support\n    } = swiper;\n    const $el = scrollbar.$el;\n    if (!$el) return;\n    const target = $el[0];\n    const activeListener = support.passiveListener && params.passiveListeners ? {\n      passive: false,\n      capture: false\n    } : false;\n    const passiveListener = support.passiveListener && params.passiveListeners ? {\n      passive: true,\n      capture: false\n    } : false;\n    if (!target) return;\n    const eventMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';\n\n    if (!support.touch) {\n      target[eventMethod](touchEventsDesktop.start, onDragStart, activeListener);\n      document[eventMethod](touchEventsDesktop.move, onDragMove, activeListener);\n      document[eventMethod](touchEventsDesktop.end, onDragEnd, passiveListener);\n    } else {\n      target[eventMethod](touchEventsTouch.start, onDragStart, activeListener);\n      target[eventMethod](touchEventsTouch.move, onDragMove, activeListener);\n      target[eventMethod](touchEventsTouch.end, onDragEnd, passiveListener);\n    }\n  }\n\n  function enableDraggable() {\n    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;\n    events('on');\n  }\n\n  function disableDraggable() {\n    if (!swiper.params.scrollbar.el || !swiper.scrollbar.el) return;\n    events('off');\n  }\n\n  function init() {\n    const {\n      scrollbar,\n      $el: $swiperEl\n    } = swiper;\n    swiper.params.scrollbar = createElementIfNotDefined(swiper, swiper.originalParams.scrollbar, swiper.params.scrollbar, {\n      el: 'swiper-scrollbar'\n    });\n    const params = swiper.params.scrollbar;\n    if (!params.el) return;\n    let $el = $(params.el);\n\n    if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1 && $swiperEl.find(params.el).length === 1) {\n      $el = $swiperEl.find(params.el);\n    }\n\n    $el.addClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);\n    let $dragEl = $el.find(`.${swiper.params.scrollbar.dragClass}`);\n\n    if ($dragEl.length === 0) {\n      $dragEl = $(`<div class=\"${swiper.params.scrollbar.dragClass}\"></div>`);\n      $el.append($dragEl);\n    }\n\n    Object.assign(scrollbar, {\n      $el,\n      el: $el[0],\n      $dragEl,\n      dragEl: $dragEl[0]\n    });\n\n    if (params.draggable) {\n      enableDraggable();\n    }\n\n    if ($el) {\n      $el[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.scrollbar.lockClass);\n    }\n  }\n\n  function destroy() {\n    const params = swiper.params.scrollbar;\n    const $el = swiper.scrollbar.$el;\n\n    if ($el) {\n      $el.removeClass(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);\n    }\n\n    disableDraggable();\n  }\n\n  on('init', () => {\n    if (swiper.params.scrollbar.enabled === false) {\n      // eslint-disable-next-line\n      disable();\n    } else {\n      init();\n      updateSize();\n      setTranslate();\n    }\n  });\n  on('update resize observerUpdate lock unlock', () => {\n    updateSize();\n  });\n  on('setTranslate', () => {\n    setTranslate();\n  });\n  on('setTransition', (_s, duration) => {\n    setTransition(duration);\n  });\n  on('enable disable', () => {\n    const {\n      $el\n    } = swiper.scrollbar;\n\n    if ($el) {\n      $el[swiper.enabled ? 'removeClass' : 'addClass'](swiper.params.scrollbar.lockClass);\n    }\n  });\n  on('destroy', () => {\n    destroy();\n  });\n\n  const enable = () => {\n    swiper.$el.removeClass(swiper.params.scrollbar.scrollbarDisabledClass);\n\n    if (swiper.scrollbar.$el) {\n      swiper.scrollbar.$el.removeClass(swiper.params.scrollbar.scrollbarDisabledClass);\n    }\n\n    init();\n    updateSize();\n    setTranslate();\n  };\n\n  const disable = () => {\n    swiper.$el.addClass(swiper.params.scrollbar.scrollbarDisabledClass);\n\n    if (swiper.scrollbar.$el) {\n      swiper.scrollbar.$el.addClass(swiper.params.scrollbar.scrollbarDisabledClass);\n    }\n\n    destroy();\n  };\n\n  Object.assign(swiper.scrollbar, {\n    enable,\n    disable,\n    updateSize,\n    setTranslate,\n    init,\n    destroy\n  });\n}",
+      "start": 1700848829200,
+      "end": 1700848829339,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829339,
+      "end": 1700848829339,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829339,
+      "end": 1700848829339,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829339,
+      "end": 1700848829339,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829340,
+      "end": 1700848829340,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829340,
+      "end": 1700848829341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829341,
+      "end": 1700848829341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829341,
+      "end": 1700848829341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829341,
+      "end": 1700848829341,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829341,
+      "end": 1700848829341,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829341,
+      "end": 1700848829342,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829342,
+      "end": 1700848829342,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829342,
+      "end": 1700848829342,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829342,
+      "end": 1700848829342,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829342,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829343,
+      "end": 1700848829343,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/base/dropDown1.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"dropdown icon-dropdown\">\n        <button class=\"btn dropdown-toggle\" id=\"incomedropdown\" type=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            <i class=\"icon-more-alt\"></i>\n        </button>\n        <div class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"incomedropdown\">\n            <a class=\"dropdown-item\" href=\"#\">Today</a><a class=\"dropdown-item\" href=\"#\">Tomorrow</a><a class=\"dropdown-item\" href=\"#\">Yesterday </a>\n        </div>\n    </div>\n    </template>\n    ",
+      "start": 1700848826272,
+      "end": 1700848827540,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827540,
+      "end": 1700848827540,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"dropdown icon-dropdown\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<button class=\\\"btn dropdown-toggle\\\" id=\\\"incomedropdown\\\" type=\\\"button\\\" data-bs-toggle=\\\"dropdown\\\" aria-expanded=\\\"false\\\"><i class=\\\"icon-more-alt\\\"></i></button><div class=\\\"dropdown-menu dropdown-menu-end\\\" aria-labelledby=\\\"incomedropdown\\\"><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Today</a><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Tomorrow</a><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Yesterday </a></div>\", 2)\nconst _hoisted_4 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_4))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848827540,
+      "end": 1700848827541,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827542,
+      "end": 1700848827542,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827542,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827543,
+      "end": 1700848827543,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827543,
+      "end": 1700848827544,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/indexSocial.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <Breadcrumbs main=\"Dashboard\" title=\"Social\" />\n    <div class=\"container-fluid\">\n        <div class=\"row\">\n            <div class=\"col-xxl-3 col-ed-4 col-xl-4 box-col-4\">\n                <div class=\"row\">\n                    <welcomeCard />\n                    <mobileApplicationCard />\n                </div>\n            </div>\n            <div class=\"col-xxl-6 col-ed-8 col-xl-8 box-col-8e\">\n                <div class=\"row\">\n                    <facebookCard />\n                    <instagramCard />\n                    <twitterCard />\n                    <instagramSubscribersCard />\n                    <photoLinkClicksCard />\n                </div>\n            </div>\n            <div class=\"col-xl-3 col-ed-none d-xxl-block d-lg-none box-col-none\">\n                <div class=\"row\">\n                    <followerGenderCard />\n                    <facebookCampaignCard />\n                </div>\n            </div>\n            <allCampaignsCard />\n            <viewsCard />\n        </div>\n    </div>\n    </template>\n    \n    <script>\n    import welcomeCard from './welcomeCard.vue';\n    import mobileApplicationCard from './mobileApplicationCard.vue';\n    import facebookCard from './facebookCard.vue';\n    import instagramCard from './instagramCard.vue';\n    import twitterCard from './twitterCard.vue';\n    import instagramSubscribersCard from './instagramSubscribersCard.vue';\n    import photoLinkClicksCard from './photoLinkClicksCard.vue';\n    import followerGenderCard from './followerGenderCard.vue';\n    import facebookCampaignCard from './facebookCampaignCard.vue';\n    import allCampaignsCard from './allCampaignsCard.vue';\n    import viewsCard from './viewsCard.vue';\n    \n    export default {\n        components: {\n            welcomeCard,\n            mobileApplicationCard,\n            facebookCard,\n            instagramCard,\n            twitterCard,\n            instagramSubscribersCard,\n            photoLinkClicksCard,\n            followerGenderCard,\n            facebookCampaignCard,\n            allCampaignsCard,\n            viewsCard\n        }\n    };\n    </script>\n    ",
+      "start": 1700848823222,
+      "end": 1700848824646,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824646,
+      "end": 1700848824646,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824646,
+      "end": 1700848824647,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824647,
+      "end": 1700848824647,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824647,
+      "end": 1700848824647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824647,
+      "end": 1700848824647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824647,
+      "end": 1700848824647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824647,
+      "end": 1700848824647,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\n    import welcomeCard from './welcomeCard.vue';\n    import mobileApplicationCard from './mobileApplicationCard.vue';\n    import facebookCard from './facebookCard.vue';\n    import instagramCard from './instagramCard.vue';\n    import twitterCard from './twitterCard.vue';\n    import instagramSubscribersCard from './instagramSubscribersCard.vue';\n    import photoLinkClicksCard from './photoLinkClicksCard.vue';\n    import followerGenderCard from './followerGenderCard.vue';\n    import facebookCampaignCard from './facebookCampaignCard.vue';\n    import allCampaignsCard from './allCampaignsCard.vue';\n    import viewsCard from './viewsCard.vue';\n    \n    const _sfc_main = {\n        components: {\n            welcomeCard,\n            mobileApplicationCard,\n            facebookCard,\n            instagramCard,\n            twitterCard,\n            instagramSubscribersCard,\n            photoLinkClicksCard,\n            followerGenderCard,\n            facebookCampaignCard,\n            allCampaignsCard,\n            viewsCard\n        }\n    };\n    \nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"col-xxl-3 col-ed-4 col-xl-4 box-col-4\" }\nconst _hoisted_4 = { class: \"row\" }\nconst _hoisted_5 = { class: \"col-xxl-6 col-ed-8 col-xl-8 box-col-8e\" }\nconst _hoisted_6 = { class: \"row\" }\nconst _hoisted_7 = { class: \"col-xl-3 col-ed-none d-xxl-block d-lg-none box-col-none\" }\nconst _hoisted_8 = { class: \"row\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_welcomeCard = _resolveComponent(\"welcomeCard\")\n  const _component_mobileApplicationCard = _resolveComponent(\"mobileApplicationCard\")\n  const _component_facebookCard = _resolveComponent(\"facebookCard\")\n  const _component_instagramCard = _resolveComponent(\"instagramCard\")\n  const _component_twitterCard = _resolveComponent(\"twitterCard\")\n  const _component_instagramSubscribersCard = _resolveComponent(\"instagramSubscribersCard\")\n  const _component_photoLinkClicksCard = _resolveComponent(\"photoLinkClicksCard\")\n  const _component_followerGenderCard = _resolveComponent(\"followerGenderCard\")\n  const _component_facebookCampaignCard = _resolveComponent(\"facebookCampaignCard\")\n  const _component_allCampaignsCard = _resolveComponent(\"allCampaignsCard\")\n  const _component_viewsCard = _resolveComponent(\"viewsCard\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Breadcrumbs, {\n      main: \"Dashboard\",\n      title: \"Social\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createElementVNode(\"div\", _hoisted_4, [\n            _createVNode(_component_welcomeCard),\n            _createVNode(_component_mobileApplicationCard)\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createVNode(_component_facebookCard),\n            _createVNode(_component_instagramCard),\n            _createVNode(_component_twitterCard),\n            _createVNode(_component_instagramSubscribersCard),\n            _createVNode(_component_photoLinkClicksCard)\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_7, [\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createVNode(_component_followerGenderCard),\n            _createVNode(_component_facebookCampaignCard)\n          ])\n        ]),\n        _createVNode(_component_allCampaignsCard),\n        _createVNode(_component_viewsCard)\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824647,
+      "end": 1700848824649,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824649,
+      "end": 1700848824649,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824650,
+      "end": 1700848824650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824650,
+      "end": 1700848824652,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824652,
+      "end": 1700848824652,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824652,
+      "end": 1700848824652,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824652,
+      "end": 1700848824652,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824652,
+      "end": 1700848824652,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824652,
+      "end": 1700848824658,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824658,
+      "end": 1700848824658,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824658,
+      "end": 1700848824659,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824659,
+      "end": 1700848824659,
+      "order": "normal"
+    }
+  ]
+}

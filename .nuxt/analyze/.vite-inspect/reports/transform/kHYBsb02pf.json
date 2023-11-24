@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/recetOrderCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-5 col-xl-4 box-col-12\">\n        <div class=\"card recent-order\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">Recent Orders</h5>\n                    <div class=\"card-header-right-icon\">\n                        <DropDown1 />\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"recent-sliders\">\n                    <div class=\"nav nav-pills\" id=\"v-pills-tab\" role=\"tablist\">\n                        <button class=\"active frame-box\" id=\"v-pills-shirt-tab\" data-bs-toggle=\"pill\"\n                            data-bs-target=\"#v-pills-shirt\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-shirt\"\n                            aria-selected=\"true\">\n                            <span class=\"frame-image\"><img src=\"/images/dashboard-2/order/1.png\"\n                                    alt=\"vector T-shirt\" /></span>\n                        </button>\n                        <button class=\"frame-box\" id=\"v-pills-television-tab\" data-bs-toggle=\"pill\"\n                            data-bs-target=\"#v-pills-television\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-television\"\n                            aria-selected=\"false\">\n                            <span class=\"frame-image\"><img src=\"/images/dashboard-2/order/2.png\"\n                                    alt=\"vector television\" /></span>\n                        </button>\n                        <button class=\"frame-box\" id=\"v-pills-headphone-tab\" data-bs-toggle=\"pill\"\n                            data-bs-target=\"#v-pills-headphone\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-headphone\"\n                            aria-selected=\"false\">\n                            <span class=\"frame-image\"><img src=\"/images/dashboard-2/order/3.png\"\n                                    alt=\"vector headphone\" /></span>\n                        </button>\n                        <button class=\"frame-box\" id=\"v-pills-chair-tab\" data-bs-toggle=\"pill\"\n                            data-bs-target=\"#v-pills-chair\" type=\"button\" role=\"tab\" aria-controls=\"v-pills-chair\"\n                            aria-selected=\"false\">\n                            <span class=\"frame-image\"><img src=\"/images/dashboard-2/order/4.png\"\n                                    alt=\"vector chair\" /></span>\n                        </button>\n                        <button class=\"frame-box\" id=\"v-pills-lamp-tab\" data-bs-toggle=\"pill\" data-bs-target=\"#v-pills-lamp\"\n                            type=\"button\" role=\"tab\" aria-controls=\"v-pills-lamp\" aria-selected=\"false\">\n                            <span class=\"frame-image\"><img src=\"/images/dashboard-2/order/5.png\" alt=\"vector lamp\" /></span>\n                        </button>\n                    </div>\n                    <div class=\"tab-content\" id=\"v-pills-tabContent\">\n                        <div class=\"tab-pane fade show active\" id=\"v-pills-shirt\" role=\"tabpanel\"\n                            aria-labelledby=\"v-pills-shirt-tab\">\n                            <ShirtTable />\n                        </div>\n                        <div class=\"tab-pane fade\" id=\"v-pills-television\" role=\"tabpanel\"\n                            aria-labelledby=\"v-pills-television-tab\">\n                            <TelevisionTable />\n                        </div>\n                        <div class=\"tab-pane fade\" id=\"v-pills-headphone\" role=\"tabpanel\"\n                            aria-labelledby=\"v-pills-headphone-tab\">\n                            <HeadphoneTable />\n                        </div>\n                        <div class=\"tab-pane fade\" id=\"v-pills-chair\" role=\"tabpanel\" aria-labelledby=\"v-pills-chair-tab\">\n                            <ChairTable />\n                        </div>\n                        <div class=\"tab-pane fade\" id=\"v-pills-lamp\" role=\"tabpanel\" aria-labelledby=\"v-pills-lamp-tab\">\n                            <LampTable />\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport DropDown1 from \"../base/dropDown1.vue\";\nimport ShirtTable from \"./recentOrderComponents/shirtTable.vue\"\nimport TelevisionTable from \"./recentOrderComponents/televisionTable.vue\";\nimport HeadphoneTable from \"./recentOrderComponents/headphoneTable.vue\";\nimport ChairTable from \"./recentOrderComponents/chairTable.vue\";\nimport LampTable from \"./recentOrderComponents/lampTable.vue\";\nexport default {\n    components: {\n        DropDown1,\n        ShirtTable,\n        TelevisionTable,\n        HeadphoneTable,\n        ChairTable,\n        LampTable\n    },\n};\n</script>\n    ",
+      "start": 1700848825237,
+      "end": 1700848825697,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825697,
+      "end": 1700848825697,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825698,
+      "end": 1700848825698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport DropDown1 from \"../base/dropDown1.vue\";\nimport ShirtTable from \"./recentOrderComponents/shirtTable.vue\"\nimport TelevisionTable from \"./recentOrderComponents/televisionTable.vue\";\nimport HeadphoneTable from \"./recentOrderComponents/headphoneTable.vue\";\nimport ChairTable from \"./recentOrderComponents/chairTable.vue\";\nimport LampTable from \"./recentOrderComponents/lampTable.vue\";\nconst _sfc_main = {\n    components: {\n        DropDown1,\n        ShirtTable,\n        TelevisionTable,\n        HeadphoneTable,\n        ChairTable,\n        LampTable\n    },\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-2/order/1.png'\nimport _imports_1 from '/images/dashboard-2/order/2.png'\nimport _imports_2 from '/images/dashboard-2/order/3.png'\nimport _imports_3 from '/images/dashboard-2/order/4.png'\nimport _imports_4 from '/images/dashboard-2/order/5.png'\n\n\nconst _hoisted_1 = { class: \"col-xxl-5 col-xl-4 box-col-12\" }\nconst _hoisted_2 = { class: \"card recent-order\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"Recent Orders\", -1)\nconst _hoisted_6 = { class: \"card-header-right-icon\" }\nconst _hoisted_7 = { class: \"card-body pt-0\" }\nconst _hoisted_8 = { class: \"recent-sliders\" }\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"div\", {\n  class: \"nav nav-pills\",\n  id: \"v-pills-tab\",\n  role: \"tablist\"\n}, [\n  /*#__PURE__*/_createElementVNode(\"button\", {\n    class: \"active frame-box\",\n    id: \"v-pills-shirt-tab\",\n    \"data-bs-toggle\": \"pill\",\n    \"data-bs-target\": \"#v-pills-shirt\",\n    type: \"button\",\n    role: \"tab\",\n    \"aria-controls\": \"v-pills-shirt\",\n    \"aria-selected\": \"true\"\n  }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"frame-image\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        src: _imports_0,\n        alt: \"vector T-shirt\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"button\", {\n    class: \"frame-box\",\n    id: \"v-pills-television-tab\",\n    \"data-bs-toggle\": \"pill\",\n    \"data-bs-target\": \"#v-pills-television\",\n    type: \"button\",\n    role: \"tab\",\n    \"aria-controls\": \"v-pills-television\",\n    \"aria-selected\": \"false\"\n  }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"frame-image\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        src: _imports_1,\n        alt: \"vector television\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"button\", {\n    class: \"frame-box\",\n    id: \"v-pills-headphone-tab\",\n    \"data-bs-toggle\": \"pill\",\n    \"data-bs-target\": \"#v-pills-headphone\",\n    type: \"button\",\n    role: \"tab\",\n    \"aria-controls\": \"v-pills-headphone\",\n    \"aria-selected\": \"false\"\n  }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"frame-image\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        src: _imports_2,\n        alt: \"vector headphone\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"button\", {\n    class: \"frame-box\",\n    id: \"v-pills-chair-tab\",\n    \"data-bs-toggle\": \"pill\",\n    \"data-bs-target\": \"#v-pills-chair\",\n    type: \"button\",\n    role: \"tab\",\n    \"aria-controls\": \"v-pills-chair\",\n    \"aria-selected\": \"false\"\n  }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"frame-image\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        src: _imports_3,\n        alt: \"vector chair\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"button\", {\n    class: \"frame-box\",\n    id: \"v-pills-lamp-tab\",\n    \"data-bs-toggle\": \"pill\",\n    \"data-bs-target\": \"#v-pills-lamp\",\n    type: \"button\",\n    role: \"tab\",\n    \"aria-controls\": \"v-pills-lamp\",\n    \"aria-selected\": \"false\"\n  }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"frame-image\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        src: _imports_4,\n        alt: \"vector lamp\"\n      })\n    ])\n  ])\n], -1)\nconst _hoisted_10 = {\n  class: \"tab-content\",\n  id: \"v-pills-tabContent\"\n}\nconst _hoisted_11 = {\n  class: \"tab-pane fade show active\",\n  id: \"v-pills-shirt\",\n  role: \"tabpanel\",\n  \"aria-labelledby\": \"v-pills-shirt-tab\"\n}\nconst _hoisted_12 = {\n  class: \"tab-pane fade\",\n  id: \"v-pills-television\",\n  role: \"tabpanel\",\n  \"aria-labelledby\": \"v-pills-television-tab\"\n}\nconst _hoisted_13 = {\n  class: \"tab-pane fade\",\n  id: \"v-pills-headphone\",\n  role: \"tabpanel\",\n  \"aria-labelledby\": \"v-pills-headphone-tab\"\n}\nconst _hoisted_14 = {\n  class: \"tab-pane fade\",\n  id: \"v-pills-chair\",\n  role: \"tabpanel\",\n  \"aria-labelledby\": \"v-pills-chair-tab\"\n}\nconst _hoisted_15 = {\n  class: \"tab-pane fade\",\n  id: \"v-pills-lamp\",\n  role: \"tabpanel\",\n  \"aria-labelledby\": \"v-pills-lamp-tab\"\n}\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_ShirtTable = _resolveComponent(\"ShirtTable\")\n  const _component_TelevisionTable = _resolveComponent(\"TelevisionTable\")\n  const _component_HeadphoneTable = _resolveComponent(\"HeadphoneTable\")\n  const _component_ChairTable = _resolveComponent(\"ChairTable\")\n  const _component_LampTable = _resolveComponent(\"LampTable\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createVNode(_component_DropDown1)\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_7, [\n        _createElementVNode(\"div\", _hoisted_8, [\n          _hoisted_9,\n          _createElementVNode(\"div\", _hoisted_10, [\n            _createElementVNode(\"div\", _hoisted_11, [\n              _createVNode(_component_ShirtTable)\n            ]),\n            _createElementVNode(\"div\", _hoisted_12, [\n              _createVNode(_component_TelevisionTable)\n            ]),\n            _createElementVNode(\"div\", _hoisted_13, [\n              _createVNode(_component_HeadphoneTable)\n            ]),\n            _createElementVNode(\"div\", _hoisted_14, [\n              _createVNode(_component_ChairTable)\n            ]),\n            _createElementVNode(\"div\", _hoisted_15, [\n              _createVNode(_component_LampTable)\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825698,
+      "end": 1700848825702,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825702,
+      "end": 1700848825702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825702,
+      "end": 1700848825704,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825705,
+      "end": 1700848825705,
+      "order": "normal"
+    }
+  ]
+}

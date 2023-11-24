@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/data/dashboard/ecommerce.json",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "{\n  \"allDetails\": [\n    {\n      \"cardClass\": \"card-body primary\",\n      \"title\": \"New Orders\",\n      \"dataInNumber\": \"2,908\",\n      \"spanClass\": \"font-primary f-12 f-w-500\",\n      \"iconClass\": \"icon-arrow-up\",\n      \"status\": \"+20%\",\n      \"svgIcon\": \"new-order\"\n    },\n    {\n      \"cardClass\": \"card-body warning\",\n      \"title\": \"New Customers\",\n      \"dataInNumber\": \"2,435\",\n      \"spanClass\": \"font-warning f-12 f-w-500\",\n      \"iconClass\": \"icon-arrow-up\",\n      \"status\": \"+50%\",\n      \"svgIcon\": \"customers\"\n    },\n    {\n      \"cardClass\": \"card-body secondary\",\n      \"title\": \"Average Sale\",\n      \"dataInNumber\": \"$389k\",\n      \"spanClass\": \"font-secondary f-12 f-w-500\",\n      \"iconClass\": \"icon-arrow-down\",\n      \"status\": \"-10%\",\n      \"svgIcon\": \"sale\"\n    },\n    {\n      \"cardClass\": \"card-body success\",\n      \"title\": \"Gross Profit\",\n      \"dataInNumber\": \"$3,908\",\n      \"spanClass\": \"font-primary f-12 f-w-500\",\n      \"iconClass\": \"icon-arrow-up\",\n      \"status\": \"+80%\",\n      \"svgIcon\": \"profit\"\n    }\n  ],\n\n  \"valuableCustomer\": [\n    {\n      \"name\": \"Jane Cooper\",\n      \"email\": \"alma.lawson@gmail.com\",\n      \"image\": \"user/1.jpg\"\n    },\n    {\n      \"name\": \"Cameron Willia\",\n      \"email\": \"tim.jennings@gmail.com\",\n      \"image\": \"user/2.jpg\"\n    },\n    {\n      \"name\": \"Floyd Miles\",\n      \"email\": \"kenzi.lawson@gmail.com\",\n      \"image\": \"user/6.jpg\"\n    },\n    {\n      \"name\": \"Dianne Russell\",\n      \"email\": \"curtis.weaver@gmail.com\",\n      \"image\": \"user/5.jpg\"\n    },\n    {\n      \"name\": \"Guy Hawkins\",\n      \"email\": \"curtis.weaver@gmail.com\",\n      \"image\": \"user/3.jpg\"\n    }\n  ],\n\n  \"orderOverview\": [\n    {\n      \"svgIcon\": \"orders\",\n      \"title\": \"Orders\",\n      \"overviewInNumber\": \"10,098\"\n    },\n    {\n      \"svgIcon\": \"expense\",\n      \"title\": \"Earning\",\n      \"overviewInNumber\": \"$12,678\"\n    },\n    {\n      \"svgIcon\": \"doller-return\",\n      \"title\": \"Refunds\",\n      \"overviewInNumber\": \"3,001\"\n    }\n  ],\n\n  \"topcategories\": [\n    {\n      \"image\": \"category/1.png\",\n      \"name\": \"Food & Drinks\",\n      \"orders\": \"12,200\"\n    },\n    {\n      \"image\": \"category/2.png\",\n      \"name\": \"Furniture\",\n      \"orders\": \"7,510\"\n    },\n    {\n      \"image\": \"category/3.png\",\n      \"name\": \"Grocery\",\n      \"orders\": \"15,475\"\n    },\n    {\n      \"image\": \"category/4.png\",\n      \"name\": \"Electronics\",\n      \"orders\": \"27,840\"\n    },\n    {\n      \"image\": \"category/5.png\",\n      \"name\": \"Toys & Games\",\n      \"orders\": \"8,788\"\n    },\n    {\n      \"image\": \"category/6.png\",\n      \"name\": \"Desktop\",\n      \"orders\": \"10,673\"\n    },\n    {\n      \"image\": \"category/7.png\",\n      \"name\": \"Mobile & Accessories\",\n      \"orders\": \"5,129\"\n    }\n  ],\n\n  \"activities\": [\n    {\n      \"class\": \"activity-dot-warning\",\n      \"date\": \"2nd Sep, Today\",\n      \"title\": \"Anamika Comments this Poducts\",\n      \"decription\": \"I don't like things to be staged or fussy.\"\n    },\n    {\n      \"class\": \"activity-dot-secondary\",\n      \"date\": \"3nd Sep, 2022\",\n      \"title\": \"  Jacksion Purchase \",\n      \"decription\": \"Fashion fades, only style remain the same.\"\n    },\n    {\n      \"class\": \"activity-dot-success\",\n      \"date\": \"2nd Sep, Today\",\n      \"title\": \" Anamika Comments this Poducts\",\n      \"decription\": \"I like to be real. I don't like things to staged.\"\n    }\n  ],\n\n  \"products\": [\n    {\n      \"image\": \"product/1.png\"\n    },\n    {\n      \"image\": \"product/2.png\"\n    },\n    {\n      \"image\": \"product/3.png\"\n    }\n  ]\n}\n",
+      "start": 1700848826267,
+      "end": 1700848827545,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827545,
+      "end": 1700848827545,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827545,
+      "end": 1700848827545,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827545,
+      "end": 1700848827545,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827545,
+      "end": 1700848827545,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827545,
+      "end": 1700848827545,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "result": "export const allDetails = [\n\t{\n\t\tcardClass: \"card-body primary\",\n\t\ttitle: \"New Orders\",\n\t\tdataInNumber: \"2,908\",\n\t\tspanClass: \"font-primary f-12 f-w-500\",\n\t\ticonClass: \"icon-arrow-up\",\n\t\tstatus: \"+20%\",\n\t\tsvgIcon: \"new-order\"\n\t},\n\t{\n\t\tcardClass: \"card-body warning\",\n\t\ttitle: \"New Customers\",\n\t\tdataInNumber: \"2,435\",\n\t\tspanClass: \"font-warning f-12 f-w-500\",\n\t\ticonClass: \"icon-arrow-up\",\n\t\tstatus: \"+50%\",\n\t\tsvgIcon: \"customers\"\n\t},\n\t{\n\t\tcardClass: \"card-body secondary\",\n\t\ttitle: \"Average Sale\",\n\t\tdataInNumber: \"$389k\",\n\t\tspanClass: \"font-secondary f-12 f-w-500\",\n\t\ticonClass: \"icon-arrow-down\",\n\t\tstatus: \"-10%\",\n\t\tsvgIcon: \"sale\"\n\t},\n\t{\n\t\tcardClass: \"card-body success\",\n\t\ttitle: \"Gross Profit\",\n\t\tdataInNumber: \"$3,908\",\n\t\tspanClass: \"font-primary f-12 f-w-500\",\n\t\ticonClass: \"icon-arrow-up\",\n\t\tstatus: \"+80%\",\n\t\tsvgIcon: \"profit\"\n\t}\n];\nexport const valuableCustomer = [\n\t{\n\t\tname: \"Jane Cooper\",\n\t\temail: \"alma.lawson@gmail.com\",\n\t\timage: \"user/1.jpg\"\n\t},\n\t{\n\t\tname: \"Cameron Willia\",\n\t\temail: \"tim.jennings@gmail.com\",\n\t\timage: \"user/2.jpg\"\n\t},\n\t{\n\t\tname: \"Floyd Miles\",\n\t\temail: \"kenzi.lawson@gmail.com\",\n\t\timage: \"user/6.jpg\"\n\t},\n\t{\n\t\tname: \"Dianne Russell\",\n\t\temail: \"curtis.weaver@gmail.com\",\n\t\timage: \"user/5.jpg\"\n\t},\n\t{\n\t\tname: \"Guy Hawkins\",\n\t\temail: \"curtis.weaver@gmail.com\",\n\t\timage: \"user/3.jpg\"\n\t}\n];\nexport const orderOverview = [\n\t{\n\t\tsvgIcon: \"orders\",\n\t\ttitle: \"Orders\",\n\t\toverviewInNumber: \"10,098\"\n\t},\n\t{\n\t\tsvgIcon: \"expense\",\n\t\ttitle: \"Earning\",\n\t\toverviewInNumber: \"$12,678\"\n\t},\n\t{\n\t\tsvgIcon: \"doller-return\",\n\t\ttitle: \"Refunds\",\n\t\toverviewInNumber: \"3,001\"\n\t}\n];\nexport const topcategories = [\n\t{\n\t\timage: \"category/1.png\",\n\t\tname: \"Food & Drinks\",\n\t\torders: \"12,200\"\n\t},\n\t{\n\t\timage: \"category/2.png\",\n\t\tname: \"Furniture\",\n\t\torders: \"7,510\"\n\t},\n\t{\n\t\timage: \"category/3.png\",\n\t\tname: \"Grocery\",\n\t\torders: \"15,475\"\n\t},\n\t{\n\t\timage: \"category/4.png\",\n\t\tname: \"Electronics\",\n\t\torders: \"27,840\"\n\t},\n\t{\n\t\timage: \"category/5.png\",\n\t\tname: \"Toys & Games\",\n\t\torders: \"8,788\"\n\t},\n\t{\n\t\timage: \"category/6.png\",\n\t\tname: \"Desktop\",\n\t\torders: \"10,673\"\n\t},\n\t{\n\t\timage: \"category/7.png\",\n\t\tname: \"Mobile & Accessories\",\n\t\torders: \"5,129\"\n\t}\n];\nexport const activities = [\n\t{\n\t\t\"class\": \"activity-dot-warning\",\n\t\tdate: \"2nd Sep, Today\",\n\t\ttitle: \"Anamika Comments this Poducts\",\n\t\tdecription: \"I don't like things to be staged or fussy.\"\n\t},\n\t{\n\t\t\"class\": \"activity-dot-secondary\",\n\t\tdate: \"3nd Sep, 2022\",\n\t\ttitle: \"  Jacksion Purchase \",\n\t\tdecription: \"Fashion fades, only style remain the same.\"\n\t},\n\t{\n\t\t\"class\": \"activity-dot-success\",\n\t\tdate: \"2nd Sep, Today\",\n\t\ttitle: \" Anamika Comments this Poducts\",\n\t\tdecription: \"I like to be real. I don't like things to staged.\"\n\t}\n];\nexport const products = [\n\t{\n\t\timage: \"product/1.png\"\n\t},\n\t{\n\t\timage: \"product/2.png\"\n\t},\n\t{\n\t\timage: \"product/3.png\"\n\t}\n];\nexport default {\n\tallDetails: allDetails,\n\tvaluableCustomer: valuableCustomer,\n\torderOverview: orderOverview,\n\ttopcategories: topcategories,\n\tactivities: activities,\n\tproducts: products\n};\n",
+      "start": 1700848827545,
+      "end": 1700848827546,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827546,
+      "end": 1700848827546,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827547,
+      "end": 1700848827547,
+      "order": "normal"
+    }
+  ]
+}

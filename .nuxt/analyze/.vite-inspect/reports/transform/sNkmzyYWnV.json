@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/apply/personal/personalPage.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <h6 class=\" m-b-0\">Personal Details</h6>\n  <form class=\"form theme-form\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label for=\"exampleFormControlInput1\"\n            >First Name:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlInput1\"\n            type=\"text\"\n            placeholder=\"Enter first name\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label for=\"exampleFormControlInput2\"\n            >Last Name:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlInput2\"\n            type=\"text\"\n            placeholder=\"Enter last name\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label for=\"exampleFormControlInput3\"\n            >Email:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlInput3\"\n            type=\"email\"\n            placeholder=\"Enter email\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label for=\"exampleFormControlpassword\"\n            >Password:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlpassword\"\n            type=\"password\"\n            placeholder=\"Enter password\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label for=\"exampleFormControlpassword1\"\n            >Repeat Password:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlpassword1\"\n            type=\"password\"\n            placeholder=\"Repeat password\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row birthday-select\">\n      <birthdayselect />\n    </div>\n  </form>\n</template>\n<script>\nimport birthdayselect from './birthdaySelect.vue';\nexport default {\n  components: {\n    birthdayselect\n  }\n};\n</script>\n",
+      "start": 1700848823252,
+      "end": 1700848824687,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824687,
+      "end": 1700848824687,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824687,
+      "end": 1700848824687,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824687,
+      "end": 1700848824687,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824688,
+      "end": 1700848824688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824688,
+      "end": 1700848824688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824688,
+      "end": 1700848824688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824688,
+      "end": 1700848824688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport birthdayselect from './birthdaySelect.vue';\nconst _sfc_main = {\n  components: {\n    birthdayselect\n  }\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createStaticVNode as _createStaticVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createElementVNode(\"h6\", { class: \"m-b-0\" }, \"Personal Details\", -1)\nconst _hoisted_2 = { class: \"form theme-form\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label for=\\\"exampleFormControlInput1\\\">First Name:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput1\\\" type=\\\"text\\\" placeholder=\\\"Enter first name\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label for=\\\"exampleFormControlInput2\\\">Last Name:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput2\\\" type=\\\"text\\\" placeholder=\\\"Enter last name\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label for=\\\"exampleFormControlInput3\\\">Email:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput3\\\" type=\\\"email\\\" placeholder=\\\"Enter email\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label for=\\\"exampleFormControlpassword\\\">Password:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlpassword\\\" type=\\\"password\\\" placeholder=\\\"Enter password\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label for=\\\"exampleFormControlpassword1\\\">Repeat Password:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlpassword1\\\" type=\\\"password\\\" placeholder=\\\"Repeat password\\\"></div></div></div>\", 5)\nconst _hoisted_8 = { class: \"row birthday-select\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_birthdayselect = _resolveComponent(\"birthdayselect\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _hoisted_1,\n    _createElementVNode(\"form\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createVNode(_component_birthdayselect)\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824688,
+      "end": 1700848824691,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824691,
+      "end": 1700848824691,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824692,
+      "end": 1700848824692,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824693,
+      "end": 1700848824693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824693,
+      "end": 1700848824694,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824694,
+      "end": 1700848824694,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824694,
+      "end": 1700848824694,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824694,
+      "end": 1700848824694,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824694,
+      "end": 1700848824694,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824694,
+      "end": 1700848824695,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824695,
+      "end": 1700848824695,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824695,
+      "end": 1700848824695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824695,
+      "end": 1700848824695,
+      "order": "normal"
+    }
+  ]
+}

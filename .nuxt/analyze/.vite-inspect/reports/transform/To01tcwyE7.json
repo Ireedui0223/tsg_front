@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/vue3-simple-typeahead/dist/vue3-simple-typeahead.esm.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineComponent, pushScopeId, popScopeId, openBlock, createElementBlock, withDirectives, createElementVNode, mergeProps, withKeys, withModifiers, vModelText, renderSlot, createCommentVNode, Fragment, renderList, normalizeClass } from 'vue';\n\nvar script = /*#__PURE__*/defineComponent({\n  name: 'Vue3SimpleTypeahead',\n  emits: ['onInput', 'onFocus', 'onBlur', 'selectItem'],\n  inheritAttrs: false,\n  props: {\n    id: {\n      type: String\n    },\n    placeholder: {\n      type: String,\n      default: ''\n    },\n    items: {\n      type: Array,\n      required: true\n    },\n    defaultItem: {\n      default: null\n    },\n    itemProjection: {\n      type: Function,\n\n      default(item) {\n        return item;\n      }\n\n    },\n    minInputLength: {\n      type: Number,\n      default: 2,\n      validator: prop => {\n        return prop >= 0;\n      }\n    },\n    minItemLength: {\n      type: Number,\n      default: 0,\n      validator: prop => {\n        return prop >= 0;\n      }\n    },\n    selectOnTab: {\n      type: Boolean,\n      default: true\n    }\n  },\n\n  mounted() {\n    if (this.defaultItem !== undefined && this.defaultItem !== null) {\n      this.selectItem(this.defaultItem);\n    }\n  },\n\n  data() {\n    return {\n      inputId: this.id || `simple_typeahead_${(Math.random() * 1000).toFixed()}`,\n      input: '',\n      isInputFocused: false,\n      currentSelectionIndex: 0\n    };\n  },\n\n  methods: {\n    onInput() {\n      if (this.isListVisible && this.currentSelectionIndex >= this.filteredItems.length) {\n        this.currentSelectionIndex = (this.filteredItems.length || 1) - 1;\n      }\n\n      this.$emit('onInput', {\n        input: this.input,\n        items: this.filteredItems\n      });\n    },\n\n    onFocus() {\n      this.isInputFocused = true;\n      this.$emit('onFocus', {\n        input: this.input,\n        items: this.filteredItems\n      });\n    },\n\n    onBlur() {\n      this.isInputFocused = false;\n      this.$emit('onBlur', {\n        input: this.input,\n        items: this.filteredItems\n      });\n    },\n\n    onArrowDown($event) {\n      if (this.isListVisible && this.currentSelectionIndex < this.filteredItems.length - 1) {\n        this.currentSelectionIndex++;\n      }\n\n      this.scrollSelectionIntoView();\n    },\n\n    onArrowUp($event) {\n      if (this.isListVisible && this.currentSelectionIndex > 0) {\n        this.currentSelectionIndex--;\n      }\n\n      this.scrollSelectionIntoView();\n    },\n\n    scrollSelectionIntoView() {\n      setTimeout(() => {\n        const list_node = document.querySelector(`#${this.wrapperId} .simple-typeahead-list`);\n        const active_node = document.querySelector(`#${this.wrapperId} .simple-typeahead-list-item.simple-typeahead-list-item-active`);\n\n        if (!(active_node.offsetTop >= list_node.scrollTop && active_node.offsetTop + active_node.offsetHeight < list_node.scrollTop + list_node.offsetHeight)) {\n          let scroll_to = 0;\n\n          if (active_node.offsetTop > list_node.scrollTop) {\n            scroll_to = active_node.offsetTop + active_node.offsetHeight - list_node.offsetHeight;\n          } else if (active_node.offsetTop < list_node.scrollTop) {\n            scroll_to = active_node.offsetTop;\n          }\n\n          list_node.scrollTo(0, scroll_to);\n        }\n      });\n    },\n\n    selectCurrentSelection() {\n      if (this.currentSelection) {\n        this.selectItem(this.currentSelection);\n      }\n    },\n\n    selectCurrentSelectionTab() {\n      if (this.selectOnTab) {\n        this.selectCurrentSelection();\n      } else {\n        this.$refs.inputRef.blur();\n      }\n    },\n\n    selectItem(item) {\n      this.input = this.itemProjection(item);\n      this.currentSelectionIndex = 0;\n      this.$refs.inputRef.blur();\n      this.$emit('selectItem', item);\n    },\n\n    escapeRegExp(string) {\n      return string.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n    },\n\n    boldMatchText(text) {\n      const regexp = new RegExp(`(${this.escapeRegExp(this.input)})`, 'ig');\n      return text.replace(regexp, '<strong>$1</strong>');\n    },\n\n    clearInput() {\n      this.input = '';\n    },\n\n    getInput() {\n      return this.$refs.inputRef;\n    },\n\n    focusInput() {\n      this.$refs.inputRef.focus();\n      this.onFocus();\n    },\n\n    blurInput() {\n      this.$refs.inputRef.blur();\n      this.onBlur();\n    }\n\n  },\n  computed: {\n    wrapperId() {\n      return `${this.inputId}_wrapper`;\n    },\n\n    filteredItems() {\n      const regexp = new RegExp(this.escapeRegExp(this.input), 'i');\n      return this.items.filter(item => this.itemProjection(item).match(regexp));\n    },\n\n    isListVisible() {\n      return this.isInputFocused && this.input.length >= this.minInputLength && this.filteredItems.length > this.minItemLength;\n    },\n\n    currentSelection() {\n      return this.isListVisible && this.currentSelectionIndex < this.filteredItems.length ? this.filteredItems[this.currentSelectionIndex] : undefined;\n    }\n\n  }\n});\n\npushScopeId(\"data-v-f81ca714\");\n\nconst _hoisted_1 = [\"id\"];\nconst _hoisted_2 = [\"id\", \"placeholder\"];\nconst _hoisted_3 = {\n  key: 0,\n  class: \"simple-typeahead-list\"\n};\nconst _hoisted_4 = {\n  key: 0,\n  class: \"simple-typeahead-list-header\"\n};\nconst _hoisted_5 = [\"onClick\", \"onMouseenter\"];\nconst _hoisted_6 = [\"data-text\"];\nconst _hoisted_7 = [\"data-text\", \"innerHTML\"];\nconst _hoisted_8 = {\n  key: 1,\n  class: \"simple-typeahead-list-footer\"\n};\n\npopScopeId();\n\nfunction render(_ctx, _cache, $props, $setup, $data, $options) {\n  return openBlock(), createElementBlock(\"div\", {\n    id: _ctx.wrapperId,\n    class: \"simple-typeahead\"\n  }, [withDirectives(createElementVNode(\"input\", mergeProps({\n    ref: \"inputRef\",\n    id: _ctx.inputId,\n    class: \"simple-typeahead-input\",\n    type: \"text\",\n    placeholder: _ctx.placeholder,\n    \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => _ctx.input = $event),\n    onInput: _cache[1] || (_cache[1] = (...args) => _ctx.onInput && _ctx.onInput(...args)),\n    onFocus: _cache[2] || (_cache[2] = (...args) => _ctx.onFocus && _ctx.onFocus(...args)),\n    onBlur: _cache[3] || (_cache[3] = (...args) => _ctx.onBlur && _ctx.onBlur(...args)),\n    onKeydown: [_cache[4] || (_cache[4] = withKeys(withModifiers((...args) => _ctx.onArrowDown && _ctx.onArrowDown(...args), [\"prevent\"]), [\"down\"])), _cache[5] || (_cache[5] = withKeys(withModifiers((...args) => _ctx.onArrowUp && _ctx.onArrowUp(...args), [\"prevent\"]), [\"up\"])), _cache[6] || (_cache[6] = withKeys(withModifiers((...args) => _ctx.selectCurrentSelection && _ctx.selectCurrentSelection(...args), [\"prevent\"]), [\"enter\"])), _cache[7] || (_cache[7] = withKeys(withModifiers((...args) => _ctx.selectCurrentSelectionTab && _ctx.selectCurrentSelectionTab(...args), [\"prevent\"]), [\"tab\"]))],\n    autocomplete: \"off\"\n  }, _ctx.$attrs), null, 16, _hoisted_2), [[vModelText, _ctx.input]]), _ctx.isListVisible ? (openBlock(), createElementBlock(\"div\", _hoisted_3, [_ctx.$slots['list-header'] ? (openBlock(), createElementBlock(\"div\", _hoisted_4, [renderSlot(_ctx.$slots, \"list-header\")])) : createCommentVNode(\"\", true), (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.filteredItems, (item, index) => {\n    return openBlock(), createElementBlock(\"div\", {\n      class: normalizeClass([\"simple-typeahead-list-item\", {\n        'simple-typeahead-list-item-active': _ctx.currentSelectionIndex == index\n      }]),\n      key: index,\n      onMousedown: _cache[8] || (_cache[8] = withModifiers(() => {}, [\"prevent\"])),\n      onClick: $event => _ctx.selectItem(item),\n      onMouseenter: $event => _ctx.currentSelectionIndex = index\n    }, [_ctx.$slots['list-item-text'] ? (openBlock(), createElementBlock(\"span\", {\n      key: 0,\n      class: \"simple-typeahead-list-item-text\",\n      \"data-text\": _ctx.itemProjection(item)\n    }, [renderSlot(_ctx.$slots, \"list-item-text\", {\n      item: item,\n      itemProjection: _ctx.itemProjection,\n      boldMatchText: _ctx.boldMatchText\n    })], 8, _hoisted_6)) : (openBlock(), createElementBlock(\"span\", {\n      key: 1,\n      class: \"simple-typeahead-list-item-text\",\n      \"data-text\": _ctx.itemProjection(item),\n      innerHTML: _ctx.boldMatchText(_ctx.itemProjection(item))\n    }, null, 8, _hoisted_7))], 42, _hoisted_5);\n  }), 128)), _ctx.$slots['list-footer'] ? (openBlock(), createElementBlock(\"div\", _hoisted_8, [renderSlot(_ctx.$slots, \"list-footer\")])) : createCommentVNode(\"\", true)])) : createCommentVNode(\"\", true)], 8, _hoisted_1);\n}\n\nscript.render = render;\nscript.__scopeId = \"data-v-f81ca714\";\n\n// Import vue component\n// IIFE injects install function into component, allowing component\n// to be registered via Vue.use() as well as Vue.component(),\n\nvar entry_esm = /*#__PURE__*/(() => {\n  // Get component instance\n  const installable = script; // Attach install function executed by Vue.use()\n\n  installable.install = app => {\n    app.component('Vue3SimpleTypeahead', installable);\n  };\n\n  return installable;\n})(); // It's possible to expose named exports when writing components that can\n// also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';\n// export const RollupDemoDirective = directive;\n\nexport { entry_esm as default };\n",
+      "start": 1700848819284,
+      "end": 1700848820220,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848820220,
+      "end": 1700848820220,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848820220,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848820221,
+      "end": 1700848820221,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848820221,
+      "end": 1700848820223,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848820223,
+      "end": 1700848820223,
+      "order": "normal"
+    }
+  ]
+}

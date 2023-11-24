@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/layouts/default.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div>\n    <div\n      class=\"page-wrapper\"\n      id=\"pageWrapper\"\n      :class=\"layoutobj\"\n    >\n      <div class=\"page-header\">\n        <Header />\n      </div>\n\n      <div class=\"page-body-wrapper\">\n        <div class=\"body-container\">\n          <slot></slot>\n          <div>\n            <Footer></Footer>\n          </div>\n        </div>\n      </div>\n      <Teleport to=\"body\">\n        <TapTop />\n      </Teleport>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { mapState } from 'pinia';\n\nimport { layoutClasses } from '../constants/layout';\nimport Header from '@/components/header';\nimport Footer from '@/components/footer.vue';\nimport { useLayoutStore } from '~~/store/layout';\nimport TapTop from '@/components/tapTop.vue';\nimport { useWindowScroll } from '@vueuse/core';\n\nexport default {\n  components: {\n    Header,\n    Footer,\n    TapTop\n  },\n  data() {\n    return {\n      loading: false,\n      mobileheader_toggle_var: false,\n      horizontal_Sidebar: true,\n      resized: false,\n      layoutobj: {}\n    };\n  },\n  computed: {\n    ...mapState(useLayoutStore, {\n      layout: 'layout',\n      svg: 'svg'\n    }),\n    layoutobject: {\n      get: function () {\n        return JSON.parse(\n          JSON.stringify(\n            layoutClasses.find(\n              (item) => Object.keys(item).pop() === this.layout.settings.layout\n            )\n          )\n        )[this.layout.settings.layout];\n      },\n      set: function () {\n        this.layoutobj = layoutClasses.find(\n          (item) => Object.keys(item).pop() === this.layout.settings.layout\n        );\n        this.layoutobj = JSON.parse(JSON.stringify(this.layoutobj))[\n          this.layout.settings.layout\n        ];\n        return this.layoutobj;\n      }\n    }\n  },\n\n  methods: {}\n\n  // mounted() {\n  //     this.loading = false;\n  // },\n};\n</script>\n\n<style lang=\"scss\" scoped></style>\n",
+      "start": 1700848808300,
+      "end": 1700848811154,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848811154,
+      "end": 1700848811154,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848811154,
+      "end": 1700848811154,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848811155,
+      "end": 1700848811155,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848811155,
+      "end": 1700848811155,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848811155,
+      "end": 1700848811155,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848811155,
+      "end": 1700848811155,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848811155,
+      "end": 1700848811155,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { mapState } from 'pinia';\n\nimport { layoutClasses } from '../constants/layout';\nimport Header from '@/components/header';\nimport Footer from '@/components/footer.vue';\nimport { useLayoutStore } from '~~/store/layout';\nimport TapTop from '@/components/tapTop.vue';\nimport { useWindowScroll } from '@vueuse/core';\n\nconst _sfc_main = {\n  components: {\n    Header,\n    Footer,\n    TapTop\n  },\n  data() {\n    return {\n      loading: false,\n      mobileheader_toggle_var: false,\n      horizontal_Sidebar: true,\n      resized: false,\n      layoutobj: {}\n    };\n  },\n  computed: {\n    ...mapState(useLayoutStore, {\n      layout: 'layout',\n      svg: 'svg'\n    }),\n    layoutobject: {\n      get: function () {\n        return JSON.parse(\n          JSON.stringify(\n            layoutClasses.find(\n              (item) => Object.keys(item).pop() === this.layout.settings.layout\n            )\n          )\n        )[this.layout.settings.layout];\n      },\n      set: function () {\n        this.layoutobj = layoutClasses.find(\n          (item) => Object.keys(item).pop() === this.layout.settings.layout\n        );\n        this.layoutobj = JSON.parse(JSON.stringify(this.layoutobj))[\n          this.layout.settings.layout\n        ];\n        return this.layoutobj;\n      }\n    }\n  },\n\n  methods: {}\n\n  // mounted() {\n  //     this.loading = false;\n  // },\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, renderSlot as _renderSlot, Teleport as _Teleport, openBlock as _openBlock, createBlock as _createBlock, normalizeClass as _normalizeClass, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"page-header\" }\nconst _hoisted_2 = { class: \"page-body-wrapper\" }\nconst _hoisted_3 = { class: \"body-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Header = _resolveComponent(\"Header\")\n  const _component_Footer = _resolveComponent(\"Footer\")\n  const _component_TapTop = _resolveComponent(\"TapTop\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", {\n      class: _normalizeClass([\"page-wrapper\", $data.layoutobj]),\n      id: \"pageWrapper\"\n    }, [\n      _createElementVNode(\"div\", _hoisted_1, [\n        _createVNode(_component_Header)\n      ]),\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _renderSlot(_ctx.$slots, \"default\"),\n          _createElementVNode(\"div\", null, [\n            _createVNode(_component_Footer)\n          ])\n        ])\n      ]),\n      (_openBlock(), _createBlock(_Teleport, { to: \"body\" }, [\n        _createVNode(_component_TapTop)\n      ]))\n    ], 2)\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848811155,
+      "end": 1700848811164,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848811164,
+      "end": 1700848811164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848811165,
+      "end": 1700848811165,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848811165,
+      "end": 1700848811165,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848811165,
+      "end": 1700848811165,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848811165,
+      "end": 1700848811165,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848811165,
+      "end": 1700848811165,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848811165,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/index.vue\";\nimport { default as __nuxt_component_1 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/footer.vue\";\nimport { default as __nuxt_component_2 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/tapTop.vue\";\n\nimport { mapState } from 'pinia';\n\nimport { layoutClasses } from '../constants/layout';\nimport Header from '@/components/header';\nimport Footer from '@/components/footer.vue';\nimport { useLayoutStore } from '~~/store/layout';\nimport TapTop from '@/components/tapTop.vue';\nimport { useWindowScroll } from '@vueuse/core';\n\nconst _sfc_main = {\n  components: {\n    Header,\n    Footer,\n    TapTop\n  },\n  data() {\n    return {\n      loading: false,\n      mobileheader_toggle_var: false,\n      horizontal_Sidebar: true,\n      resized: false,\n      layoutobj: {}\n    };\n  },\n  computed: {\n    ...mapState(useLayoutStore, {\n      layout: 'layout',\n      svg: 'svg'\n    }),\n    layoutobject: {\n      get: function () {\n        return JSON.parse(\n          JSON.stringify(\n            layoutClasses.find(\n              (item) => Object.keys(item).pop() === this.layout.settings.layout\n            )\n          )\n        )[this.layout.settings.layout];\n      },\n      set: function () {\n        this.layoutobj = layoutClasses.find(\n          (item) => Object.keys(item).pop() === this.layout.settings.layout\n        );\n        this.layoutobj = JSON.parse(JSON.stringify(this.layoutobj))[\n          this.layout.settings.layout\n        ];\n        return this.layoutobj;\n      }\n    }\n  },\n\n  methods: {}\n\n  // mounted() {\n  //     this.loading = false;\n  // },\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, renderSlot as _renderSlot, Teleport as _Teleport, openBlock as _openBlock, createBlock as _createBlock, normalizeClass as _normalizeClass, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"page-header\" }\nconst _hoisted_2 = { class: \"page-body-wrapper\" }\nconst _hoisted_3 = { class: \"body-container\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Header = __nuxt_component_0\n  const _component_Footer = __nuxt_component_1\n  const _component_TapTop = __nuxt_component_2\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", {\n      class: _normalizeClass([\"page-wrapper\", $data.layoutobj]),\n      id: \"pageWrapper\"\n    }, [\n      _createElementVNode(\"div\", _hoisted_1, [\n        _createVNode(_component_Header)\n      ]),\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _renderSlot(_ctx.$slots, \"default\"),\n          _createElementVNode(\"div\", null, [\n            _createVNode(_component_Footer)\n          ])\n        ])\n      ]),\n      (_openBlock(), _createBlock(_Teleport, { to: \"body\" }, [\n        _createVNode(_component_TapTop)\n      ]))\n    ], 2)\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848811168,
+      "end": 1700848811168,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848811168,
+      "end": 1700848811169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848811169,
+      "end": 1700848811169,
+      "order": "normal"
+    }
+  ]
+}

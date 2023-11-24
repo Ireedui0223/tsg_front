@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/default/papernoteCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-5 col-lg-12 col-md-12 box-col-8 col-ed-6\">\n    <div class=\"card papernote-wrap\">\n      <div class=\"card-header card-no-border\">\n        <div class=\"header-top\">\n          <h5>Paper Note</h5>\n          <a\n            class=\"f-light d-flex align-items-center\"\n            href=\"#\"\n            >View project <i class=\"f-w-700 icon-arrow-top-right\"></i\n          ></a>\n        </div>\n      </div>\n      <div class=\"card-body pt-0\">\n        <img\n          class=\"banner-img img-fluid\"\n          src=\"/images/dashboard/papernote.jpg\"\n          alt=\"multicolor background\"\n        />\n        <div class=\"note-content mt-sm-4 mt-2\">\n          <p>\n            You should be able to look beautiful and feel good with little\n            effort thanks to design and elegance.\n          </p>\n          <div class=\"note-labels\">\n            <ul>\n              <li\n                v-for=\"item in paperNotes\"\n                :key=\"item\"\n              >\n                <span :class=\"item.labelClass\">{{ item.label }}</span>\n              </li>\n            </ul>\n            <div class=\"last-label\">\n              <span class=\"badge badge-light-success\">Inprogress</span>\n            </div>\n          </div>\n          <div class=\"mt-sm-4 mt-2 user-details\">\n            <div class=\"customers\">\n              <ul>\n                <li\n                  class=\"d-inline-block\"\n                  v-for=\"customer in customers\"\n                  :key=\"customer\"\n                >\n                  <img\n                    class=\"img-40 rounded-circle\"\n                    :src=\"getImgURL(customer.image)\"\n                    alt=\"user\"\n                  />\n                </li>\n                <li class=\"d-inline-block\">\n                  <div class=\"light-card\">\n                    <span class=\"f-w-500\">+5</span>\n                  </div>\n                </li>\n              </ul>\n            </div>\n            <div class=\"d-flex align-items-center\">\n              <h5 class=\" m-b-0 font-primary f-18 me-1\">$239,098</h5>\n              <span class=\"f-light f-w-500\">(Budget)</span>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { paperNotes, customers } from '@/data/dashboard/default.json';\nexport default {\n  data() {\n    return {\n      paperNotes: paperNotes,\n      customers: customers\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/images/dashboard/' + path;\n    }\n  }\n};\n</script>\n",
+      "start": 1700848825600,
+      "end": 1700848825812,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825812,
+      "end": 1700848825812,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825812,
+      "end": 1700848825813,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825813,
+      "end": 1700848825813,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825813,
+      "end": 1700848825813,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825813,
+      "end": 1700848825813,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825813,
+      "end": 1700848825813,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825813,
+      "end": 1700848825813,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { paperNotes, customers } from '@/data/dashboard/default.json';\nconst _sfc_main = {\n  data() {\n    return {\n      paperNotes: paperNotes,\n      customers: customers\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/images/dashboard/' + path;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass } from \"vue\"\nimport _imports_0 from '/images/dashboard/papernote.jpg'\n\n\nconst _hoisted_1 = { class: \"col-xxl-5 col-lg-12 col-md-12 box-col-8 col-ed-6\" }\nconst _hoisted_2 = { class: \"card papernote-wrap\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header card-no-border\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"header-top\" }, [\n    /*#__PURE__*/_createElementVNode(\"h5\", null, \"Paper Note\"),\n    /*#__PURE__*/_createElementVNode(\"a\", {\n      class: \"f-light d-flex align-items-center\",\n      href: \"#\"\n    }, [\n      /*#__PURE__*/_createTextVNode(\"View project \"),\n      /*#__PURE__*/_createElementVNode(\"i\", { class: \"f-w-700 icon-arrow-top-right\" })\n    ])\n  ])\n], -1)\nconst _hoisted_4 = { class: \"card-body pt-0\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"img\", {\n  class: \"banner-img img-fluid\",\n  src: _imports_0,\n  alt: \"multicolor background\"\n}, null, -1)\nconst _hoisted_6 = { class: \"note-content mt-sm-4 mt-2\" }\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"p\", null, \" You should be able to look beautiful and feel good with little effort thanks to design and elegance. \", -1)\nconst _hoisted_8 = { class: \"note-labels\" }\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"last-label\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"badge badge-light-success\" }, \"Inprogress\")\n], -1)\nconst _hoisted_10 = { class: \"mt-sm-4 mt-2 user-details\" }\nconst _hoisted_11 = { class: \"customers\" }\nconst _hoisted_12 = [\"src\"]\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"li\", { class: \"d-inline-block\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"light-card\" }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-w-500\" }, \"+5\")\n  ])\n], -1)\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"d-flex align-items-center\" }, [\n  /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-b-0 font-primary f-18 me-1\" }, \"$239,098\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light f-w-500\" }, \"(Budget)\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _hoisted_5,\n        _createElementVNode(\"div\", _hoisted_6, [\n          _hoisted_7,\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createElementVNode(\"ul\", null, [\n              (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.paperNotes, (item) => {\n                return (_openBlock(), _createElementBlock(\"li\", { key: item }, [\n                  _createElementVNode(\"span\", {\n                    class: _normalizeClass(item.labelClass)\n                  }, _toDisplayString(item.label), 3)\n                ]))\n              }), 128))\n            ]),\n            _hoisted_9\n          ]),\n          _createElementVNode(\"div\", _hoisted_10, [\n            _createElementVNode(\"div\", _hoisted_11, [\n              _createElementVNode(\"ul\", null, [\n                (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.customers, (customer) => {\n                  return (_openBlock(), _createElementBlock(\"li\", {\n                    class: \"d-inline-block\",\n                    key: customer\n                  }, [\n                    _createElementVNode(\"img\", {\n                      class: \"img-40 rounded-circle\",\n                      src: $options.getImgURL(customer.image),\n                      alt: \"user\"\n                    }, null, 8, _hoisted_12)\n                  ]))\n                }), 128)),\n                _hoisted_13\n              ])\n            ]),\n            _hoisted_14\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825813,
+      "end": 1700848825819,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825819,
+      "end": 1700848825819,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825820,
+      "end": 1700848825820,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825820,
+      "end": 1700848825821,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825821,
+      "end": 1700848825821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825821,
+      "end": 1700848825822,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825822,
+      "end": 1700848825822,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/indexEcommerce.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<div>\n    <Breadcrumbs main=\"Dashboard\" title=\"e-commerce\" />\n    <div class=\"container-fluid\">\n        <div class=\"row size-column\">\n            <div class=\"col-xxl-10 col-md-12 box-col-8 grid-ed-12\">\n                <div class=\"row\">\n                    <allfourCard />\n                    <valuableCustomerCard />\n                    <orderthismonthCard />\n                    <monthlyProfitsCard />\n                    <orderOverviewCard />\n                    <discoverProCard />\n                    <visitorsCard />\n                    <recetOrderCard />\n                   \n                </div>\n            </div>\n            <div class=\"col-xxl-2 col-xl-3 col-md-4 grid-ed-none box-col-4e d-xxl-block d-none\">\n\n                <topCategoriesCardVue/>\n            </div>\n        </div>\n    </div>\n</div>\n</template>\n\n<script>\nimport allfourCard from \"./allfourCard.vue\"\nimport valuableCustomerCard from \"./valuableCustomerCard.vue\"\nimport orderthismonthCard from './orderthismonthCard.vue'\nimport monthlyProfitsCard from \"./monthlyProfitsCard.vue\"\nimport orderOverviewCard from \"./orderOverviewCard.vue\"\nimport discoverProCard from \"./discoverProCard.vue\"\nimport visitorsCard from \"./visitorsCard.vue\"\nimport recetOrderCard from \"./recetOrderCard.vue\"\nimport topCategoriesCardVue from './topCategoriesCard.vue'\n\nexport default {\n    components: {\n        allfourCard,\n        valuableCustomerCard,\n        orderthismonthCard,\n        monthlyProfitsCard,\n        orderOverviewCard,\n        discoverProCard,\n        visitorsCard,\n        recetOrderCard,\n        topCategoriesCardVue\n    },\n}\n</script>",
+      "start": 1700848823203,
+      "end": 1700848824609,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824609,
+      "end": 1700848824609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport allfourCard from \"./allfourCard.vue\"\nimport valuableCustomerCard from \"./valuableCustomerCard.vue\"\nimport orderthismonthCard from './orderthismonthCard.vue'\nimport monthlyProfitsCard from \"./monthlyProfitsCard.vue\"\nimport orderOverviewCard from \"./orderOverviewCard.vue\"\nimport discoverProCard from \"./discoverProCard.vue\"\nimport visitorsCard from \"./visitorsCard.vue\"\nimport recetOrderCard from \"./recetOrderCard.vue\"\nimport topCategoriesCardVue from './topCategoriesCard.vue'\n\nconst _sfc_main = {\n    components: {\n        allfourCard,\n        valuableCustomerCard,\n        orderthismonthCard,\n        monthlyProfitsCard,\n        orderOverviewCard,\n        discoverProCard,\n        visitorsCard,\n        recetOrderCard,\n        topCategoriesCardVue\n    },\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"row size-column\" }\nconst _hoisted_3 = { class: \"col-xxl-10 col-md-12 box-col-8 grid-ed-12\" }\nconst _hoisted_4 = { class: \"row\" }\nconst _hoisted_5 = { class: \"col-xxl-2 col-xl-3 col-md-4 grid-ed-none box-col-4e d-xxl-block d-none\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_allfourCard = _resolveComponent(\"allfourCard\")\n  const _component_valuableCustomerCard = _resolveComponent(\"valuableCustomerCard\")\n  const _component_orderthismonthCard = _resolveComponent(\"orderthismonthCard\")\n  const _component_monthlyProfitsCard = _resolveComponent(\"monthlyProfitsCard\")\n  const _component_orderOverviewCard = _resolveComponent(\"orderOverviewCard\")\n  const _component_discoverProCard = _resolveComponent(\"discoverProCard\")\n  const _component_visitorsCard = _resolveComponent(\"visitorsCard\")\n  const _component_recetOrderCard = _resolveComponent(\"recetOrderCard\")\n  const _component_topCategoriesCardVue = _resolveComponent(\"topCategoriesCardVue\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createVNode(_component_Breadcrumbs, {\n      main: \"Dashboard\",\n      title: \"e-commerce\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createElementVNode(\"div\", _hoisted_4, [\n            _createVNode(_component_allfourCard),\n            _createVNode(_component_valuableCustomerCard),\n            _createVNode(_component_orderthismonthCard),\n            _createVNode(_component_monthlyProfitsCard),\n            _createVNode(_component_orderOverviewCard),\n            _createVNode(_component_discoverProCard),\n            _createVNode(_component_visitorsCard),\n            _createVNode(_component_recetOrderCard)\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createVNode(_component_topCategoriesCardVue)\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824609,
+      "end": 1700848824611,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824611,
+      "end": 1700848824611,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824611,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824612,
+      "end": 1700848824612,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824612,
+      "end": 1700848824614,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824614,
+      "end": 1700848824614,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824614,
+      "end": 1700848824614,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824614,
+      "end": 1700848824614,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824614,
+      "end": 1700848824614,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824614,
+      "end": 1700848824615,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824615,
+      "end": 1700848824615,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824615,
+      "end": 1700848824615,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824615,
+      "end": 1700848824615,
+      "order": "normal"
+    }
+  ]
+}

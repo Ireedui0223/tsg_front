@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/notifications.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <li class=\"onhover-dropdown\">\n    <div class=\"notification-box\">\n      <svg>\n        <use\n          href=\"@/assets/svg/icon-sprite.svg#notification\"\n          @click=\"notification_open()\"\n        ></use>\n      </svg>\n\n      <span class=\"badge rounded-pill badge-secondary\">4 </span>\n    </div>\n    <div\n      class=\"onhover-show-div notification-dropdown\"\n      :class=\"{ active: notification }\"\n    >\n      <h6 class=\"f-18  m-b-0 dropdown-title\">Notitications</h6>\n      <ul>\n        <li class=\"b-l-primary border-4\">\n          <p>Delivery processing <span class=\"font-danger\">10 min.</span></p>\n        </li>\n        <li class=\"b-l-success border-4\">\n          <p>Order Complete<span class=\"font-success\">1 hr</span></p>\n        </li>\n        <li class=\"b-l-info border-4\">\n          <p>Tickets Generated<span class=\"font-info\">3 hr</span></p>\n        </li>\n        <li class=\"b-l-warning border-4\">\n          <p>Delivery Complete<span class=\"font-warning\">6 hr</span></p>\n        </li>\n        <li>\n          <a\n            class=\"f-w-700\"\n            href=\"#\"\n            >Check all</a\n          >\n        </li>\n      </ul>\n    </div>\n  </li>\n</template>\n\n<script>\nexport default {\n  name: 'Notifications',\n  data() {\n    return {\n      notification: false\n    };\n  },\n  methods: {\n    notification_open() {\n      this.notification = !this.notification;\n    }\n  }\n};\n</script>\n",
+      "start": 1700848824989,
+      "end": 1700848825220,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825220,
+      "end": 1700848825220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {\n  name: 'Notifications',\n  data() {\n    return {\n      notification: false\n    };\n  },\n  methods: {\n    notification_open() {\n      this.notification = !this.notification;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock, createTextVNode as _createTextVNode, normalizeClass as _normalizeClass, createStaticVNode as _createStaticVNode } from \"vue\"\nimport _imports_0 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_0 + '#notification'\nconst _hoisted_2 = { class: \"onhover-dropdown\" }\nconst _hoisted_3 = { class: \"notification-box\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"badge rounded-pill badge-secondary\" }, \"4 \", -1)\nconst _hoisted_5 = /*#__PURE__*/_createStaticVNode(\"<h6 class=\\\"f-18 m-b-0 dropdown-title\\\">Notitications</h6><ul><li class=\\\"b-l-primary border-4\\\"><p>Delivery processing <span class=\\\"font-danger\\\">10 min.</span></p></li><li class=\\\"b-l-success border-4\\\"><p>Order Complete<span class=\\\"font-success\\\">1 hr</span></p></li><li class=\\\"b-l-info border-4\\\"><p>Tickets Generated<span class=\\\"font-info\\\">3 hr</span></p></li><li class=\\\"b-l-warning border-4\\\"><p>Delivery Complete<span class=\\\"font-warning\\\">6 hr</span></p></li><li><a class=\\\"f-w-700\\\" href=\\\"#\\\">Check all</a></li></ul>\", 2)\nconst _hoisted_7 = [\n  _hoisted_5\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"li\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      (_openBlock(), _createElementBlock(\"svg\", null, [\n        _createElementVNode(\"use\", {\n          href: _hoisted_1,\n          onClick: _cache[0] || (_cache[0] = $event => ($options.notification_open()))\n        })\n      ])),\n      _hoisted_4\n    ]),\n    _createElementVNode(\"div\", {\n      class: _normalizeClass([\"onhover-show-div notification-dropdown\", { active: $data.notification }])\n    }, _hoisted_7, 2)\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825220,
+      "end": 1700848825223,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825223,
+      "end": 1700848825223,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825224,
+      "end": 1700848825224,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825224,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825225,
+      "end": 1700848825225,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.esm.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { h } from 'vue';\nimport PerfectScrollbar from 'perfect-scrollbar';\n\nconst eventNames = [\n  'scroll',\n  'ps-scroll-y',\n  'ps-scroll-x',\n  'ps-scroll-up',\n  'ps-scroll-down',\n  'ps-scroll-left',\n  'ps-scroll-right',\n  'ps-y-reach-start',\n  'ps-y-reach-end',\n  'ps-x-reach-start',\n  'ps-x-reach-end'\n];\n\nvar PerfectScrollbar$1 = {\n  name: 'PerfectScrollbar',\n  props: {\n    options: {\n      type: Object,\n      required: false,\n      default: () => {}\n    },\n    tag: {\n      type: String,\n      required: false,\n      default: 'div'\n    },\n    watchOptions: {\n      type: Boolean,\n      required: false,\n      default: false\n    }\n  },\n  emits: eventNames,\n  data () {\n    return {\n      ps: null\n    }\n  },\n  watch: {\n    watchOptions (shouldWatch) {\n      if (!shouldWatch && this.watcher) {\n        this.watcher();\n      } else {\n        this.createWatcher();\n      }\n    }\n  },\n  mounted () {\n    this.create();\n\n    if (this.watchOptions) {\n      this.createWatcher();\n    }\n  },\n  updated () {\n    this.$nextTick(() => {\n      this.update();\n    });\n  },\n  beforeUnmount () {\n    this.destroy();\n  },\n  methods: {\n    create () {\n      if (!(this.ps && this.$isServer)) {\n        this.ps = new PerfectScrollbar(this.$el, this.options);\n\n        eventNames.forEach(eventName => {\n          this.ps.element.addEventListener(eventName, event => this.$emit(eventName, event));\n        });\n      }\n    },\n    createWatcher () {\n      this.watcher = this.$watch('options', () => {\n        this.destroy();\n        this.create();\n      }, {\n        deep: true\n      });\n    },\n    update () {\n      if (this.ps) {\n        this.ps.update();\n      }\n    },\n    destroy () {\n      if (this.ps) {\n        this.ps.destroy();\n        this.ps = null;\n      }\n    }\n  },\n  render () {\n    return h(this.tag,\n      {\n        class: 'ps'\n      },\n      this.$slots.default && this.$slots.default())\n  }\n};\n\nvar index = {\n  install: (Vue, settings) => {\n    if (settings) {\n      if (settings.name && typeof settings.name === 'string') {\n        PerfectScrollbar$1.name = settings.name;\n      }\n\n      if (settings.options && typeof settings.options === 'object') {\n        PerfectScrollbar$1.props.options.default = () => {\n          return settings.options\n        };\n      }\n\n      if (settings.tag && typeof settings.tag === 'string') {\n        PerfectScrollbar$1.props.tag.default = settings.tag;\n      }\n\n      if (settings.watchOptions && typeof settings.watchOptions === 'boolean') {\n        PerfectScrollbar$1.props.watchOptions = settings.watchOptions;\n      }\n    }\n\n    Vue.component(\n      PerfectScrollbar$1.name,\n      PerfectScrollbar$1\n    );\n  }\n};\n\nexport default index;\nexport { PerfectScrollbar$1 as PerfectScrollbar };\n",
+      "start": 1700848819132,
+      "end": 1700848819380,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848819380,
+      "end": 1700848819380,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848819380,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848819381,
+      "end": 1700848819381,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848819381,
+      "end": 1700848819382,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848819382,
+      "end": 1700848819382,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848819382,
+      "end": 1700848819382,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848819382,
+      "end": 1700848819382,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848819382,
+      "end": 1700848819382,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848819382,
+      "end": 1700848819382,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848819383,
+      "end": 1700848819383,
+      "order": "normal"
+    }
+  ]
+}

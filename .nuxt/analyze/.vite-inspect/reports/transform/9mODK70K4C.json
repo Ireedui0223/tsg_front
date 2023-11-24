@@ -1,0 +1,235 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/util/config.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/*!\n  * Bootstrap config.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\n(function (global, factory) {\n  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/manipulator.js'), require('./index.js')) :\n  typeof define === 'function' && define.amd ? define(['../dom/manipulator', './index'], factory) :\n  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Config = factory(global.Manipulator, global.Index));\n})(this, (function (Manipulator, index_js) { 'use strict';\n\n  /**\n   * --------------------------------------------------------------------------\n   * Bootstrap util/config.js\n   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n   * --------------------------------------------------------------------------\n   */\n\n\n  /**\n   * Class definition\n   */\n\n  class Config {\n    // Getters\n    static get Default() {\n      return {};\n    }\n    static get DefaultType() {\n      return {};\n    }\n    static get NAME() {\n      throw new Error('You have to implement the static method \"NAME\", for each component!');\n    }\n    _getConfig(config) {\n      config = this._mergeConfigObj(config);\n      config = this._configAfterMerge(config);\n      this._typeCheckConfig(config);\n      return config;\n    }\n    _configAfterMerge(config) {\n      return config;\n    }\n    _mergeConfigObj(config, element) {\n      const jsonConfig = index_js.isElement(element) ? Manipulator.getDataAttribute(element, 'config') : {}; // try to parse\n\n      return {\n        ...this.constructor.Default,\n        ...(typeof jsonConfig === 'object' ? jsonConfig : {}),\n        ...(index_js.isElement(element) ? Manipulator.getDataAttributes(element) : {}),\n        ...(typeof config === 'object' ? config : {})\n      };\n    }\n    _typeCheckConfig(config, configTypes = this.constructor.DefaultType) {\n      for (const [property, expectedTypes] of Object.entries(configTypes)) {\n        const value = config[property];\n        const valueType = index_js.isElement(value) ? 'element' : index_js.toType(value);\n        if (!new RegExp(expectedTypes).test(valueType)) {\n          throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option \"${property}\" provided type \"${valueType}\" but expected type \"${expectedTypes}\".`);\n        }\n      }\n    }\n  }\n\n  return Config;\n\n}));\n//# sourceMappingURL=config.js.map\n",
+      "start": 1700848825946,
+      "end": 1700848826128,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848826128,
+      "end": 1700848826128,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848826128,
+      "end": 1700848826128,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848826128,
+      "end": 1700848826128,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848826128,
+      "end": 1700848826128,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848826128,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "result": "/*!\n  * Bootstrap config.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\n(function (global, factory) {\n  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('../dom/manipulator.js'), require('./index.js')) :\n  typeof define === 'function' && define.amd ? define(['../dom/manipulator', './index'], factory) :\n  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Config = factory(globalThis.Manipulator, global.Index));\n})(this, (function (Manipulator, index_js) { 'use strict';\n\n  /**\n   * --------------------------------------------------------------------------\n   * Bootstrap util/config.js\n   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n   * --------------------------------------------------------------------------\n   */\n\n\n  /**\n   * Class definition\n   */\n\n  class Config {\n    // Getters\n    static get Default() {\n      return {};\n    }\n    static get DefaultType() {\n      return {};\n    }\n    static get NAME() {\n      throw new Error('You have to implement the static method \"NAME\", for each component!');\n    }\n    _getConfig(config) {\n      config = this._mergeConfigObj(config);\n      config = this._configAfterMerge(config);\n      this._typeCheckConfig(config);\n      return config;\n    }\n    _configAfterMerge(config) {\n      return config;\n    }\n    _mergeConfigObj(config, element) {\n      const jsonConfig = index_js.isElement(element) ? Manipulator.getDataAttribute(element, 'config') : {}; // try to parse\n\n      return {\n        ...this.constructor.Default,\n        ...(typeof jsonConfig === 'object' ? jsonConfig : {}),\n        ...(index_js.isElement(element) ? Manipulator.getDataAttributes(element) : {}),\n        ...(typeof config === 'object' ? config : {})\n      };\n    }\n    _typeCheckConfig(config, configTypes = this.constructor.DefaultType) {\n      for (const [property, expectedTypes] of Object.entries(configTypes)) {\n        const value = config[property];\n        const valueType = index_js.isElement(value) ? 'element' : index_js.toType(value);\n        if (!new RegExp(expectedTypes).test(valueType)) {\n          throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option \"${property}\" provided type \"${valueType}\" but expected type \"${expectedTypes}\".`);\n        }\n      }\n    }\n  }\n\n  return Config;\n\n}));\n//# sourceMappingURL=config.js.map\n",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnG,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,YAAQ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxI,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D;AACA,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E,CAAC,CAAC,CAAC,CAAC,CAAC;AACL;AACA;AACA,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7F,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5H;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACR,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACT,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC;AACL,CAAC,CAAC,CAAC;AACH;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB;AACA,CAAC,CAAC,CAAC,CAAC;AACJ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;"
+      }
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826129,
+      "end": 1700848826129,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "result": "/*!\n  * Bootstrap config.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\nimport * as commonjsHelpers from \"\u0000commonjsHelpers.js\";\nimport { __module as configModule } from \"\\u0000C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/util/config.js?commonjs-module\";\nvar config = configModule.exports;\nimport { __require as require$$0 } from \"\\u0000C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/dom/manipulator.js?commonjs-wrapped\";\nimport { __require as require$$1 } from \"\\u0000C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/util/index.js?commonjs-wrapped\";\n\nvar hasRequiredConfig;\n\nfunction requireConfig () {\n\tif (hasRequiredConfig) return configModule.exports;\n\thasRequiredConfig = 1;\n\t(function (module, exports) {\n\t\t(function (global, factory) {\n\t\t  'object' === 'object' && 'object' !== 'undefined' ? module.exports = factory(require$$0(), require$$1()) :\n\t\t  typeof undefined === 'function' && undefined.amd ? undefined(['../dom/manipulator', './index'], factory) :\n\t\t  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Config = factory(globalThis.Manipulator, global.Index));\n\t\t})(commonjsHelpers.commonjsGlobal, (function (Manipulator, index_js) { 'use strict';\n\n\t\t  /**\n\t\t   * --------------------------------------------------------------------------\n\t\t   * Bootstrap util/config.js\n\t\t   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n\t\t   * --------------------------------------------------------------------------\n\t\t   */\n\n\n\t\t  /**\n\t\t   * Class definition\n\t\t   */\n\n\t\t  class Config {\n\t\t    // Getters\n\t\t    static get Default() {\n\t\t      return {};\n\t\t    }\n\t\t    static get DefaultType() {\n\t\t      return {};\n\t\t    }\n\t\t    static get NAME() {\n\t\t      throw new Error('You have to implement the static method \"NAME\", for each component!');\n\t\t    }\n\t\t    _getConfig(config) {\n\t\t      config = this._mergeConfigObj(config);\n\t\t      config = this._configAfterMerge(config);\n\t\t      this._typeCheckConfig(config);\n\t\t      return config;\n\t\t    }\n\t\t    _configAfterMerge(config) {\n\t\t      return config;\n\t\t    }\n\t\t    _mergeConfigObj(config, element) {\n\t\t      const jsonConfig = index_js.isElement(element) ? Manipulator.getDataAttribute(element, 'config') : {}; // try to parse\n\n\t\t      return {\n\t\t        ...this.constructor.Default,\n\t\t        ...(typeof jsonConfig === 'object' ? jsonConfig : {}),\n\t\t        ...(index_js.isElement(element) ? Manipulator.getDataAttributes(element) : {}),\n\t\t        ...(typeof config === 'object' ? config : {})\n\t\t      };\n\t\t    }\n\t\t    _typeCheckConfig(config, configTypes = this.constructor.DefaultType) {\n\t\t      for (const [property, expectedTypes] of Object.entries(configTypes)) {\n\t\t        const value = config[property];\n\t\t        const valueType = index_js.isElement(value) ? 'element' : index_js.toType(value);\n\t\t        if (!new RegExp(expectedTypes).test(valueType)) {\n\t\t          throw new TypeError(`${this.constructor.NAME.toUpperCase()}: Option \"${property}\" provided type \"${valueType}\" but expected type \"${expectedTypes}\".`);\n\t\t        }\n\t\t      }\n\t\t    }\n\t\t  }\n\n\t\t  return Config;\n\n\t\t}));\n\t\t//# sourceMappingURL=config.js.map \n\t} (configModule, configModule.exports));\n\treturn configModule.exports;\n}\n\nexport { requireConfig as __require };",
+      "start": 1700848826129,
+      "end": 1700848826132,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": null,
+        "sources": [
+          null
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "names": [
+          "define",
+          "this"
+        ],
+        "mappings": "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"
+      }
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826132,
+      "end": 1700848826132,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826133,
+      "end": 1700848826133,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826133,
+      "end": 1700848826133,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826133,
+      "end": 1700848826133,
+      "order": "normal"
+    }
+  ]
+}

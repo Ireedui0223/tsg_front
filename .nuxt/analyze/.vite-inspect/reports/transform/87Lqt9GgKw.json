@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/facebookCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-md-4 col-sm-6\">\n        <div class=\"card social-widget widget-hover\">\n            <div class=\"card-body\">\n                <div class=\"d-flex align-items-center justify-content-between\">\n                    <div class=\"d-flex align-items-center gap-2\">\n                        <div class=\"social-icons\">\n                            <img src=\"/images/dashboard-5/social/1.png\" alt=\"facebook icon\" />\n                        </div>\n                        <span>Facebook</span>\n                    </div>\n                    <span class=\"font-success f-12 d-xxl-block d-xl-none\">+22.9%</span>\n                </div>\n                <div class=\"social-content\">\n                    <div>\n                        <h5 class=\"mb-1\">12,098</h5>\n                        <span class=\"f-light\">Followers</span>\n                    </div>\n                    <div class=\"social-chart\">\n                        <apexchart height=\"96.4\" type=\"radialBar\" :options=\"socialDashboard.options\"\n                            :series=\"socialDashboard.series\"></apexchart>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport {\n    socialDashboard\n} from \"@/data/comon\";\n\nexport default {\n    data() {\n        return {\n            socialDashboard: socialDashboard,\n        };\n    },\n};\n</script>\n    ",
+      "start": 1700848825757,
+      "end": 1700848825936,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825936,
+      "end": 1700848825936,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport {\n    socialDashboard\n} from \"@/data/comon\";\n\nconst _sfc_main = {\n    data() {\n        return {\n            socialDashboard: socialDashboard,\n        };\n    },\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-5/social/1.png'\n\n\nconst _hoisted_1 = { class: \"col-md-4 col-sm-6\" }\nconst _hoisted_2 = { class: \"card social-widget widget-hover\" }\nconst _hoisted_3 = { class: \"card-body\" }\nconst _hoisted_4 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"d-flex align-items-center justify-content-between\\\"><div class=\\\"d-flex align-items-center gap-2\\\"><div class=\\\"social-icons\\\"><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"facebook icon\\\"></div><span>Facebook</span></div><span class=\\\"font-success f-12 d-xxl-block d-xl-none\\\">+22.9%</span></div>\", 1)\nconst _hoisted_5 = { class: \"social-content\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h5\", { class: \"mb-1\" }, \"12,098\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Followers\")\n], -1)\nconst _hoisted_7 = { class: \"social-chart\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _hoisted_4,\n        _createElementVNode(\"div\", _hoisted_5, [\n          _hoisted_6,\n          _createElementVNode(\"div\", _hoisted_7, [\n            _createVNode(_component_apexchart, {\n              height: \"96.4\",\n              type: \"radialBar\",\n              options: $data.socialDashboard.options,\n              series: $data.socialDashboard.series\n            }, null, 8, [\"options\", \"series\"])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825936,
+      "end": 1700848825938,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825938,
+      "end": 1700848825938,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825938,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825939,
+      "end": 1700848825939,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825939,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825940,
+      "end": 1700848825940,
+      "order": "normal"
+    }
+  ]
+}

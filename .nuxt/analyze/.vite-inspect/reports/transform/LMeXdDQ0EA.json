@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/differenceInCalendarMonths/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import toDate from \"../toDate/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name differenceInCalendarMonths\n * @category Month Helpers\n * @summary Get the number of calendar months between the given dates.\n *\n * @description\n * Get the number of calendar months between the given dates.\n *\n * @param {Date|Number} dateLeft - the later date\n * @param {Date|Number} dateRight - the earlier date\n * @returns {Number} the number of calendar months\n * @throws {TypeError} 2 arguments required\n *\n * @example\n * // How many calendar months are between 31 January 2014 and 1 September 2014?\n * const result = differenceInCalendarMonths(\n *   new Date(2014, 8, 1),\n *   new Date(2014, 0, 31)\n * )\n * //=> 8\n */\nexport default function differenceInCalendarMonths(dirtyDateLeft, dirtyDateRight) {\n  requiredArgs(2, arguments);\n  var dateLeft = toDate(dirtyDateLeft);\n  var dateRight = toDate(dirtyDateRight);\n  var yearDiff = dateLeft.getFullYear() - dateRight.getFullYear();\n  var monthDiff = dateLeft.getMonth() - dateRight.getMonth();\n  return yearDiff * 12 + monthDiff;\n}",
+      "start": 1700848829529,
+      "end": 1700848829628,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829628,
+      "end": 1700848829628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829628,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829629,
+      "end": 1700848829629,
+      "order": "normal"
+    }
+  ]
+}

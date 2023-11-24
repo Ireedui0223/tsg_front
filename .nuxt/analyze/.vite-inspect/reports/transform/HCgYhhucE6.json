@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/modules/autoplay/autoplay.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/* eslint no-underscore-dangle: \"off\" */\n\n/* eslint no-use-before-define: \"off\" */\nimport { getDocument } from 'ssr-window';\nimport { nextTick } from '../../shared/utils.js';\nexport default function Autoplay({\n  swiper,\n  extendParams,\n  on,\n  emit\n}) {\n  let timeout;\n  swiper.autoplay = {\n    running: false,\n    paused: false\n  };\n  extendParams({\n    autoplay: {\n      enabled: false,\n      delay: 3000,\n      waitForTransition: true,\n      disableOnInteraction: true,\n      stopOnLastSlide: false,\n      reverseDirection: false,\n      pauseOnMouseEnter: false\n    }\n  });\n\n  function run() {\n    if (!swiper.size) {\n      swiper.autoplay.running = false;\n      swiper.autoplay.paused = false;\n      return;\n    }\n\n    const $activeSlideEl = swiper.slides.eq(swiper.activeIndex);\n    let delay = swiper.params.autoplay.delay;\n\n    if ($activeSlideEl.attr('data-swiper-autoplay')) {\n      delay = $activeSlideEl.attr('data-swiper-autoplay') || swiper.params.autoplay.delay;\n    }\n\n    clearTimeout(timeout);\n    timeout = nextTick(() => {\n      let autoplayResult;\n\n      if (swiper.params.autoplay.reverseDirection) {\n        if (swiper.params.loop) {\n          swiper.loopFix();\n          autoplayResult = swiper.slidePrev(swiper.params.speed, true, true);\n          emit('autoplay');\n        } else if (!swiper.isBeginning) {\n          autoplayResult = swiper.slidePrev(swiper.params.speed, true, true);\n          emit('autoplay');\n        } else if (!swiper.params.autoplay.stopOnLastSlide) {\n          autoplayResult = swiper.slideTo(swiper.slides.length - 1, swiper.params.speed, true, true);\n          emit('autoplay');\n        } else {\n          stop();\n        }\n      } else if (swiper.params.loop) {\n        swiper.loopFix();\n        autoplayResult = swiper.slideNext(swiper.params.speed, true, true);\n        emit('autoplay');\n      } else if (!swiper.isEnd) {\n        autoplayResult = swiper.slideNext(swiper.params.speed, true, true);\n        emit('autoplay');\n      } else if (!swiper.params.autoplay.stopOnLastSlide) {\n        autoplayResult = swiper.slideTo(0, swiper.params.speed, true, true);\n        emit('autoplay');\n      } else {\n        stop();\n      }\n\n      if (swiper.params.cssMode && swiper.autoplay.running) run();else if (autoplayResult === false) {\n        run();\n      }\n    }, delay);\n  }\n\n  function start() {\n    if (typeof timeout !== 'undefined') return false;\n    if (swiper.autoplay.running) return false;\n    swiper.autoplay.running = true;\n    emit('autoplayStart');\n    run();\n    return true;\n  }\n\n  function stop() {\n    if (!swiper.autoplay.running) return false;\n    if (typeof timeout === 'undefined') return false;\n\n    if (timeout) {\n      clearTimeout(timeout);\n      timeout = undefined;\n    }\n\n    swiper.autoplay.running = false;\n    emit('autoplayStop');\n    return true;\n  }\n\n  function pause(speed) {\n    if (!swiper.autoplay.running) return;\n    if (swiper.autoplay.paused) return;\n    if (timeout) clearTimeout(timeout);\n    swiper.autoplay.paused = true;\n\n    if (speed === 0 || !swiper.params.autoplay.waitForTransition) {\n      swiper.autoplay.paused = false;\n      run();\n    } else {\n      ['transitionend', 'webkitTransitionEnd'].forEach(event => {\n        swiper.$wrapperEl[0].addEventListener(event, onTransitionEnd);\n      });\n    }\n  }\n\n  function onVisibilityChange() {\n    const document = getDocument();\n\n    if (document.visibilityState === 'hidden' && swiper.autoplay.running) {\n      pause();\n    }\n\n    if (document.visibilityState === 'visible' && swiper.autoplay.paused) {\n      run();\n      swiper.autoplay.paused = false;\n    }\n  }\n\n  function onTransitionEnd(e) {\n    if (!swiper || swiper.destroyed || !swiper.$wrapperEl) return;\n    if (e.target !== swiper.$wrapperEl[0]) return;\n    ['transitionend', 'webkitTransitionEnd'].forEach(event => {\n      swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);\n    });\n    swiper.autoplay.paused = false;\n\n    if (!swiper.autoplay.running) {\n      stop();\n    } else {\n      run();\n    }\n  }\n\n  function onMouseEnter() {\n    if (swiper.params.autoplay.disableOnInteraction) {\n      stop();\n    } else {\n      emit('autoplayPause');\n      pause();\n    }\n\n    ['transitionend', 'webkitTransitionEnd'].forEach(event => {\n      swiper.$wrapperEl[0].removeEventListener(event, onTransitionEnd);\n    });\n  }\n\n  function onMouseLeave() {\n    if (swiper.params.autoplay.disableOnInteraction) {\n      return;\n    }\n\n    swiper.autoplay.paused = false;\n    emit('autoplayResume');\n    run();\n  }\n\n  function attachMouseEvents() {\n    if (swiper.params.autoplay.pauseOnMouseEnter) {\n      swiper.$el.on('mouseenter', onMouseEnter);\n      swiper.$el.on('mouseleave', onMouseLeave);\n    }\n  }\n\n  function detachMouseEvents() {\n    swiper.$el.off('mouseenter', onMouseEnter);\n    swiper.$el.off('mouseleave', onMouseLeave);\n  }\n\n  on('init', () => {\n    if (swiper.params.autoplay.enabled) {\n      start();\n      const document = getDocument();\n      document.addEventListener('visibilitychange', onVisibilityChange);\n      attachMouseEvents();\n    }\n  });\n  on('beforeTransitionStart', (_s, speed, internal) => {\n    if (swiper.autoplay.running) {\n      if (internal || !swiper.params.autoplay.disableOnInteraction) {\n        swiper.autoplay.pause(speed);\n      } else {\n        stop();\n      }\n    }\n  });\n  on('sliderFirstMove', () => {\n    if (swiper.autoplay.running) {\n      if (swiper.params.autoplay.disableOnInteraction) {\n        stop();\n      } else {\n        pause();\n      }\n    }\n  });\n  on('touchEnd', () => {\n    if (swiper.params.cssMode && swiper.autoplay.paused && !swiper.params.autoplay.disableOnInteraction) {\n      run();\n    }\n  });\n  on('destroy', () => {\n    detachMouseEvents();\n\n    if (swiper.autoplay.running) {\n      stop();\n    }\n\n    const document = getDocument();\n    document.removeEventListener('visibilitychange', onVisibilityChange);\n  });\n  Object.assign(swiper.autoplay, {\n    pause,\n    run,\n    start,\n    stop\n  });\n}",
+      "start": 1700848829240,
+      "end": 1700848829434,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829434,
+      "end": 1700848829434,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829434,
+      "end": 1700848829435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829435,
+      "end": 1700848829435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829435,
+      "end": 1700848829435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829435,
+      "end": 1700848829435,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829435,
+      "end": 1700848829435,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829435,
+      "end": 1700848829436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829436,
+      "end": 1700848829436,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/footer.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div>\n    <teleport to=\"body\">\n      <footer\n        class=\"footer\"\n        :class=\"footer == 'footer-dark' ? 'footer-dark' : ''\"\n      >\n        <div class=\"footer-container m-t-30\">\n          <div class=\"inner-footer m-t-20\">\n            <div\n              class=\"row\"\n              data-intro=\"This is the your details\"\n              id=\"info-bar-tour\"\n            >\n              <div class=\"col-sm-6 col-lg-6 order-sm-1 order-xl-0\">\n                <div class=\"row\">\n                  <div class=\"col-md-6\">\n                    <nuxt-link to=\"/\">\n                      <img\n                        src=\"/images/logo.png\"\n                        alt=\"images\"\n                      />\n                    </nuxt-link>\n                  </div>\n                  <div class=\"col-md-6\">\n                    <div class=\"ttl-info text-start\">\n                      <h6><i class=\"fa fa-envelope\"></i> Холбоос</h6>\n                      <ul>\n                        <li class=\"m-t-5\">\n                          <nuxt-link to=\"/\"> Нүүр хуудас </nuxt-link>\n                        </li>\n                        <li class=\"m-t-5\">\n                          <nuxt-link to=\"/student/profile\">\n                            Хувийн мэдээлэл\n                          </nuxt-link>\n                        </li>\n                        <li class=\"m-t-5\">\n                          <nuxt-link to=\"/student/job/list\">\n                            Ажлын зарууд\n                          </nuxt-link>\n                        </li>\n                      </ul>\n                    </div>\n                  </div>\n                </div>\n              </div>\n              <div\n                class=\"col-sm-6 col-lg-6 order-sm-2 order-xl-2 contact-us-container\"\n              >\n                <div class=\"row\">\n                  <div class=\"col-md-6\">\n                    <div class=\"ttl-info text-start ttl-xs-mt\">\n                      <h6><i class=\"fa fa-phone\"></i> Бидний тухай</h6>\n                      <span>Багийн танилцуулга</span>\n                    </div>\n                  </div>\n                  <div class=\"col-md-6 social-container\">\n                    <div class=\"ttl-info text-start ttl-sm-  icons\">\n                      <h6><i class=\"fa fa-location-arrow\"></i> Холбоо барих</h6>\n                      <ul class=\"list-social d-flex aln-center\">\n                        <li>\n                          <a\n                            href=\"https://www.instagram.com/\"\n                            target=\"_blank\"\n                            ><i class=\"icon-facebook\"></i\n                          ></a>\n                        </li>\n                        <li>\n                          <a\n                            href=\"https://www.instagram.com/\"\n                            target=\"_blank\"\n                            ><i class=\"icon-linkedin\"></i\n                          ></a>\n                        </li>\n                        <li>\n                          <a\n                            href=\"https://www.instagram.com/\"\n                            target=\"_blank\"\n                            ><i class=\"icon-twitter\"></i\n                          ></a>\n                        </li>\n                        <li>\n                          <a\n                            href=\"https://www.instagram.com/\"\n                            target=\"_blank\"\n                            ><i class=\"icon-pinterest\"></i\n                          ></a>\n                        </li>\n                        <li>\n                          <a\n                            href=\"https://www.instagram.com/\"\n                            target=\"_blank\"\n                            ><i class=\"icon-instagram\"></i\n                          ></a>\n                        </li>\n                      </ul>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <div class=\"container-fluid m-t-20 p-t-4\">\n          <div class=\"row\">\n            <div class=\"col-md-12 footer-copyright text-center\">\n              <p class=\"  p-t-5 p-b-5\">\n                Copyright © 2021 Tsg Job Web. All Rights Reserved.\n              </p>\n            </div>\n          </div>\n        </div>\n      </footer>\n    </teleport>\n  </div>\n</template>\n\n<script>\nimport { useLayoutStore } from '~~/store/layout';\n\nexport default {\n  data() {\n    return {};\n  },\n  computed: {\n    footer() {\n      return useLayoutStore().footer;\n    }\n  }\n};\n</script>\n<style lang=\"scss\" scoped>\n.footer-container {\n  width: 80%;\n  margin: auto;\n  .inner-footer {\n    .row {\n      .contact-us-container {\n        display: flex;\n        justify-content: right;\n        align-items: center;\n        font-size: 0.9rem;\n        .row {\n          .social-container {\n            .icons {\n              span {\n                font-size: 0.9rem;\n                font-weight: 500;\n                line-height: 1rem;\n                margin-right: 6px;\n              }\n              ul {\n                flex-wrap: wrap;\n                align-content: center;\n                li {\n                  border: 1px solid var(--theme-deafult);\n                  width: 40px;\n                  height: 40px;\n                  padding: 10px 17px 1px 12px;\n                  border-radius: 100%;\n                  background: white;\n                  margin-right: 8px;\n                  margin-bottom: 8px;\n                  &:hover {\n                    background: var(--theme-deafult);\n                    a {\n                      i {\n                        color: white;\n                      }\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n.container-fluid {\n  background: #f7f8f9;\n}\n.footer {\n  padding-bottom: 0px;\n}\n</style>\n",
+      "start": 1700848821958,
+      "end": 1700848824296,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824296,
+      "end": 1700848824296,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { useLayoutStore } from '~~/store/layout';\n\nconst _sfc_main = {\n  data() {\n    return {};\n  },\n  computed: {\n    footer() {\n      return useLayoutStore().footer;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, normalizeClass as _normalizeClass, Teleport as _Teleport, openBlock as _openBlock, createBlock as _createBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport _imports_0 from '/images/logo.png'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-b8d00501\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"footer-container m-t-30\" }\nconst _hoisted_2 = { class: \"inner-footer m-t-20\" }\nconst _hoisted_3 = {\n  class: \"row\",\n  \"data-intro\": \"This is the your details\",\n  id: \"info-bar-tour\"\n}\nconst _hoisted_4 = { class: \"col-sm-6 col-lg-6 order-sm-1 order-xl-0\" }\nconst _hoisted_5 = { class: \"row\" }\nconst _hoisted_6 = { class: \"col-md-6\" }\nconst _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  alt: \"images\"\n}, null, -1))\nconst _hoisted_8 = { class: \"col-md-6\" }\nconst _hoisted_9 = { class: \"ttl-info text-start\" }\nconst _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h6\", null, [\n  /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-envelope\" }),\n  /*#__PURE__*/_createTextVNode(\" Холбоос\")\n], -1))\nconst _hoisted_11 = { class: \"m-t-5\" }\nconst _hoisted_12 = { class: \"m-t-5\" }\nconst _hoisted_13 = { class: \"m-t-5\" }\nconst _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-sm-6 col-lg-6 order-sm-2 order-xl-2 contact-us-container\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"row\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-6\" }, [\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"ttl-info text-start ttl-xs-mt\" }, [\n        /*#__PURE__*/_createElementVNode(\"h6\", null, [\n          /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-phone\" }),\n          /*#__PURE__*/_createTextVNode(\" Бидний тухай\")\n        ]),\n        /*#__PURE__*/_createElementVNode(\"span\", null, \"Багийн танилцуулга\")\n      ])\n    ]),\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-6 social-container\" }, [\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"ttl-info text-start ttl-sm- icons\" }, [\n        /*#__PURE__*/_createElementVNode(\"h6\", null, [\n          /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-location-arrow\" }),\n          /*#__PURE__*/_createTextVNode(\" Холбоо барих\")\n        ]),\n        /*#__PURE__*/_createElementVNode(\"ul\", { class: \"list-social d-flex aln-center\" }, [\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-facebook\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-linkedin\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-twitter\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-pinterest\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-instagram\" })\n            ])\n          ])\n        ])\n      ])\n    ])\n  ])\n], -1))\nconst _hoisted_15 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"div\", { class: \"container-fluid m-t-20 p-t-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"row\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-12 footer-copyright text-center\" }, [\n      /*#__PURE__*/_createElementVNode(\"p\", { class: \"p-t-5 p-b-5\" }, \" Copyright © 2021 Tsg Job Web. All Rights Reserved. \")\n    ])\n  ])\n], -1))\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    (_openBlock(), _createBlock(_Teleport, { to: \"body\" }, [\n      _createElementVNode(\"footer\", {\n        class: _normalizeClass([\"footer\", $options.footer == 'footer-dark' ? 'footer-dark' : ''])\n      }, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"div\", _hoisted_4, [\n                _createElementVNode(\"div\", _hoisted_5, [\n                  _createElementVNode(\"div\", _hoisted_6, [\n                    _createVNode(_component_nuxt_link, { to: \"/\" }, {\n                      default: _withCtx(() => [\n                        _hoisted_7\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _createElementVNode(\"div\", _hoisted_8, [\n                    _createElementVNode(\"div\", _hoisted_9, [\n                      _hoisted_10,\n                      _createElementVNode(\"ul\", null, [\n                        _createElementVNode(\"li\", _hoisted_11, [\n                          _createVNode(_component_nuxt_link, { to: \"/\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Нүүр хуудас \")\n                            ]),\n                            _: 1\n                          })\n                        ]),\n                        _createElementVNode(\"li\", _hoisted_12, [\n                          _createVNode(_component_nuxt_link, { to: \"/student/profile\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Хувийн мэдээлэл \")\n                            ]),\n                            _: 1\n                          })\n                        ]),\n                        _createElementVNode(\"li\", _hoisted_13, [\n                          _createVNode(_component_nuxt_link, { to: \"/student/job/list\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Ажлын зарууд \")\n                            ]),\n                            _: 1\n                          })\n                        ])\n                      ])\n                    ])\n                  ])\n                ])\n              ]),\n              _hoisted_14\n            ])\n          ])\n        ]),\n        _hoisted_15\n      ], 2)\n    ]))\n  ]))\n}\n\nimport \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/footer.vue?vue&type=style&index=0&scoped=b8d00501&lang.scss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-b8d00501\"]])",
+      "start": 1700848824296,
+      "end": 1700848824308,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824308,
+      "end": 1700848824308,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824308,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824309,
+      "end": 1700848824309,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824309,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport { useLayoutStore } from '~~/store/layout';\n\nconst _sfc_main = {\n  data() {\n    return {};\n  },\n  computed: {\n    footer() {\n      return useLayoutStore().footer;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, normalizeClass as _normalizeClass, Teleport as _Teleport, openBlock as _openBlock, createBlock as _createBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport _imports_0 from '/images/logo.png'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-b8d00501\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = { class: \"footer-container m-t-30\" }\nconst _hoisted_2 = { class: \"inner-footer m-t-20\" }\nconst _hoisted_3 = {\n  class: \"row\",\n  \"data-intro\": \"This is the your details\",\n  id: \"info-bar-tour\"\n}\nconst _hoisted_4 = { class: \"col-sm-6 col-lg-6 order-sm-1 order-xl-0\" }\nconst _hoisted_5 = { class: \"row\" }\nconst _hoisted_6 = { class: \"col-md-6\" }\nconst _hoisted_7 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  alt: \"images\"\n}, null, -1))\nconst _hoisted_8 = { class: \"col-md-6\" }\nconst _hoisted_9 = { class: \"ttl-info text-start\" }\nconst _hoisted_10 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"h6\", null, [\n  /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-envelope\" }),\n  /*#__PURE__*/_createTextVNode(\" Холбоос\")\n], -1))\nconst _hoisted_11 = { class: \"m-t-5\" }\nconst _hoisted_12 = { class: \"m-t-5\" }\nconst _hoisted_13 = { class: \"m-t-5\" }\nconst _hoisted_14 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-sm-6 col-lg-6 order-sm-2 order-xl-2 contact-us-container\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"row\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-6\" }, [\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"ttl-info text-start ttl-xs-mt\" }, [\n        /*#__PURE__*/_createElementVNode(\"h6\", null, [\n          /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-phone\" }),\n          /*#__PURE__*/_createTextVNode(\" Бидний тухай\")\n        ]),\n        /*#__PURE__*/_createElementVNode(\"span\", null, \"Багийн танилцуулга\")\n      ])\n    ]),\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-6 social-container\" }, [\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"ttl-info text-start ttl-sm- icons\" }, [\n        /*#__PURE__*/_createElementVNode(\"h6\", null, [\n          /*#__PURE__*/_createElementVNode(\"i\", { class: \"fa fa-location-arrow\" }),\n          /*#__PURE__*/_createTextVNode(\" Холбоо барих\")\n        ]),\n        /*#__PURE__*/_createElementVNode(\"ul\", { class: \"list-social d-flex aln-center\" }, [\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-facebook\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-linkedin\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-twitter\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-pinterest\" })\n            ])\n          ]),\n          /*#__PURE__*/_createElementVNode(\"li\", null, [\n            /*#__PURE__*/_createElementVNode(\"a\", {\n              href: \"https://www.instagram.com/\",\n              target: \"_blank\"\n            }, [\n              /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-instagram\" })\n            ])\n          ])\n        ])\n      ])\n    ])\n  ])\n], -1))\nconst _hoisted_15 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"div\", { class: \"container-fluid m-t-20 p-t-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"row\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"col-md-12 footer-copyright text-center\" }, [\n      /*#__PURE__*/_createElementVNode(\"p\", { class: \"p-t-5 p-b-5\" }, \" Copyright © 2021 Tsg Job Web. All Rights Reserved. \")\n    ])\n  ])\n], -1))\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_nuxt_link = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    (_openBlock(), _createBlock(_Teleport, { to: \"body\" }, [\n      _createElementVNode(\"footer\", {\n        class: _normalizeClass([\"footer\", $options.footer == 'footer-dark' ? 'footer-dark' : ''])\n      }, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"div\", _hoisted_2, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"div\", _hoisted_4, [\n                _createElementVNode(\"div\", _hoisted_5, [\n                  _createElementVNode(\"div\", _hoisted_6, [\n                    _createVNode(_component_nuxt_link, { to: \"/\" }, {\n                      default: _withCtx(() => [\n                        _hoisted_7\n                      ]),\n                      _: 1\n                    })\n                  ]),\n                  _createElementVNode(\"div\", _hoisted_8, [\n                    _createElementVNode(\"div\", _hoisted_9, [\n                      _hoisted_10,\n                      _createElementVNode(\"ul\", null, [\n                        _createElementVNode(\"li\", _hoisted_11, [\n                          _createVNode(_component_nuxt_link, { to: \"/\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Нүүр хуудас \")\n                            ]),\n                            _: 1\n                          })\n                        ]),\n                        _createElementVNode(\"li\", _hoisted_12, [\n                          _createVNode(_component_nuxt_link, { to: \"/student/profile\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Хувийн мэдээлэл \")\n                            ]),\n                            _: 1\n                          })\n                        ]),\n                        _createElementVNode(\"li\", _hoisted_13, [\n                          _createVNode(_component_nuxt_link, { to: \"/student/job/list\" }, {\n                            default: _withCtx(() => [\n                              _createTextVNode(\" Ажлын зарууд \")\n                            ]),\n                            _: 1\n                          })\n                        ])\n                      ])\n                    ])\n                  ])\n                ])\n              ]),\n              _hoisted_14\n            ])\n          ])\n        ]),\n        _hoisted_15\n      ], 2)\n    ]))\n  ]))\n}\n\nimport \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/footer.vue?vue&type=style&index=0&scoped=b8d00501&lang.scss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-b8d00501\"]])",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824314,
+      "end": 1700848824314,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824315,
+      "end": 1700848824315,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/clamp/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import max from \"../max/index.js\";\nimport min from \"../min/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name clamp\n * @category Interval Helpers\n * @summary Return a date bounded by the start and the end of the given interval\n *\n * @description\n * Clamps a date to the lower bound with the start of the interval and the upper\n * bound with the end of the interval.\n *\n * - When the date is less than the start of the interval, the start is returned.\n * - When the date is greater than the end of the interval, the end is returned.\n * - Otherwise the date is returned.\n *\n * @example\n * // What is Mar, 21, 2021 bounded to an interval starting at Mar, 22, 2021 and ending at Apr, 01, 2021\n * const result = clamp(new Date(2021, 2, 21), {\n *   start: new Date(2021, 2, 22),\n *   end: new Date(2021, 3, 1),\n * })\n * //=> Mon Mar 22 2021 00:00:00\n *\n * @param {Date | Number} date - the date to be bounded\n * @param {Interval} interval - the interval to bound to\n * @returns {Date} the date bounded by the start and the end of the interval\n * @throws {TypeError} 2 arguments required\n */\nexport default function clamp(date, _ref) {\n  var start = _ref.start,\n    end = _ref.end;\n  requiredArgs(2, arguments);\n  return min([max([date, start]), end]);\n}",
+      "start": 1700848829468,
+      "end": 1700848829578,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829578,
+      "end": 1700848829578,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829579,
+      "end": 1700848829579,
+      "order": "normal"
+    }
+  ]
+}

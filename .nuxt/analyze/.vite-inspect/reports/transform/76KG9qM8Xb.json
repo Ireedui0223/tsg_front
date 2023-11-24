@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/modules/thumbs/thumbs.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { isObject } from '../../shared/utils.js';\nimport $ from '../../shared/dom.js';\nexport default function Thumb({\n  swiper,\n  extendParams,\n  on\n}) {\n  extendParams({\n    thumbs: {\n      swiper: null,\n      multipleActiveThumbs: true,\n      autoScrollOffset: 0,\n      slideThumbActiveClass: 'swiper-slide-thumb-active',\n      thumbsContainerClass: 'swiper-thumbs'\n    }\n  });\n  let initialized = false;\n  let swiperCreated = false;\n  swiper.thumbs = {\n    swiper: null\n  };\n\n  function onThumbClick() {\n    const thumbsSwiper = swiper.thumbs.swiper;\n    if (!thumbsSwiper || thumbsSwiper.destroyed) return;\n    const clickedIndex = thumbsSwiper.clickedIndex;\n    const clickedSlide = thumbsSwiper.clickedSlide;\n    if (clickedSlide && $(clickedSlide).hasClass(swiper.params.thumbs.slideThumbActiveClass)) return;\n    if (typeof clickedIndex === 'undefined' || clickedIndex === null) return;\n    let slideToIndex;\n\n    if (thumbsSwiper.params.loop) {\n      slideToIndex = parseInt($(thumbsSwiper.clickedSlide).attr('data-swiper-slide-index'), 10);\n    } else {\n      slideToIndex = clickedIndex;\n    }\n\n    if (swiper.params.loop) {\n      let currentIndex = swiper.activeIndex;\n\n      if (swiper.slides.eq(currentIndex).hasClass(swiper.params.slideDuplicateClass)) {\n        swiper.loopFix(); // eslint-disable-next-line\n\n        swiper._clientLeft = swiper.$wrapperEl[0].clientLeft;\n        currentIndex = swiper.activeIndex;\n      }\n\n      const prevIndex = swiper.slides.eq(currentIndex).prevAll(`[data-swiper-slide-index=\"${slideToIndex}\"]`).eq(0).index();\n      const nextIndex = swiper.slides.eq(currentIndex).nextAll(`[data-swiper-slide-index=\"${slideToIndex}\"]`).eq(0).index();\n      if (typeof prevIndex === 'undefined') slideToIndex = nextIndex;else if (typeof nextIndex === 'undefined') slideToIndex = prevIndex;else if (nextIndex - currentIndex < currentIndex - prevIndex) slideToIndex = nextIndex;else slideToIndex = prevIndex;\n    }\n\n    swiper.slideTo(slideToIndex);\n  }\n\n  function init() {\n    const {\n      thumbs: thumbsParams\n    } = swiper.params;\n    if (initialized) return false;\n    initialized = true;\n    const SwiperClass = swiper.constructor;\n\n    if (thumbsParams.swiper instanceof SwiperClass) {\n      swiper.thumbs.swiper = thumbsParams.swiper;\n      Object.assign(swiper.thumbs.swiper.originalParams, {\n        watchSlidesProgress: true,\n        slideToClickedSlide: false\n      });\n      Object.assign(swiper.thumbs.swiper.params, {\n        watchSlidesProgress: true,\n        slideToClickedSlide: false\n      });\n    } else if (isObject(thumbsParams.swiper)) {\n      const thumbsSwiperParams = Object.assign({}, thumbsParams.swiper);\n      Object.assign(thumbsSwiperParams, {\n        watchSlidesProgress: true,\n        slideToClickedSlide: false\n      });\n      swiper.thumbs.swiper = new SwiperClass(thumbsSwiperParams);\n      swiperCreated = true;\n    }\n\n    swiper.thumbs.swiper.$el.addClass(swiper.params.thumbs.thumbsContainerClass);\n    swiper.thumbs.swiper.on('tap', onThumbClick);\n    return true;\n  }\n\n  function update(initial) {\n    const thumbsSwiper = swiper.thumbs.swiper;\n    if (!thumbsSwiper || thumbsSwiper.destroyed) return;\n    const slidesPerView = thumbsSwiper.params.slidesPerView === 'auto' ? thumbsSwiper.slidesPerViewDynamic() : thumbsSwiper.params.slidesPerView; // Activate thumbs\n\n    let thumbsToActivate = 1;\n    const thumbActiveClass = swiper.params.thumbs.slideThumbActiveClass;\n\n    if (swiper.params.slidesPerView > 1 && !swiper.params.centeredSlides) {\n      thumbsToActivate = swiper.params.slidesPerView;\n    }\n\n    if (!swiper.params.thumbs.multipleActiveThumbs) {\n      thumbsToActivate = 1;\n    }\n\n    thumbsToActivate = Math.floor(thumbsToActivate);\n    thumbsSwiper.slides.removeClass(thumbActiveClass);\n\n    if (thumbsSwiper.params.loop || thumbsSwiper.params.virtual && thumbsSwiper.params.virtual.enabled) {\n      for (let i = 0; i < thumbsToActivate; i += 1) {\n        thumbsSwiper.$wrapperEl.children(`[data-swiper-slide-index=\"${swiper.realIndex + i}\"]`).addClass(thumbActiveClass);\n      }\n    } else {\n      for (let i = 0; i < thumbsToActivate; i += 1) {\n        thumbsSwiper.slides.eq(swiper.realIndex + i).addClass(thumbActiveClass);\n      }\n    }\n\n    const autoScrollOffset = swiper.params.thumbs.autoScrollOffset;\n    const useOffset = autoScrollOffset && !thumbsSwiper.params.loop;\n\n    if (swiper.realIndex !== thumbsSwiper.realIndex || useOffset) {\n      let currentThumbsIndex = thumbsSwiper.activeIndex;\n      let newThumbsIndex;\n      let direction;\n\n      if (thumbsSwiper.params.loop) {\n        if (thumbsSwiper.slides.eq(currentThumbsIndex).hasClass(thumbsSwiper.params.slideDuplicateClass)) {\n          thumbsSwiper.loopFix(); // eslint-disable-next-line\n\n          thumbsSwiper._clientLeft = thumbsSwiper.$wrapperEl[0].clientLeft;\n          currentThumbsIndex = thumbsSwiper.activeIndex;\n        } // Find actual thumbs index to slide to\n\n\n        const prevThumbsIndex = thumbsSwiper.slides.eq(currentThumbsIndex).prevAll(`[data-swiper-slide-index=\"${swiper.realIndex}\"]`).eq(0).index();\n        const nextThumbsIndex = thumbsSwiper.slides.eq(currentThumbsIndex).nextAll(`[data-swiper-slide-index=\"${swiper.realIndex}\"]`).eq(0).index();\n\n        if (typeof prevThumbsIndex === 'undefined') {\n          newThumbsIndex = nextThumbsIndex;\n        } else if (typeof nextThumbsIndex === 'undefined') {\n          newThumbsIndex = prevThumbsIndex;\n        } else if (nextThumbsIndex - currentThumbsIndex === currentThumbsIndex - prevThumbsIndex) {\n          newThumbsIndex = thumbsSwiper.params.slidesPerGroup > 1 ? nextThumbsIndex : currentThumbsIndex;\n        } else if (nextThumbsIndex - currentThumbsIndex < currentThumbsIndex - prevThumbsIndex) {\n          newThumbsIndex = nextThumbsIndex;\n        } else {\n          newThumbsIndex = prevThumbsIndex;\n        }\n\n        direction = swiper.activeIndex > swiper.previousIndex ? 'next' : 'prev';\n      } else {\n        newThumbsIndex = swiper.realIndex;\n        direction = newThumbsIndex > swiper.previousIndex ? 'next' : 'prev';\n      }\n\n      if (useOffset) {\n        newThumbsIndex += direction === 'next' ? autoScrollOffset : -1 * autoScrollOffset;\n      }\n\n      if (thumbsSwiper.visibleSlidesIndexes && thumbsSwiper.visibleSlidesIndexes.indexOf(newThumbsIndex) < 0) {\n        if (thumbsSwiper.params.centeredSlides) {\n          if (newThumbsIndex > currentThumbsIndex) {\n            newThumbsIndex = newThumbsIndex - Math.floor(slidesPerView / 2) + 1;\n          } else {\n            newThumbsIndex = newThumbsIndex + Math.floor(slidesPerView / 2) - 1;\n          }\n        } else if (newThumbsIndex > currentThumbsIndex && thumbsSwiper.params.slidesPerGroup === 1) {// newThumbsIndex = newThumbsIndex - slidesPerView + 1;\n        }\n\n        thumbsSwiper.slideTo(newThumbsIndex, initial ? 0 : undefined);\n      }\n    }\n  }\n\n  on('beforeInit', () => {\n    const {\n      thumbs\n    } = swiper.params;\n    if (!thumbs || !thumbs.swiper) return;\n    init();\n    update(true);\n  });\n  on('slideChange update resize observerUpdate', () => {\n    update();\n  });\n  on('setTransition', (_s, duration) => {\n    const thumbsSwiper = swiper.thumbs.swiper;\n    if (!thumbsSwiper || thumbsSwiper.destroyed) return;\n    thumbsSwiper.setTransition(duration);\n  });\n  on('beforeDestroy', () => {\n    const thumbsSwiper = swiper.thumbs.swiper;\n    if (!thumbsSwiper || thumbsSwiper.destroyed) return;\n\n    if (swiperCreated) {\n      thumbsSwiper.destroy();\n    }\n  });\n  Object.assign(swiper.thumbs, {\n    init,\n    update\n  });\n}",
+      "start": 1700848829244,
+      "end": 1700848829427,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829427,
+      "end": 1700848829427,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829427,
+      "end": 1700848829428,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829428,
+      "end": 1700848829429,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829429,
+      "end": 1700848829429,
+      "order": "normal"
+    }
+  ]
+}

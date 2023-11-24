@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/vue3-animate-onscroll/lib/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import ScrollAnimate from \"./scroll-animate\";\r\nexport default {\r\n    ScrollAnimate: ScrollAnimate,\r\n    install: function (app, opt) {\r\n        app.directive(\"animate-onscroll\", {\r\n            mounted: function (el, binding) {\r\n                var domRef = window;\r\n                if (opt && (opt === null || opt === void 0 ? void 0 : opt.id)) {\r\n                    domRef = document.getElementById(opt.id);\r\n                }\r\n                else if (opt && (opt === null || opt === void 0 ? void 0 : opt.tag) == \"body\") {\r\n                    domRef = document.body;\r\n                }\r\n                var scrollAnimate = ScrollAnimate();\r\n                var previousClassName = el.className;\r\n                var lastScrollTop = window.pageYOffset;\r\n                domRef.addEventListener(\"scroll\", function () {\r\n                    var scrollTop = window.pageYOffset || domRef.scrollTop;\r\n                    var isUpwards = scrollTop < lastScrollTop;\r\n                    scrollAnimate.run(el, binding, { isUpwards: isUpwards, previousClassName: previousClassName });\r\n                    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;\r\n                }, false);\r\n            },\r\n        });\r\n    },\r\n};\r\n",
+      "start": 1700848819195,
+      "end": 1700848819706,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848819706,
+      "end": 1700848819706,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848819706,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848819707,
+      "end": 1700848819707,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848819707,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848819708,
+      "end": 1700848819708,
+      "order": "normal"
+    }
+  ]
+}

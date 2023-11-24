@@ -1,0 +1,212 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/store/menu.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineStore } from 'pinia';\nexport const useMenuStore = defineStore({\n  id: 'menu',\n  state: () => {\n    return {\n      searchData: [],\n      togglesidebar: true,\n      activeoverlay: false,\n      searchOpen: false,\n      customizer: '',\n      hideRightArrowRTL: false,\n      hideLeftArrowRTL: true,\n      hideRightArrow: true,\n      hideLeftArrow: true,\n      width: 0,\n      height: 0,\n      margin: 0,\n      menuWidth: 0\n    };\n  },\n  actions: {\n    resizetoggle() {\n      if (process.client) {\n        if (window.innerWidth < 1199) {\n          this.togglesidebar = false;\n          // this.activeoverlay = true\n        } else {\n          this.togglesidebar = true;\n          // this.activeoverlay = false\n        }\n      }\n    },\n    searchTerm(term) {\n      let items = [];\n      var searchval = term.toLowerCase();\n      console.log('====================================');\n      console.log('search field');\n      console.log('====================================');\n    }\n  }\n});\n",
+      "start": 1700848825032,
+      "end": 1700848825562,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { defineStore } from 'pinia';\nexport const useMenuStore = defineStore({\n  id: 'menu',\n  state: () => {\n    return {\n      searchData: [],\n      togglesidebar: true,\n      activeoverlay: false,\n      searchOpen: false,\n      customizer: '',\n      hideRightArrowRTL: false,\n      hideLeftArrowRTL: true,\n      hideRightArrow: true,\n      hideLeftArrow: true,\n      width: 0,\n      height: 0,\n      margin: 0,\n      menuWidth: 0\n    };\n  },\n  actions: {\n    resizetoggle() {\n      if (true) {\n        if (window.innerWidth < 1199) {\n          this.togglesidebar = false;\n          // this.activeoverlay = true\n        } else {\n          this.togglesidebar = true;\n          // this.activeoverlay = false\n        }\n      }\n    },\n    searchTerm(term) {\n      let items = [];\n      var searchval = term.toLowerCase();\n      console.log('====================================');\n      console.log('search field');\n      console.log('====================================');\n    }\n  }\n});\n",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825563,
+      "end": 1700848825563,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825563,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825564,
+      "end": 1700848825564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825564,
+      "end": 1700848825565,
+      "order": "normal"
+    }
+  ]
+}

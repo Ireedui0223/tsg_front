@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/eachQuarterOfInterval/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import addQuarters from \"../addQuarters/index.js\";\nimport startOfQuarter from \"../startOfQuarter/index.js\";\nimport toDate from \"../toDate/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name eachQuarterOfInterval\n * @category Interval Helpers\n * @summary Return the array of quarters within the specified time interval.\n *\n * @description\n * Return the array of quarters within the specified time interval.\n *\n * @param {Interval} interval - the interval. See [Interval]{@link https://date-fns.org/docs/Interval}\n * @returns {Date[]} the array with starts of quarters from the quarter of the interval start to the quarter of the interval end\n * @throws {TypeError} 1 argument required\n * @throws {RangeError} The start of an interval cannot be after its end\n * @throws {RangeError} Date in interval cannot be `Invalid Date`\n *\n * @example\n * // Each quarter within interval 6 February 2014 - 10 August 2014:\n * const result = eachQuarterOfInterval({\n *   start: new Date(2014, 1, 6),\n *   end: new Date(2014, 7, 10)\n * })\n * //=> [\n * //   Wed Jan 01 2014 00:00:00,\n * //   Tue Apr 01 2014 00:00:00,\n * //   Tue Jul 01 2014 00:00:00,\n * // ]\n */\nexport default function eachQuarterOfInterval(dirtyInterval) {\n  requiredArgs(1, arguments);\n  var interval = dirtyInterval || {};\n  var startDate = toDate(interval.start);\n  var endDate = toDate(interval.end);\n  var endTime = endDate.getTime();\n\n  // Throw an exception if start date is after end date or if any date is `Invalid Date`\n  if (!(startDate.getTime() <= endTime)) {\n    throw new RangeError('Invalid interval');\n  }\n  var startDateQuarter = startOfQuarter(startDate);\n  var endDateQuarter = startOfQuarter(endDate);\n  endTime = endDateQuarter.getTime();\n  var quarters = [];\n  var currentQuarter = startDateQuarter;\n  while (currentQuarter.getTime() <= endTime) {\n    quarters.push(toDate(currentQuarter));\n    currentQuarter = addQuarters(currentQuarter, 1);\n  }\n  return quarters;\n}",
+      "start": 1700848829619,
+      "end": 1700848829714,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829714,
+      "end": 1700848829714,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829714,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829715,
+      "end": 1700848829715,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829715,
+      "end": 1700848829716,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829716,
+      "end": 1700848829716,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829716,
+      "end": 1700848829716,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829716,
+      "end": 1700848829716,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829716,
+      "end": 1700848829716,
+      "order": "normal"
+    }
+  ]
+}

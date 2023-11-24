@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/recentOrderComponents/televisionTable.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"recent-table table-responsive\">\n    <table class=\"table\">\n      <thead>\n        <tr>\n          <th class=\"f-light\">Item</th>\n          <th class=\"f-light\">Qty</th>\n          <th class=\"f-light\">Price</th>\n          <th class=\"f-light\">Status</th>\n          <th class=\"f-light\">Total Price</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr>\n          <td>\n            <div class=\"product-content\">\n              <div class=\"order-image\">\n                <img\n                  src=\"/images/dashboard-2/order/sub-product/5.png\"\n                  alt=\"television\"\n                />\n              </div>\n              <div>\n                <h6 class=\"f-14  m-b-0\">\n                  <a>\n                    <NuxtLink to=\"/ecommerce/order/history\">Sony</NuxtLink>\n                  </a>\n                </h6>\n                <span class=\"f-light f-12\">Id : #CFDE-2163</span>\n              </div>\n            </div>\n          </td>\n          <td class=\"f-w-500\">X1</td>\n          <td class=\"f-w-500\">$56.00</td>\n          <td class=\"f-w-500\">\n            <div class=\"recent-status font-danger\">\n              <svg class=\"me-1\">\n                <use href=\"@/assets/svg/icon-sprite.svg#24-hour\"></use></svg\n              >Rejected\n            </div>\n          </td>\n          <td class=\"f-w-500\">$390.00</td>\n        </tr>\n        <tr>\n          <td>\n            <div class=\"product-content\">\n              <div class=\"order-image\">\n                <img\n                  src=\"/images/dashboard-2/order/sub-product/6.png\"\n                  alt=\"television\"\n                />\n              </div>\n              <div>\n                <h6 class=\"f-14  m-b-0\">\n                  <a>\n                    <NuxtLink to=\"/ecommerce/order/history\">Samsung</NuxtLink>\n                  </a>\n                </h6>\n                <span class=\"f-light f-12\">Id : #CFDE-2780</span>\n              </div>\n            </div>\n          </td>\n          <td class=\"f-w-500\">X2</td>\n          <td class=\"f-w-500\">$100.00</td>\n          <td class=\"f-w-500\">\n            <div class=\"recent-status font-success\">\n              <svg class=\"me-1\">\n                <use href=\"@/assets/svg/icon-sprite.svg#24-hour\"></use></svg\n              >Verified\n            </div>\n          </td>\n          <td class=\"f-w-500\">$870.00</td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</template>\n",
+      "start": 1700848827303,
+      "end": 1700848827677,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827677,
+      "end": 1700848827677,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-2/order/sub-product/5.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\nimport _imports_2 from '/images/dashboard-2/order/sub-product/6.png'\n\n\nconst _hoisted_1 = _imports_1 + '#24-hour'\nconst _hoisted_2 = { class: \"recent-table table-responsive\" }\nconst _hoisted_3 = { class: \"table\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"thead\", null, [\n  /*#__PURE__*/_createElementVNode(\"tr\", null, [\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Item\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Qty\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Price\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Status\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Total Price\")\n  ])\n], -1)\nconst _hoisted_5 = { class: \"product-content\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"order-image\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    alt: \"television\"\n  })\n], -1)\nconst _hoisted_7 = { class: \"f-14 m-b-0\" }\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light f-12\" }, \"Id : #CFDE-2163\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"X1\", -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$56.00\", -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"recent-status font-danger\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", { class: \"me-1\" }, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ]),\n    /*#__PURE__*/_createTextVNode(\"Rejected \")\n  ])\n], -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$390.00\", -1)\nconst _hoisted_13 = { class: \"product-content\" }\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"order-image\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_2,\n    alt: \"television\"\n  })\n], -1)\nconst _hoisted_15 = { class: \"f-14 m-b-0\" }\nconst _hoisted_16 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light f-12\" }, \"Id : #CFDE-2780\", -1)\nconst _hoisted_17 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"X2\", -1)\nconst _hoisted_18 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$100.00\", -1)\nconst _hoisted_19 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"recent-status font-success\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", { class: \"me-1\" }, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ]),\n    /*#__PURE__*/_createTextVNode(\"Verified \")\n  ])\n], -1)\nconst _hoisted_20 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$870.00\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"table\", _hoisted_3, [\n      _hoisted_4,\n      _createElementVNode(\"tbody\", null, [\n        _createElementVNode(\"tr\", null, [\n          _createElementVNode(\"td\", null, [\n            _createElementVNode(\"div\", _hoisted_5, [\n              _hoisted_6,\n              _createElementVNode(\"div\", null, [\n                _createElementVNode(\"h6\", _hoisted_7, [\n                  _createElementVNode(\"a\", null, [\n                    _createVNode(_component_NuxtLink, { to: \"/ecommerce/order/history\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Sony\")\n                      ]),\n                      _: 1\n                    })\n                  ])\n                ]),\n                _hoisted_8\n              ])\n            ])\n          ]),\n          _hoisted_9,\n          _hoisted_10,\n          _hoisted_11,\n          _hoisted_12\n        ]),\n        _createElementVNode(\"tr\", null, [\n          _createElementVNode(\"td\", null, [\n            _createElementVNode(\"div\", _hoisted_13, [\n              _hoisted_14,\n              _createElementVNode(\"div\", null, [\n                _createElementVNode(\"h6\", _hoisted_15, [\n                  _createElementVNode(\"a\", null, [\n                    _createVNode(_component_NuxtLink, { to: \"/ecommerce/order/history\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Samsung\")\n                      ]),\n                      _: 1\n                    })\n                  ])\n                ]),\n                _hoisted_16\n              ])\n            ])\n          ]),\n          _hoisted_17,\n          _hoisted_18,\n          _hoisted_19,\n          _hoisted_20\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848827677,
+      "end": 1700848827679,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827679,
+      "end": 1700848827679,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827679,
+      "end": 1700848827679,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827679,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827680,
+      "end": 1700848827680,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827680,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\nconst _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-2/order/sub-product/5.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\nimport _imports_2 from '/images/dashboard-2/order/sub-product/6.png'\n\n\nconst _hoisted_1 = _imports_1 + '#24-hour'\nconst _hoisted_2 = { class: \"recent-table table-responsive\" }\nconst _hoisted_3 = { class: \"table\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"thead\", null, [\n  /*#__PURE__*/_createElementVNode(\"tr\", null, [\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Item\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Qty\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Price\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Status\"),\n    /*#__PURE__*/_createElementVNode(\"th\", { class: \"f-light\" }, \"Total Price\")\n  ])\n], -1)\nconst _hoisted_5 = { class: \"product-content\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"order-image\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_0,\n    alt: \"television\"\n  })\n], -1)\nconst _hoisted_7 = { class: \"f-14 m-b-0\" }\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light f-12\" }, \"Id : #CFDE-2163\", -1)\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"X1\", -1)\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$56.00\", -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"recent-status font-danger\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", { class: \"me-1\" }, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ]),\n    /*#__PURE__*/_createTextVNode(\"Rejected \")\n  ])\n], -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$390.00\", -1)\nconst _hoisted_13 = { class: \"product-content\" }\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"order-image\" }, [\n  /*#__PURE__*/_createElementVNode(\"img\", {\n    src: _imports_2,\n    alt: \"television\"\n  })\n], -1)\nconst _hoisted_15 = { class: \"f-14 m-b-0\" }\nconst _hoisted_16 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light f-12\" }, \"Id : #CFDE-2780\", -1)\nconst _hoisted_17 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"X2\", -1)\nconst _hoisted_18 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$100.00\", -1)\nconst _hoisted_19 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"recent-status font-success\" }, [\n    /*#__PURE__*/_createElementVNode(\"svg\", { class: \"me-1\" }, [\n      /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n    ]),\n    /*#__PURE__*/_createTextVNode(\"Verified \")\n  ])\n], -1)\nconst _hoisted_20 = /*#__PURE__*/_createElementVNode(\"td\", { class: \"f-w-500\" }, \"$870.00\", -1)\n\nfunction _sfc_render(_ctx, _cache) {\n  const _component_NuxtLink = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"table\", _hoisted_3, [\n      _hoisted_4,\n      _createElementVNode(\"tbody\", null, [\n        _createElementVNode(\"tr\", null, [\n          _createElementVNode(\"td\", null, [\n            _createElementVNode(\"div\", _hoisted_5, [\n              _hoisted_6,\n              _createElementVNode(\"div\", null, [\n                _createElementVNode(\"h6\", _hoisted_7, [\n                  _createElementVNode(\"a\", null, [\n                    _createVNode(_component_NuxtLink, { to: \"/ecommerce/order/history\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Sony\")\n                      ]),\n                      _: 1\n                    })\n                  ])\n                ]),\n                _hoisted_8\n              ])\n            ])\n          ]),\n          _hoisted_9,\n          _hoisted_10,\n          _hoisted_11,\n          _hoisted_12\n        ]),\n        _createElementVNode(\"tr\", null, [\n          _createElementVNode(\"td\", null, [\n            _createElementVNode(\"div\", _hoisted_13, [\n              _hoisted_14,\n              _createElementVNode(\"div\", null, [\n                _createElementVNode(\"h6\", _hoisted_15, [\n                  _createElementVNode(\"a\", null, [\n                    _createVNode(_component_NuxtLink, { to: \"/ecommerce/order/history\" }, {\n                      default: _withCtx(() => [\n                        _createTextVNode(\"Samsung\")\n                      ]),\n                      _: 1\n                    })\n                  ])\n                ]),\n                _hoisted_16\n              ])\n            ])\n          ]),\n          _hoisted_17,\n          _hoisted_18,\n          _hoisted_19,\n          _hoisted_20\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827686,
+      "end": 1700848827686,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827686,
+      "end": 1700848827687,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827687,
+      "end": 1700848827687,
+      "order": "normal"
+    }
+  ]
+}

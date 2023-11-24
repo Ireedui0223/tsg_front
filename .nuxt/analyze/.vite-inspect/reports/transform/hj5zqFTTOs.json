@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/vue-feather/dist/vue-feather.esm.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/*! vue-feather v2.0.0 | (c) 2018-present Chen Fengyuan | MIT */\nimport { defineComponent, h } from 'vue';\nimport * as feather from 'feather-icons';\n\nvar script = defineComponent({\r\n    name: 'VueFeather',\r\n    props: {\r\n        animation: {\r\n            type: String,\r\n            default: undefined,\r\n        },\r\n        animationSpeed: {\r\n            type: String,\r\n            default: undefined,\r\n        },\r\n        fill: {\r\n            type: String,\r\n            default: 'none',\r\n        },\r\n        size: {\r\n            type: [Number, String],\r\n            default: 24,\r\n        },\r\n        stroke: {\r\n            type: String,\r\n            default: 'currentColor',\r\n        },\r\n        strokeLinecap: {\r\n            type: String,\r\n            default: 'round',\r\n        },\r\n        strokeLinejoin: {\r\n            type: String,\r\n            default: 'round',\r\n        },\r\n        strokeWidth: {\r\n            type: [Number, String],\r\n            default: 2,\r\n        },\r\n        tag: {\r\n            type: String,\r\n            default: 'i',\r\n        },\r\n        type: {\r\n            type: String,\r\n            default: 'feather',\r\n            validator(type) {\r\n                if (!feather) {\r\n                    throw new Error('The Feather icons is required.');\r\n                }\r\n                if (!feather.icons[type]) {\r\n                    throw new Error(`\"${type}\" is not an available icon type.`);\r\n                }\r\n                return true;\r\n            },\r\n        },\r\n    },\r\n    computed: {\r\n        isRemSize() {\r\n            return typeof this.size === 'string' && this.size.endsWith('rem');\r\n        },\r\n    },\r\n    render() {\r\n        const { animation, animationSpeed, isRemSize, size, type, } = this;\r\n        const icon = feather.icons[type];\r\n        return h(this.tag, {\r\n            ...this.$attrs,\r\n            'data-name': type,\r\n            'data-tags': icon.tags,\r\n            'data-type': type,\r\n            class: {\r\n                'vue-feather': true,\r\n                [`vue-feather--${type}`]: type,\r\n                [`vue-feather--${animation}`]: animation,\r\n                [`vue-feather--${animationSpeed}`]: animationSpeed,\r\n            },\r\n            style: isRemSize ? {\r\n                height: size,\r\n                width: size,\r\n            } : undefined,\r\n        }, [\r\n            h('svg', \r\n            // XXX: The `width` and `height` attributes do not support the `rem` unit in Safari (#13).\r\n            {\r\n                ...icon.attrs,\r\n                fill: this.fill,\r\n                height: isRemSize ? undefined : size,\r\n                stroke: this.stroke,\r\n                'stroke-linecap': this.strokeLinecap,\r\n                'stroke-linejoin': this.strokeLinejoin,\r\n                'stroke-width': this.strokeWidth,\r\n                width: isRemSize ? undefined : size,\r\n                class: [icon.attrs.class, 'vue-feather__content'],\r\n                innerHTML: icon.contents,\r\n            }),\r\n        ]);\r\n    },\r\n});\n\nfunction styleInject(css, ref) {\n  if ( ref === void 0 ) ref = {};\n  var insertAt = ref.insertAt;\n\n  if (!css || typeof document === 'undefined') { return; }\n\n  var head = document.head || document.getElementsByTagName('head')[0];\n  var style = document.createElement('style');\n  style.type = 'text/css';\n\n  if (insertAt === 'top') {\n    if (head.firstChild) {\n      head.insertBefore(style, head.firstChild);\n    } else {\n      head.appendChild(style);\n    }\n  } else {\n    head.appendChild(style);\n  }\n\n  if (style.styleSheet) {\n    style.styleSheet.cssText = css;\n  } else {\n    style.appendChild(document.createTextNode(css));\n  }\n}\n\nvar css_248z = \"@keyframes vue-feather--spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.vue-feather{display:inline-block;overflow:hidden}.vue-feather--spin{animation:vue-feather--spin 2s linear infinite}.vue-feather--pulse{animation:vue-feather--spin 2s steps(8) infinite}.vue-feather--slow{animation-duration:3s}.vue-feather--fast{animation-duration:1s}.vue-feather__content{display:block;height:inherit;width:inherit}\";\nstyleInject(css_248z);\n\nexport { script as default };\n",
+      "start": 1700848820099,
+      "end": 1700848821942,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848821942,
+      "end": 1700848821942,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848821942,
+      "end": 1700848821943,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848821943,
+      "end": 1700848821943,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848821943,
+      "end": 1700848821944,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848821944,
+      "end": 1700848821944,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848821945,
+      "end": 1700848821945,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848821945,
+      "end": 1700848821945,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848821945,
+      "end": 1700848821945,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848821945,
+      "end": 1700848821945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848821945,
+      "end": 1700848821945,
+      "order": "normal"
+    }
+  ]
+}

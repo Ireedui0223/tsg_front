@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/welcomeCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-5 col-ed-6 col-xl-8 box-col-7\">\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n        <div class=\"card o-hidden welcome-card\">\n          <div class=\"card-body\">\n            <h4 class=\"mb-3 mt-1 f-w-500  m-b-0 f-22\">\n              Hello Jashmin<span>\n                <img\n                  src=\"/images/dashboard-3/hand.svg\"\n                  alt=\"hand vector\"\n              /></span>\n            </h4>\n            <p>\n              Learn something new every day with world's best courses.Free\n              online courses available.\n            </p>\n          </div>\n          <img\n            class=\"welcome-img\"\n            src=\"/images/dashboard-3/widget.svg\"\n            alt=\"search image\"\n          />\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <div class=\"card course-box\">\n          <div class=\"card-body\">\n            <div class=\"course-widget\">\n              <div class=\"course-icon\">\n                <svg class=\"fill-icon\">\n                  <use href=\"@/assets/svg/icon-sprite.svg#course-1\"></use>\n                </svg>\n              </div>\n              <div>\n                <h4 class=\" m-b-0\">100+</h4>\n                <span class=\"f-light\">Completed Courses</span\n                ><a class=\"btn btn-light f-light\">\n                  <NuxtLink to=\"/learning/list\"\n                    >View course<span class=\"ms-2\">\n                      <svg class=\"fill-icon f-light\">\n                        <use\n                          href=\"@/assets/svg/icon-sprite.svg#arrowright\"\n                        ></use></svg></span\n                  ></NuxtLink>\n                </a>\n              </div>\n            </div>\n          </div>\n          <ul class=\"square-group\">\n            <li class=\"square-1 warning\"></li>\n            <li class=\"square-1 primary\"></li>\n            <li class=\"square-2 warning1\"></li>\n            <li class=\"square-3 danger\"></li>\n            <li class=\"square-4 light\"></li>\n            <li class=\"square-5 warning\"></li>\n            <li class=\"square-6 success\"></li>\n            <li class=\"square-7 success\"></li>\n          </ul>\n        </div>\n      </div>\n      <div class=\"col-sm-6\">\n        <div class=\"card course-box\">\n          <div class=\"card-body\">\n            <div class=\"course-widget\">\n              <div class=\"course-icon warning\">\n                <svg class=\"fill-icon\">\n                  <use href=\"@/assets/svg/icon-sprite.svg#course-2\"></use>\n                </svg>\n              </div>\n              <div>\n                <h4 class=\" m-b-0\">50+</h4>\n                <span class=\"f-light\">In Progress Courses</span\n                ><a class=\"btn btn-light f-light\">\n                  <NuxtLink to=\"/learning/list\"\n                    >View course<span class=\"ms-2\">\n                      <svg class=\"fill-icon f-light\">\n                        <use\n                          href=\"@/assets/svg/icon-sprite.svg#arrowright\"\n                        ></use></svg></span\n                  ></NuxtLink>\n                </a>\n              </div>\n            </div>\n          </div>\n          <ul class=\"square-group\">\n            <li class=\"square-1 warning\"></li>\n            <li class=\"square-1 primary\"></li>\n            <li class=\"square-2 warning1\"></li>\n            <li class=\"square-3 danger\"></li>\n            <li class=\"square-4 light\"></li>\n            <li class=\"square-5 warning\"></li>\n            <li class=\"square-6 success\"></li>\n            <li class=\"square-7 success\"></li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {};\n</script>\n",
+      "start": 1700848825607,
+      "end": 1700848825834,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825834,
+      "end": 1700848825834,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-3/hand.svg'\nimport _imports_1 from '/images/dashboard-3/widget.svg'\nimport _imports_2 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_2 + '#course-1'\nconst _hoisted_2 = _imports_2 + '#arrowright'\nconst _hoisted_3 = _imports_2 + '#course-2'\nconst _hoisted_4 = { class: \"col-xxl-5 col-ed-6 col-xl-8 box-col-7\" }\nconst _hoisted_5 = { class: \"row\" }\nconst _hoisted_6 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"col-sm-12\\\"><div class=\\\"card o-hidden welcome-card\\\"><div class=\\\"card-body\\\"><h4 class=\\\"mb-3 mt-1 f-w-500 m-b-0 f-22\\\"> Hello Jashmin<span><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"hand vector\\\"></span></h4><p> Learn something new every day with world&#39;s best courses.Free online courses available. </p></div><img class=\\\"welcome-img\\\" src=\\\"\" + _imports_1 + \"\\\" alt=\\\"search image\\\"></div></div>\", 1)\nconst _hoisted_7 = { class: \"col-sm-6\" }\nconst _hoisted_8 = { class: \"card course-box\" }\nconst _hoisted_9 = { class: \"card-body\" }\nconst _hoisted_10 = { class: \"course-widget\" }\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"course-icon\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n  ])\n], -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"100+\", -1)\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Completed Courses\", -1)\nconst _hoisted_14 = { class: \"btn btn-light f-light\" }\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"ms-2\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n  ])\n], -1)\nconst _hoisted_16 = /*#__PURE__*/_createStaticVNode(\"<ul class=\\\"square-group\\\"><li class=\\\"square-1 warning\\\"></li><li class=\\\"square-1 primary\\\"></li><li class=\\\"square-2 warning1\\\"></li><li class=\\\"square-3 danger\\\"></li><li class=\\\"square-4 light\\\"></li><li class=\\\"square-5 warning\\\"></li><li class=\\\"square-6 success\\\"></li><li class=\\\"square-7 success\\\"></li></ul>\", 1)\nconst _hoisted_17 = { class: \"col-sm-6\" }\nconst _hoisted_18 = { class: \"card course-box\" }\nconst _hoisted_19 = { class: \"card-body\" }\nconst _hoisted_20 = { class: \"course-widget\" }\nconst _hoisted_21 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"course-icon warning\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_3 })\n  ])\n], -1)\nconst _hoisted_22 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"50+\", -1)\nconst _hoisted_23 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"In Progress Courses\", -1)\nconst _hoisted_24 = { class: \"btn btn-light f-light\" }\nconst _hoisted_25 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"ms-2\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n  ])\n], -1)\nconst _hoisted_26 = /*#__PURE__*/_createStaticVNode(\"<ul class=\\\"square-group\\\"><li class=\\\"square-1 warning\\\"></li><li class=\\\"square-1 primary\\\"></li><li class=\\\"square-2 warning1\\\"></li><li class=\\\"square-3 danger\\\"></li><li class=\\\"square-4 light\\\"></li><li class=\\\"square-5 warning\\\"></li><li class=\\\"square-6 success\\\"></li><li class=\\\"square-7 success\\\"></li></ul>\", 1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n    _createElementVNode(\"div\", _hoisted_5, [\n      _hoisted_6,\n      _createElementVNode(\"div\", _hoisted_7, [\n        _createElementVNode(\"div\", _hoisted_8, [\n          _createElementVNode(\"div\", _hoisted_9, [\n            _createElementVNode(\"div\", _hoisted_10, [\n              _hoisted_11,\n              _createElementVNode(\"div\", null, [\n                _hoisted_12,\n                _hoisted_13,\n                _createElementVNode(\"a\", _hoisted_14, [\n                  _createVNode(_component_NuxtLink, { to: \"/learning/list\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(\"View course\"),\n                      _hoisted_15\n                    ]),\n                    _: 1\n                  })\n                ])\n              ])\n            ])\n          ]),\n          _hoisted_16\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_17, [\n        _createElementVNode(\"div\", _hoisted_18, [\n          _createElementVNode(\"div\", _hoisted_19, [\n            _createElementVNode(\"div\", _hoisted_20, [\n              _hoisted_21,\n              _createElementVNode(\"div\", null, [\n                _hoisted_22,\n                _hoisted_23,\n                _createElementVNode(\"a\", _hoisted_24, [\n                  _createVNode(_component_NuxtLink, { to: \"/learning/list\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(\"View course\"),\n                      _hoisted_25\n                    ]),\n                    _: 1\n                  })\n                ])\n              ])\n            ])\n          ]),\n          _hoisted_26\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825834,
+      "end": 1700848825837,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825837,
+      "end": 1700848825837,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825837,
+      "end": 1700848825837,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825837,
+      "end": 1700848825837,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825837,
+      "end": 1700848825837,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825837,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825838,
+      "end": 1700848825838,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825838,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nconst _sfc_main = {};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-3/hand.svg'\nimport _imports_1 from '/images/dashboard-3/widget.svg'\nimport _imports_2 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_2 + '#course-1'\nconst _hoisted_2 = _imports_2 + '#arrowright'\nconst _hoisted_3 = _imports_2 + '#course-2'\nconst _hoisted_4 = { class: \"col-xxl-5 col-ed-6 col-xl-8 box-col-7\" }\nconst _hoisted_5 = { class: \"row\" }\nconst _hoisted_6 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"col-sm-12\\\"><div class=\\\"card o-hidden welcome-card\\\"><div class=\\\"card-body\\\"><h4 class=\\\"mb-3 mt-1 f-w-500 m-b-0 f-22\\\"> Hello Jashmin<span><img src=\\\"\" + _imports_0 + \"\\\" alt=\\\"hand vector\\\"></span></h4><p> Learn something new every day with world&#39;s best courses.Free online courses available. </p></div><img class=\\\"welcome-img\\\" src=\\\"\" + _imports_1 + \"\\\" alt=\\\"search image\\\"></div></div>\", 1)\nconst _hoisted_7 = { class: \"col-sm-6\" }\nconst _hoisted_8 = { class: \"card course-box\" }\nconst _hoisted_9 = { class: \"card-body\" }\nconst _hoisted_10 = { class: \"course-widget\" }\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"course-icon\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n  ])\n], -1)\nconst _hoisted_12 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"100+\", -1)\nconst _hoisted_13 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Completed Courses\", -1)\nconst _hoisted_14 = { class: \"btn btn-light f-light\" }\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"ms-2\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n  ])\n], -1)\nconst _hoisted_16 = /*#__PURE__*/_createStaticVNode(\"<ul class=\\\"square-group\\\"><li class=\\\"square-1 warning\\\"></li><li class=\\\"square-1 primary\\\"></li><li class=\\\"square-2 warning1\\\"></li><li class=\\\"square-3 danger\\\"></li><li class=\\\"square-4 light\\\"></li><li class=\\\"square-5 warning\\\"></li><li class=\\\"square-6 success\\\"></li><li class=\\\"square-7 success\\\"></li></ul>\", 1)\nconst _hoisted_17 = { class: \"col-sm-6\" }\nconst _hoisted_18 = { class: \"card course-box\" }\nconst _hoisted_19 = { class: \"card-body\" }\nconst _hoisted_20 = { class: \"course-widget\" }\nconst _hoisted_21 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"course-icon warning\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_3 })\n  ])\n], -1)\nconst _hoisted_22 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"50+\", -1)\nconst _hoisted_23 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"In Progress Courses\", -1)\nconst _hoisted_24 = { class: \"btn btn-light f-light\" }\nconst _hoisted_25 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"ms-2\" }, [\n  /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n    /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n  ])\n], -1)\nconst _hoisted_26 = /*#__PURE__*/_createStaticVNode(\"<ul class=\\\"square-group\\\"><li class=\\\"square-1 warning\\\"></li><li class=\\\"square-1 primary\\\"></li><li class=\\\"square-2 warning1\\\"></li><li class=\\\"square-3 danger\\\"></li><li class=\\\"square-4 light\\\"></li><li class=\\\"square-5 warning\\\"></li><li class=\\\"square-6 success\\\"></li><li class=\\\"square-7 success\\\"></li></ul>\", 1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_NuxtLink = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_4, [\n    _createElementVNode(\"div\", _hoisted_5, [\n      _hoisted_6,\n      _createElementVNode(\"div\", _hoisted_7, [\n        _createElementVNode(\"div\", _hoisted_8, [\n          _createElementVNode(\"div\", _hoisted_9, [\n            _createElementVNode(\"div\", _hoisted_10, [\n              _hoisted_11,\n              _createElementVNode(\"div\", null, [\n                _hoisted_12,\n                _hoisted_13,\n                _createElementVNode(\"a\", _hoisted_14, [\n                  _createVNode(_component_NuxtLink, { to: \"/learning/list\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(\"View course\"),\n                      _hoisted_15\n                    ]),\n                    _: 1\n                  })\n                ])\n              ])\n            ])\n          ]),\n          _hoisted_16\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_17, [\n        _createElementVNode(\"div\", _hoisted_18, [\n          _createElementVNode(\"div\", _hoisted_19, [\n            _createElementVNode(\"div\", _hoisted_20, [\n              _hoisted_21,\n              _createElementVNode(\"div\", null, [\n                _hoisted_22,\n                _hoisted_23,\n                _createElementVNode(\"a\", _hoisted_24, [\n                  _createVNode(_component_NuxtLink, { to: \"/learning/list\" }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(\"View course\"),\n                      _hoisted_25\n                    ]),\n                    _: 1\n                  })\n                ])\n              ])\n            ])\n          ]),\n          _hoisted_26\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825840,
+      "end": 1700848825840,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825840,
+      "end": 1700848825841,
+      "order": "normal"
+    }
+  ]
+}

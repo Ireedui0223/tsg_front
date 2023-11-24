@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/data/dashboard/social.json",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "{\n      \"campaigns\" : [{\n        \"tdBorderIcon\": \"border-icon facebook\",\n        \"platformIcon\": \"fa fa-facebook\",\n        \"campaign\": \"Jane Cooper\",\n        \"geo\": \"UK\",\n        \"profitabilityIcon\": \"font-success me-1\",\n        \"type\": \"trending-up\",\n        \"profitability\": \"45.6%\",\n        \"maxParticipation\": \"$9,786\",\n        \"status\": \"Active\",\n        \"statusClass\": \"btn badge-light-primary\"\n    },\n    {\n        \"tdBorderIcon\": \"border-icon instagram\",\n        \"platformIcon\": \"fa fa-instagram\",\n        \"campaign\": \"Floyd Miles\",\n        \"geo\": \"DE\",\n        \"profitabilityIcon\": \"font-danger me-1\",\n        \"type\": \"trending-down\",\n        \"profitability\": \"12.3%\",\n        \"maxParticipation\": \"$19,7098\",\n        \"status\": \"Active\",\n        \"statusClass\": \"btn badge-light-primary\"\n    },\n    {\n        \"tdBorderIcon\": \"border-icon pinterest\",\n        \"platformIcon\": \"fa fa-pinterest\",\n        \"campaign\": \"Guy Hawkins\",\n        \"geo\": \"ES\",\n        \"profitabilityIcon\": \"font-success me-1\",\n        \"type\": \"trending-up\",\n        \"profitability\": \"65.6%\",\n        \"maxParticipation\": \"$90,986\",\n        \"status\": \"Active\",\n        \"statusClass\": \"btn badge-light-primary\"\n    },\n    {\n        \"tdBorderIcon\": \"border-icon twitter\",\n        \"platformIcon\": \"fa fa-twitter\",\n        \"campaign\": \"Travis Wright\",\n        \"geo\": \"ES\",\n        \"profitabilityIcon\": \"font-danger me-1\",\n        \"type\": \"trending-down\",\n        \"profitability\": \"35.6%\",\n        \"maxParticipation\": \"$23,654\",\n        \"status\": \"Inactive\",\n        \"statusClass\": \"btn badge-light-light disabled\"\n    },\n    {\n        \"tdBorderIcon\": \"border-icon you-tube\",\n        \"platformIcon\": \"fa fa-youtube-play\",\n        \"campaign\": \"Mark Green\",\n        \"geo\": \"UK\",\n        \"profitabilityIcon\": \"font-success me-1\",\n        \"type\": \"trending-up\",\n        \"profitability\": \"45.6%\",\n        \"maxParticipation\": \"$12,796\",\n        \"status\": \"Inactive\",\n        \"statusClass\": \"btn badge-light-light disabled\"\n    }\n    ],\n    \"users\": [{\n        \"image\": \"user/1.jpg\"\n    },\n    {\n        \"image\": \"user/6.jpg\"\n    },\n    {\n        \"image\": \"user/7.jpg\"\n    },\n    {\n        \"image\": \"user/3.jpg\"\n    },\n    {\n        \"image\": \"user/8.jpg\"\n    }\n]\n}",
+      "start": 1700848827498,
+      "end": 1700848827810,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "result": "export const campaigns = [\n\t{\n\t\ttdBorderIcon: \"border-icon facebook\",\n\t\tplatformIcon: \"fa fa-facebook\",\n\t\tcampaign: \"Jane Cooper\",\n\t\tgeo: \"UK\",\n\t\tprofitabilityIcon: \"font-success me-1\",\n\t\ttype: \"trending-up\",\n\t\tprofitability: \"45.6%\",\n\t\tmaxParticipation: \"$9,786\",\n\t\tstatus: \"Active\",\n\t\tstatusClass: \"btn badge-light-primary\"\n\t},\n\t{\n\t\ttdBorderIcon: \"border-icon instagram\",\n\t\tplatformIcon: \"fa fa-instagram\",\n\t\tcampaign: \"Floyd Miles\",\n\t\tgeo: \"DE\",\n\t\tprofitabilityIcon: \"font-danger me-1\",\n\t\ttype: \"trending-down\",\n\t\tprofitability: \"12.3%\",\n\t\tmaxParticipation: \"$19,7098\",\n\t\tstatus: \"Active\",\n\t\tstatusClass: \"btn badge-light-primary\"\n\t},\n\t{\n\t\ttdBorderIcon: \"border-icon pinterest\",\n\t\tplatformIcon: \"fa fa-pinterest\",\n\t\tcampaign: \"Guy Hawkins\",\n\t\tgeo: \"ES\",\n\t\tprofitabilityIcon: \"font-success me-1\",\n\t\ttype: \"trending-up\",\n\t\tprofitability: \"65.6%\",\n\t\tmaxParticipation: \"$90,986\",\n\t\tstatus: \"Active\",\n\t\tstatusClass: \"btn badge-light-primary\"\n\t},\n\t{\n\t\ttdBorderIcon: \"border-icon twitter\",\n\t\tplatformIcon: \"fa fa-twitter\",\n\t\tcampaign: \"Travis Wright\",\n\t\tgeo: \"ES\",\n\t\tprofitabilityIcon: \"font-danger me-1\",\n\t\ttype: \"trending-down\",\n\t\tprofitability: \"35.6%\",\n\t\tmaxParticipation: \"$23,654\",\n\t\tstatus: \"Inactive\",\n\t\tstatusClass: \"btn badge-light-light disabled\"\n\t},\n\t{\n\t\ttdBorderIcon: \"border-icon you-tube\",\n\t\tplatformIcon: \"fa fa-youtube-play\",\n\t\tcampaign: \"Mark Green\",\n\t\tgeo: \"UK\",\n\t\tprofitabilityIcon: \"font-success me-1\",\n\t\ttype: \"trending-up\",\n\t\tprofitability: \"45.6%\",\n\t\tmaxParticipation: \"$12,796\",\n\t\tstatus: \"Inactive\",\n\t\tstatusClass: \"btn badge-light-light disabled\"\n\t}\n];\nexport const users = [\n\t{\n\t\timage: \"user/1.jpg\"\n\t},\n\t{\n\t\timage: \"user/6.jpg\"\n\t},\n\t{\n\t\timage: \"user/7.jpg\"\n\t},\n\t{\n\t\timage: \"user/3.jpg\"\n\t},\n\t{\n\t\timage: \"user/8.jpg\"\n\t}\n];\nexport default {\n\tcampaigns: campaigns,\n\tusers: users\n};\n",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827810,
+      "end": 1700848827810,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827810,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827811,
+      "end": 1700848827811,
+      "order": "normal"
+    }
+  ]
+}

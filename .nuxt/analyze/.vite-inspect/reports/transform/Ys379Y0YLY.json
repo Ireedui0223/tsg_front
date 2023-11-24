@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/setISODay/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import toInteger from \"../_lib/toInteger/index.js\";\nimport toDate from \"../toDate/index.js\";\nimport addDays from \"../addDays/index.js\";\nimport getISODay from \"../getISODay/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name setISODay\n * @category Weekday Helpers\n * @summary Set the day of the ISO week to the given date.\n *\n * @description\n * Set the day of the ISO week to the given date.\n * ISO week starts with Monday.\n * 7 is the index of Sunday, 1 is the index of Monday etc.\n *\n * @param {Date|Number} date - the date to be changed\n * @param {Number} day - the day of the ISO week of the new date\n * @returns {Date} the new date with the day of the ISO week set\n * @throws {TypeError} 2 arguments required\n *\n * @example\n * // Set Sunday to 1 September 2014:\n * const result = setISODay(new Date(2014, 8, 1), 7)\n * //=> Sun Sep 07 2014 00:00:00\n */\nexport default function setISODay(dirtyDate, dirtyDay) {\n  requiredArgs(2, arguments);\n  var date = toDate(dirtyDate);\n  var day = toInteger(dirtyDay);\n  var currentDay = getISODay(date);\n  var diff = day - currentDay;\n  return addDays(date, diff);\n}",
+      "start": 1700848830371,
+      "end": 1700848830451,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848830451,
+      "end": 1700848830451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848830451,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848830452,
+      "end": 1700848830452,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848830452,
+      "end": 1700848830453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848830453,
+      "end": 1700848830453,
+      "order": "normal"
+    }
+  ]
+}

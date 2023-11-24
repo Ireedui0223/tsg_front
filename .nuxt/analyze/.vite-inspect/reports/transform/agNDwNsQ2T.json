@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/datePickerCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-3 col-ed-5 col-xl-5 col-sm-6 box-col-5\">\n        <div class=\"card\">\n            <div class=\"card-body\">\n                <div class=\"default-datepicker\">\n                    <Datepicker1 class=\"datepicker-here\" inline autoApply v-model=\"date1\" range data-language=\"en\"></Datepicker1>\n                </div>\n            </div>\n        </div>\n    </div>\n    </template>\n    \n    <script>\n    import Datepicker1 from \"@vuepic/vue-datepicker\";\n    import \"@vuepic/vue-datepicker/dist/main.css\";\n    export default {\n        components: {\n            Datepicker1,\n        },\n        data() {\n            return {\n                date1: new Date(),\n            };\n        },\n    };\n    </script>\n    ",
+      "start": 1700848825630,
+      "end": 1700848825852,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825852,
+      "end": 1700848825852,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\n    import Datepicker1 from \"@vuepic/vue-datepicker\";\n    import \"@vuepic/vue-datepicker/dist/main.css\";\n    const _sfc_main = {\n        components: {\n            Datepicker1,\n        },\n        data() {\n            return {\n                date1: new Date(),\n            };\n        },\n    };\n    \nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-ed-5 col-xl-5 col-sm-6 box-col-5\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = { class: \"card-body\" }\nconst _hoisted_4 = { class: \"default-datepicker\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Datepicker1 = _resolveComponent(\"Datepicker1\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createVNode(_component_Datepicker1, {\n            class: \"datepicker-here\",\n            inline: \"\",\n            autoApply: \"\",\n            modelValue: $data.date1,\n            \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.date1) = $event)),\n            range: \"\",\n            \"data-language\": \"en\"\n          }, null, 8, [\"modelValue\"])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825852,
+      "end": 1700848825854,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825854,
+      "end": 1700848825854,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825854,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825855,
+      "end": 1700848825855,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825855,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825856,
+      "end": 1700848825856,
+      "order": "normal"
+    }
+  ]
+}

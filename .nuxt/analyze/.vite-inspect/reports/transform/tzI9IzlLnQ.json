@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/apply/experiencePage.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <h6 class=\" m-b-0\">Your Experience</h6>\n  <form class=\"form theme-form\">\n    <div class=\"row\">\n      <div class=\"col-xl-6 xl-100\">\n        <div class=\"form-group mb-3\">\n          <label\n            class=\"form-label\"\n            for=\"exampleFormControlInput7\"\n            >Location:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlInput7\"\n            type=\"text\"\n            placeholder=\"Enter Location\"\n          />\n        </div>\n      </div>\n      <div class=\"col-xl-6 xl-100 xl-mt-job mb-3\">\n        <label class=\"col-form-label text-end pt-0\"\n          >Period:<span class=\"font-danger\">*</span></label\n        >\n        <div class=\"row\">\n          <div class=\"col-sm-6\">\n            <div class=\"input-group\">\n              <input\n                class=\"datepicker-here form-control digits\"\n                type=\"text\"\n                data-language=\"en\"\n                placeholder=\"Start Date\"\n              />\n            </div>\n          </div>\n          <div class=\"col-sm-6 xs-mt-period\">\n            <div class=\"input-group\">\n              <input\n                class=\"datepicker-here form-control digits\"\n                type=\"text\"\n                data-language=\"en\"\n                placeholder=\"End Date\"\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-xl-6 xl-100\">\n        <div class=\"form-group mb-3\">\n          <label class=\"form-label\"\n            >Position:<span class=\"font-danger\">*</span></label\n          >\n          <select\n            class=\"js-example-basic-single col-sm-12 job-select2 form-select job-select2\"\n          >\n            <optgroup label=\"Enter Position\">\n              <option value=\"position\">Choose a option</option>\n              <option value=\"Web designer\">Web Designer</option>\n              <option value=\"Graphic designer\">Graphic Designer</option>\n              <option value=\"UI designer\">UI Designer</option>\n              <option value=\"UI/UX designer\">UI/UX Designer</option>\n            </optgroup>\n          </select>\n        </div>\n      </div>\n      <div class=\"col-xl-6 xl-100\">\n        <div class=\"form-group mb-3\">\n          <label\n            class=\"form-label\"\n            for=\"exampleFormControlInput8\"\n            >Company Name:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            id=\"exampleFormControlInput8\"\n            type=\"text\"\n            placeholder=\"Enter Company Name\"\n          />\n        </div>\n      </div>\n    </div>\n  </form>\n</template>\n",
+      "start": 1700848824132,
+      "end": 1700848824817,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824817,
+      "end": 1700848824817,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createStaticVNode(\"<h6 class=\\\"m-b-0\\\">Your Experience</h6><form class=\\\"form theme-form\\\"><div class=\\\"row\\\"><div class=\\\"col-xl-6 xl-100\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"form-label\\\" for=\\\"exampleFormControlInput7\\\">Location:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput7\\\" type=\\\"text\\\" placeholder=\\\"Enter Location\\\"></div></div><div class=\\\"col-xl-6 xl-100 xl-mt-job mb-3\\\"><label class=\\\"col-form-label text-end pt-0\\\">Period:<span class=\\\"font-danger\\\">*</span></label><div class=\\\"row\\\"><div class=\\\"col-sm-6\\\"><div class=\\\"input-group\\\"><input class=\\\"datepicker-here form-control digits\\\" type=\\\"text\\\" data-language=\\\"en\\\" placeholder=\\\"Start Date\\\"></div></div><div class=\\\"col-sm-6 xs-mt-period\\\"><div class=\\\"input-group\\\"><input class=\\\"datepicker-here form-control digits\\\" type=\\\"text\\\" data-language=\\\"en\\\" placeholder=\\\"End Date\\\"></div></div></div></div><div class=\\\"col-xl-6 xl-100\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"form-label\\\">Position:<span class=\\\"font-danger\\\">*</span></label><select class=\\\"js-example-basic-single col-sm-12 job-select2 form-select job-select2\\\"><optgroup label=\\\"Enter Position\\\"><option value=\\\"position\\\">Choose a option</option><option value=\\\"Web designer\\\">Web Designer</option><option value=\\\"Graphic designer\\\">Graphic Designer</option><option value=\\\"UI designer\\\">UI Designer</option><option value=\\\"UI/UX designer\\\">UI/UX Designer</option></optgroup></select></div></div><div class=\\\"col-xl-6 xl-100\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"form-label\\\" for=\\\"exampleFormControlInput8\\\">Company Name:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput8\\\" type=\\\"text\\\" placeholder=\\\"Enter Company Name\\\"></div></div></div></form>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  return _hoisted_1\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824817,
+      "end": 1700848824819,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824819,
+      "end": 1700848824819,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824819,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824820,
+      "end": 1700848824820,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824820,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824821,
+      "end": 1700848824821,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824821,
+      "end": 1700848824822,
+      "order": "normal"
+    }
+  ]
+}

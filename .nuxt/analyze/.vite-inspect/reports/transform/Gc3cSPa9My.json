@@ -1,0 +1,226 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/dom/manipulator.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/*!\n  * Bootstrap manipulator.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\n(function (global, factory) {\n  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :\n  typeof define === 'function' && define.amd ? define(factory) :\n  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Manipulator = factory());\n})(this, (function () { 'use strict';\n\n  /**\n   * --------------------------------------------------------------------------\n   * Bootstrap dom/manipulator.js\n   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n   * --------------------------------------------------------------------------\n   */\n\n  function normalizeData(value) {\n    if (value === 'true') {\n      return true;\n    }\n    if (value === 'false') {\n      return false;\n    }\n    if (value === Number(value).toString()) {\n      return Number(value);\n    }\n    if (value === '' || value === 'null') {\n      return null;\n    }\n    if (typeof value !== 'string') {\n      return value;\n    }\n    try {\n      return JSON.parse(decodeURIComponent(value));\n    } catch (_unused) {\n      return value;\n    }\n  }\n  function normalizeDataKey(key) {\n    return key.replace(/[A-Z]/g, chr => `-${chr.toLowerCase()}`);\n  }\n  const Manipulator = {\n    setDataAttribute(element, key, value) {\n      element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value);\n    },\n    removeDataAttribute(element, key) {\n      element.removeAttribute(`data-bs-${normalizeDataKey(key)}`);\n    },\n    getDataAttributes(element) {\n      if (!element) {\n        return {};\n      }\n      const attributes = {};\n      const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs') && !key.startsWith('bsConfig'));\n      for (const key of bsKeys) {\n        let pureKey = key.replace(/^bs/, '');\n        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);\n        attributes[pureKey] = normalizeData(element.dataset[key]);\n      }\n      return attributes;\n    },\n    getDataAttribute(element, key) {\n      return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));\n    }\n  };\n\n  return Manipulator;\n\n}));\n//# sourceMappingURL=manipulator.js.map\n",
+      "start": 1700848824624,
+      "end": 1700848824930,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824930,
+      "end": 1700848824930,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "result": "/*!\n  * Bootstrap manipulator.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\nimport * as commonjsHelpers from \"\u0000commonjsHelpers.js\";\nimport { __module as manipulatorModule } from \"\\u0000C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/dom/manipulator.js?commonjs-module\";\nvar manipulator = manipulatorModule.exports;\n\nvar hasRequiredManipulator;\n\nfunction requireManipulator () {\n\tif (hasRequiredManipulator) return manipulatorModule.exports;\n\thasRequiredManipulator = 1;\n\t(function (module, exports) {\n\t\t(function (global, factory) {\n\t\t  'object' === 'object' && 'object' !== 'undefined' ? module.exports = factory() :\n\t\t  typeof undefined === 'function' && undefined.amd ? undefined(factory) :\n\t\t  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Manipulator = factory());\n\t\t})(commonjsHelpers.commonjsGlobal, (function () { 'use strict';\n\n\t\t  /**\n\t\t   * --------------------------------------------------------------------------\n\t\t   * Bootstrap dom/manipulator.js\n\t\t   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n\t\t   * --------------------------------------------------------------------------\n\t\t   */\n\n\t\t  function normalizeData(value) {\n\t\t    if (value === 'true') {\n\t\t      return true;\n\t\t    }\n\t\t    if (value === 'false') {\n\t\t      return false;\n\t\t    }\n\t\t    if (value === Number(value).toString()) {\n\t\t      return Number(value);\n\t\t    }\n\t\t    if (value === '' || value === 'null') {\n\t\t      return null;\n\t\t    }\n\t\t    if (typeof value !== 'string') {\n\t\t      return value;\n\t\t    }\n\t\t    try {\n\t\t      return JSON.parse(decodeURIComponent(value));\n\t\t    } catch (_unused) {\n\t\t      return value;\n\t\t    }\n\t\t  }\n\t\t  function normalizeDataKey(key) {\n\t\t    return key.replace(/[A-Z]/g, chr => `-${chr.toLowerCase()}`);\n\t\t  }\n\t\t  const Manipulator = {\n\t\t    setDataAttribute(element, key, value) {\n\t\t      element.setAttribute(`data-bs-${normalizeDataKey(key)}`, value);\n\t\t    },\n\t\t    removeDataAttribute(element, key) {\n\t\t      element.removeAttribute(`data-bs-${normalizeDataKey(key)}`);\n\t\t    },\n\t\t    getDataAttributes(element) {\n\t\t      if (!element) {\n\t\t        return {};\n\t\t      }\n\t\t      const attributes = {};\n\t\t      const bsKeys = Object.keys(element.dataset).filter(key => key.startsWith('bs') && !key.startsWith('bsConfig'));\n\t\t      for (const key of bsKeys) {\n\t\t        let pureKey = key.replace(/^bs/, '');\n\t\t        pureKey = pureKey.charAt(0).toLowerCase() + pureKey.slice(1, pureKey.length);\n\t\t        attributes[pureKey] = normalizeData(element.dataset[key]);\n\t\t      }\n\t\t      return attributes;\n\t\t    },\n\t\t    getDataAttribute(element, key) {\n\t\t      return normalizeData(element.getAttribute(`data-bs-${normalizeDataKey(key)}`));\n\t\t    }\n\t\t  };\n\n\t\t  return Manipulator;\n\n\t\t}));\n\t\t//# sourceMappingURL=manipulator.js.map \n\t} (manipulatorModule, manipulatorModule.exports));\n\treturn manipulatorModule.exports;\n}\n\nexport { requireManipulator as __require };",
+      "start": 1700848824930,
+      "end": 1700848824933,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": null,
+        "sources": [
+          null
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "names": [
+          "define",
+          "this"
+        ],
+        "mappings": "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"
+      }
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824933,
+      "end": 1700848824933,
+      "order": "normal"
+    }
+  ]
+}

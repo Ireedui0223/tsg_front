@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/default/welcomeCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-4 col-sm-6 box-col-6\">\n    <div class=\"card profile-box\">\n      <div class=\"card-body\">\n        <div class=\"media\">\n          <div class=\"media-body\">\n            <div class=\"greeting-user\">\n              <h4 class=\"f-w-600  m-b-0\">Welcome to cuba</h4>\n              <p>Here whats happing in your account today</p>\n              <div class=\"whatsnew-btn\">\n                <a class=\"btn btn-outline-white\">Whats New !</a>\n              </div>\n            </div>\n          </div>\n          <div>\n            <div class=\"clockbox\">\n              <svg\n                id=\"clock\"\n                xmlns=\"http://www.w3.org/2000/svg\"\n                viewBox=\"0 0 600 600\"\n              >\n                <g id=\"face\">\n                  <circle\n                    class=\"circle\"\n                    cx=\"300\"\n                    cy=\"300\"\n                    r=\"253.9\"\n                  ></circle>\n                  <path\n                    class=\"hour-marks\"\n                    d=\"M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6\"\n                  ></path>\n                  <circle\n                    class=\"mid-circle\"\n                    cx=\"300\"\n                    cy=\"300\"\n                    r=\"16.2\"\n                  ></circle>\n                </g>\n                <g id=\"hour\">\n                  <path\n                    class=\"hour-hand\"\n                    d=\"M300.5 298V142\"\n                  ></path>\n                  <circle\n                    class=\"sizing-box\"\n                    cx=\"300\"\n                    cy=\"300\"\n                    r=\"253.9\"\n                  ></circle>\n                </g>\n                <g id=\"minute\">\n                  <path\n                    class=\"minute-hand\"\n                    d=\"M300.5 298V67\"\n                  ></path>\n                  <circle\n                    class=\"sizing-box\"\n                    cx=\"300\"\n                    cy=\"300\"\n                    r=\"253.9\"\n                  ></circle>\n                </g>\n                <g id=\"second\">\n                  <path\n                    class=\"second-hand\"\n                    d=\"M300.5 350V55\"\n                  ></path>\n                  <circle\n                    class=\"sizing-box\"\n                    cx=\"300\"\n                    cy=\"300\"\n                    r=\"253.9\"\n                  ></circle>\n                </g>\n              </svg>\n            </div>\n            <div\n              class=\"badge f-10 p-0\"\n              id=\"txt\"\n            ></div>\n          </div>\n        </div>\n        <div class=\"cartoon\">\n          <img\n            class=\"img-fluid\"\n            src=\"/images/dashboard/cartoon.svg\"\n            alt=\"vector women with leptop\"\n          />\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nexport default {\n  data() {\n    return {\n      interval: '',\n      greeting: '',\n      time: ''\n    };\n  },\n  mounted() {\n    const HOURHAND = document.querySelector('#hour');\n    const MINUTEHAND = document.querySelector('#minute');\n    const SECONDHAND = document.querySelector('#second');\n    var date = new Date();\n    let hr = date.getHours();\n    let min = date.getMinutes();\n    let sec = date.getSeconds();\n    var ampm = hr >= 12 ? 'PM' : 'AM';\n    let hrPosition = (hr * 360) / 12 + (min * (360 / 60)) / 12;\n    let minPosition = (min * 360) / 60 + (sec * (360 / 60)) / 60;\n    let secPosition = (sec * 360) / 60;\n    function runClock() {\n      hrPosition += 30 / 3600;\n      minPosition += 6 / 60;\n      secPosition += 6;\n      HOURHAND.style.transform = 'rotate(' + hrPosition + 'deg)';\n      MINUTEHAND.style.transform = 'rotate(' + minPosition + 'deg)';\n      SECONDHAND.style.transform = 'rotate(' + secPosition + 'deg)';\n      document.getElementById('txt').innerHTML = hr + ':' + min + ' ' + ampm;\n    }\n    this.interval = setInterval(runClock, 1000);\n  },\n  unmounted() {\n    clearTimeout(this.interval);\n  }\n};\n</script>\n",
+      "start": 1700848825258,
+      "end": 1700848825726,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825726,
+      "end": 1700848825726,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {\n  data() {\n    return {\n      interval: '',\n      greeting: '',\n      time: ''\n    };\n  },\n  mounted() {\n    const HOURHAND = document.querySelector('#hour');\n    const MINUTEHAND = document.querySelector('#minute');\n    const SECONDHAND = document.querySelector('#second');\n    var date = new Date();\n    let hr = date.getHours();\n    let min = date.getMinutes();\n    let sec = date.getSeconds();\n    var ampm = hr >= 12 ? 'PM' : 'AM';\n    let hrPosition = (hr * 360) / 12 + (min * (360 / 60)) / 12;\n    let minPosition = (min * 360) / 60 + (sec * (360 / 60)) / 60;\n    let secPosition = (sec * 360) / 60;\n    function runClock() {\n      hrPosition += 30 / 3600;\n      minPosition += 6 / 60;\n      secPosition += 6;\n      HOURHAND.style.transform = 'rotate(' + hrPosition + 'deg)';\n      MINUTEHAND.style.transform = 'rotate(' + minPosition + 'deg)';\n      SECONDHAND.style.transform = 'rotate(' + secPosition + 'deg)';\n      document.getElementById('txt').innerHTML = hr + ':' + min + ' ' + ampm;\n    }\n    this.interval = setInterval(runClock, 1000);\n  },\n  unmounted() {\n    clearTimeout(this.interval);\n  }\n};\n\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard/cartoon.svg'\n\n\nconst _hoisted_1 = { class: \"col-xxl-4 col-sm-6 box-col-6\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"card profile-box\\\"><div class=\\\"card-body\\\"><div class=\\\"media\\\"><div class=\\\"media-body\\\"><div class=\\\"greeting-user\\\"><h4 class=\\\"f-w-600 m-b-0\\\">Welcome to cuba</h4><p>Here whats happing in your account today</p><div class=\\\"whatsnew-btn\\\"><a class=\\\"btn btn-outline-white\\\">Whats New !</a></div></div></div><div><div class=\\\"clockbox\\\"><svg id=\\\"clock\\\" xmlns=\\\"http://www.w3.org/2000/svg\\\" viewBox=\\\"0 0 600 600\\\"><g id=\\\"face\\\"><circle class=\\\"circle\\\" cx=\\\"300\\\" cy=\\\"300\\\" r=\\\"253.9\\\"></circle><path class=\\\"hour-marks\\\" d=\\\"M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6\\\"></path><circle class=\\\"mid-circle\\\" cx=\\\"300\\\" cy=\\\"300\\\" r=\\\"16.2\\\"></circle></g><g id=\\\"hour\\\"><path class=\\\"hour-hand\\\" d=\\\"M300.5 298V142\\\"></path><circle class=\\\"sizing-box\\\" cx=\\\"300\\\" cy=\\\"300\\\" r=\\\"253.9\\\"></circle></g><g id=\\\"minute\\\"><path class=\\\"minute-hand\\\" d=\\\"M300.5 298V67\\\"></path><circle class=\\\"sizing-box\\\" cx=\\\"300\\\" cy=\\\"300\\\" r=\\\"253.9\\\"></circle></g><g id=\\\"second\\\"><path class=\\\"second-hand\\\" d=\\\"M300.5 350V55\\\"></path><circle class=\\\"sizing-box\\\" cx=\\\"300\\\" cy=\\\"300\\\" r=\\\"253.9\\\"></circle></g></svg></div><div class=\\\"badge f-10 p-0\\\" id=\\\"txt\\\"></div></div></div><div class=\\\"cartoon\\\"><img class=\\\"img-fluid\\\" src=\\\"\" + _imports_0 + \"\\\" alt=\\\"vector women with leptop\\\"></div></div></div>\", 1)\nconst _hoisted_3 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_3))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825726,
+      "end": 1700848825730,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825730,
+      "end": 1700848825730,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825730,
+      "end": 1700848825730,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825731,
+      "end": 1700848825731,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825731,
+      "end": 1700848825732,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825733,
+      "end": 1700848825733,
+      "order": "normal"
+    }
+  ]
+}

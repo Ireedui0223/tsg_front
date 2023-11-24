@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/apexcharts.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<ClientOnly>\n    <VueApexCharts :height=\"height\" :type=\"type\" :options=\"options\" :series=\"series\"/>\n</ClientOnly>    \n</template>\n<script>\nimport VueApexCharts from \"vue3-apexcharts\";\nexport default {\n    props: ['height','type','options','series'],\n    components:{\n        VueApexCharts\n    }\n}\n</script>",
+      "start": 1700848819508,
+      "end": 1700848820366,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848820366,
+      "end": 1700848820366,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport VueApexCharts from \"vue3-apexcharts\";\nconst _sfc_main = {\n    props: ['height','type','options','series'],\n    components:{\n        VueApexCharts\n    }\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_VueApexCharts = _resolveComponent(\"VueApexCharts\")\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_VueApexCharts, {\n        height: $props.height,\n        type: $props.type,\n        options: $props.options,\n        series: $props.series\n      }, null, 8, [\"height\", \"type\", \"options\", \"series\"])\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848820366,
+      "end": 1700848820368,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848820368,
+      "end": 1700848820368,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848820368,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848820369,
+      "end": 1700848820369,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/client-only\";\n\nimport VueApexCharts from \"vue3-apexcharts\";\nconst _sfc_main = {\n    props: ['height','type','options','series'],\n    components:{\n        VueApexCharts\n    }\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, withCtx as _withCtx, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_VueApexCharts = _resolveComponent(\"VueApexCharts\")\n  const _component_ClientOnly = __nuxt_component_0\n\n  return (_openBlock(), _createBlock(_component_ClientOnly, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_VueApexCharts, {\n        height: $props.height,\n        type: $props.type,\n        options: $props.options,\n        series: $props.series\n      }, null, 8, [\"height\", \"type\", \"options\", \"series\"])\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848820370,
+      "end": 1700848820370,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848820370,
+      "end": 1700848820371,
+      "order": "normal"
+    }
+  ]
+}

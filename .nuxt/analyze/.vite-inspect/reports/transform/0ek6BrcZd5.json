@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/index.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"header-wrapper w-100 m-0\">\n    <div class=\"row header-container\">\n      <SearchBar />\n      <div\n        class=\"left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0\"\n      >\n        <nuxt-link to=\"/\">\n          <img src=\"/images/logo.png\" />\n        </nuxt-link>\n      </div>\n      <div\n        class=\"nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto\"\n      >\n        <ul class=\"nav-menus\">\n          <li>\n            <span class=\"header-search\">\n              <svg @click=\"search_open()\">\n                <use href=\"@/assets/svg/icon-sprite.svg#search\"></use>\n              </svg>\n            </span>\n          </li>\n          <li>\n            <Mode />\n          </li>\n          <Notifications />\n          <Profile />\n        </ul>\n      </div>\n    </div>\n  </div>\n</template>\n<script>\nimport { mapState } from 'pinia';\nimport { Swiper, SwiperSlide } from 'swiper/vue';\nimport 'swiper/css';\nimport Notifications from './notifications.vue';\nimport Mode from './mode';\nimport Profile from './profile';\nimport SearchBar from './search';\nimport { useMenuStore } from '~~/store/menu';\n\nexport default {\n  components: {\n    Notifications,\n    Mode,\n    Profile,\n    Swiper,\n    SwiperSlide,\n    SearchBar\n  },\n  data() {\n    return {\n      bookmark: false\n    };\n  },\n  computed: {\n    ...mapState(useMenuStore, {\n      megamenuItems: 'megamenu',\n      searchOpen: 'searchOpen'\n    })\n  },\n  methods: {\n    search_open() {\n      useMenuStore().searchOpen = true;\n    }\n  }\n};\n</script>\n<style lang=\"scss\" scoped>\n.w-100 {\n  width: 100vw !important;\n}\n.header-container {\n  width: 80%;\n  align-items: center;\n  margin: auto;\n}\n@media (max-width: 575px) {\n  .header-container {\n    align-items: center;\n    width: 100%;\n  }\n}\n</style>\n",
+      "start": 1700848821950,
+      "end": 1700848824246,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824246,
+      "end": 1700848824246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { mapState } from 'pinia';\nimport { Swiper, SwiperSlide } from 'swiper/vue';\nimport 'swiper/css';\nimport Notifications from './notifications.vue';\nimport Mode from './mode';\nimport Profile from './profile';\nimport SearchBar from './search';\nimport { useMenuStore } from '~~/store/menu';\n\nconst _sfc_main = {\n  components: {\n    Notifications,\n    Mode,\n    Profile,\n    Swiper,\n    SwiperSlide,\n    SearchBar\n  },\n  data() {\n    return {\n      bookmark: false\n    };\n  },\n  computed: {\n    ...mapState(useMenuStore, {\n      megamenuItems: 'megamenu',\n      searchOpen: 'searchOpen'\n    })\n  },\n  methods: {\n    search_open() {\n      useMenuStore().searchOpen = true;\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport _imports_0 from '/images/logo.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-c4ec0c11\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = _imports_1 + '#search'\nconst _hoisted_2 = { class: \"header-wrapper w-100 m-0\" }\nconst _hoisted_3 = { class: \"row header-container\" }\nconst _hoisted_4 = { class: \"left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0\" }\nconst _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"img\", { src: _imports_0 }, null, -1))\nconst _hoisted_6 = { class: \"nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto\" }\nconst _hoisted_7 = { class: \"nav-menus\" }\nconst _hoisted_8 = { class: \"header-search\" }\nconst _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 }, null, -1))\nconst _hoisted_10 = [\n  _hoisted_9\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_SearchBar = _resolveComponent(\"SearchBar\")\n  const _component_nuxt_link = _resolveComponent(\"nuxt-link\")\n  const _component_Mode = _resolveComponent(\"Mode\")\n  const _component_Notifications = _resolveComponent(\"Notifications\")\n  const _component_Profile = _resolveComponent(\"Profile\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createVNode(_component_SearchBar),\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createVNode(_component_nuxt_link, { to: \"/\" }, {\n          default: _withCtx(() => [\n            _hoisted_5\n          ]),\n          _: 1\n        })\n      ]),\n      _createElementVNode(\"div\", _hoisted_6, [\n        _createElementVNode(\"ul\", _hoisted_7, [\n          _createElementVNode(\"li\", null, [\n            _createElementVNode(\"span\", _hoisted_8, [\n              (_openBlock(), _createElementBlock(\"svg\", {\n                onClick: _cache[0] || (_cache[0] = $event => ($options.search_open()))\n              }, _hoisted_10))\n            ])\n          ]),\n          _createElementVNode(\"li\", null, [\n            _createVNode(_component_Mode)\n          ]),\n          _createVNode(_component_Notifications),\n          _createVNode(_component_Profile)\n        ])\n      ])\n    ])\n  ]))\n}\n\nimport \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/index.vue?vue&type=style&index=0&scoped=c4ec0c11&lang.scss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-c4ec0c11\"]])",
+      "start": 1700848824246,
+      "end": 1700848824251,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824251,
+      "end": 1700848824251,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824252,
+      "end": 1700848824252,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824252,
+      "end": 1700848824253,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824253,
+      "end": 1700848824253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824253,
+      "end": 1700848824253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824253,
+      "end": 1700848824253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824253,
+      "end": 1700848824253,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport { mapState } from 'pinia';\nimport { Swiper, SwiperSlide } from 'swiper/vue';\nimport 'swiper/css';\nimport Notifications from './notifications.vue';\nimport Mode from './mode';\nimport Profile from './profile';\nimport SearchBar from './search';\nimport { useMenuStore } from '~~/store/menu';\n\nconst _sfc_main = {\n  components: {\n    Notifications,\n    Mode,\n    Profile,\n    Swiper,\n    SwiperSlide,\n    SearchBar\n  },\n  data() {\n    return {\n      bookmark: false\n    };\n  },\n  computed: {\n    ...mapState(useMenuStore, {\n      megamenuItems: 'megamenu',\n      searchOpen: 'searchOpen'\n    })\n  },\n  methods: {\n    search_open() {\n      useMenuStore().searchOpen = true;\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, withCtx as _withCtx, openBlock as _openBlock, createElementBlock as _createElementBlock, pushScopeId as _pushScopeId, popScopeId as _popScopeId } from \"vue\"\nimport _imports_0 from '/images/logo.png'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _withScopeId = n => (_pushScopeId(\"data-v-c4ec0c11\"),n=n(),_popScopeId(),n)\nconst _hoisted_1 = _imports_1 + '#search'\nconst _hoisted_2 = { class: \"header-wrapper w-100 m-0\" }\nconst _hoisted_3 = { class: \"row header-container\" }\nconst _hoisted_4 = { class: \"left-header col-xxl-5 col-xl-6 col-lg-5 col-md-4 col-sm-3 p-0\" }\nconst _hoisted_5 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"img\", { src: _imports_0 }, null, -1))\nconst _hoisted_6 = { class: \"nav-right col-xxl-7 col-xl-6 col-md-7 col-8 pull-right right-header p-0 ms-auto\" }\nconst _hoisted_7 = { class: \"nav-menus\" }\nconst _hoisted_8 = { class: \"header-search\" }\nconst _hoisted_9 = /*#__PURE__*/ _withScopeId(() => /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 }, null, -1))\nconst _hoisted_10 = [\n  _hoisted_9\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_SearchBar = _resolveComponent(\"SearchBar\")\n  const _component_nuxt_link = __nuxt_component_0\n  const _component_Mode = _resolveComponent(\"Mode\")\n  const _component_Notifications = _resolveComponent(\"Notifications\")\n  const _component_Profile = _resolveComponent(\"Profile\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      _createVNode(_component_SearchBar),\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createVNode(_component_nuxt_link, { to: \"/\" }, {\n          default: _withCtx(() => [\n            _hoisted_5\n          ]),\n          _: 1\n        })\n      ]),\n      _createElementVNode(\"div\", _hoisted_6, [\n        _createElementVNode(\"ul\", _hoisted_7, [\n          _createElementVNode(\"li\", null, [\n            _createElementVNode(\"span\", _hoisted_8, [\n              (_openBlock(), _createElementBlock(\"svg\", {\n                onClick: _cache[0] || (_cache[0] = $event => ($options.search_open()))\n              }, _hoisted_10))\n            ])\n          ]),\n          _createElementVNode(\"li\", null, [\n            _createVNode(_component_Mode)\n          ]),\n          _createVNode(_component_Notifications),\n          _createVNode(_component_Profile)\n        ])\n      ])\n    ])\n  ]))\n}\n\nimport \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/index.vue?vue&type=style&index=0&scoped=c4ec0c11&lang.scss\"\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render],['__scopeId',\"data-v-c4ec0c11\"]])",
+      "start": 1700848824253,
+      "end": 1700848824254,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824254,
+      "end": 1700848824254,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824254,
+      "end": 1700848824254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824254,
+      "end": 1700848824255,
+      "order": "normal"
+    }
+  ]
+}

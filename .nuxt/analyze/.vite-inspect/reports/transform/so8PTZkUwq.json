@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/valuableCustomerCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-3 col-md-5 col-sm-6 box-col-5\">\n    <div class=\"appointment\">\n      <div class=\"card\">\n        <div class=\"card-header card-no-border\">\n          <div class=\"header-top\">\n            <h5 class=\"m-0\">Valuable Customer</h5>\n            <div class=\"card-header-right-icon\">\n              <DropDown1 />\n            </div>\n          </div>\n        </div>\n        <div class=\"card-body pt-0\">\n          <div class=\"appointment-table customer-table table-responsive\">\n            <table class=\"table table-bordernone\">\n              <tbody>\n                <tr\n                  v-for=\"item in valuableCustomer\"\n                  :key=\"item\"\n                >\n                  <td>\n                    <img\n                      class=\"img-fluid img-40 rounded-circle me-2\"\n                      :src=\"getImgURL(item.image)\"\n                      alt=\"user\"\n                    />\n                  </td>\n                  <td class=\"img-content-box\">\n                    <a class=\"f-w-500\">\n                      <NuxtLink to=\"/student/profile\">{{\n                        item.name\n                      }}</NuxtLink> </a\n                    ><span class=\"f-light\">{{ item.email }}</span>\n                  </td>\n                </tr>\n              </tbody>\n            </table>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { valuableCustomer } from '@/data/dashboard/ecommerce.json';\nimport DropDown1 from '../base/dropDown1.vue';\nexport default {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      valuableCustomer: valuableCustomer\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/images/dashboard/' + path;\n    }\n  }\n};\n</script>\n",
+      "start": 1700848825088,
+      "end": 1700848825609,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825609,
+      "end": 1700848825609,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { valuableCustomer } from '@/data/dashboard/ecommerce.json';\nimport DropDown1 from '../base/dropDown1.vue';\nconst _sfc_main = {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      valuableCustomer: valuableCustomer\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/images/dashboard/' + path;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-md-5 col-sm-6 box-col-5\" }\nconst _hoisted_2 = { class: \"appointment\" }\nconst _hoisted_3 = { class: \"card\" }\nconst _hoisted_4 = { class: \"card-header card-no-border\" }\nconst _hoisted_5 = { class: \"header-top\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"Valuable Customer\", -1)\nconst _hoisted_7 = { class: \"card-header-right-icon\" }\nconst _hoisted_8 = { class: \"card-body pt-0\" }\nconst _hoisted_9 = { class: \"appointment-table customer-table table-responsive\" }\nconst _hoisted_10 = { class: \"table table-bordernone\" }\nconst _hoisted_11 = [\"src\"]\nconst _hoisted_12 = { class: \"img-content-box\" }\nconst _hoisted_13 = { class: \"f-w-500\" }\nconst _hoisted_14 = { class: \"f-light\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_NuxtLink = _resolveComponent(\"NuxtLink\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createElementVNode(\"div\", _hoisted_5, [\n            _hoisted_6,\n            _createElementVNode(\"div\", _hoisted_7, [\n              _createVNode(_component_DropDown1)\n            ])\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_8, [\n          _createElementVNode(\"div\", _hoisted_9, [\n            _createElementVNode(\"table\", _hoisted_10, [\n              _createElementVNode(\"tbody\", null, [\n                (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.valuableCustomer, (item) => {\n                  return (_openBlock(), _createElementBlock(\"tr\", { key: item }, [\n                    _createElementVNode(\"td\", null, [\n                      _createElementVNode(\"img\", {\n                        class: \"img-fluid img-40 rounded-circle me-2\",\n                        src: $options.getImgURL(item.image),\n                        alt: \"user\"\n                      }, null, 8, _hoisted_11)\n                    ]),\n                    _createElementVNode(\"td\", _hoisted_12, [\n                      _createElementVNode(\"a\", _hoisted_13, [\n                        _createVNode(_component_NuxtLink, { to: \"/student/profile\" }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(item.name), 1)\n                          ]),\n                          _: 2\n                        }, 1024)\n                      ]),\n                      _createElementVNode(\"span\", _hoisted_14, _toDisplayString(item.email), 1)\n                    ])\n                  ]))\n                }), 128))\n              ])\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825609,
+      "end": 1700848825612,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825612,
+      "end": 1700848825612,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825612,
+      "end": 1700848825612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825612,
+      "end": 1700848825612,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825613,
+      "end": 1700848825613,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825613,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-link\";\n\nimport { valuableCustomer } from '@/data/dashboard/ecommerce.json';\nimport DropDown1 from '../base/dropDown1.vue';\nconst _sfc_main = {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      valuableCustomer: valuableCustomer\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/images/dashboard/' + path;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, withCtx as _withCtx } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-md-5 col-sm-6 box-col-5\" }\nconst _hoisted_2 = { class: \"appointment\" }\nconst _hoisted_3 = { class: \"card\" }\nconst _hoisted_4 = { class: \"card-header card-no-border\" }\nconst _hoisted_5 = { class: \"header-top\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"Valuable Customer\", -1)\nconst _hoisted_7 = { class: \"card-header-right-icon\" }\nconst _hoisted_8 = { class: \"card-body pt-0\" }\nconst _hoisted_9 = { class: \"appointment-table customer-table table-responsive\" }\nconst _hoisted_10 = { class: \"table table-bordernone\" }\nconst _hoisted_11 = [\"src\"]\nconst _hoisted_12 = { class: \"img-content-box\" }\nconst _hoisted_13 = { class: \"f-w-500\" }\nconst _hoisted_14 = { class: \"f-light\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_NuxtLink = __nuxt_component_0\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createElementVNode(\"div\", _hoisted_5, [\n            _hoisted_6,\n            _createElementVNode(\"div\", _hoisted_7, [\n              _createVNode(_component_DropDown1)\n            ])\n          ])\n        ]),\n        _createElementVNode(\"div\", _hoisted_8, [\n          _createElementVNode(\"div\", _hoisted_9, [\n            _createElementVNode(\"table\", _hoisted_10, [\n              _createElementVNode(\"tbody\", null, [\n                (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.valuableCustomer, (item) => {\n                  return (_openBlock(), _createElementBlock(\"tr\", { key: item }, [\n                    _createElementVNode(\"td\", null, [\n                      _createElementVNode(\"img\", {\n                        class: \"img-fluid img-40 rounded-circle me-2\",\n                        src: $options.getImgURL(item.image),\n                        alt: \"user\"\n                      }, null, 8, _hoisted_11)\n                    ]),\n                    _createElementVNode(\"td\", _hoisted_12, [\n                      _createElementVNode(\"a\", _hoisted_13, [\n                        _createVNode(_component_NuxtLink, { to: \"/student/profile\" }, {\n                          default: _withCtx(() => [\n                            _createTextVNode(_toDisplayString(item.name), 1)\n                          ]),\n                          _: 2\n                        }, 1024)\n                      ]),\n                      _createElementVNode(\"span\", _hoisted_14, _toDisplayString(item.email), 1)\n                    ])\n                  ]))\n                }), 128))\n              ])\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825617,
+      "end": 1700848825617,
+      "order": "normal"
+    }
+  ]
+}

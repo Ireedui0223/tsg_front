@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/data/dashboard/online.json",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "\n{\n\"activirtyHours\" : [{\n    \"title\": \"Time Spent\",\n    \"inNumber\": \"30\",\n    \"inPercentage\": \"140%\"\n},\n{\n    \"title\": \"Lessons taken\",\n    \"inNumber\": \"45\",\n    \"inPercentage\": \"86%\"\n},\n{\n    \"title\": \"Exams passed\",\n    \"inNumber\": \"12\",\n    \"inPercentage\": \"120%\"\n}\n],\n\n\"courses\" :[{\n    \"iconWrap\": \"course/1.svg\",\n    \"backArrow\": \"course/back-arrow/1.png\",\n    \"title\": \"Management\"\n},\n{\n    \"iconWrap\": \"course/2.svg\",\n    \"backArrow\": \"course/back-arrow/2.png\",\n    \"title\": \"Web Devlopment\"\n},\n{\n    \"iconWrap\": \"course/3.svg\",\n    \"backArrow\": \"course/back-arrow/1.png\",\n    \"title\": \"Business Analytics\"\n},\n{\n    \"iconWrap\": \"course/4.svg\",\n    \"backArrow\": \"course/back-arrow/3.png\",\n    \"title\": \"Marketing\"\n}\n],\n\n  \"upcomingSchedule\" :[{\n    \"iconWrap\": \"course/1.svg\",\n    \"backArrow\": \"course/back-arrow/1.png\",\n    \"title\": \"Management\"\n},\n{\n    \"iconWrap\": \"course/2.svg\",\n    \"backArrow\": \"course/back-arrow/2.png\",\n    \"title\": \"Web Devlopment\"\n},\n{\n    \"iconWrap\": \"course/3.svg\",\n    \"backArrow\": \"course/back-arrow/1.png\",\n    \"title\": \"Business Analytics\"\n},\n{\n    \"iconWrap\": \"course/4.svg\",\n    \"backArrow\": \"course/back-arrow/3.png\",\n    \"title\": \"Marketing\"\n}\n]\n}",
+      "start": 1700848827479,
+      "end": 1700848827807,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "result": "export const activirtyHours = [\n\t{\n\t\ttitle: \"Time Spent\",\n\t\tinNumber: \"30\",\n\t\tinPercentage: \"140%\"\n\t},\n\t{\n\t\ttitle: \"Lessons taken\",\n\t\tinNumber: \"45\",\n\t\tinPercentage: \"86%\"\n\t},\n\t{\n\t\ttitle: \"Exams passed\",\n\t\tinNumber: \"12\",\n\t\tinPercentage: \"120%\"\n\t}\n];\nexport const courses = [\n\t{\n\t\ticonWrap: \"course/1.svg\",\n\t\tbackArrow: \"course/back-arrow/1.png\",\n\t\ttitle: \"Management\"\n\t},\n\t{\n\t\ticonWrap: \"course/2.svg\",\n\t\tbackArrow: \"course/back-arrow/2.png\",\n\t\ttitle: \"Web Devlopment\"\n\t},\n\t{\n\t\ticonWrap: \"course/3.svg\",\n\t\tbackArrow: \"course/back-arrow/1.png\",\n\t\ttitle: \"Business Analytics\"\n\t},\n\t{\n\t\ticonWrap: \"course/4.svg\",\n\t\tbackArrow: \"course/back-arrow/3.png\",\n\t\ttitle: \"Marketing\"\n\t}\n];\nexport const upcomingSchedule = [\n\t{\n\t\ticonWrap: \"course/1.svg\",\n\t\tbackArrow: \"course/back-arrow/1.png\",\n\t\ttitle: \"Management\"\n\t},\n\t{\n\t\ticonWrap: \"course/2.svg\",\n\t\tbackArrow: \"course/back-arrow/2.png\",\n\t\ttitle: \"Web Devlopment\"\n\t},\n\t{\n\t\ticonWrap: \"course/3.svg\",\n\t\tbackArrow: \"course/back-arrow/1.png\",\n\t\ttitle: \"Business Analytics\"\n\t},\n\t{\n\t\ticonWrap: \"course/4.svg\",\n\t\tbackArrow: \"course/back-arrow/3.png\",\n\t\ttitle: \"Marketing\"\n\t}\n];\nexport default {\n\tactivirtyHours: activirtyHours,\n\tcourses: courses,\n\tupcomingSchedule: upcomingSchedule\n};\n",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827808,
+      "end": 1700848827808,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827809,
+      "end": 1700848827809,
+      "order": "normal"
+    }
+  ]
+}

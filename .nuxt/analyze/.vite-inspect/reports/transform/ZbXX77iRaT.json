@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/activeLessonsCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-3 col-ed-6 col-md-5 col-sm-6 box-col-5\">\n    <div class=\"card\">\n      <div class=\"card-header card-no-border\">\n        <div class=\"header-top\">\n          <h5 class=\"m-0\">Active Lessons</h5>\n          <div class=\"card-header-right-icon\">\n            <a\n              class=\"link-only\"\n              href=\"#\"\n              >View <vue-feather type=\"arrow-right\"></vue-feather\n            ></a>\n          </div>\n        </div>\n      </div>\n      <div class=\"card-body pt-0\">\n        <ul class=\"lessons-lists\">\n          <li>\n            <img\n              src=\"/images/dashboard-3/lessons/1.png\"\n              alt=\"ux icon\"\n            />\n            <div>\n              <h6 class=\"f-14 f-w-400  m-b-0\">UI/UX</h6>\n              <span class=\"f-light\">Web design</span>\n            </div>\n            <div class=\"lesson-wrap ms-auto\">\n              <div id=\"lessonChart1\">\n                <apexchart\n                  height=\"60.75\"\n                  type=\"donut\"\n                  :options=\"onlineDashboard.options4\"\n                  :series=\"onlineDashboard.series4\"\n                ></apexchart>\n              </div>\n            </div>\n          </li>\n          <li>\n            <img\n              src=\"/images/dashboard-3/lessons/2.png\"\n              alt=\"vue icon\"\n            />\n            <div>\n              <h6 class=\"f-14 f-w-400  m-b-0\">Vue 3</h6>\n              <span class=\"f-light\">JS Framework</span>\n            </div>\n            <div class=\"lesson-wrap ms-auto\">\n              <div id=\"lessonChart2\">\n                <apexchart\n                  height=\"60.75\"\n                  type=\"donut\"\n                  :options=\"onlineDashboard.options5\"\n                  :series=\"onlineDashboard.series5\"\n                ></apexchart>\n              </div>\n            </div>\n          </li>\n          <li>\n            <img\n              src=\"/images/dashboard-3/lessons/3.png\"\n              alt=\"bootstrap icon\"\n            />\n            <div>\n              <h6 class=\"f-14 f-w-400  m-b-0\">Bootstrap 5</h6>\n              <span class=\"f-light\">Framework</span>\n            </div>\n            <div class=\"lesson-wrap ms-auto\">\n              <div id=\"lessonChart3\">\n                <apexchart\n                  height=\"60.75\"\n                  type=\"donut\"\n                  :options=\"onlineDashboard.options6\"\n                  :series=\"onlineDashboard.series6\"\n                ></apexchart>\n              </div>\n            </div>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { onlineDashboard } from '@/data/comon';\n\nexport default {\n  data() {\n    return {\n      onlineDashboard: onlineDashboard\n    };\n  }\n};\n</script>\n",
+      "start": 1700848825719,
+      "end": 1700848825907,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825907,
+      "end": 1700848825907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825907,
+      "end": 1700848825907,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825907,
+      "end": 1700848825907,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825908,
+      "end": 1700848825908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825908,
+      "end": 1700848825908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825908,
+      "end": 1700848825908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825908,
+      "end": 1700848825908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { onlineDashboard } from '@/data/comon';\n\nconst _sfc_main = {\n  data() {\n    return {\n      onlineDashboard: onlineDashboard\n    };\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createTextVNode as _createTextVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-3/lessons/1.png'\nimport _imports_1 from '/images/dashboard-3/lessons/2.png'\nimport _imports_2 from '/images/dashboard-3/lessons/3.png'\n\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-ed-6 col-md-5 col-sm-6 box-col-5\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"Active Lessons\", -1)\nconst _hoisted_6 = { class: \"card-header-right-icon\" }\nconst _hoisted_7 = {\n  class: \"link-only\",\n  href: \"#\"\n}\nconst _hoisted_8 = { class: \"card-body pt-0\" }\nconst _hoisted_9 = { class: \"lessons-lists\" }\nconst _hoisted_10 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_0,\n  alt: \"ux icon\"\n}, null, -1)\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h6\", { class: \"f-14 f-w-400 m-b-0\" }, \"UI/UX\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Web design\")\n], -1)\nconst _hoisted_12 = { class: \"lesson-wrap ms-auto\" }\nconst _hoisted_13 = { id: \"lessonChart1\" }\nconst _hoisted_14 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_1,\n  alt: \"vue icon\"\n}, null, -1)\nconst _hoisted_15 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h6\", { class: \"f-14 f-w-400 m-b-0\" }, \"Vue 3\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"JS Framework\")\n], -1)\nconst _hoisted_16 = { class: \"lesson-wrap ms-auto\" }\nconst _hoisted_17 = { id: \"lessonChart2\" }\nconst _hoisted_18 = /*#__PURE__*/_createElementVNode(\"img\", {\n  src: _imports_2,\n  alt: \"bootstrap icon\"\n}, null, -1)\nconst _hoisted_19 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h6\", { class: \"f-14 f-w-400 m-b-0\" }, \"Bootstrap 5\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Framework\")\n], -1)\nconst _hoisted_20 = { class: \"lesson-wrap ms-auto\" }\nconst _hoisted_21 = { id: \"lessonChart3\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_vue_feather = _resolveComponent(\"vue-feather\")\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createElementVNode(\"a\", _hoisted_7, [\n              _createTextVNode(\"View \"),\n              _createVNode(_component_vue_feather, { type: \"arrow-right\" })\n            ])\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createElementVNode(\"ul\", _hoisted_9, [\n          _createElementVNode(\"li\", null, [\n            _hoisted_10,\n            _hoisted_11,\n            _createElementVNode(\"div\", _hoisted_12, [\n              _createElementVNode(\"div\", _hoisted_13, [\n                _createVNode(_component_apexchart, {\n                  height: \"60.75\",\n                  type: \"donut\",\n                  options: $data.onlineDashboard.options4,\n                  series: $data.onlineDashboard.series4\n                }, null, 8, [\"options\", \"series\"])\n              ])\n            ])\n          ]),\n          _createElementVNode(\"li\", null, [\n            _hoisted_14,\n            _hoisted_15,\n            _createElementVNode(\"div\", _hoisted_16, [\n              _createElementVNode(\"div\", _hoisted_17, [\n                _createVNode(_component_apexchart, {\n                  height: \"60.75\",\n                  type: \"donut\",\n                  options: $data.onlineDashboard.options5,\n                  series: $data.onlineDashboard.series5\n                }, null, 8, [\"options\", \"series\"])\n              ])\n            ])\n          ]),\n          _createElementVNode(\"li\", null, [\n            _hoisted_18,\n            _hoisted_19,\n            _createElementVNode(\"div\", _hoisted_20, [\n              _createElementVNode(\"div\", _hoisted_21, [\n                _createVNode(_component_apexchart, {\n                  height: \"60.75\",\n                  type: \"donut\",\n                  options: $data.onlineDashboard.options6,\n                  series: $data.onlineDashboard.series6\n                }, null, 8, [\"options\", \"series\"])\n              ])\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825908,
+      "end": 1700848825911,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825911,
+      "end": 1700848825911,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825911,
+      "end": 1700848825913,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825913,
+      "end": 1700848825913,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825913,
+      "end": 1700848825913,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825913,
+      "end": 1700848825913,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825913,
+      "end": 1700848825913,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825913,
+      "end": 1700848825914,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825914,
+      "end": 1700848825914,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825914,
+      "end": 1700848825914,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825914,
+      "end": 1700848825914,
+      "order": "normal"
+    }
+  ]
+}

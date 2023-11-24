@@ -1,0 +1,221 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/index.vue?vue&type=style&index=0&scoped=907e3bb5&lang.scss",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\r\n@keyframes scaler {\r\n  0% {\r\n    transform: scale(0.89, 0.89);\r\n  }\r\n  50% {\r\n    transform: scale(1, 1);\r\n  }\r\n  100% {\r\n    transform: scale(0.89, 0.89);\r\n  }\r\n}\r\n@keyframes heart-move {\r\n  0% {\r\n    -webkit-transform: translate(0px, 0px) rotate(0deg);\r\n    transform: translate(0px, 0px) rotate(0deg);\r\n  }\r\n  20% {\r\n    -webkit-transform: translate(-13px, 1px) rotate(-6deg);\r\n    transform: translate(-13px, 1px) rotate(-6deg);\r\n  }\r\n  40% {\r\n    -webkit-transform: translate(-41px, -22px) rotate(-22deg);\r\n    transform: translate(-41px, -22px) rotate(-22deg);\r\n  }\r\n  60% {\r\n    -webkit-transform: translate(-33px, -22px) rotate(-50deg);\r\n    transform: translate(-33px, -22px) rotate(-50deg);\r\n  }\r\n  80% {\r\n    -webkit-transform: translate(40px, -72px) rotate(-50deg);\r\n    transform: translate(40px, -72px) rotate(-50deg);\r\n  }\r\n  100% {\r\n    -webkit-transform: translate(0px, 0px) rotate(0deg);\r\n    transform: translate(0px, 0px) rotate(0deg);\r\n  }\r\n}\r\n@keyframes like-bumb {\r\n  0% {\r\n    transform: scale(0.8, 0.8);\r\n  }\r\n\r\n  50% {\r\n    transform: scale(1, 1);\r\n  }\r\n  100% {\r\n    transform: scale(0.8, 0.8);\r\n  }\r\n}\r\n.student-search-container {\r\n  width: 100vw;\r\n  background: var(--theme-deafult);\r\n  .content-container {\r\n    display: flex;\r\n    flex: wrap;\r\n    width: 80%;\r\n    margin: auto;\r\n    .student-content {\r\n      width: 67%;\r\n      flex: 0 0 auto;\r\n      margin: 80px 0 80px 0;\r\n      .content-title {\r\n        width: 70%;\r\n      }\r\n      .motto {\r\n        font-size: 0.8rem;\r\n      }\r\n      .job-choice-container {\r\n        margin-top: 8px;\r\n        span {\r\n          margin-right: 16px;\r\n          color: white;\r\n          font-size: 0.7rem;\r\n        }\r\n      }\r\n    }\r\n    .image-container {\r\n      position: relative;\r\n      align-content: center;\r\n      height: 340px;\r\n      max-width: 290px;\r\n      width: 33%;\r\n      flex: 0 0 auto;\r\n      display: flex;\r\n      margin: 30px;\r\n      .box-1 {\r\n        width: 60%;\r\n        position: relative;\r\n        margin-left: -10.4%;\r\n        margin-top: -14%;\r\n        margin-right: -6%;\r\n        flex-grow: 1;\r\n        img {\r\n          width: 160px;\r\n          margin-top: 12px;\r\n          margin-right: 30px;\r\n          border-radius: 120px;\r\n          position: absolute;\r\n        }\r\n        .circle-container {\r\n          animation: scaler 4s infinite ease-in-out alternate;\r\n          top: -10px;\r\n          right: 23px;\r\n          position: absolute;\r\n          .inlay-circle-1 {\r\n            width: 180px;\r\n            height: 180px;\r\n            border: solid transparent 4px;\r\n            border-right: solid #10d1ef 4px;\r\n            border-radius: 50%;\r\n            transform: rotate(-45deg);\r\n          }\r\n        }\r\n      }\r\n      .box-2 {\r\n        width: 40%;\r\n        position: relative;\r\n        margin-left: 0%;\r\n        margin-top: 19.4%;\r\n        margin-right: -11%;\r\n        flex-grow: 1;\r\n        background: rgb(232, 231, 231, 0.5);\r\n        border-radius: 120px;\r\n        img {\r\n          position: absolute;\r\n          height: 100%;\r\n          width: auto;\r\n          margin-left: -60px;\r\n        }\r\n        .circle-container {\r\n          animation: scaler 4s infinite ease-in-out alternate;\r\n          bottom: -14px;\r\n          right: -14px;;\r\n          position: absolute;\r\n          .inlay-circle-2 {\r\n            width: 180px;\r\n            height: 180px;\r\n            border: solid transparent 4px;\r\n            border-right: solid #ffc766 4px;\r\n            border-radius: 50%;\r\n            transform: rotate(45deg);\r\n          }\r\n        }\r\n      }\r\n      .heart-icon {\r\n        position: absolute;\r\n        bottom: 6%;\r\n        left: 26%;\r\n        animation: heart-move 7s infinite ease-in-out alternate;\r\n      }\r\n      .like-icon {\r\n        position: absolute;\r\n        top: 10.4%;\r\n        left: 100%;\r\n        z-index: 10;\r\n        animation: like-bumb 4s infinite ease-in-out alternate;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n.job-lists-container {\r\n  text-align: center;\r\n  width: 80%;\r\n  margin: auto;\r\n  .sub-header {\r\n    color: rgb(109, 108, 108);\r\n    font-size: 1rem;\r\n  }\r\n}\r\n.our-past-work-container {\r\n  width: 80%;\r\n  margin: auto;\r\n  .our-past-work {\r\n    width: 100%;\r\n    display: flex;\r\n    .image-container {\r\n      width: 50%;\r\n      img {\r\n        width: 100%;\r\n        object-fit: contain;\r\n        object-position: right;\r\n      }\r\n    }\r\n    .content-container {\r\n      width: 50%;\r\n      padding: 50px 0 50px 50px;\r\n    }\r\n  }\r\n  .wrap-count {\r\n    text-align: center;\r\n  }\r\n}\r\n",
+      "start": 1700848824266,
+      "end": 1700848824266
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824266,
+      "end": 1700848824266,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824266,
+      "end": 1700848824266,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824266,
+      "end": 1700848824266,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "@keyframes scaler{0%{transform:scale(.89)}50%{transform:scale(1)}to{transform:scale(.89)}}@keyframes heart-move{0%{transform:translate(0) rotate(0deg)}20%{transform:translate(-13px,1px) rotate(-6deg)}40%{transform:translate(-41px,-22px) rotate(-22deg)}60%{transform:translate(-33px,-22px) rotate(-50deg)}80%{transform:translate(40px,-72px) rotate(-50deg)}to{transform:translate(0) rotate(0deg)}}@keyframes like-bumb{0%{transform:scale(.8)}50%{transform:scale(1)}to{transform:scale(.8)}}.student-search-container{background:var(--theme-deafult);width:100vw}.student-search-container .content-container{display:flex;flex:wrap;margin:auto;width:80%}.student-search-container .content-container .student-content{flex:0 0 auto;margin:80px 0;width:67%}.student-search-container .content-container .student-content .content-title{width:70%}.student-search-container .content-container .student-content .motto{font-size:.8rem}.student-search-container .content-container .student-content .job-choice-container{margin-top:8px}.student-search-container .content-container .student-content .job-choice-container span{color:#fff;font-size:.7rem;margin-right:16px}.student-search-container .content-container .image-container{align-content:center;display:flex;flex:0 0 auto;height:340px;margin:30px;max-width:290px;position:relative;width:33%}.student-search-container .content-container .image-container .box-1{flex-grow:1;margin-left:-10.4%;margin-right:-6%;margin-top:-14%;position:relative;width:60%}.student-search-container .content-container .image-container .box-1 img{border-radius:120px;margin-right:30px;margin-top:12px;position:absolute;width:160px}.student-search-container .content-container .image-container .box-1 .circle-container{animation:scaler 4s ease-in-out infinite alternate;position:absolute;right:23px;top:-10px}.student-search-container .content-container .image-container .box-1 .circle-container .inlay-circle-1{border:4px solid transparent;border-radius:50%;border-right-color:#10d1ef;height:180px;transform:rotate(-45deg);width:180px}.student-search-container .content-container .image-container .box-2{background:hsla(0,2%,91%,.5);border-radius:120px;flex-grow:1;margin-left:0;margin-right:-11%;margin-top:19.4%;position:relative;width:40%}.student-search-container .content-container .image-container .box-2 img{height:100%;margin-left:-60px;position:absolute;width:auto}.student-search-container .content-container .image-container .box-2 .circle-container{animation:scaler 4s ease-in-out infinite alternate;bottom:-14px;position:absolute;right:-14px}.student-search-container .content-container .image-container .box-2 .circle-container .inlay-circle-2{border:4px solid transparent;border-radius:50%;border-right-color:#ffc766;height:180px;transform:rotate(45deg);width:180px}.student-search-container .content-container .image-container .heart-icon{animation:heart-move 7s ease-in-out infinite alternate;bottom:6%;left:26%;position:absolute}.student-search-container .content-container .image-container .like-icon{animation:like-bumb 4s ease-in-out infinite alternate;left:100%;position:absolute;top:10.4%;z-index:10}.job-lists-container{margin:auto;text-align:center;width:80%}.job-lists-container .sub-header{color:#6d6c6c;font-size:1rem}.our-past-work-container{margin:auto;width:80%}.our-past-work-container .our-past-work{display:flex;width:100%}.our-past-work-container .our-past-work .image-container{width:50%}.our-past-work-container .our-past-work .image-container img{-o-object-fit:contain;object-fit:contain;-o-object-position:right;object-position:right;width:100%}.our-past-work-container .our-past-work .content-container{padding:50px 0 50px 50px;width:50%}.our-past-work-container .wrap-count{text-align:center}",
+      "start": 1700848824266,
+      "end": 1700848833303,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848833303,
+      "end": 1700848833303,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848833303,
+      "end": 1700848833303,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848833303,
+      "end": 1700848833303,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "@keyframes scaler-907e3bb5{0%{transform:scale(.89)}50%{transform:scale(1)}to{transform:scale(.89)}}@keyframes heart-move-907e3bb5{0%{transform:translate(0) rotate(0deg)}20%{transform:translate(-13px,1px) rotate(-6deg)}40%{transform:translate(-41px,-22px) rotate(-22deg)}60%{transform:translate(-33px,-22px) rotate(-50deg)}80%{transform:translate(40px,-72px) rotate(-50deg)}to{transform:translate(0) rotate(0deg)}}@keyframes like-bumb-907e3bb5{0%{transform:scale(.8)}50%{transform:scale(1)}to{transform:scale(.8)}}.student-search-container[data-v-907e3bb5]{background:var(--theme-deafult);width:100vw}.student-search-container .content-container[data-v-907e3bb5]{display:flex;flex:wrap;margin:auto;width:80%}.student-search-container .content-container .student-content[data-v-907e3bb5]{flex:0 0 auto;margin:80px 0;width:67%}.student-search-container .content-container .student-content .content-title[data-v-907e3bb5]{width:70%}.student-search-container .content-container .student-content .motto[data-v-907e3bb5]{font-size:.8rem}.student-search-container .content-container .student-content .job-choice-container[data-v-907e3bb5]{margin-top:8px}.student-search-container .content-container .student-content .job-choice-container span[data-v-907e3bb5]{color:#fff;font-size:.7rem;margin-right:16px}.student-search-container .content-container .image-container[data-v-907e3bb5]{align-content:center;display:flex;flex:0 0 auto;height:340px;margin:30px;max-width:290px;position:relative;width:33%}.student-search-container .content-container .image-container .box-1[data-v-907e3bb5]{flex-grow:1;margin-left:-10.4%;margin-right:-6%;margin-top:-14%;position:relative;width:60%}.student-search-container .content-container .image-container .box-1 img[data-v-907e3bb5]{border-radius:120px;margin-right:30px;margin-top:12px;position:absolute;width:160px}.student-search-container .content-container .image-container .box-1 .circle-container[data-v-907e3bb5]{animation:scaler-907e3bb5 4s ease-in-out infinite alternate;position:absolute;right:23px;top:-10px}.student-search-container .content-container .image-container .box-1 .circle-container .inlay-circle-1[data-v-907e3bb5]{border:4px solid transparent;border-radius:50%;border-right-color:#10d1ef;height:180px;transform:rotate(-45deg);width:180px}.student-search-container .content-container .image-container .box-2[data-v-907e3bb5]{background:hsla(0,2%,91%,.5);border-radius:120px;flex-grow:1;margin-left:0;margin-right:-11%;margin-top:19.4%;position:relative;width:40%}.student-search-container .content-container .image-container .box-2 img[data-v-907e3bb5]{height:100%;margin-left:-60px;position:absolute;width:auto}.student-search-container .content-container .image-container .box-2 .circle-container[data-v-907e3bb5]{animation:scaler-907e3bb5 4s ease-in-out infinite alternate;bottom:-14px;position:absolute;right:-14px}.student-search-container .content-container .image-container .box-2 .circle-container .inlay-circle-2[data-v-907e3bb5]{border:4px solid transparent;border-radius:50%;border-right-color:#ffc766;height:180px;transform:rotate(45deg);width:180px}.student-search-container .content-container .image-container .heart-icon[data-v-907e3bb5]{animation:heart-move-907e3bb5 7s ease-in-out infinite alternate;bottom:6%;left:26%;position:absolute}.student-search-container .content-container .image-container .like-icon[data-v-907e3bb5]{animation:like-bumb-907e3bb5 4s ease-in-out infinite alternate;left:100%;position:absolute;top:10.4%;z-index:10}.job-lists-container[data-v-907e3bb5]{margin:auto;text-align:center;width:80%}.job-lists-container .sub-header[data-v-907e3bb5]{color:#6d6c6c;font-size:1rem}.our-past-work-container[data-v-907e3bb5]{margin:auto;width:80%}.our-past-work-container .our-past-work[data-v-907e3bb5]{display:flex;width:100%}.our-past-work-container .our-past-work .image-container[data-v-907e3bb5]{width:50%}.our-past-work-container .our-past-work .image-container img[data-v-907e3bb5]{-o-object-fit:contain;object-fit:contain;-o-object-position:right;object-position:right;width:100%}.our-past-work-container .our-past-work .content-container[data-v-907e3bb5]{padding:50px 0 50px 50px;width:50%}.our-past-work-container .wrap-count[data-v-907e3bb5]{text-align:center}",
+      "start": 1700848833303,
+      "end": 1700848833310,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848833310,
+      "end": 1700848833310,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848833311,
+      "end": 1700848833311,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848833311,
+      "end": 1700848833312,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848833312,
+      "end": 1700848833312,
+      "order": "normal"
+    }
+  ]
+}

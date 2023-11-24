@@ -1,0 +1,212 @@
+{
+  "resolvedId": "virtual:nuxt:C:/Users/Ireedui/Desktop/additional/tsg/front-latest/.nuxt/routes.mjs",
+  "transforms": [
+    {
+      "name": "virtual",
+      "result": "import { default as register5RToeJCQtzMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/auth/register.vue?macro=true\";\nimport { default as _91id_93tNxmWhi0WSMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/detail/[id].vue?macro=true\";\nimport { default as index9VPLG8i2vYMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/index.vue?macro=true\";\nimport { default as default120rgW5xhc3OMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/default12.vue?macro=true\";\nimport { default as ecommerceTXlgIJyGBfMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/ecommerce.vue?macro=true\";\nimport { default as onlineyHo4CUSFobMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/online.vue?macro=true\";\nimport { default as social7FqIOcFCtbMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/social.vue?macro=true\";\nimport { default as index8Fqmf2Zp8iMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/index.vue?macro=true\";\nimport { default as indexu6UZZZcBM6Meta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/index.vue?macro=true\";\nimport { default as _91id_93WJNNXCcuebMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/apply/[id].vue?macro=true\";\nimport { default as _91id_93wW867cf9yJMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/detail/[id].vue?macro=true\";\nimport { default as indexiLmz3iRdFiMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/index.vue?macro=true\";\nimport { default as indexVSAnEpWnXiMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/list/index.vue?macro=true\";\nimport { default as profileQ2VDO2WENqMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/profile.vue?macro=true\";\nexport default [\n  {\n    name: register5RToeJCQtzMeta?.name ?? \"auth-register\",\n    path: register5RToeJCQtzMeta?.path ?? \"/auth/register\",\n    meta: register5RToeJCQtzMeta || {},\n    alias: register5RToeJCQtzMeta?.alias || [],\n    redirect: register5RToeJCQtzMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/auth/register.vue\").then(m => m.default || m)\n  },\n  {\n    name: _91id_93tNxmWhi0WSMeta?.name ?? \"company-detail-id\",\n    path: _91id_93tNxmWhi0WSMeta?.path ?? \"/company/detail/:id()\",\n    meta: _91id_93tNxmWhi0WSMeta || {},\n    alias: _91id_93tNxmWhi0WSMeta?.alias || [],\n    redirect: _91id_93tNxmWhi0WSMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/detail/[id].vue\").then(m => m.default || m)\n  },\n  {\n    name: index9VPLG8i2vYMeta?.name ?? \"company\",\n    path: index9VPLG8i2vYMeta?.path ?? \"/company\",\n    meta: index9VPLG8i2vYMeta || {},\n    alias: index9VPLG8i2vYMeta?.alias || [],\n    redirect: index9VPLG8i2vYMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: default120rgW5xhc3OMeta?.name ?? \"dashboard-default12\",\n    path: default120rgW5xhc3OMeta?.path ?? \"/dashboard/default12\",\n    meta: default120rgW5xhc3OMeta || {},\n    alias: default120rgW5xhc3OMeta?.alias || [],\n    redirect: default120rgW5xhc3OMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/default12.vue\").then(m => m.default || m)\n  },\n  {\n    name: ecommerceTXlgIJyGBfMeta?.name ?? \"dashboard-ecommerce\",\n    path: ecommerceTXlgIJyGBfMeta?.path ?? \"/dashboard/ecommerce\",\n    meta: ecommerceTXlgIJyGBfMeta || {},\n    alias: ecommerceTXlgIJyGBfMeta?.alias || [],\n    redirect: ecommerceTXlgIJyGBfMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/ecommerce.vue\").then(m => m.default || m)\n  },\n  {\n    name: onlineyHo4CUSFobMeta?.name ?? \"dashboard-online\",\n    path: onlineyHo4CUSFobMeta?.path ?? \"/dashboard/online\",\n    meta: onlineyHo4CUSFobMeta || {},\n    alias: onlineyHo4CUSFobMeta?.alias || [],\n    redirect: onlineyHo4CUSFobMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/online.vue\").then(m => m.default || m)\n  },\n  {\n    name: social7FqIOcFCtbMeta?.name ?? \"dashboard-social\",\n    path: social7FqIOcFCtbMeta?.path ?? \"/dashboard/social\",\n    meta: social7FqIOcFCtbMeta || {},\n    alias: social7FqIOcFCtbMeta?.alias || [],\n    redirect: social7FqIOcFCtbMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/social.vue\").then(m => m.default || m)\n  },\n  {\n    name: index8Fqmf2Zp8iMeta?.name ?? \"index\",\n    path: index8Fqmf2Zp8iMeta?.path ?? \"/\",\n    meta: index8Fqmf2Zp8iMeta || {},\n    alias: index8Fqmf2Zp8iMeta?.alias || [],\n    redirect: index8Fqmf2Zp8iMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexu6UZZZcBM6Meta?.name ?? \"student\",\n    path: indexu6UZZZcBM6Meta?.path ?? \"/student\",\n    meta: indexu6UZZZcBM6Meta || {},\n    alias: indexu6UZZZcBM6Meta?.alias || [],\n    redirect: indexu6UZZZcBM6Meta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: _91id_93WJNNXCcuebMeta?.name ?? \"student-job-apply-id\",\n    path: _91id_93WJNNXCcuebMeta?.path ?? \"/student/job/apply/:id()\",\n    meta: _91id_93WJNNXCcuebMeta || {},\n    alias: _91id_93WJNNXCcuebMeta?.alias || [],\n    redirect: _91id_93WJNNXCcuebMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/apply/[id].vue\").then(m => m.default || m)\n  },\n  {\n    name: _91id_93wW867cf9yJMeta?.name ?? \"student-job-detail-id\",\n    path: _91id_93wW867cf9yJMeta?.path ?? \"/student/job/detail/:id()\",\n    meta: _91id_93wW867cf9yJMeta || {},\n    alias: _91id_93wW867cf9yJMeta?.alias || [],\n    redirect: _91id_93wW867cf9yJMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/detail/[id].vue\").then(m => m.default || m)\n  },\n  {\n    name: indexiLmz3iRdFiMeta?.name ?? \"student-job\",\n    path: indexiLmz3iRdFiMeta?.path ?? \"/student/job\",\n    meta: indexiLmz3iRdFiMeta || {},\n    alias: indexiLmz3iRdFiMeta?.alias || [],\n    redirect: indexiLmz3iRdFiMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: indexVSAnEpWnXiMeta?.name ?? \"student-job-list\",\n    path: indexVSAnEpWnXiMeta?.path ?? \"/student/job/list\",\n    meta: indexVSAnEpWnXiMeta || {},\n    alias: indexVSAnEpWnXiMeta?.alias || [],\n    redirect: indexVSAnEpWnXiMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/list/index.vue\").then(m => m.default || m)\n  },\n  {\n    name: profileQ2VDO2WENqMeta?.name ?? \"student-profile\",\n    path: profileQ2VDO2WENqMeta?.path ?? \"/student/profile\",\n    meta: profileQ2VDO2WENqMeta || {},\n    alias: profileQ2VDO2WENqMeta?.alias || [],\n    redirect: profileQ2VDO2WENqMeta?.redirect || undefined,\n    component: () => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/profile.vue\").then(m => m.default || m)\n  }\n]",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848808050,
+      "end": 1700848808050,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848808051,
+      "end": 1700848808051,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848808052,
+      "end": 1700848808052,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848808052,
+      "end": 1700848808052,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848808052,
+      "end": 1700848808052,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848808052,
+      "end": 1700848808052,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848808052,
+      "end": 1700848808052,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848808053,
+      "end": 1700848808053,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848808084,
+      "end": 1700848808084,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848808084,
+      "end": 1700848808084,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848808084,
+      "end": 1700848808084,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848808084,
+      "end": 1700848808085,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848808085,
+      "end": 1700848808085,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848808087,
+      "end": 1700848808087,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848808087,
+      "end": 1700848808093,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848808093,
+      "end": 1700848808094,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848808094,
+      "end": 1700848808094,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848808094,
+      "end": 1700848808094,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848808094,
+      "end": 1700848808094,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848808094,
+      "end": 1700848808094,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848808095,
+      "end": 1700848808095,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "result": "import { __vitePreload } from \"\u0000vite/preload-helper\";import { default as register5RToeJCQtzMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/auth/register.vue?macro=true\";\nimport { default as _91id_93tNxmWhi0WSMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/detail/[id].vue?macro=true\";\nimport { default as index9VPLG8i2vYMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/index.vue?macro=true\";\nimport { default as default120rgW5xhc3OMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/default12.vue?macro=true\";\nimport { default as ecommerceTXlgIJyGBfMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/ecommerce.vue?macro=true\";\nimport { default as onlineyHo4CUSFobMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/online.vue?macro=true\";\nimport { default as social7FqIOcFCtbMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/social.vue?macro=true\";\nimport { default as index8Fqmf2Zp8iMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/index.vue?macro=true\";\nimport { default as indexu6UZZZcBM6Meta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/index.vue?macro=true\";\nimport { default as _91id_93WJNNXCcuebMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/apply/[id].vue?macro=true\";\nimport { default as _91id_93wW867cf9yJMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/detail/[id].vue?macro=true\";\nimport { default as indexiLmz3iRdFiMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/index.vue?macro=true\";\nimport { default as indexVSAnEpWnXiMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/list/index.vue?macro=true\";\nimport { default as profileQ2VDO2WENqMeta } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/profile.vue?macro=true\";\nexport default [\n  {\n    name: register5RToeJCQtzMeta?.name ?? \"auth-register\",\n    path: register5RToeJCQtzMeta?.path ?? \"/auth/register\",\n    meta: register5RToeJCQtzMeta || {},\n    alias: register5RToeJCQtzMeta?.alias || [],\n    redirect: register5RToeJCQtzMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/auth/register.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: _91id_93tNxmWhi0WSMeta?.name ?? \"company-detail-id\",\n    path: _91id_93tNxmWhi0WSMeta?.path ?? \"/company/detail/:id()\",\n    meta: _91id_93tNxmWhi0WSMeta || {},\n    alias: _91id_93tNxmWhi0WSMeta?.alias || [],\n    redirect: _91id_93tNxmWhi0WSMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/detail/[id].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: index9VPLG8i2vYMeta?.name ?? \"company\",\n    path: index9VPLG8i2vYMeta?.path ?? \"/company\",\n    meta: index9VPLG8i2vYMeta || {},\n    alias: index9VPLG8i2vYMeta?.alias || [],\n    redirect: index9VPLG8i2vYMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/company/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: default120rgW5xhc3OMeta?.name ?? \"dashboard-default12\",\n    path: default120rgW5xhc3OMeta?.path ?? \"/dashboard/default12\",\n    meta: default120rgW5xhc3OMeta || {},\n    alias: default120rgW5xhc3OMeta?.alias || [],\n    redirect: default120rgW5xhc3OMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/default12.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: ecommerceTXlgIJyGBfMeta?.name ?? \"dashboard-ecommerce\",\n    path: ecommerceTXlgIJyGBfMeta?.path ?? \"/dashboard/ecommerce\",\n    meta: ecommerceTXlgIJyGBfMeta || {},\n    alias: ecommerceTXlgIJyGBfMeta?.alias || [],\n    redirect: ecommerceTXlgIJyGBfMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/ecommerce.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: onlineyHo4CUSFobMeta?.name ?? \"dashboard-online\",\n    path: onlineyHo4CUSFobMeta?.path ?? \"/dashboard/online\",\n    meta: onlineyHo4CUSFobMeta || {},\n    alias: onlineyHo4CUSFobMeta?.alias || [],\n    redirect: onlineyHo4CUSFobMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/online.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: social7FqIOcFCtbMeta?.name ?? \"dashboard-social\",\n    path: social7FqIOcFCtbMeta?.path ?? \"/dashboard/social\",\n    meta: social7FqIOcFCtbMeta || {},\n    alias: social7FqIOcFCtbMeta?.alias || [],\n    redirect: social7FqIOcFCtbMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/dashboard/social.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: index8Fqmf2Zp8iMeta?.name ?? \"index\",\n    path: index8Fqmf2Zp8iMeta?.path ?? \"/\",\n    meta: index8Fqmf2Zp8iMeta || {},\n    alias: index8Fqmf2Zp8iMeta?.alias || [],\n    redirect: index8Fqmf2Zp8iMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexu6UZZZcBM6Meta?.name ?? \"student\",\n    path: indexu6UZZZcBM6Meta?.path ?? \"/student\",\n    meta: indexu6UZZZcBM6Meta || {},\n    alias: indexu6UZZZcBM6Meta?.alias || [],\n    redirect: indexu6UZZZcBM6Meta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: _91id_93WJNNXCcuebMeta?.name ?? \"student-job-apply-id\",\n    path: _91id_93WJNNXCcuebMeta?.path ?? \"/student/job/apply/:id()\",\n    meta: _91id_93WJNNXCcuebMeta || {},\n    alias: _91id_93WJNNXCcuebMeta?.alias || [],\n    redirect: _91id_93WJNNXCcuebMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/apply/[id].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: _91id_93wW867cf9yJMeta?.name ?? \"student-job-detail-id\",\n    path: _91id_93wW867cf9yJMeta?.path ?? \"/student/job/detail/:id()\",\n    meta: _91id_93wW867cf9yJMeta || {},\n    alias: _91id_93wW867cf9yJMeta?.alias || [],\n    redirect: _91id_93wW867cf9yJMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/detail/[id].vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexiLmz3iRdFiMeta?.name ?? \"student-job\",\n    path: indexiLmz3iRdFiMeta?.path ?? \"/student/job\",\n    meta: indexiLmz3iRdFiMeta || {},\n    alias: indexiLmz3iRdFiMeta?.alias || [],\n    redirect: indexiLmz3iRdFiMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: indexVSAnEpWnXiMeta?.name ?? \"student-job-list\",\n    path: indexVSAnEpWnXiMeta?.path ?? \"/student/job/list\",\n    meta: indexVSAnEpWnXiMeta || {},\n    alias: indexVSAnEpWnXiMeta?.alias || [],\n    redirect: indexVSAnEpWnXiMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/job/list/index.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  },\n  {\n    name: profileQ2VDO2WENqMeta?.name ?? \"student-profile\",\n    path: profileQ2VDO2WENqMeta?.path ?? \"/student/profile\",\n    meta: profileQ2VDO2WENqMeta || {},\n    alias: profileQ2VDO2WENqMeta?.alias || [],\n    redirect: profileQ2VDO2WENqMeta?.redirect || undefined,\n    component: () => __vitePreload(() => import(\"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/profile.vue\"),__VITE_IS_MODERN__?\"__VITE_PRELOAD__\":void 0,import.meta.url).then(m => m.default || m)\n  }\n]",
+      "start": 1700848808095,
+      "end": 1700848808096,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848808098,
+      "end": 1700848808098,
+      "order": "normal"
+    }
+  ]
+}

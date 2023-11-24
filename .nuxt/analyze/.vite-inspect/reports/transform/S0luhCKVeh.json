@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/allfourCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-5 col-md-7 box-col-7\">\n    <div class=\"row\">\n      <div class=\"col-sm-12\">\n        <div class=\"card o-hidden\">\n          <div class=\"card-body balance-widget\">\n            <span class=\"f-w-500 f-light\">Total Balance</span>\n            <h4 class=\"mb-3 mt-1 f-w-500  m-b-0 f-22\">\n              $<span class=\"counter\">245,154.00 </span\n              ><span class=\"f-light f-14 f-w-400 ms-1\">this month</span>\n            </h4>\n            <a\n              class=\"purchase-btn btn btn-primary btn-hover-effect f-w-500\"\n              href=\"#\"\n              >Tap Up Balance</a\n            >\n            <div class=\"mobile-right-img\">\n              <img\n                class=\"left-mobile-img\"\n                src=\"/images/dashboard-2/widget-img.png\"\n                alt=\"\"\n              /><img\n                class=\"mobile-img\"\n                src=\"/images/dashboard-2/mobile.gif\"\n                alt=\"mobile with coin\"\n              />\n            </div>\n          </div>\n        </div>\n      </div>\n      <div\n        class=\"col-6\"\n        v-for=\"allDetail in allDetails\"\n        :key=\"allDetail\"\n      >\n        <div class=\"card small-widget\">\n          <div :class=\"allDetail.cardClass\">\n            <span class=\"f-light\">{{ allDetail.title }}</span>\n            <div class=\"d-flex align-items-end gap-1\">\n              <h4>{{ allDetail.dataInNumber }}</h4>\n              <span :class=\"allDetail.spanClass\"\n                ><i :class=\"allDetail.iconClass\"></i\n                ><span>{{ allDetail.status }}</span></span\n              >\n            </div>\n            <div class=\"bg-gradient\">\n              <svg class=\"stroke-icon svg-fill\">\n                <use :xlink:href=\"getImgURL(allDetail.svgIcon)\"></use>\n              </svg>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { allDetails } from '@/data/dashboard/ecommerce.json';\nexport default {\n  data() {\n    return {\n      allDetails: allDetails\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/svg/icon-sprite.svg/' + `#${path}`;\n    }\n  }\n};\n</script>\n",
+      "start": 1700848825085,
+      "end": 1700848825596,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825596,
+      "end": 1700848825596,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825596,
+      "end": 1700848825596,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825597,
+      "end": 1700848825597,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825597,
+      "end": 1700848825597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825597,
+      "end": 1700848825597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825597,
+      "end": 1700848825597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825597,
+      "end": 1700848825597,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { allDetails } from '@/data/dashboard/ecommerce.json';\nconst _sfc_main = {\n  data() {\n    return {\n      allDetails: allDetails\n    };\n  },\n  methods: {\n    getImgURL(path) {\n      return '/svg/icon-sprite.svg/' + `#${path}`;\n    }\n  }\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, normalizeClass as _normalizeClass, createStaticVNode as _createStaticVNode } from \"vue\"\nimport _imports_0 from '/images/dashboard-2/widget-img.png'\nimport _imports_1 from '/images/dashboard-2/mobile.gif'\n\n\nconst _hoisted_1 = { class: \"col-xxl-5 col-md-7 box-col-7\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"col-sm-12\\\"><div class=\\\"card o-hidden\\\"><div class=\\\"card-body balance-widget\\\"><span class=\\\"f-w-500 f-light\\\">Total Balance</span><h4 class=\\\"mb-3 mt-1 f-w-500 m-b-0 f-22\\\"> $<span class=\\\"counter\\\">245,154.00 </span><span class=\\\"f-light f-14 f-w-400 ms-1\\\">this month</span></h4><a class=\\\"purchase-btn btn btn-primary btn-hover-effect f-w-500\\\" href=\\\"#\\\">Tap Up Balance</a><div class=\\\"mobile-right-img\\\"><img class=\\\"left-mobile-img\\\" src=\\\"\" + _imports_0 + \"\\\" alt=\\\"\\\"><img class=\\\"mobile-img\\\" src=\\\"\" + _imports_1 + \"\\\" alt=\\\"mobile with coin\\\"></div></div></div></div>\", 1)\nconst _hoisted_4 = { class: \"card small-widget\" }\nconst _hoisted_5 = { class: \"f-light\" }\nconst _hoisted_6 = { class: \"d-flex align-items-end gap-1\" }\nconst _hoisted_7 = { class: \"bg-gradient\" }\nconst _hoisted_8 = { class: \"stroke-icon svg-fill\" }\nconst _hoisted_9 = [\"xlink:href\"]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.allDetails, (allDetail) => {\n        return (_openBlock(), _createElementBlock(\"div\", {\n          class: \"col-6\",\n          key: allDetail\n        }, [\n          _createElementVNode(\"div\", _hoisted_4, [\n            _createElementVNode(\"div\", {\n              class: _normalizeClass(allDetail.cardClass)\n            }, [\n              _createElementVNode(\"span\", _hoisted_5, _toDisplayString(allDetail.title), 1),\n              _createElementVNode(\"div\", _hoisted_6, [\n                _createElementVNode(\"h4\", null, _toDisplayString(allDetail.dataInNumber), 1),\n                _createElementVNode(\"span\", {\n                  class: _normalizeClass(allDetail.spanClass)\n                }, [\n                  _createElementVNode(\"i\", {\n                    class: _normalizeClass(allDetail.iconClass)\n                  }, null, 2),\n                  _createElementVNode(\"span\", null, _toDisplayString(allDetail.status), 1)\n                ], 2)\n              ]),\n              _createElementVNode(\"div\", _hoisted_7, [\n                (_openBlock(), _createElementBlock(\"svg\", _hoisted_8, [\n                  _createElementVNode(\"use\", {\n                    \"xlink:href\": $options.getImgURL(allDetail.svgIcon)\n                  }, null, 8, _hoisted_9)\n                ]))\n              ])\n            ], 2)\n          ])\n        ]))\n      }), 128))\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825597,
+      "end": 1700848825600,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825600,
+      "end": 1700848825600,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825600,
+      "end": 1700848825600,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825600,
+      "end": 1700848825600,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825601,
+      "end": 1700848825601,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825601,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825603,
+      "end": 1700848825603,
+      "order": "normal"
+    }
+  ]
+}

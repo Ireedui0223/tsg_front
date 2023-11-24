@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/pages/student/profile.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\r\n  <Breadcrumbs\r\n    title=\"User Profile\"\r\n    main=\"User\"\r\n  />\r\n\r\n  <div class=\"container-fluid\">\r\n    <div class=\"user-profile\">\r\n      <div class=\"row\">\r\n        <IndexProfile />\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script>\r\nimport IndexProfile from '@/components/users/profile/indexProfile.vue';\r\n\r\nexport default {\r\n  name: 'userProfile',\r\n  components: {\r\n    IndexProfile\r\n  }\r\n};\r\n</script>\r\n",
+      "start": 1700848819063,
+      "end": 1700848819373,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848819373,
+      "end": 1700848819373,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\r\nimport IndexProfile from '@/components/users/profile/indexProfile.vue';\r\n\r\nconst _sfc_main = {\r\n  name: 'userProfile',\r\n  components: {\r\n    IndexProfile\r\n  }\r\n};\r\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"user-profile\" }\nconst _hoisted_3 = { class: \"row\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_IndexProfile = _resolveComponent(\"IndexProfile\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Breadcrumbs, {\n      title: \"User Profile\",\n      main: \"User\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _createVNode(_component_IndexProfile)\n        ])\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848819373,
+      "end": 1700848819374,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848819374,
+      "end": 1700848819374,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848819375,
+      "end": 1700848819375,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848819375,
+      "end": 1700848819376,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848819376,
+      "end": 1700848819376,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848819376,
+      "end": 1700848819376,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848819376,
+      "end": 1700848819376,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848819376,
+      "end": 1700848819376,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848819376,
+      "end": 1700848819377,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848819377,
+      "end": 1700848819377,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848819377,
+      "end": 1700848819377,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848819377,
+      "end": 1700848819377,
+      "order": "normal"
+    }
+  ]
+}

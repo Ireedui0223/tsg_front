@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/doyouWanttoGetCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xl-2 col-ed-3 d-xxl-block d-sm-none box-col-none\">\n        <div class=\"card get-card overflow-hidden\">\n            <div class=\"card-header card-no-border\">\n                <h5>Do You Want to Get</h5>\n                <span class=\"f-14 f-w-500 f-light\">Better Results?</span><a class=\"btn btn-primary btn-hover-effect\"\n                    href=\"#\">More details<span class=\"ms-1\">\n                        <svg class=\"fill-icon\">\n                            <use href=\"@/assets/svg/icon-sprite.svg#arrowright\"></use>\n                        </svg></span></a>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"get-image text-center\">\n                    <img class=\"img-fluid\" src=\"/images/dashboard-3/better.png\" alt=\"leptop with men vector\" />\n                </div>\n            </div>\n            <ul class=\"square-group\">\n                <li class=\"square-1 warning\"></li>\n                <li class=\"square-1 primary\"></li>\n                <li class=\"square-2 warning1\"></li>\n                <li class=\"square-3 danger\"></li>\n                <li class=\"square-4 light\"></li>\n                <li class=\"square-5 warning\"></li>\n                <li class=\"square-6 success\"></li>\n                <li class=\"square-7 success\"></li>\n            </ul>\n        </div>\n    </div>\n</template>\n    ",
+      "start": 1700848825624,
+      "end": 1700848825845,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825845,
+      "end": 1700848825845,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825845,
+      "end": 1700848825845,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825845,
+      "end": 1700848825845,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825845,
+      "end": 1700848825845,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825846,
+      "end": 1700848825846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825846,
+      "end": 1700848825846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825846,
+      "end": 1700848825846,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/svg/icon-sprite.svg'\nimport _imports_1 from '/images/dashboard-3/better.png'\n\n\nconst _hoisted_1 = _imports_0 + '#arrowright'\nconst _hoisted_2 = { class: \"col-xl-2 col-ed-3 d-xxl-block d-sm-none box-col-none\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"card get-card overflow-hidden\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header card-no-border\" }, [\n    /*#__PURE__*/_createElementVNode(\"h5\", null, \"Do You Want to Get\"),\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-14 f-w-500 f-light\" }, \"Better Results?\"),\n    /*#__PURE__*/_createElementVNode(\"a\", {\n      class: \"btn btn-primary btn-hover-effect\",\n      href: \"#\"\n    }, [\n      /*#__PURE__*/_createTextVNode(\"More details\"),\n      /*#__PURE__*/_createElementVNode(\"span\", { class: \"ms-1\" }, [\n        /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon\" }, [\n          /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n        ])\n      ])\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-body pt-0\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"get-image text-center\" }, [\n      /*#__PURE__*/_createElementVNode(\"img\", {\n        class: \"img-fluid\",\n        src: _imports_1,\n        alt: \"leptop with men vector\"\n      })\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"ul\", { class: \"square-group\" }, [\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-1 warning\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-1 primary\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-2 warning1\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-3 danger\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-4 light\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-5 warning\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-6 success\" }),\n    /*#__PURE__*/_createElementVNode(\"li\", { class: \"square-7 success\" })\n  ])\n], -1)\nconst _hoisted_4 = [\n  _hoisted_3\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, _hoisted_4))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825846,
+      "end": 1700848825847,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825847,
+      "end": 1700848825847,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825847,
+      "end": 1700848825847,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825847,
+      "end": 1700848825847,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825847,
+      "end": 1700848825847,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825847,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825848,
+      "end": 1700848825848,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825848,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825849,
+      "end": 1700848825849,
+      "order": "normal"
+    }
+  ]
+}

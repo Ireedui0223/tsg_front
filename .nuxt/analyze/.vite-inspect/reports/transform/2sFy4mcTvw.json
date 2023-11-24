@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/data/dashboard/default.json",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "{\n  \"puechaseSalesDetails1\": [\n    {\n      \"widgetClass\": \"widget-round secondary\",\n      \"svgIcon1\": \"cart\",\n      \"svgIcon2\": \"halfcircle\",\n      \"number\": \"10,000\",\n      \"title\": \"Purchase\",\n      \"growthClass\": \"font-secondary f-w-500\",\n      \"iconClass\": \"icon-arrow-up icon-rotate me-1\",\n      \"growthNumber\": \"+50%\"\n    },\n    {\n      \"widgetClass\": \"widget-round primary\",\n      \"svgIcon1\": \"tag\",\n      \"svgIcon2\": \"halfcircle\",\n      \"number\": \"4,200\",\n      \"title\": \"Sales\",\n      \"growthClass\": \"font-primary f-w-500\",\n      \"iconClass\": \"icon-arrow-up icon-rotate me-1\",\n      \"growthNumber\": \"+70%\"\n    }\n  ],\n  \"puechaseSalesDetails2\": [\n    {\n      \"widgetClass\": \"widget-round warning\",\n      \"svgIcon1\": \"return-box\",\n      \"svgIcon2\": \"halfcircle\",\n      \"number\": \"7000\",\n      \"title\": \"Sales return\",\n      \"growthClass\": \"font-warning f-w-500\",\n      \"iconClass\": \"icon-arrow-down icon-rotate me-1\",\n      \"growthNumber\": \"-20%\"\n    },\n    {\n      \"widgetClass\": \"widget-round success\",\n      \"svgIcon1\": \"rate\",\n      \"svgIcon2\": \"halfcircle\",\n      \"number\": \"5700\",\n      \"title\": \"Purchase rate\",\n      \"growthClass\": \"font-success f-w-500\",\n      \"iconClass\": \"icon-arrow-up icon-rotate me-1\",\n      \"growthNumber\": \"+70%\"\n    }\n  ],\n  \"overallbalance\": [\n    {\n      \"iconName\": \"income\",\n      \"title\": \"Income\",\n      \"amount\": \"$22,678\",\n      \"balance\": \"+$456\",\n      \"balanceClass\": \"font-success\"\n    },\n    {\n      \"iconName\": \"expense\",\n      \"title\": \"Expense\",\n      \"amount\": \"$12,057\",\n      \"balance\": \"+$456\",\n      \"balanceClass\": \"font-danger\"\n    },\n    {\n      \"iconName\": \"doller-return\",\n      \"title\": \"Cashback\",\n      \"amount\": \"$8475\"\n    }\n  ],\n  \"activities\": [\n    {\n      \"date\": \"8th March, 2022\",\n      \"day\": \"1 day ago\",\n      \"title\": \"Updated Product\",\n      \"decription\": \"I don't like things to be staged or fussy.\",\n      \"class\": \"activity-dot-primary\"\n    },\n    {\n      \"date\": \"15th Oct, 2022\",\n      \"day\": \"Today\",\n      \"title\": \"Tello just like your product\",\n      \"decription\": \"If you have it, you can make anything look good.\",\n      \"class\": \"activity-dot-warning\"\n    },\n    {\n      \"date\": \"20th Sep, 2022 \",\n      \"day\": \"12:00 PM\",\n      \"title\": \" Tello just like your product\",\n      \"decription\": \"I like to design everything to do with the body.\",\n      \"class\": \"activity-dot-secondary\"\n    }\n  ],\n\n  \"resentSales\": [\n    {\n      \"image\": \"user/1.jpg\",\n      \"name\": \"Jane Cooper\",\n      \"time\": \"10 minutes ago\",\n      \"amount\": \"$200.00\"\n    },\n    {\n      \"image\": \"user/2.jpg\",\n      \"name\": \"Brooklyn Simmons\",\n      \"time\": \"19 minutes ago\",\n      \"amount\": \"$970.00\"\n    },\n    {\n      \"image\": \"user/3.jpg\",\n      \"name\": \"Leslie Alexander\",\n      \"time\": \"2 hours ago\",\n      \"amount\": \"$300.00\"\n    },\n    {\n      \"image\": \"user/4.jpg\",\n      \"name\": \"Travis Wright\",\n      \"time\": \"8 hours ago\",\n      \"amount\": \"$450.00\"\n    },\n    {\n      \"image\": \"user/5.jpg\",\n      \"name\": \"Mark Green\",\n      \"time\": \"1 day ago\",\n      \"amount\": \"$768.00\"\n    }\n  ],\n\n  \"paperNotes\": [\n    {\n      \"label\": \"SAAS\",\n      \"labelClass\": \"badge badge-light-primary\"\n    },\n    {\n      \"label\": \"E-Commerce\",\n      \"labelClass\": \"badge badge-light-success\"\n    },\n    {\n      \"label\": \"Crypto\",\n      \"labelClass\": \"badge badge-light-warning\"\n    },\n    {\n      \"label\": \"Project\",\n      \"labelClass\": \"badge badge-light-info\"\n    },\n    {\n      \"label\": \"NFT\",\n      \"labelClass\": \"badge badge-light-secondary\"\n    },\n    {\n      \"label\": \"+9\",\n      \"labelClass\": \"badge badge-light-light\"\n    }\n  ],\n\n  \"customers\": [\n    {\n      \"image\": \"user/1.jpg\"\n    },\n    {\n      \"image\": \"user/6.jpg\"\n    },\n    {\n      \"image\": \"user/7.jpg\"\n    },\n    {\n      \"image\": \"user/3.jpg\"\n    },\n    {\n      \"image\": \"user/8.jpg\"\n    }\n  ]\n}\n",
+      "start": 1700848827440,
+      "end": 1700848827724,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848827724,
+      "end": 1700848827724,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848827724,
+      "end": 1700848827724,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848827724,
+      "end": 1700848827724,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848827724,
+      "end": 1700848827724,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848827724,
+      "end": 1700848827724,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "result": "export const puechaseSalesDetails1 = [\n\t{\n\t\twidgetClass: \"widget-round secondary\",\n\t\tsvgIcon1: \"cart\",\n\t\tsvgIcon2: \"halfcircle\",\n\t\tnumber: \"10,000\",\n\t\ttitle: \"Purchase\",\n\t\tgrowthClass: \"font-secondary f-w-500\",\n\t\ticonClass: \"icon-arrow-up icon-rotate me-1\",\n\t\tgrowthNumber: \"+50%\"\n\t},\n\t{\n\t\twidgetClass: \"widget-round primary\",\n\t\tsvgIcon1: \"tag\",\n\t\tsvgIcon2: \"halfcircle\",\n\t\tnumber: \"4,200\",\n\t\ttitle: \"Sales\",\n\t\tgrowthClass: \"font-primary f-w-500\",\n\t\ticonClass: \"icon-arrow-up icon-rotate me-1\",\n\t\tgrowthNumber: \"+70%\"\n\t}\n];\nexport const puechaseSalesDetails2 = [\n\t{\n\t\twidgetClass: \"widget-round warning\",\n\t\tsvgIcon1: \"return-box\",\n\t\tsvgIcon2: \"halfcircle\",\n\t\tnumber: \"7000\",\n\t\ttitle: \"Sales return\",\n\t\tgrowthClass: \"font-warning f-w-500\",\n\t\ticonClass: \"icon-arrow-down icon-rotate me-1\",\n\t\tgrowthNumber: \"-20%\"\n\t},\n\t{\n\t\twidgetClass: \"widget-round success\",\n\t\tsvgIcon1: \"rate\",\n\t\tsvgIcon2: \"halfcircle\",\n\t\tnumber: \"5700\",\n\t\ttitle: \"Purchase rate\",\n\t\tgrowthClass: \"font-success f-w-500\",\n\t\ticonClass: \"icon-arrow-up icon-rotate me-1\",\n\t\tgrowthNumber: \"+70%\"\n\t}\n];\nexport const overallbalance = [\n\t{\n\t\ticonName: \"income\",\n\t\ttitle: \"Income\",\n\t\tamount: \"$22,678\",\n\t\tbalance: \"+$456\",\n\t\tbalanceClass: \"font-success\"\n\t},\n\t{\n\t\ticonName: \"expense\",\n\t\ttitle: \"Expense\",\n\t\tamount: \"$12,057\",\n\t\tbalance: \"+$456\",\n\t\tbalanceClass: \"font-danger\"\n\t},\n\t{\n\t\ticonName: \"doller-return\",\n\t\ttitle: \"Cashback\",\n\t\tamount: \"$8475\"\n\t}\n];\nexport const activities = [\n\t{\n\t\tdate: \"8th March, 2022\",\n\t\tday: \"1 day ago\",\n\t\ttitle: \"Updated Product\",\n\t\tdecription: \"I don't like things to be staged or fussy.\",\n\t\t\"class\": \"activity-dot-primary\"\n\t},\n\t{\n\t\tdate: \"15th Oct, 2022\",\n\t\tday: \"Today\",\n\t\ttitle: \"Tello just like your product\",\n\t\tdecription: \"If you have it, you can make anything look good.\",\n\t\t\"class\": \"activity-dot-warning\"\n\t},\n\t{\n\t\tdate: \"20th Sep, 2022 \",\n\t\tday: \"12:00 PM\",\n\t\ttitle: \" Tello just like your product\",\n\t\tdecription: \"I like to design everything to do with the body.\",\n\t\t\"class\": \"activity-dot-secondary\"\n\t}\n];\nexport const resentSales = [\n\t{\n\t\timage: \"user/1.jpg\",\n\t\tname: \"Jane Cooper\",\n\t\ttime: \"10 minutes ago\",\n\t\tamount: \"$200.00\"\n\t},\n\t{\n\t\timage: \"user/2.jpg\",\n\t\tname: \"Brooklyn Simmons\",\n\t\ttime: \"19 minutes ago\",\n\t\tamount: \"$970.00\"\n\t},\n\t{\n\t\timage: \"user/3.jpg\",\n\t\tname: \"Leslie Alexander\",\n\t\ttime: \"2 hours ago\",\n\t\tamount: \"$300.00\"\n\t},\n\t{\n\t\timage: \"user/4.jpg\",\n\t\tname: \"Travis Wright\",\n\t\ttime: \"8 hours ago\",\n\t\tamount: \"$450.00\"\n\t},\n\t{\n\t\timage: \"user/5.jpg\",\n\t\tname: \"Mark Green\",\n\t\ttime: \"1 day ago\",\n\t\tamount: \"$768.00\"\n\t}\n];\nexport const paperNotes = [\n\t{\n\t\tlabel: \"SAAS\",\n\t\tlabelClass: \"badge badge-light-primary\"\n\t},\n\t{\n\t\tlabel: \"E-Commerce\",\n\t\tlabelClass: \"badge badge-light-success\"\n\t},\n\t{\n\t\tlabel: \"Crypto\",\n\t\tlabelClass: \"badge badge-light-warning\"\n\t},\n\t{\n\t\tlabel: \"Project\",\n\t\tlabelClass: \"badge badge-light-info\"\n\t},\n\t{\n\t\tlabel: \"NFT\",\n\t\tlabelClass: \"badge badge-light-secondary\"\n\t},\n\t{\n\t\tlabel: \"+9\",\n\t\tlabelClass: \"badge badge-light-light\"\n\t}\n];\nexport const customers = [\n\t{\n\t\timage: \"user/1.jpg\"\n\t},\n\t{\n\t\timage: \"user/6.jpg\"\n\t},\n\t{\n\t\timage: \"user/7.jpg\"\n\t},\n\t{\n\t\timage: \"user/3.jpg\"\n\t},\n\t{\n\t\timage: \"user/8.jpg\"\n\t}\n];\nexport default {\n\tpuechaseSalesDetails1: puechaseSalesDetails1,\n\tpuechaseSalesDetails2: puechaseSalesDetails2,\n\toverallbalance: overallbalance,\n\tactivities: activities,\n\tresentSales: resentSales,\n\tpaperNotes: paperNotes,\n\tcustomers: customers\n};\n",
+      "start": 1700848827724,
+      "end": 1700848827725,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848827725,
+      "end": 1700848827725,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848827725,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848827726,
+      "end": 1700848827726,
+      "order": "normal"
+    }
+  ]
+}

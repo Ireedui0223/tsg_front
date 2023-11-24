@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/discoverProCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-3 col-xl-4 col-sm-6 box-col-6 wow zoomIn\">\n        <div class=\"card purchase-card discover\">\n            <img class=\"img-fluid\" src=\"/images/dashboard-2/discover.png\" alt=\"vector discover\" />\n            <div class=\"card-body pt-3\">\n                <h5 class=\"mb-1\">Discover Pro</h5>\n                <p class=\"f-light\">\n                    Design and style should work toward making you look good.\n                </p>\n                <a class=\"\n                              purchase-btn\n                              btn btn-hover-effect btn-primary\n                              f-w-500\n                            \" href=\"https://1.envato.market/3GVzd\" target=\"_blank\">Update Now</a>\n            </div>\n        </div>\n    </div>\n</template>\n    ",
+      "start": 1700848825223,
+      "end": 1700848825682,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825682,
+      "end": 1700848825682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard-2/discover.png'\n\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-xl-4 col-sm-6 box-col-6 wow zoomIn\" }\nconst _hoisted_2 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"card purchase-card discover\\\"><img class=\\\"img-fluid\\\" src=\\\"\" + _imports_0 + \"\\\" alt=\\\"vector discover\\\"><div class=\\\"card-body pt-3\\\"><h5 class=\\\"mb-1\\\">Discover Pro</h5><p class=\\\"f-light\\\"> Design and style should work toward making you look good. </p><a class=\\\"purchase-btn btn btn-hover-effect btn-primary f-w-500\\\" href=\\\"https://1.envato.market/3GVzd\\\" target=\\\"_blank\\\">Update Now</a></div></div>\", 1)\nconst _hoisted_3 = [\n  _hoisted_2\n]\n\nfunction _sfc_render(_ctx, _cache) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, _hoisted_3))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825682,
+      "end": 1700848825684,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825684,
+      "end": 1700848825684,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825684,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825685,
+      "end": 1700848825685,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825685,
+      "end": 1700848825686,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825686,
+      "end": 1700848825686,
+      "order": "normal"
+    }
+  ]
+}

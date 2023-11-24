@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/inboxOnline.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n<Breadcrumbs main=\"Dashboard\" title=\"online\" />\n<div class=\"container-fluid\">\n    <div class=\"row\">\n        <welcomeCard />\n        <todayProgressCard />\n        <doyouWanttoGetCard />\n        <datePickerCard />\n        <learningOverviewCard />\n        <activityHoursCard />\n        <upcomingEventsCard />\n        <myCourseCardVue />\n        <upcomingScheduleCard />\n        <activeLessonsCard />\n    </div>\n</div>\n</template>\n\n<script>\nimport welcomeCard from './welcomeCard.vue'\nimport todayProgressCard from './todayProgressCard.vue'\nimport doyouWanttoGetCard from './doyouWanttoGetCard.vue'\nimport datePickerCard from './datePickerCard.vue'\nimport learningOverviewCard from './learningOverviewCard.vue'\nimport activityHoursCard from './activityHoursCard.vue'\nimport upcomingEventsCard from './upcomingEventsCard.vue'\nimport myCourseCardVue from './myCourseCard.vue'\nimport upcomingScheduleCard from './upcomingScheduleCard.vue'\nimport activeLessonsCard from './activeLessonsCard.vue'\n\nexport default {\n    components: {\n        welcomeCard,\n        todayProgressCard,\n        doyouWanttoGetCard,\n        datePickerCard,\n        learningOverviewCard,\n        activityHoursCard,\n        upcomingEventsCard,\n        myCourseCardVue,\n        upcomingScheduleCard,\n        activeLessonsCard\n\n    },\n    data() {\n        return {\n\n        }\n    }\n}\n</script>\n",
+      "start": 1700848823219,
+      "end": 1700848824634,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824634,
+      "end": 1700848824634,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport welcomeCard from './welcomeCard.vue'\nimport todayProgressCard from './todayProgressCard.vue'\nimport doyouWanttoGetCard from './doyouWanttoGetCard.vue'\nimport datePickerCard from './datePickerCard.vue'\nimport learningOverviewCard from './learningOverviewCard.vue'\nimport activityHoursCard from './activityHoursCard.vue'\nimport upcomingEventsCard from './upcomingEventsCard.vue'\nimport myCourseCardVue from './myCourseCard.vue'\nimport upcomingScheduleCard from './upcomingScheduleCard.vue'\nimport activeLessonsCard from './activeLessonsCard.vue'\n\nconst _sfc_main = {\n    components: {\n        welcomeCard,\n        todayProgressCard,\n        doyouWanttoGetCard,\n        datePickerCard,\n        learningOverviewCard,\n        activityHoursCard,\n        upcomingEventsCard,\n        myCourseCardVue,\n        upcomingScheduleCard,\n        activeLessonsCard\n\n    },\n    data() {\n        return {\n\n        }\n    }\n}\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"container-fluid\" }\nconst _hoisted_2 = { class: \"row\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Breadcrumbs = _resolveComponent(\"Breadcrumbs\")\n  const _component_welcomeCard = _resolveComponent(\"welcomeCard\")\n  const _component_todayProgressCard = _resolveComponent(\"todayProgressCard\")\n  const _component_doyouWanttoGetCard = _resolveComponent(\"doyouWanttoGetCard\")\n  const _component_datePickerCard = _resolveComponent(\"datePickerCard\")\n  const _component_learningOverviewCard = _resolveComponent(\"learningOverviewCard\")\n  const _component_activityHoursCard = _resolveComponent(\"activityHoursCard\")\n  const _component_upcomingEventsCard = _resolveComponent(\"upcomingEventsCard\")\n  const _component_myCourseCardVue = _resolveComponent(\"myCourseCardVue\")\n  const _component_upcomingScheduleCard = _resolveComponent(\"upcomingScheduleCard\")\n  const _component_activeLessonsCard = _resolveComponent(\"activeLessonsCard\")\n\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createVNode(_component_Breadcrumbs, {\n      main: \"Dashboard\",\n      title: \"online\"\n    }),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createVNode(_component_welcomeCard),\n        _createVNode(_component_todayProgressCard),\n        _createVNode(_component_doyouWanttoGetCard),\n        _createVNode(_component_datePickerCard),\n        _createVNode(_component_learningOverviewCard),\n        _createVNode(_component_activityHoursCard),\n        _createVNode(_component_upcomingEventsCard),\n        _createVNode(_component_myCourseCardVue),\n        _createVNode(_component_upcomingScheduleCard),\n        _createVNode(_component_activeLessonsCard)\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824634,
+      "end": 1700848824637,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824637,
+      "end": 1700848824637,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824637,
+      "end": 1700848824638,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824638,
+      "end": 1700848824639,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824639,
+      "end": 1700848824639,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824639,
+      "end": 1700848824639,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824639,
+      "end": 1700848824639,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824639,
+      "end": 1700848824639,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824639,
+      "end": 1700848824640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824640,
+      "end": 1700848824640,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824640,
+      "end": 1700848824640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824640,
+      "end": 1700848824640,
+      "order": "normal"
+    }
+  ]
+}

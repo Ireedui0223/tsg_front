@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/upcomingEventsCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-3 col-ed-5 col-xl-5 col-md-6 box-col-5\">\n        <div class=\"card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5>Upcoming Events</h5>\n                    <DropDown1 />\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"upcoming-event-wrap\">\n                    <apexchart height=\"385\" type=\"bar\" :options=\"onlineDashboard.options3\"\n                        :series=\"onlineDashboard.series3\"></apexchart>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport DropDown1 from \"../base/dropDown1.vue\"\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nexport default {\n    components: {\n        DropDown1\n    },\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n</script>\n    ",
+      "start": 1700848825684,
+      "end": 1700848825866,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825866,
+      "end": 1700848825866,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport DropDown1 from \"../base/dropDown1.vue\"\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nconst _sfc_main = {\n    components: {\n        DropDown1\n    },\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-3 col-ed-5 col-xl-5 col-md-6 box-col-5\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", null, \"Upcoming Events\", -1)\nconst _hoisted_6 = { class: \"card-body pt-0\" }\nconst _hoisted_7 = { class: \"upcoming-event-wrap\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createVNode(_component_DropDown1)\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_6, [\n        _createElementVNode(\"div\", _hoisted_7, [\n          _createVNode(_component_apexchart, {\n            height: \"385\",\n            type: \"bar\",\n            options: $data.onlineDashboard.options3,\n            series: $data.onlineDashboard.series3\n          }, null, 8, [\"options\", \"series\"])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825866,
+      "end": 1700848825868,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825868,
+      "end": 1700848825868,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825869,
+      "end": 1700848825869,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825869,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825870,
+      "end": 1700848825870,
+      "order": "normal"
+    }
+  ]
+}

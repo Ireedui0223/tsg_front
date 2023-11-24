@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/constants/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/**\n * Days in 1 week.\n *\n * @name daysInWeek\n * @constant\n * @type {number}\n * @default\n */\nexport var daysInWeek = 7;\n\n/**\n * Days in 1 year\n * One years equals 365.2425 days according to the formula:\n *\n * > Leap year occures every 4 years, except for years that are divisable by 100 and not divisable by 400.\n * > 1 mean year = (365+1/4-1/100+1/400) days = 365.2425 days\n *\n * @name daysInYear\n * @constant\n * @type {number}\n * @default\n */\nexport var daysInYear = 365.2425;\n\n/**\n * Maximum allowed time.\n *\n * @name maxTime\n * @constant\n * @type {number}\n * @default\n */\nexport var maxTime = Math.pow(10, 8) * 24 * 60 * 60 * 1000;\n\n/**\n * Milliseconds in 1 minute\n *\n * @name millisecondsInMinute\n * @constant\n * @type {number}\n * @default\n */\nexport var millisecondsInMinute = 60000;\n\n/**\n * Milliseconds in 1 hour\n *\n * @name millisecondsInHour\n * @constant\n * @type {number}\n * @default\n */\nexport var millisecondsInHour = 3600000;\n\n/**\n * Milliseconds in 1 second\n *\n * @name millisecondsInSecond\n * @constant\n * @type {number}\n * @default\n */\nexport var millisecondsInSecond = 1000;\n\n/**\n * Minimum allowed time.\n *\n * @name minTime\n * @constant\n * @type {number}\n * @default\n */\nexport var minTime = -maxTime;\n\n/**\n * Minutes in 1 hour\n *\n * @name minutesInHour\n * @constant\n * @type {number}\n * @default\n */\nexport var minutesInHour = 60;\n\n/**\n * Months in 1 quarter\n *\n * @name monthsInQuarter\n * @constant\n * @type {number}\n * @default\n */\nexport var monthsInQuarter = 3;\n\n/**\n * Months in 1 year\n *\n * @name monthsInYear\n * @constant\n * @type {number}\n * @default\n */\nexport var monthsInYear = 12;\n\n/**\n * Quarters in 1 year\n *\n * @name quartersInYear\n * @constant\n * @type {number}\n * @default\n */\nexport var quartersInYear = 4;\n\n/**\n * Seconds in 1 hour\n *\n * @name secondsInHour\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInHour = 3600;\n\n/**\n * Seconds in 1 minute\n *\n * @name secondsInMinute\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInMinute = 60;\n\n/**\n * Seconds in 1 day\n *\n * @name secondsInDay\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInDay = secondsInHour * 24;\n\n/**\n * Seconds in 1 week\n *\n * @name secondsInWeek\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInWeek = secondsInDay * 7;\n\n/**\n * Seconds in 1 year\n *\n * @name secondsInYear\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInYear = secondsInDay * daysInYear;\n\n/**\n * Seconds in 1 month\n *\n * @name secondsInMonth\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInMonth = secondsInYear / 12;\n\n/**\n * Seconds in 1 quarter\n *\n * @name secondsInQuarter\n * @constant\n * @type {number}\n * @default\n */\nexport var secondsInQuarter = secondsInMonth * 3;",
+      "start": 1700848830554,
+      "end": 1700848830638,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848830638,
+      "end": 1700848830638,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848830639,
+      "end": 1700848830639,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848830640,
+      "end": 1700848830640,
+      "order": "normal"
+    }
+  ]
+}

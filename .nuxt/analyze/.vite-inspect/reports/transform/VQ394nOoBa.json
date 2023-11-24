@@ -1,0 +1,226 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/dom/data.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/*!\n  * Bootstrap data.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\n(function (global, factory) {\n  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :\n  typeof define === 'function' && define.amd ? define(factory) :\n  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Data = factory());\n})(this, (function () { 'use strict';\n\n  /**\n   * --------------------------------------------------------------------------\n   * Bootstrap dom/data.js\n   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n   * --------------------------------------------------------------------------\n   */\n\n  /**\n   * Constants\n   */\n\n  const elementMap = new Map();\n  const data = {\n    set(element, key, instance) {\n      if (!elementMap.has(element)) {\n        elementMap.set(element, new Map());\n      }\n      const instanceMap = elementMap.get(element);\n\n      // make it clear we only want one instance per element\n      // can be removed later when multiple key/instances are fine to be used\n      if (!instanceMap.has(key) && instanceMap.size !== 0) {\n        // eslint-disable-next-line no-console\n        console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(instanceMap.keys())[0]}.`);\n        return;\n      }\n      instanceMap.set(key, instance);\n    },\n    get(element, key) {\n      if (elementMap.has(element)) {\n        return elementMap.get(element).get(key) || null;\n      }\n      return null;\n    },\n    remove(element, key) {\n      if (!elementMap.has(element)) {\n        return;\n      }\n      const instanceMap = elementMap.get(element);\n      instanceMap.delete(key);\n\n      // free up element references if there are no instances left for an element\n      if (instanceMap.size === 0) {\n        elementMap.delete(element);\n      }\n    }\n  };\n\n  return data;\n\n}));\n//# sourceMappingURL=data.js.map\n",
+      "start": 1700848825938,
+      "end": 1700848826124,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826124,
+      "end": 1700848826124,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "result": "/*!\n  * Bootstrap data.js v5.3.2 (https://getbootstrap.com/)\n  * Copyright 2011-2023 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)\n  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n  */\nimport * as commonjsHelpers from \"\u0000commonjsHelpers.js\";\nimport { __module as dataModule } from \"\\u0000C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/bootstrap/js/dist/dom/data.js?commonjs-module\";\nvar data = dataModule.exports;\n\nvar hasRequiredData;\n\nfunction requireData () {\n\tif (hasRequiredData) return dataModule.exports;\n\thasRequiredData = 1;\n\t(function (module, exports) {\n\t\t(function (global, factory) {\n\t\t  'object' === 'object' && 'object' !== 'undefined' ? module.exports = factory() :\n\t\t  typeof undefined === 'function' && undefined.amd ? undefined(factory) :\n\t\t  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Data = factory());\n\t\t})(commonjsHelpers.commonjsGlobal, (function () { 'use strict';\n\n\t\t  /**\n\t\t   * --------------------------------------------------------------------------\n\t\t   * Bootstrap dom/data.js\n\t\t   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)\n\t\t   * --------------------------------------------------------------------------\n\t\t   */\n\n\t\t  /**\n\t\t   * Constants\n\t\t   */\n\n\t\t  const elementMap = new Map();\n\t\t  const data = {\n\t\t    set(element, key, instance) {\n\t\t      if (!elementMap.has(element)) {\n\t\t        elementMap.set(element, new Map());\n\t\t      }\n\t\t      const instanceMap = elementMap.get(element);\n\n\t\t      // make it clear we only want one instance per element\n\t\t      // can be removed later when multiple key/instances are fine to be used\n\t\t      if (!instanceMap.has(key) && instanceMap.size !== 0) {\n\t\t        // eslint-disable-next-line no-console\n\t\t        console.error(`Bootstrap doesn't allow more than one instance per element. Bound instance: ${Array.from(instanceMap.keys())[0]}.`);\n\t\t        return;\n\t\t      }\n\t\t      instanceMap.set(key, instance);\n\t\t    },\n\t\t    get(element, key) {\n\t\t      if (elementMap.has(element)) {\n\t\t        return elementMap.get(element).get(key) || null;\n\t\t      }\n\t\t      return null;\n\t\t    },\n\t\t    remove(element, key) {\n\t\t      if (!elementMap.has(element)) {\n\t\t        return;\n\t\t      }\n\t\t      const instanceMap = elementMap.get(element);\n\t\t      instanceMap.delete(key);\n\n\t\t      // free up element references if there are no instances left for an element\n\t\t      if (instanceMap.size === 0) {\n\t\t        elementMap.delete(element);\n\t\t      }\n\t\t    }\n\t\t  };\n\n\t\t  return data;\n\n\t\t}));\n\t\t//# sourceMappingURL=data.js.map \n\t} (dataModule, dataModule.exports));\n\treturn dataModule.exports;\n}\n\nexport { requireData as __require };",
+      "start": 1700848826124,
+      "end": 1700848826126,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "file": null,
+        "sources": [
+          null
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "names": [
+          "define",
+          "this"
+        ],
+        "mappings": ";;;;;;;;;;;;;;;EAKA,CAAC,UAAU,MAAM,EAAE,OAAO,EAAE;EAC5B,EAAE,QAAc,KAAK,QAAQ,IAAI,QAAa,KAAK,WAAW,GAAG,iBAAiB,OAAO,EAAE;EAC3F,EAAE,OAAOA,SAAM,KAAK,UAAU,IAAIA,SAAM,CAAC,GAAG,GAAGA,SAAM,CAAC,OAAO,CAAC;EAC9D,GAAG,MAAM,GAAG,OAAO,UAAU,KAAK,WAAW,GAAG,UAAU,GAAG,MAAM,IAAI,IAAI,EAAE,MAAM,CAAC,IAAI,GAAG,OAAO,EAAE,CAAC,CAAC;EACtG,CAAC,EAAEC,8BAAI,GAAG,YAAY,EAAE,YAAY,CAAC;AACrC;EACA;EACA;EACA;EACA;EACA;EACA;AACA;EACA;EACA;EACA;AACA;EACA,EAAE,MAAM,UAAU,GAAG,IAAI,GAAG,EAAE,CAAC;EAC/B,EAAE,MAAM,IAAI,GAAG;EACf,IAAI,GAAG,CAAC,OAAO,EAAE,GAAG,EAAE,QAAQ,EAAE;EAChC,MAAM,IAAI,CAAC,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,EAAE;EACpC,QAAQ,UAAU,CAAC,GAAG,CAAC,OAAO,EAAE,IAAI,GAAG,EAAE,CAAC,CAAC;EAC3C,OAAO;EACP,MAAM,MAAM,WAAW,GAAG,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC;AAClD;EACA;EACA;EACA,MAAM,IAAI,CAAC,WAAW,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,WAAW,CAAC,IAAI,KAAK,CAAC,EAAE;EAC3D;EACA,QAAQ,OAAO,CAAC,KAAK,CAAC,CAAC,4EAA4E,EAAE,KAAK,CAAC,IAAI,CAAC,WAAW,CAAC,IAAI,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;EAC3I,QAAQ,OAAO;EACf,OAAO;EACP,MAAM,WAAW,CAAC,GAAG,CAAC,GAAG,EAAE,QAAQ,CAAC,CAAC;EACrC,KAAK;EACL,IAAI,GAAG,CAAC,OAAO,EAAE,GAAG,EAAE;EACtB,MAAM,IAAI,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,EAAE;EACnC,QAAQ,OAAO,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC,GAAG,CAAC,GAAG,CAAC,IAAI,IAAI,CAAC;EACxD,OAAO;EACP,MAAM,OAAO,IAAI,CAAC;EAClB,KAAK;EACL,IAAI,MAAM,CAAC,OAAO,EAAE,GAAG,EAAE;EACzB,MAAM,IAAI,CAAC,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,EAAE;EACpC,QAAQ,OAAO;EACf,OAAO;EACP,MAAM,MAAM,WAAW,GAAG,UAAU,CAAC,GAAG,CAAC,OAAO,CAAC,CAAC;EAClD,MAAM,WAAW,CAAC,MAAM,CAAC,GAAG,CAAC,CAAC;AAC9B;EACA;EACA,MAAM,IAAI,WAAW,CAAC,IAAI,KAAK,CAAC,EAAE;EAClC,QAAQ,UAAU,CAAC,MAAM,CAAC,OAAO,CAAC,CAAC;EACnC,OAAO;EACP,KAAK;EACL,GAAG,CAAC;AACJ;EACA,EAAE,OAAO,IAAI,CAAC;AACd;EACA,CAAC,EAAE,CAAC;EACJ"
+      }
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826126,
+      "end": 1700848826126,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826126,
+      "end": 1700848826126,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826126,
+      "end": 1700848826126,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826126,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826127,
+      "end": 1700848826127,
+      "order": "normal"
+    }
+  ]
+}

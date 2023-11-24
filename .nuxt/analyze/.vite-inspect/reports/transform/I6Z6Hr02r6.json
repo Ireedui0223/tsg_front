@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/core/events/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getDocument } from 'ssr-window';\nimport onTouchStart from './onTouchStart.js';\nimport onTouchMove from './onTouchMove.js';\nimport onTouchEnd from './onTouchEnd.js';\nimport onResize from './onResize.js';\nimport onClick from './onClick.js';\nimport onScroll from './onScroll.js';\nlet dummyEventAttached = false;\n\nfunction dummyEventListener() {}\n\nconst events = (swiper, method) => {\n  const document = getDocument();\n  const {\n    params,\n    touchEvents,\n    el,\n    wrapperEl,\n    device,\n    support\n  } = swiper;\n  const capture = !!params.nested;\n  const domMethod = method === 'on' ? 'addEventListener' : 'removeEventListener';\n  const swiperMethod = method; // Touch Events\n\n  if (!support.touch) {\n    el[domMethod](touchEvents.start, swiper.onTouchStart, false);\n    document[domMethod](touchEvents.move, swiper.onTouchMove, capture);\n    document[domMethod](touchEvents.end, swiper.onTouchEnd, false);\n  } else {\n    const passiveListener = touchEvents.start === 'touchstart' && support.passiveListener && params.passiveListeners ? {\n      passive: true,\n      capture: false\n    } : false;\n    el[domMethod](touchEvents.start, swiper.onTouchStart, passiveListener);\n    el[domMethod](touchEvents.move, swiper.onTouchMove, support.passiveListener ? {\n      passive: false,\n      capture\n    } : capture);\n    el[domMethod](touchEvents.end, swiper.onTouchEnd, passiveListener);\n\n    if (touchEvents.cancel) {\n      el[domMethod](touchEvents.cancel, swiper.onTouchEnd, passiveListener);\n    }\n  } // Prevent Links Clicks\n\n\n  if (params.preventClicks || params.preventClicksPropagation) {\n    el[domMethod]('click', swiper.onClick, true);\n  }\n\n  if (params.cssMode) {\n    wrapperEl[domMethod]('scroll', swiper.onScroll);\n  } // Resize handler\n\n\n  if (params.updateOnWindowResize) {\n    swiper[swiperMethod](device.ios || device.android ? 'resize orientationchange observerUpdate' : 'resize observerUpdate', onResize, true);\n  } else {\n    swiper[swiperMethod]('observerUpdate', onResize, true);\n  }\n};\n\nfunction attachEvents() {\n  const swiper = this;\n  const document = getDocument();\n  const {\n    params,\n    support\n  } = swiper;\n  swiper.onTouchStart = onTouchStart.bind(swiper);\n  swiper.onTouchMove = onTouchMove.bind(swiper);\n  swiper.onTouchEnd = onTouchEnd.bind(swiper);\n\n  if (params.cssMode) {\n    swiper.onScroll = onScroll.bind(swiper);\n  }\n\n  swiper.onClick = onClick.bind(swiper);\n\n  if (support.touch && !dummyEventAttached) {\n    document.addEventListener('touchstart', dummyEventListener);\n    dummyEventAttached = true;\n  }\n\n  events(swiper, 'on');\n}\n\nfunction detachEvents() {\n  const swiper = this;\n  events(swiper, 'off');\n}\n\nexport default {\n  attachEvents,\n  detachEvents\n};",
+      "start": 1700848830644,
+      "end": 1700848830743,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830743,
+      "end": 1700848830743,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848830744,
+      "end": 1700848830744,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848830745,
+      "end": 1700848830745,
+      "order": "normal"
+    }
+  ]
+}

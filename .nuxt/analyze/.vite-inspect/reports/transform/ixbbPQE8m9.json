@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/vue/loop.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { h } from 'vue';\nimport { calcLoopedSlides } from '../shared/calc-looped-slides.js';\n\nfunction renderLoop(swiperRef, slides, swiperParams) {\n  const modifiedSlides = slides.map((child, index) => {\n    if (!child.props) child.props = {};\n    child.props.swiperRef = swiperRef;\n    child.props['data-swiper-slide-index'] = index;\n    return child;\n  });\n\n  function duplicateSlide(child, index, position) {\n    if (!child.props) child.props = {};\n    return h(child.type, { ...child.props,\n      key: `${child.key}-duplicate-${index}-${position}`,\n      class: `${child.props.className || ''} ${swiperParams.slideDuplicateClass} ${child.props.class || ''}`\n    }, child.children);\n  }\n\n  if (swiperParams.loopFillGroupWithBlank) {\n    const blankSlidesNum = swiperParams.slidesPerGroup - modifiedSlides.length % swiperParams.slidesPerGroup;\n\n    if (blankSlidesNum !== swiperParams.slidesPerGroup) {\n      for (let i = 0; i < blankSlidesNum; i += 1) {\n        const blankSlide = h('div', {\n          class: `${swiperParams.slideClass} ${swiperParams.slideBlankClass}`\n        });\n        modifiedSlides.push(blankSlide);\n      }\n    }\n  }\n\n  if (swiperParams.slidesPerView === 'auto' && !swiperParams.loopedSlides) {\n    swiperParams.loopedSlides = modifiedSlides.length;\n  }\n\n  const loopedSlides = calcLoopedSlides(modifiedSlides, swiperParams);\n  const prependSlides = [];\n  const appendSlides = [];\n\n  for (let i = 0; i < loopedSlides; i += 1) {\n    const index = i - Math.floor(i / modifiedSlides.length) * modifiedSlides.length;\n    appendSlides.push(duplicateSlide(modifiedSlides[index], i, 'append'));\n    prependSlides.unshift(duplicateSlide(modifiedSlides[modifiedSlides.length - index - 1], i, 'prepend'));\n  }\n\n  if (swiperRef.value) {\n    swiperRef.value.loopedSlides = loopedSlides;\n  }\n\n  return [...prependSlides, ...modifiedSlides, ...appendSlides];\n}\n\nexport { calcLoopedSlides, renderLoop };",
+      "start": 1700848828507,
+      "end": 1700848828648,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848828648,
+      "end": 1700848828648,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848828648,
+      "end": 1700848828649,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848828649,
+      "end": 1700848828649,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848828649,
+      "end": 1700848828650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848828650,
+      "end": 1700848828650,
+      "order": "normal"
+    }
+  ]
+}

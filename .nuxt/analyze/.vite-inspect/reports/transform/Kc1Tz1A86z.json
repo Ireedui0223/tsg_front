@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/eachDayOfInterval/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import toDate from \"../toDate/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name eachDayOfInterval\n * @category Interval Helpers\n * @summary Return the array of dates within the specified time interval.\n *\n * @description\n * Return the array of dates within the specified time interval.\n *\n * @param {Interval} interval - the interval. See [Interval]{@link https://date-fns.org/docs/Interval}\n * @param {Object} [options] - an object with options.\n * @param {Number} [options.step=1] - the step to increment by. The value should be more than 1.\n * @returns {Date[]} the array with starts of days from the day of the interval start to the day of the interval end\n * @throws {TypeError} 1 argument required\n * @throws {RangeError} `options.step` must be a number greater than 1\n * @throws {RangeError} The start of an interval cannot be after its end\n * @throws {RangeError} Date in interval cannot be `Invalid Date`\n *\n * @example\n * // Each day between 6 October 2014 and 10 October 2014:\n * const result = eachDayOfInterval({\n *   start: new Date(2014, 9, 6),\n *   end: new Date(2014, 9, 10)\n * })\n * //=> [\n * //   Mon Oct 06 2014 00:00:00,\n * //   Tue Oct 07 2014 00:00:00,\n * //   Wed Oct 08 2014 00:00:00,\n * //   Thu Oct 09 2014 00:00:00,\n * //   Fri Oct 10 2014 00:00:00\n * // ]\n */\nexport default function eachDayOfInterval(dirtyInterval, options) {\n  var _options$step;\n  requiredArgs(1, arguments);\n  var interval = dirtyInterval || {};\n  var startDate = toDate(interval.start);\n  var endDate = toDate(interval.end);\n  var endTime = endDate.getTime();\n\n  // Throw an exception if start date is after end date or if any date is `Invalid Date`\n  if (!(startDate.getTime() <= endTime)) {\n    throw new RangeError('Invalid interval');\n  }\n  var dates = [];\n  var currentDate = startDate;\n  currentDate.setHours(0, 0, 0, 0);\n  var step = Number((_options$step = options === null || options === void 0 ? void 0 : options.step) !== null && _options$step !== void 0 ? _options$step : 1);\n  if (step < 1 || isNaN(step)) throw new RangeError('`options.step` must be a number greater than 1');\n  while (currentDate.getTime() <= endTime) {\n    dates.push(toDate(currentDate));\n    currentDate.setDate(currentDate.getDate() + step);\n    currentDate.setHours(0, 0, 0, 0);\n  }\n  return dates;\n}",
+      "start": 1700848829602,
+      "end": 1700848829694,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829694,
+      "end": 1700848829694,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829694,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829695,
+      "end": 1700848829695,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829695,
+      "end": 1700848829696,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829696,
+      "end": 1700848829696,
+      "order": "normal"
+    }
+  ]
+}

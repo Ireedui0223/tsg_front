@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/ecommerce/visitorsCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-4 col-xl-4 col-sm-6 box-col-6\">\n        <div class=\"card visitor-card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">\n                        Visitors<span class=\"f-14 font-primary f-w-500 ms-1\">\n                            <svg class=\"svg-fill me-1\">\n                                <use href=\"@/assets/svg/icon-sprite.svg#user-visitor\"></use>\n                            </svg>(+2.8)</span>\n                    </h5>\n                    <div class=\"card-header-right-icon\">\n                        <div class=\"dropdown icon-dropdown\">\n                            <button class=\"btn dropdown-toggle\" id=\"visitorButton\" type=\"button\" data-bs-toggle=\"dropdown\"\n                                aria-expanded=\"false\">\n                                <i class=\"icon-more-alt\"></i>\n                            </button>\n                            <div class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"visitorButton\">\n                                <a class=\"dropdown-item\" href=\"#\">Today</a><a class=\"dropdown-item\" href=\"#\">Tomorrow</a><a\n                                    class=\"dropdown-item\" href=\"#\">Yesterday</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"visitors-container\">\n                    <div id=\"visitor-chart\">\n                        <apexchart height=\"285\" type=\"bar\" :options=\"ecomDashboard.options4\"\n                            :series=\"ecomDashboard.series4\"></apexchart>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport {\n    ecomDashboard\n} from \"@/data/comon\";\n\nexport default {\n    data() {\n        return {\n            ecomDashboard: ecomDashboard,\n        };\n    },\n};\n</script>\n    ",
+      "start": 1700848825233,
+      "end": 1700848825688,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825688,
+      "end": 1700848825688,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport {\n    ecomDashboard\n} from \"@/data/comon\";\n\nconst _sfc_main = {\n    data() {\n        return {\n            ecomDashboard: ecomDashboard,\n        };\n    },\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '@/assets/svg/icon-sprite.svg'\n\n\nconst _hoisted_1 = _imports_0 + '#user-visitor'\nconst _hoisted_2 = { class: \"col-xxl-4 col-xl-4 col-sm-6 box-col-6\" }\nconst _hoisted_3 = { class: \"card visitor-card\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header card-no-border\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"header-top\" }, [\n    /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, [\n      /*#__PURE__*/_createTextVNode(\" Visitors\"),\n      /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-14 font-primary f-w-500 ms-1\" }, [\n        /*#__PURE__*/_createElementVNode(\"svg\", { class: \"svg-fill me-1\" }, [\n          /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n        ]),\n        /*#__PURE__*/_createTextVNode(\"(+2.8)\")\n      ])\n    ]),\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header-right-icon\" }, [\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"dropdown icon-dropdown\" }, [\n        /*#__PURE__*/_createElementVNode(\"button\", {\n          class: \"btn dropdown-toggle\",\n          id: \"visitorButton\",\n          type: \"button\",\n          \"data-bs-toggle\": \"dropdown\",\n          \"aria-expanded\": \"false\"\n        }, [\n          /*#__PURE__*/_createElementVNode(\"i\", { class: \"icon-more-alt\" })\n        ]),\n        /*#__PURE__*/_createElementVNode(\"div\", {\n          class: \"dropdown-menu dropdown-menu-end\",\n          \"aria-labelledby\": \"visitorButton\"\n        }, [\n          /*#__PURE__*/_createElementVNode(\"a\", {\n            class: \"dropdown-item\",\n            href: \"#\"\n          }, \"Today\"),\n          /*#__PURE__*/_createElementVNode(\"a\", {\n            class: \"dropdown-item\",\n            href: \"#\"\n          }, \"Tomorrow\"),\n          /*#__PURE__*/_createElementVNode(\"a\", {\n            class: \"dropdown-item\",\n            href: \"#\"\n          }, \"Yesterday\")\n        ])\n      ])\n    ])\n  ])\n], -1)\nconst _hoisted_5 = { class: \"card-body pt-0\" }\nconst _hoisted_6 = { class: \"visitors-container\" }\nconst _hoisted_7 = { id: \"visitor-chart\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_2, [\n    _createElementVNode(\"div\", _hoisted_3, [\n      _hoisted_4,\n      _createElementVNode(\"div\", _hoisted_5, [\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createElementVNode(\"div\", _hoisted_7, [\n            _createVNode(_component_apexchart, {\n              height: \"285\",\n              type: \"bar\",\n              options: $data.ecomDashboard.options4,\n              series: $data.ecomDashboard.series4\n            }, null, 8, [\"options\", \"series\"])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825688,
+      "end": 1700848825691,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825691,
+      "end": 1700848825691,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825692,
+      "end": 1700848825692,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825692,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825693,
+      "end": 1700848825693,
+      "order": "normal"
+    }
+  ]
+}

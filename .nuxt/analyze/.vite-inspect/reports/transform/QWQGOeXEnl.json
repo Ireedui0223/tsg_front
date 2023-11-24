@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/modules/zoom/zoom.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getWindow } from 'ssr-window';\nimport $ from '../../shared/dom.js';\nimport { getTranslate } from '../../shared/utils.js';\nexport default function Zoom({\n  swiper,\n  extendParams,\n  on,\n  emit\n}) {\n  const window = getWindow();\n  extendParams({\n    zoom: {\n      enabled: false,\n      maxRatio: 3,\n      minRatio: 1,\n      toggle: true,\n      containerClass: 'swiper-zoom-container',\n      zoomedSlideClass: 'swiper-slide-zoomed'\n    }\n  });\n  swiper.zoom = {\n    enabled: false\n  };\n  let currentScale = 1;\n  let isScaling = false;\n  let gesturesEnabled;\n  let fakeGestureTouched;\n  let fakeGestureMoved;\n  const gesture = {\n    $slideEl: undefined,\n    slideWidth: undefined,\n    slideHeight: undefined,\n    $imageEl: undefined,\n    $imageWrapEl: undefined,\n    maxRatio: 3\n  };\n  const image = {\n    isTouched: undefined,\n    isMoved: undefined,\n    currentX: undefined,\n    currentY: undefined,\n    minX: undefined,\n    minY: undefined,\n    maxX: undefined,\n    maxY: undefined,\n    width: undefined,\n    height: undefined,\n    startX: undefined,\n    startY: undefined,\n    touchesStart: {},\n    touchesCurrent: {}\n  };\n  const velocity = {\n    x: undefined,\n    y: undefined,\n    prevPositionX: undefined,\n    prevPositionY: undefined,\n    prevTime: undefined\n  };\n  let scale = 1;\n  Object.defineProperty(swiper.zoom, 'scale', {\n    get() {\n      return scale;\n    },\n\n    set(value) {\n      if (scale !== value) {\n        const imageEl = gesture.$imageEl ? gesture.$imageEl[0] : undefined;\n        const slideEl = gesture.$slideEl ? gesture.$slideEl[0] : undefined;\n        emit('zoomChange', value, imageEl, slideEl);\n      }\n\n      scale = value;\n    }\n\n  });\n\n  function getDistanceBetweenTouches(e) {\n    if (e.targetTouches.length < 2) return 1;\n    const x1 = e.targetTouches[0].pageX;\n    const y1 = e.targetTouches[0].pageY;\n    const x2 = e.targetTouches[1].pageX;\n    const y2 = e.targetTouches[1].pageY;\n    const distance = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);\n    return distance;\n  } // Events\n\n\n  function onGestureStart(e) {\n    const support = swiper.support;\n    const params = swiper.params.zoom;\n    fakeGestureTouched = false;\n    fakeGestureMoved = false;\n\n    if (!support.gestures) {\n      if (e.type !== 'touchstart' || e.type === 'touchstart' && e.targetTouches.length < 2) {\n        return;\n      }\n\n      fakeGestureTouched = true;\n      gesture.scaleStart = getDistanceBetweenTouches(e);\n    }\n\n    if (!gesture.$slideEl || !gesture.$slideEl.length) {\n      gesture.$slideEl = $(e.target).closest(`.${swiper.params.slideClass}`);\n      if (gesture.$slideEl.length === 0) gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);\n      gesture.$imageEl = gesture.$slideEl.find(`.${params.containerClass}`).eq(0).find('picture, img, svg, canvas, .swiper-zoom-target').eq(0);\n      gesture.$imageWrapEl = gesture.$imageEl.parent(`.${params.containerClass}`);\n      gesture.maxRatio = gesture.$imageWrapEl.attr('data-swiper-zoom') || params.maxRatio;\n\n      if (gesture.$imageWrapEl.length === 0) {\n        gesture.$imageEl = undefined;\n        return;\n      }\n    }\n\n    if (gesture.$imageEl) {\n      gesture.$imageEl.transition(0);\n    }\n\n    isScaling = true;\n  }\n\n  function onGestureChange(e) {\n    const support = swiper.support;\n    const params = swiper.params.zoom;\n    const zoom = swiper.zoom;\n\n    if (!support.gestures) {\n      if (e.type !== 'touchmove' || e.type === 'touchmove' && e.targetTouches.length < 2) {\n        return;\n      }\n\n      fakeGestureMoved = true;\n      gesture.scaleMove = getDistanceBetweenTouches(e);\n    }\n\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0) {\n      if (e.type === 'gesturechange') onGestureStart(e);\n      return;\n    }\n\n    if (support.gestures) {\n      zoom.scale = e.scale * currentScale;\n    } else {\n      zoom.scale = gesture.scaleMove / gesture.scaleStart * currentScale;\n    }\n\n    if (zoom.scale > gesture.maxRatio) {\n      zoom.scale = gesture.maxRatio - 1 + (zoom.scale - gesture.maxRatio + 1) ** 0.5;\n    }\n\n    if (zoom.scale < params.minRatio) {\n      zoom.scale = params.minRatio + 1 - (params.minRatio - zoom.scale + 1) ** 0.5;\n    }\n\n    gesture.$imageEl.transform(`translate3d(0,0,0) scale(${zoom.scale})`);\n  }\n\n  function onGestureEnd(e) {\n    const device = swiper.device;\n    const support = swiper.support;\n    const params = swiper.params.zoom;\n    const zoom = swiper.zoom;\n\n    if (!support.gestures) {\n      if (!fakeGestureTouched || !fakeGestureMoved) {\n        return;\n      }\n\n      if (e.type !== 'touchend' || e.type === 'touchend' && e.changedTouches.length < 2 && !device.android) {\n        return;\n      }\n\n      fakeGestureTouched = false;\n      fakeGestureMoved = false;\n    }\n\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0) return;\n    zoom.scale = Math.max(Math.min(zoom.scale, gesture.maxRatio), params.minRatio);\n    gesture.$imageEl.transition(swiper.params.speed).transform(`translate3d(0,0,0) scale(${zoom.scale})`);\n    currentScale = zoom.scale;\n    isScaling = false;\n    if (zoom.scale === 1) gesture.$slideEl = undefined;\n  }\n\n  function onTouchStart(e) {\n    const device = swiper.device;\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0) return;\n    if (image.isTouched) return;\n    if (device.android && e.cancelable) e.preventDefault();\n    image.isTouched = true;\n    image.touchesStart.x = e.type === 'touchstart' ? e.targetTouches[0].pageX : e.pageX;\n    image.touchesStart.y = e.type === 'touchstart' ? e.targetTouches[0].pageY : e.pageY;\n  }\n\n  function onTouchMove(e) {\n    const zoom = swiper.zoom;\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0) return;\n    swiper.allowClick = false;\n    if (!image.isTouched || !gesture.$slideEl) return;\n\n    if (!image.isMoved) {\n      image.width = gesture.$imageEl[0].offsetWidth;\n      image.height = gesture.$imageEl[0].offsetHeight;\n      image.startX = getTranslate(gesture.$imageWrapEl[0], 'x') || 0;\n      image.startY = getTranslate(gesture.$imageWrapEl[0], 'y') || 0;\n      gesture.slideWidth = gesture.$slideEl[0].offsetWidth;\n      gesture.slideHeight = gesture.$slideEl[0].offsetHeight;\n      gesture.$imageWrapEl.transition(0);\n    } // Define if we need image drag\n\n\n    const scaledWidth = image.width * zoom.scale;\n    const scaledHeight = image.height * zoom.scale;\n    if (scaledWidth < gesture.slideWidth && scaledHeight < gesture.slideHeight) return;\n    image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);\n    image.maxX = -image.minX;\n    image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);\n    image.maxY = -image.minY;\n    image.touchesCurrent.x = e.type === 'touchmove' ? e.targetTouches[0].pageX : e.pageX;\n    image.touchesCurrent.y = e.type === 'touchmove' ? e.targetTouches[0].pageY : e.pageY;\n\n    if (!image.isMoved && !isScaling) {\n      if (swiper.isHorizontal() && (Math.floor(image.minX) === Math.floor(image.startX) && image.touchesCurrent.x < image.touchesStart.x || Math.floor(image.maxX) === Math.floor(image.startX) && image.touchesCurrent.x > image.touchesStart.x)) {\n        image.isTouched = false;\n        return;\n      }\n\n      if (!swiper.isHorizontal() && (Math.floor(image.minY) === Math.floor(image.startY) && image.touchesCurrent.y < image.touchesStart.y || Math.floor(image.maxY) === Math.floor(image.startY) && image.touchesCurrent.y > image.touchesStart.y)) {\n        image.isTouched = false;\n        return;\n      }\n    }\n\n    if (e.cancelable) {\n      e.preventDefault();\n    }\n\n    e.stopPropagation();\n    image.isMoved = true;\n    image.currentX = image.touchesCurrent.x - image.touchesStart.x + image.startX;\n    image.currentY = image.touchesCurrent.y - image.touchesStart.y + image.startY;\n\n    if (image.currentX < image.minX) {\n      image.currentX = image.minX + 1 - (image.minX - image.currentX + 1) ** 0.8;\n    }\n\n    if (image.currentX > image.maxX) {\n      image.currentX = image.maxX - 1 + (image.currentX - image.maxX + 1) ** 0.8;\n    }\n\n    if (image.currentY < image.minY) {\n      image.currentY = image.minY + 1 - (image.minY - image.currentY + 1) ** 0.8;\n    }\n\n    if (image.currentY > image.maxY) {\n      image.currentY = image.maxY - 1 + (image.currentY - image.maxY + 1) ** 0.8;\n    } // Velocity\n\n\n    if (!velocity.prevPositionX) velocity.prevPositionX = image.touchesCurrent.x;\n    if (!velocity.prevPositionY) velocity.prevPositionY = image.touchesCurrent.y;\n    if (!velocity.prevTime) velocity.prevTime = Date.now();\n    velocity.x = (image.touchesCurrent.x - velocity.prevPositionX) / (Date.now() - velocity.prevTime) / 2;\n    velocity.y = (image.touchesCurrent.y - velocity.prevPositionY) / (Date.now() - velocity.prevTime) / 2;\n    if (Math.abs(image.touchesCurrent.x - velocity.prevPositionX) < 2) velocity.x = 0;\n    if (Math.abs(image.touchesCurrent.y - velocity.prevPositionY) < 2) velocity.y = 0;\n    velocity.prevPositionX = image.touchesCurrent.x;\n    velocity.prevPositionY = image.touchesCurrent.y;\n    velocity.prevTime = Date.now();\n    gesture.$imageWrapEl.transform(`translate3d(${image.currentX}px, ${image.currentY}px,0)`);\n  }\n\n  function onTouchEnd() {\n    const zoom = swiper.zoom;\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0) return;\n\n    if (!image.isTouched || !image.isMoved) {\n      image.isTouched = false;\n      image.isMoved = false;\n      return;\n    }\n\n    image.isTouched = false;\n    image.isMoved = false;\n    let momentumDurationX = 300;\n    let momentumDurationY = 300;\n    const momentumDistanceX = velocity.x * momentumDurationX;\n    const newPositionX = image.currentX + momentumDistanceX;\n    const momentumDistanceY = velocity.y * momentumDurationY;\n    const newPositionY = image.currentY + momentumDistanceY; // Fix duration\n\n    if (velocity.x !== 0) momentumDurationX = Math.abs((newPositionX - image.currentX) / velocity.x);\n    if (velocity.y !== 0) momentumDurationY = Math.abs((newPositionY - image.currentY) / velocity.y);\n    const momentumDuration = Math.max(momentumDurationX, momentumDurationY);\n    image.currentX = newPositionX;\n    image.currentY = newPositionY; // Define if we need image drag\n\n    const scaledWidth = image.width * zoom.scale;\n    const scaledHeight = image.height * zoom.scale;\n    image.minX = Math.min(gesture.slideWidth / 2 - scaledWidth / 2, 0);\n    image.maxX = -image.minX;\n    image.minY = Math.min(gesture.slideHeight / 2 - scaledHeight / 2, 0);\n    image.maxY = -image.minY;\n    image.currentX = Math.max(Math.min(image.currentX, image.maxX), image.minX);\n    image.currentY = Math.max(Math.min(image.currentY, image.maxY), image.minY);\n    gesture.$imageWrapEl.transition(momentumDuration).transform(`translate3d(${image.currentX}px, ${image.currentY}px,0)`);\n  }\n\n  function onTransitionEnd() {\n    const zoom = swiper.zoom;\n\n    if (gesture.$slideEl && swiper.previousIndex !== swiper.activeIndex) {\n      if (gesture.$imageEl) {\n        gesture.$imageEl.transform('translate3d(0,0,0) scale(1)');\n      }\n\n      if (gesture.$imageWrapEl) {\n        gesture.$imageWrapEl.transform('translate3d(0,0,0)');\n      }\n\n      zoom.scale = 1;\n      currentScale = 1;\n      gesture.$slideEl = undefined;\n      gesture.$imageEl = undefined;\n      gesture.$imageWrapEl = undefined;\n    }\n  }\n\n  function zoomIn(e) {\n    const zoom = swiper.zoom;\n    const params = swiper.params.zoom;\n\n    if (!gesture.$slideEl) {\n      if (e && e.target) {\n        gesture.$slideEl = $(e.target).closest(`.${swiper.params.slideClass}`);\n      }\n\n      if (!gesture.$slideEl) {\n        if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {\n          gesture.$slideEl = swiper.$wrapperEl.children(`.${swiper.params.slideActiveClass}`);\n        } else {\n          gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);\n        }\n      }\n\n      gesture.$imageEl = gesture.$slideEl.find(`.${params.containerClass}`).eq(0).find('picture, img, svg, canvas, .swiper-zoom-target').eq(0);\n      gesture.$imageWrapEl = gesture.$imageEl.parent(`.${params.containerClass}`);\n    }\n\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0 || !gesture.$imageWrapEl || gesture.$imageWrapEl.length === 0) return;\n\n    if (swiper.params.cssMode) {\n      swiper.wrapperEl.style.overflow = 'hidden';\n      swiper.wrapperEl.style.touchAction = 'none';\n    }\n\n    gesture.$slideEl.addClass(`${params.zoomedSlideClass}`);\n    let touchX;\n    let touchY;\n    let offsetX;\n    let offsetY;\n    let diffX;\n    let diffY;\n    let translateX;\n    let translateY;\n    let imageWidth;\n    let imageHeight;\n    let scaledWidth;\n    let scaledHeight;\n    let translateMinX;\n    let translateMinY;\n    let translateMaxX;\n    let translateMaxY;\n    let slideWidth;\n    let slideHeight;\n\n    if (typeof image.touchesStart.x === 'undefined' && e) {\n      touchX = e.type === 'touchend' ? e.changedTouches[0].pageX : e.pageX;\n      touchY = e.type === 'touchend' ? e.changedTouches[0].pageY : e.pageY;\n    } else {\n      touchX = image.touchesStart.x;\n      touchY = image.touchesStart.y;\n    }\n\n    zoom.scale = gesture.$imageWrapEl.attr('data-swiper-zoom') || params.maxRatio;\n    currentScale = gesture.$imageWrapEl.attr('data-swiper-zoom') || params.maxRatio;\n\n    if (e) {\n      slideWidth = gesture.$slideEl[0].offsetWidth;\n      slideHeight = gesture.$slideEl[0].offsetHeight;\n      offsetX = gesture.$slideEl.offset().left + window.scrollX;\n      offsetY = gesture.$slideEl.offset().top + window.scrollY;\n      diffX = offsetX + slideWidth / 2 - touchX;\n      diffY = offsetY + slideHeight / 2 - touchY;\n      imageWidth = gesture.$imageEl[0].offsetWidth;\n      imageHeight = gesture.$imageEl[0].offsetHeight;\n      scaledWidth = imageWidth * zoom.scale;\n      scaledHeight = imageHeight * zoom.scale;\n      translateMinX = Math.min(slideWidth / 2 - scaledWidth / 2, 0);\n      translateMinY = Math.min(slideHeight / 2 - scaledHeight / 2, 0);\n      translateMaxX = -translateMinX;\n      translateMaxY = -translateMinY;\n      translateX = diffX * zoom.scale;\n      translateY = diffY * zoom.scale;\n\n      if (translateX < translateMinX) {\n        translateX = translateMinX;\n      }\n\n      if (translateX > translateMaxX) {\n        translateX = translateMaxX;\n      }\n\n      if (translateY < translateMinY) {\n        translateY = translateMinY;\n      }\n\n      if (translateY > translateMaxY) {\n        translateY = translateMaxY;\n      }\n    } else {\n      translateX = 0;\n      translateY = 0;\n    }\n\n    gesture.$imageWrapEl.transition(300).transform(`translate3d(${translateX}px, ${translateY}px,0)`);\n    gesture.$imageEl.transition(300).transform(`translate3d(0,0,0) scale(${zoom.scale})`);\n  }\n\n  function zoomOut() {\n    const zoom = swiper.zoom;\n    const params = swiper.params.zoom;\n\n    if (!gesture.$slideEl) {\n      if (swiper.params.virtual && swiper.params.virtual.enabled && swiper.virtual) {\n        gesture.$slideEl = swiper.$wrapperEl.children(`.${swiper.params.slideActiveClass}`);\n      } else {\n        gesture.$slideEl = swiper.slides.eq(swiper.activeIndex);\n      }\n\n      gesture.$imageEl = gesture.$slideEl.find(`.${params.containerClass}`).eq(0).find('picture, img, svg, canvas, .swiper-zoom-target').eq(0);\n      gesture.$imageWrapEl = gesture.$imageEl.parent(`.${params.containerClass}`);\n    }\n\n    if (!gesture.$imageEl || gesture.$imageEl.length === 0 || !gesture.$imageWrapEl || gesture.$imageWrapEl.length === 0) return;\n\n    if (swiper.params.cssMode) {\n      swiper.wrapperEl.style.overflow = '';\n      swiper.wrapperEl.style.touchAction = '';\n    }\n\n    zoom.scale = 1;\n    currentScale = 1;\n    gesture.$imageWrapEl.transition(300).transform('translate3d(0,0,0)');\n    gesture.$imageEl.transition(300).transform('translate3d(0,0,0) scale(1)');\n    gesture.$slideEl.removeClass(`${params.zoomedSlideClass}`);\n    gesture.$slideEl = undefined;\n  } // Toggle Zoom\n\n\n  function zoomToggle(e) {\n    const zoom = swiper.zoom;\n\n    if (zoom.scale && zoom.scale !== 1) {\n      // Zoom Out\n      zoomOut();\n    } else {\n      // Zoom In\n      zoomIn(e);\n    }\n  }\n\n  function getListeners() {\n    const support = swiper.support;\n    const passiveListener = swiper.touchEvents.start === 'touchstart' && support.passiveListener && swiper.params.passiveListeners ? {\n      passive: true,\n      capture: false\n    } : false;\n    const activeListenerWithCapture = support.passiveListener ? {\n      passive: false,\n      capture: true\n    } : true;\n    return {\n      passiveListener,\n      activeListenerWithCapture\n    };\n  }\n\n  function getSlideSelector() {\n    return `.${swiper.params.slideClass}`;\n  }\n\n  function toggleGestures(method) {\n    const {\n      passiveListener\n    } = getListeners();\n    const slideSelector = getSlideSelector();\n    swiper.$wrapperEl[method]('gesturestart', slideSelector, onGestureStart, passiveListener);\n    swiper.$wrapperEl[method]('gesturechange', slideSelector, onGestureChange, passiveListener);\n    swiper.$wrapperEl[method]('gestureend', slideSelector, onGestureEnd, passiveListener);\n  }\n\n  function enableGestures() {\n    if (gesturesEnabled) return;\n    gesturesEnabled = true;\n    toggleGestures('on');\n  }\n\n  function disableGestures() {\n    if (!gesturesEnabled) return;\n    gesturesEnabled = false;\n    toggleGestures('off');\n  } // Attach/Detach Events\n\n\n  function enable() {\n    const zoom = swiper.zoom;\n    if (zoom.enabled) return;\n    zoom.enabled = true;\n    const support = swiper.support;\n    const {\n      passiveListener,\n      activeListenerWithCapture\n    } = getListeners();\n    const slideSelector = getSlideSelector(); // Scale image\n\n    if (support.gestures) {\n      swiper.$wrapperEl.on(swiper.touchEvents.start, enableGestures, passiveListener);\n      swiper.$wrapperEl.on(swiper.touchEvents.end, disableGestures, passiveListener);\n    } else if (swiper.touchEvents.start === 'touchstart') {\n      swiper.$wrapperEl.on(swiper.touchEvents.start, slideSelector, onGestureStart, passiveListener);\n      swiper.$wrapperEl.on(swiper.touchEvents.move, slideSelector, onGestureChange, activeListenerWithCapture);\n      swiper.$wrapperEl.on(swiper.touchEvents.end, slideSelector, onGestureEnd, passiveListener);\n\n      if (swiper.touchEvents.cancel) {\n        swiper.$wrapperEl.on(swiper.touchEvents.cancel, slideSelector, onGestureEnd, passiveListener);\n      }\n    } // Move image\n\n\n    swiper.$wrapperEl.on(swiper.touchEvents.move, `.${swiper.params.zoom.containerClass}`, onTouchMove, activeListenerWithCapture);\n  }\n\n  function disable() {\n    const zoom = swiper.zoom;\n    if (!zoom.enabled) return;\n    const support = swiper.support;\n    zoom.enabled = false;\n    const {\n      passiveListener,\n      activeListenerWithCapture\n    } = getListeners();\n    const slideSelector = getSlideSelector(); // Scale image\n\n    if (support.gestures) {\n      swiper.$wrapperEl.off(swiper.touchEvents.start, enableGestures, passiveListener);\n      swiper.$wrapperEl.off(swiper.touchEvents.end, disableGestures, passiveListener);\n    } else if (swiper.touchEvents.start === 'touchstart') {\n      swiper.$wrapperEl.off(swiper.touchEvents.start, slideSelector, onGestureStart, passiveListener);\n      swiper.$wrapperEl.off(swiper.touchEvents.move, slideSelector, onGestureChange, activeListenerWithCapture);\n      swiper.$wrapperEl.off(swiper.touchEvents.end, slideSelector, onGestureEnd, passiveListener);\n\n      if (swiper.touchEvents.cancel) {\n        swiper.$wrapperEl.off(swiper.touchEvents.cancel, slideSelector, onGestureEnd, passiveListener);\n      }\n    } // Move image\n\n\n    swiper.$wrapperEl.off(swiper.touchEvents.move, `.${swiper.params.zoom.containerClass}`, onTouchMove, activeListenerWithCapture);\n  }\n\n  on('init', () => {\n    if (swiper.params.zoom.enabled) {\n      enable();\n    }\n  });\n  on('destroy', () => {\n    disable();\n  });\n  on('touchStart', (_s, e) => {\n    if (!swiper.zoom.enabled) return;\n    onTouchStart(e);\n  });\n  on('touchEnd', (_s, e) => {\n    if (!swiper.zoom.enabled) return;\n    onTouchEnd(e);\n  });\n  on('doubleTap', (_s, e) => {\n    if (!swiper.animating && swiper.params.zoom.enabled && swiper.zoom.enabled && swiper.params.zoom.toggle) {\n      zoomToggle(e);\n    }\n  });\n  on('transitionEnd', () => {\n    if (swiper.zoom.enabled && swiper.params.zoom.enabled) {\n      onTransitionEnd();\n    }\n  });\n  on('slideChange', () => {\n    if (swiper.zoom.enabled && swiper.params.zoom.enabled && swiper.params.cssMode) {\n      onTransitionEnd();\n    }\n  });\n  Object.assign(swiper.zoom, {\n    enable,\n    disable,\n    in: zoomIn,\n    out: zoomOut,\n    toggle: zoomToggle\n  });\n}",
+      "start": 1700848829211,
+      "end": 1700848829379,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829379,
+      "end": 1700848829379,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829379,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829380,
+      "end": 1700848829380,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829380,
+      "end": 1700848829383,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829383,
+      "end": 1700848829383,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829383,
+      "end": 1700848829383,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829383,
+      "end": 1700848829383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829383,
+      "end": 1700848829383,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829383,
+      "end": 1700848829383,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829384,
+      "end": 1700848829384,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/components-shared/update-swiper.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { isObject, extend } from './utils.js';\n\nfunction updateSwiper({\n  swiper,\n  slides,\n  passedParams,\n  changedParams,\n  nextEl,\n  prevEl,\n  scrollbarEl,\n  paginationEl\n}) {\n  const updateParams = changedParams.filter(key => key !== 'children' && key !== 'direction');\n  const {\n    params: currentParams,\n    pagination,\n    navigation,\n    scrollbar,\n    virtual,\n    thumbs\n  } = swiper;\n  let needThumbsInit;\n  let needControllerInit;\n  let needPaginationInit;\n  let needScrollbarInit;\n  let needNavigationInit;\n\n  if (changedParams.includes('thumbs') && passedParams.thumbs && passedParams.thumbs.swiper && currentParams.thumbs && !currentParams.thumbs.swiper) {\n    needThumbsInit = true;\n  }\n\n  if (changedParams.includes('controller') && passedParams.controller && passedParams.controller.control && currentParams.controller && !currentParams.controller.control) {\n    needControllerInit = true;\n  }\n\n  if (changedParams.includes('pagination') && passedParams.pagination && (passedParams.pagination.el || paginationEl) && (currentParams.pagination || currentParams.pagination === false) && pagination && !pagination.el) {\n    needPaginationInit = true;\n  }\n\n  if (changedParams.includes('scrollbar') && passedParams.scrollbar && (passedParams.scrollbar.el || scrollbarEl) && (currentParams.scrollbar || currentParams.scrollbar === false) && scrollbar && !scrollbar.el) {\n    needScrollbarInit = true;\n  }\n\n  if (changedParams.includes('navigation') && passedParams.navigation && (passedParams.navigation.prevEl || prevEl) && (passedParams.navigation.nextEl || nextEl) && (currentParams.navigation || currentParams.navigation === false) && navigation && !navigation.prevEl && !navigation.nextEl) {\n    needNavigationInit = true;\n  }\n\n  const destroyModule = mod => {\n    if (!swiper[mod]) return;\n    swiper[mod].destroy();\n\n    if (mod === 'navigation') {\n      currentParams[mod].prevEl = undefined;\n      currentParams[mod].nextEl = undefined;\n      swiper[mod].prevEl = undefined;\n      swiper[mod].nextEl = undefined;\n    } else {\n      currentParams[mod].el = undefined;\n      swiper[mod].el = undefined;\n    }\n  };\n\n  updateParams.forEach(key => {\n    if (isObject(currentParams[key]) && isObject(passedParams[key])) {\n      extend(currentParams[key], passedParams[key]);\n    } else {\n      const newValue = passedParams[key];\n\n      if ((newValue === true || newValue === false) && (key === 'navigation' || key === 'pagination' || key === 'scrollbar')) {\n        if (newValue === false) {\n          destroyModule(key);\n        }\n      } else {\n        currentParams[key] = passedParams[key];\n      }\n    }\n  });\n\n  if (updateParams.includes('controller') && !needControllerInit && swiper.controller && swiper.controller.control && currentParams.controller && currentParams.controller.control) {\n    swiper.controller.control = currentParams.controller.control;\n  }\n\n  if (changedParams.includes('children') && slides && virtual && currentParams.virtual.enabled) {\n    virtual.slides = slides;\n    virtual.update(true);\n  } else if (changedParams.includes('children') && swiper.lazy && swiper.params.lazy.enabled) {\n    swiper.lazy.load();\n  }\n\n  if (needThumbsInit) {\n    const initialized = thumbs.init();\n    if (initialized) thumbs.update(true);\n  }\n\n  if (needControllerInit) {\n    swiper.controller.control = currentParams.controller.control;\n  }\n\n  if (needPaginationInit) {\n    if (paginationEl) currentParams.pagination.el = paginationEl;\n    pagination.init();\n    pagination.render();\n    pagination.update();\n  }\n\n  if (needScrollbarInit) {\n    if (scrollbarEl) currentParams.scrollbar.el = scrollbarEl;\n    scrollbar.init();\n    scrollbar.updateSize();\n    scrollbar.setTranslate();\n  }\n\n  if (needNavigationInit) {\n    if (nextEl) currentParams.navigation.nextEl = nextEl;\n    if (prevEl) currentParams.navigation.prevEl = prevEl;\n    navigation.init();\n    navigation.update();\n  }\n\n  if (changedParams.includes('allowSlideNext')) {\n    swiper.allowSlideNext = passedParams.allowSlideNext;\n  }\n\n  if (changedParams.includes('allowSlidePrev')) {\n    swiper.allowSlidePrev = passedParams.allowSlidePrev;\n  }\n\n  if (changedParams.includes('direction')) {\n    swiper.changeDirection(passedParams.direction, false);\n  }\n\n  swiper.update();\n}\n\nexport { updateSwiper };",
+      "start": 1700848828528,
+      "end": 1700848828659,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848828660,
+      "end": 1700848828660,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848828660,
+      "end": 1700848828661,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848828661,
+      "end": 1700848828661,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848828661,
+      "end": 1700848828662,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848828662,
+      "end": 1700848828662,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848828662,
+      "end": 1700848828662,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848828662,
+      "end": 1700848828662,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848828662,
+      "end": 1700848828662,
+      "order": "normal"
+    }
+  ]
+}

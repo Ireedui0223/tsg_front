@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/apply/uploadPage.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <h6 class=\" m-b-0\">Upload Your Files</h6>\n  <form class=\"form theme-form\">\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label class=\"col-form-label pt-0\"\n            >Upload Cover Letter:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            type=\"file\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div class=\"form-group mb-3\">\n          <label class=\"col-form-label pt-0\"\n            >Upload Your CV:<span class=\"font-danger\">*</span></label\n          >\n          <input\n            class=\"form-control\"\n            type=\"file\"\n          />\n        </div>\n      </div>\n    </div>\n    <div class=\"row\">\n      <div class=\"col\">\n        <div>\n          <label class=\"col-form-label pt-0\">Upload Recommendations:</label>\n          <input\n            class=\"form-control\"\n            type=\"file\"\n          />\n        </div>\n      </div>\n    </div>\n  </form>\n</template>\n",
+      "start": 1700848824251,
+      "end": 1700848824824,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824824,
+      "end": 1700848824824,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createStaticVNode(\"<h6 class=\\\"m-b-0\\\">Upload Your Files</h6><form class=\\\"form theme-form\\\"><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"col-form-label pt-0\\\">Upload Cover Letter:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" type=\\\"file\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"col-form-label pt-0\\\">Upload Your CV:<span class=\\\"font-danger\\\">*</span></label><input class=\\\"form-control\\\" type=\\\"file\\\"></div></div></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div><label class=\\\"col-form-label pt-0\\\">Upload Recommendations:</label><input class=\\\"form-control\\\" type=\\\"file\\\"></div></div></div></form>\", 2)\n\nfunction _sfc_render(_ctx, _cache) {\n  return _hoisted_1\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824824,
+      "end": 1700848824826,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824826,
+      "end": 1700848824826,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824826,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824827,
+      "end": 1700848824827,
+      "order": "normal"
+    }
+  ]
+}

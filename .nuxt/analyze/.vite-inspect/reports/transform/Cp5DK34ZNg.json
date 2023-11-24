@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/core/loop/loopFix.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export default function loopFix() {\n  const swiper = this;\n  swiper.emit('beforeLoopFix');\n  const {\n    activeIndex,\n    slides,\n    loopedSlides,\n    allowSlidePrev,\n    allowSlideNext,\n    snapGrid,\n    rtlTranslate: rtl\n  } = swiper;\n  let newIndex;\n  swiper.allowSlidePrev = true;\n  swiper.allowSlideNext = true;\n  const snapTranslate = -snapGrid[activeIndex];\n  const diff = snapTranslate - swiper.getTranslate(); // Fix For Negative Oversliding\n\n  if (activeIndex < loopedSlides) {\n    newIndex = slides.length - loopedSlides * 3 + activeIndex;\n    newIndex += loopedSlides;\n    const slideChanged = swiper.slideTo(newIndex, 0, false, true);\n\n    if (slideChanged && diff !== 0) {\n      swiper.setTranslate((rtl ? -swiper.translate : swiper.translate) - diff);\n    }\n  } else if (activeIndex >= slides.length - loopedSlides) {\n    // Fix For Positive Oversliding\n    newIndex = -slides.length + activeIndex + loopedSlides;\n    newIndex += loopedSlides;\n    const slideChanged = swiper.slideTo(newIndex, 0, false, true);\n\n    if (slideChanged && diff !== 0) {\n      swiper.setTranslate((rtl ? -swiper.translate : swiper.translate) - diff);\n    }\n  }\n\n  swiper.allowSlidePrev = allowSlidePrev;\n  swiper.allowSlideNext = allowSlideNext;\n  swiper.emit('loopFix');\n}",
+      "start": 1700848830963,
+      "end": 1700848831060,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848831060,
+      "end": 1700848831060,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848831060,
+      "end": 1700848831060,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848831060,
+      "end": 1700848831061,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848831061,
+      "end": 1700848831061,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848831061,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848831062,
+      "end": 1700848831062,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848831062,
+      "end": 1700848831063,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848831063,
+      "end": 1700848831063,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848831063,
+      "end": 1700848831063,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848831063,
+      "end": 1700848831063,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848831063,
+      "end": 1700848831063,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848831063,
+      "end": 1700848831063,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848831064,
+      "end": 1700848831064,
+      "order": "normal"
+    }
+  ]
+}

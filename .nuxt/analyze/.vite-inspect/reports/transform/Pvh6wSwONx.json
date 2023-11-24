@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/list/jobfilter.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"card\">\n    <div\n      class=\"card-header\"\n      id=\"headingOne\"\n    >\n      <h2 class=\" m-b-0\">\n        <button\n          class=\"btn btn-link btn-block text-start\"\n          type=\"button\"\n          data-bs-target=\"#collapseOne\"\n          :aria-expanded=\"active ? 'false' : 'true'\"\n          aria-controls=\"collapseOne\"\n          @click=\"active = !active\"\n        >\n          Төрөл сонгох\n        </button>\n      </h2>\n    </div>\n    <div\n      class=\"collapse\"\n      :class=\"active ? '' : 'show'\"\n      id=\"collapseOne\"\n      aria-labelledby=\"headingOne\"\n    >\n      <div class=\"card-body\">\n        <div\n          v-for=\"(work, index) in workTime\"\n          :key=\"`work_time_${index}`\"\n          class=\"mb-2\"\n        >\n          <label :for=\"work.value\">\n            <input\n              v-model=\"selectedTime\"\n              type=\"radio\"\n              class=\"radio_animated\"\n              :id=\"work.value\"\n              :value=\"work.value\"\n              name=\"work_field\"\n            />\n            {{ work.name }}\n          </label>\n        </div>\n        <button\n          class=\"btn btn-primary text-center\"\n          type=\"button\"\n        >\n          Ажил хайх\n        </button>\n      </div>\n    </div>\n  </div>\n  <div class=\"card\">\n    <div\n      class=\"card-header\"\n      id=\"headingTwo\"\n    >\n      <h2 class=\" m-b-0\">\n        <button\n          class=\"btn btn-link btn-block text-start collapsed\"\n          type=\"button\"\n          data-bs-target=\"#collapseTwo\"\n          :aria-expanded=\"active1 ? 'false' : 'true'\"\n          aria-controls=\"collapseTwo\"\n          @click=\"active1 = !active1\"\n        >\n          Салбар\n        </button>\n      </h2>\n    </div>\n    <div\n      class=\"collapse\"\n      :class=\"active1 ? '' : 'show'\"\n      id=\"collapseTwo\"\n      aria-labelledby=\"headingTwo\"\n    >\n      <div class=\"card-body animate-chk\">\n        <div class=\"location-checkbox\">\n          <div\n            v-for=\"(work, index) in fieldOfWorks\"\n            :key=\"`work_field_${index}`\"\n            class=\"mb-2\"\n          >\n            <label :for=\"work.id\">\n              <input\n                v-model=\"selectedField\"\n                type=\"radio\"\n                class=\"radio_animated\"\n                :id=\"work.id\"\n                :value=\"work.id\"\n                name=\"work_field\"\n              />\n              {{ work.name }}\n            </label>\n          </div>\n        </div>\n      </div>\n      <button\n        class=\"btn btn-block btn-primary text-center\"\n        type=\"button\"\n      >\n        Салбар хайх\n      </button>\n    </div>\n  </div>\n</template>\n<script>\nexport default {\n  data() {\n    return {\n      active: false,\n      active1: false,\n      active2: false,\n      workTime: [\n        {\n          selected: false,\n          name: 'Бүтэн цагаар',\n          value: 'full_time'\n        },\n        {\n          selected: false,\n          name: 'Гэрээт',\n          value: 'contract'\n        },\n        {\n          selected: false,\n          name: 'Цагийн ажил',\n          value: 'part_time'\n        },\n        {\n          selected: false,\n          name: 'Түр ажил',\n          value: 'hour_work'\n        }\n      ],\n      fieldOfWorks: [\n        {\n          selected: true,\n          name: 'Автомашин, засвар үйлчилгээ',\n          id: 'work_field_machine'\n        },\n        { selected: false, name: 'Аялал жуулчлал', id: 'work_field_tour' },\n        {\n          selected: false,\n          name: 'Банк, санхүү, эдийн засаг, даатгал',\n          id: 'work_field_bank'\n        },\n        {\n          selected: false,\n          name: 'Барилга, Инженеринг',\n          id: 'work_field_construction'\n        },\n        {\n          selected: false,\n          name: 'Бизнес менежмент',\n          id: 'work_field_business'\n        },\n        {\n          selected: false,\n          name: 'Боловсрол, нийгмийн ухаан',\n          id: 'work_field_education'\n        },\n        { selected: false, name: 'Дизайн', id: 'work_field_design' },\n        { selected: false, name: 'Дэд бүтэц', id: 'work_field_sub_struct' },\n        {\n          selected: false,\n          name: 'Зочид буудал, ресторан',\n          id: 'work_field_hotel'\n        },\n        { selected: false, name: 'Маркетинг, PR', id: 'work_field_marketing' },\n        { selected: false, name: 'Мэдээлэл технологи', id: 'work_field_it' },\n        {\n          selected: false,\n          name: 'Спорт, Гоо сайхан, Фитнесс',\n          id: 'work_field_sport'\n        },\n        {\n          selected: false,\n          name: 'Төрийн болон ТББ, ОУБ',\n          id: 'work_field_goverment'\n        },\n        {\n          selected: false,\n          name: 'Тээвэр, гааль, агуулах',\n          id: 'work_field_tranport'\n        },\n        {\n          selected: false,\n          name: 'Уул уурхай, газрын тос',\n          id: 'work_field_mining'\n        },\n        { selected: false, name: 'Үйлдвэрлэл', id: 'work_field_factory' },\n        { selected: false, name: 'Үйлчилгээ', id: 'work_field_service' },\n        { selected: false, name: 'Үл хөдлөх хөрөнгө', id: 'work_field_remax' },\n        {\n          selected: false,\n          name: 'ХАА, Байгаль экологи',\n          id: 'work_field_ecology'\n        },\n        { selected: false, name: 'Харилцаа холбоо', id: 'work_field_tele' },\n        {\n          selected: false,\n          name: 'Харуул хамгаалалт',\n          id: 'work_field_secuirity'\n        },\n        {\n          selected: false,\n          name: 'Худалдаа, Борлуулалт',\n          id: 'work_field_selling'\n        },\n        { selected: false, name: 'Хууль эрх зүй', id: 'work_field_law' },\n        { selected: false, name: 'Хүний нөөц, захиргаа', id: 'work_field_hr' },\n        {\n          selected: false,\n          name: 'Хэвлэл мэдээлэл, Медиа',\n          id: 'work_field_media'\n        },\n        { selected: false, name: 'Шинжлэх ухаан', id: 'work_field_science' },\n        {\n          selected: false,\n          name: 'Энтертайнмент, Соёл урлаг',\n          id: 'work_field_entertainment'\n        },\n        { selected: false, name: 'Эрүүл мэнд', id: 'work_field_health' },\n        { selected: false, name: 'Бусад', id: 'work_field_etc' }\n      ],\n\n      selectedField: '',\n      selectedTime: ''\n    };\n  }\n};\n</script>\n",
+      "start": 1700848825861,
+      "end": 1700848826037,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848826037,
+      "end": 1700848826037,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {\n  data() {\n    return {\n      active: false,\n      active1: false,\n      active2: false,\n      workTime: [\n        {\n          selected: false,\n          name: 'Бүтэн цагаар',\n          value: 'full_time'\n        },\n        {\n          selected: false,\n          name: 'Гэрээт',\n          value: 'contract'\n        },\n        {\n          selected: false,\n          name: 'Цагийн ажил',\n          value: 'part_time'\n        },\n        {\n          selected: false,\n          name: 'Түр ажил',\n          value: 'hour_work'\n        }\n      ],\n      fieldOfWorks: [\n        {\n          selected: true,\n          name: 'Автомашин, засвар үйлчилгээ',\n          id: 'work_field_machine'\n        },\n        { selected: false, name: 'Аялал жуулчлал', id: 'work_field_tour' },\n        {\n          selected: false,\n          name: 'Банк, санхүү, эдийн засаг, даатгал',\n          id: 'work_field_bank'\n        },\n        {\n          selected: false,\n          name: 'Барилга, Инженеринг',\n          id: 'work_field_construction'\n        },\n        {\n          selected: false,\n          name: 'Бизнес менежмент',\n          id: 'work_field_business'\n        },\n        {\n          selected: false,\n          name: 'Боловсрол, нийгмийн ухаан',\n          id: 'work_field_education'\n        },\n        { selected: false, name: 'Дизайн', id: 'work_field_design' },\n        { selected: false, name: 'Дэд бүтэц', id: 'work_field_sub_struct' },\n        {\n          selected: false,\n          name: 'Зочид буудал, ресторан',\n          id: 'work_field_hotel'\n        },\n        { selected: false, name: 'Маркетинг, PR', id: 'work_field_marketing' },\n        { selected: false, name: 'Мэдээлэл технологи', id: 'work_field_it' },\n        {\n          selected: false,\n          name: 'Спорт, Гоо сайхан, Фитнесс',\n          id: 'work_field_sport'\n        },\n        {\n          selected: false,\n          name: 'Төрийн болон ТББ, ОУБ',\n          id: 'work_field_goverment'\n        },\n        {\n          selected: false,\n          name: 'Тээвэр, гааль, агуулах',\n          id: 'work_field_tranport'\n        },\n        {\n          selected: false,\n          name: 'Уул уурхай, газрын тос',\n          id: 'work_field_mining'\n        },\n        { selected: false, name: 'Үйлдвэрлэл', id: 'work_field_factory' },\n        { selected: false, name: 'Үйлчилгээ', id: 'work_field_service' },\n        { selected: false, name: 'Үл хөдлөх хөрөнгө', id: 'work_field_remax' },\n        {\n          selected: false,\n          name: 'ХАА, Байгаль экологи',\n          id: 'work_field_ecology'\n        },\n        { selected: false, name: 'Харилцаа холбоо', id: 'work_field_tele' },\n        {\n          selected: false,\n          name: 'Харуул хамгаалалт',\n          id: 'work_field_secuirity'\n        },\n        {\n          selected: false,\n          name: 'Худалдаа, Борлуулалт',\n          id: 'work_field_selling'\n        },\n        { selected: false, name: 'Хууль эрх зүй', id: 'work_field_law' },\n        { selected: false, name: 'Хүний нөөц, захиргаа', id: 'work_field_hr' },\n        {\n          selected: false,\n          name: 'Хэвлэл мэдээлэл, Медиа',\n          id: 'work_field_media'\n        },\n        { selected: false, name: 'Шинжлэх ухаан', id: 'work_field_science' },\n        {\n          selected: false,\n          name: 'Энтертайнмент, Соёл урлаг',\n          id: 'work_field_entertainment'\n        },\n        { selected: false, name: 'Эрүүл мэнд', id: 'work_field_health' },\n        { selected: false, name: 'Бусад', id: 'work_field_etc' }\n      ],\n\n      selectedField: '',\n      selectedTime: ''\n    };\n  }\n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, vModelRadio as _vModelRadio, withDirectives as _withDirectives, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, normalizeClass as _normalizeClass } from \"vue\"\n\nconst _hoisted_1 = { class: \"card\" }\nconst _hoisted_2 = {\n  class: \"card-header\",\n  id: \"headingOne\"\n}\nconst _hoisted_3 = { class: \"m-b-0\" }\nconst _hoisted_4 = [\"aria-expanded\"]\nconst _hoisted_5 = { class: \"card-body\" }\nconst _hoisted_6 = [\"for\"]\nconst _hoisted_7 = [\"id\", \"value\"]\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"button\", {\n  class: \"btn btn-primary text-center\",\n  type: \"button\"\n}, \" Ажил хайх \", -1)\nconst _hoisted_9 = { class: \"card\" }\nconst _hoisted_10 = {\n  class: \"card-header\",\n  id: \"headingTwo\"\n}\nconst _hoisted_11 = { class: \"m-b-0\" }\nconst _hoisted_12 = [\"aria-expanded\"]\nconst _hoisted_13 = { class: \"card-body animate-chk\" }\nconst _hoisted_14 = { class: \"location-checkbox\" }\nconst _hoisted_15 = [\"for\"]\nconst _hoisted_16 = [\"id\", \"value\"]\nconst _hoisted_17 = /*#__PURE__*/_createElementVNode(\"button\", {\n  class: \"btn btn-block btn-primary text-center\",\n  type: \"button\"\n}, \" Салбар хайх \", -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"h2\", _hoisted_3, [\n          _createElementVNode(\"button\", {\n            class: \"btn btn-link btn-block text-start\",\n            type: \"button\",\n            \"data-bs-target\": \"#collapseOne\",\n            \"aria-expanded\": $data.active ? 'false' : 'true',\n            \"aria-controls\": \"collapseOne\",\n            onClick: _cache[0] || (_cache[0] = $event => ($data.active = !$data.active))\n          }, \" Төрөл сонгох \", 8, _hoisted_4)\n        ])\n      ]),\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"collapse\", $data.active ? '' : 'show']),\n        id: \"collapseOne\",\n        \"aria-labelledby\": \"headingOne\"\n      }, [\n        _createElementVNode(\"div\", _hoisted_5, [\n          (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.workTime, (work, index) => {\n            return (_openBlock(), _createElementBlock(\"div\", {\n              key: `work_time_${index}`,\n              class: \"mb-2\"\n            }, [\n              _createElementVNode(\"label\", {\n                for: work.value\n              }, [\n                _withDirectives(_createElementVNode(\"input\", {\n                  \"onUpdate:modelValue\": _cache[1] || (_cache[1] = $event => (($data.selectedTime) = $event)),\n                  type: \"radio\",\n                  class: \"radio_animated\",\n                  id: work.value,\n                  value: work.value,\n                  name: \"work_field\"\n                }, null, 8, _hoisted_7), [\n                  [_vModelRadio, $data.selectedTime]\n                ]),\n                _createTextVNode(\" \" + _toDisplayString(work.name), 1)\n              ], 8, _hoisted_6)\n            ]))\n          }), 128)),\n          _hoisted_8\n        ])\n      ], 2)\n    ]),\n    _createElementVNode(\"div\", _hoisted_9, [\n      _createElementVNode(\"div\", _hoisted_10, [\n        _createElementVNode(\"h2\", _hoisted_11, [\n          _createElementVNode(\"button\", {\n            class: \"btn btn-link btn-block text-start collapsed\",\n            type: \"button\",\n            \"data-bs-target\": \"#collapseTwo\",\n            \"aria-expanded\": $data.active1 ? 'false' : 'true',\n            \"aria-controls\": \"collapseTwo\",\n            onClick: _cache[2] || (_cache[2] = $event => ($data.active1 = !$data.active1))\n          }, \" Салбар \", 8, _hoisted_12)\n        ])\n      ]),\n      _createElementVNode(\"div\", {\n        class: _normalizeClass([\"collapse\", $data.active1 ? '' : 'show']),\n        id: \"collapseTwo\",\n        \"aria-labelledby\": \"headingTwo\"\n      }, [\n        _createElementVNode(\"div\", _hoisted_13, [\n          _createElementVNode(\"div\", _hoisted_14, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.fieldOfWorks, (work, index) => {\n              return (_openBlock(), _createElementBlock(\"div\", {\n                key: `work_field_${index}`,\n                class: \"mb-2\"\n              }, [\n                _createElementVNode(\"label\", {\n                  for: work.id\n                }, [\n                  _withDirectives(_createElementVNode(\"input\", {\n                    \"onUpdate:modelValue\": _cache[3] || (_cache[3] = $event => (($data.selectedField) = $event)),\n                    type: \"radio\",\n                    class: \"radio_animated\",\n                    id: work.id,\n                    value: work.id,\n                    name: \"work_field\"\n                  }, null, 8, _hoisted_16), [\n                    [_vModelRadio, $data.selectedField]\n                  ]),\n                  _createTextVNode(\" \" + _toDisplayString(work.name), 1)\n                ], 8, _hoisted_15)\n              ]))\n            }), 128))\n          ])\n        ]),\n        _hoisted_17\n      ], 2)\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848826037,
+      "end": 1700848826047,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826047,
+      "end": 1700848826047,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826047,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826048,
+      "end": 1700848826048,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826048,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826052,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826052,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826052,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826052,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826052,
+      "end": 1700848826052,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826053,
+      "end": 1700848826053,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826053,
+      "end": 1700848826053,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826053,
+      "end": 1700848826053,
+      "order": "normal"
+    }
+  ]
+}

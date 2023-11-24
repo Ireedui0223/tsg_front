@@ -1,0 +1,212 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/store/layout.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/* eslint-disable */\nimport { useLocalStorage } from '@vueuse/core';\nimport { useStorage } from '@vueuse/core';\nimport Layout from '@/data/layout.json';\nexport const useLayoutStore = defineStore({\n  id: 'layout',\n  state: () => {\n    return {\n      layout: Layout,\n      sidebarType: 'default',\n      boxlayout: true,\n      footer: '',\n      svg: 'stroke-svg',\n      sidebar: 'compact-sidebar1',\n      primaryColor: '#7366ff',\n      secondaryColor: '#f73164'\n    };\n  },\n  getters: {\n    footer123: (state) => {\n      return state.footer;\n    },\n    sidebar123: (state) => {\n      return state.sidebar;\n    },\n    PColor: (state) => {\n      return state.primaryColor;\n    }\n  },\n  actions: {\n    intialChange(payload) {\n      this.primaryColor = payload.localPrimaryColor;\n      this.secondaryColor = payload.localSecondaryColor;\n    },\n    setFooter(payload) {\n      this.footer = payload.class;\n    },\n    set() {\n      if (process.client) {\n        document.body.className = this.layout.color.mix_layout;\n        document.body.setAttribute('main-theme-layout', 'compact-wrapper');\n        document\n          .getElementsByTagName('html')[0]\n          .setAttribute('dir', this.layout.settings.layout_type);\n        let primaryColor = this.primaryColor || this.layout.color.primary_color;\n        let secondaryColor =\n          this.secondaryColor || this.layout.color.secondary_color;\n        let layoutVersion =\n          localStorage.getItem('layoutVersion') ||\n          this.layout.color.layout_version;\n        if (primaryColor || secondaryColor) {\n          addStyle(primaryColor, secondaryColor);\n          if (layoutVersion) document.body.className = layoutVersion;\n        }\n      }\n    },\n    setLayoutType(payload) {\n      document.body.classList.remove('rtl');\n      document.body.classList.remove('ltr');\n      document.body.classList.remove('boxed');\n      document.documentElement.removeAttribute('dir');\n      payload.class && document.body.setAttribute('class', payload.class);\n      payload.class &&\n        document.documentElement.setAttribute('dir', payload.class);\n\n      this.layout.settings.layout_type = payload;\n    },\n    setLayout(payload) {\n      if (document.body.className == 'box-layout') {\n        document.body.className = 'box-layout ' + payload.class;\n      } else {\n        document.body.className = payload.class;\n      }\n    },\n    setColorScheme(payload) {\n      setColor(payload);\n      this.primaryColor = payload.primary;\n      this.secondaryColor = payload.secondary;\n      this.layout.color.layout_version = 'light';\n\n      if (process.client) {\n        localStorage.setItem('layoutVersion', this.layout.color.layout_version);\n      }\n    },\n    setColorDarkScheme(payload) {\n      setColor(payload);\n      this.layout.color.layout_version = 'dark-only';\n      if (process.client) {\n        localStorage.setItem('layoutVersion', this.layout.color.layout_version);\n      }\n    },\n\n    setCustomizeSidebarType(payload) {\n      if (process.client) {\n        localStorage.setItem('SidebarType', payload);\n      }\n    },\n    setSvg(payload) {\n      this.svg = payload;\n      this.layout.settings.sidebar_setting = payload;\n    }\n  },\n  persist: true\n});\n\nfunction addStyle(primary, secondary) {\n  document.documentElement.style.setProperty('--theme-deafult', primary);\n  document.documentElement.style.setProperty('--theme-secondary', secondary);\n}\n\nfunction setColor(color) {\n  useLayoutStore().primaryColor = color.primary;\n  useLayoutStore().secondaryColor = color.secondary;\n  if (process.client) {\n    addStyle(color.primary, color.secondary);\n  }\n}\n",
+      "start": 1700848822981,
+      "end": 1700848824681,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824681,
+      "end": 1700848824681,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "/* eslint-disable */\nimport { useLocalStorage } from '@vueuse/core';\nimport { useStorage } from '@vueuse/core';\nimport Layout from '@/data/layout.json';\nexport const useLayoutStore = defineStore({\n  id: 'layout',\n  state: () => {\n    return {\n      layout: Layout,\n      sidebarType: 'default',\n      boxlayout: true,\n      footer: '',\n      svg: 'stroke-svg',\n      sidebar: 'compact-sidebar1',\n      primaryColor: '#7366ff',\n      secondaryColor: '#f73164'\n    };\n  },\n  getters: {\n    footer123: (state) => {\n      return state.footer;\n    },\n    sidebar123: (state) => {\n      return state.sidebar;\n    },\n    PColor: (state) => {\n      return state.primaryColor;\n    }\n  },\n  actions: {\n    intialChange(payload) {\n      this.primaryColor = payload.localPrimaryColor;\n      this.secondaryColor = payload.localSecondaryColor;\n    },\n    setFooter(payload) {\n      this.footer = payload.class;\n    },\n    set() {\n      if (true) {\n        document.body.className = this.layout.color.mix_layout;\n        document.body.setAttribute('main-theme-layout', 'compact-wrapper');\n        document\n          .getElementsByTagName('html')[0]\n          .setAttribute('dir', this.layout.settings.layout_type);\n        let primaryColor = this.primaryColor || this.layout.color.primary_color;\n        let secondaryColor =\n          this.secondaryColor || this.layout.color.secondary_color;\n        let layoutVersion =\n          localStorage.getItem('layoutVersion') ||\n          this.layout.color.layout_version;\n        if (primaryColor || secondaryColor) {\n          addStyle(primaryColor, secondaryColor);\n          if (layoutVersion) document.body.className = layoutVersion;\n        }\n      }\n    },\n    setLayoutType(payload) {\n      document.body.classList.remove('rtl');\n      document.body.classList.remove('ltr');\n      document.body.classList.remove('boxed');\n      document.documentElement.removeAttribute('dir');\n      payload.class && document.body.setAttribute('class', payload.class);\n      payload.class &&\n        document.documentElement.setAttribute('dir', payload.class);\n\n      this.layout.settings.layout_type = payload;\n    },\n    setLayout(payload) {\n      if (document.body.className == 'box-layout') {\n        document.body.className = 'box-layout ' + payload.class;\n      } else {\n        document.body.className = payload.class;\n      }\n    },\n    setColorScheme(payload) {\n      setColor(payload);\n      this.primaryColor = payload.primary;\n      this.secondaryColor = payload.secondary;\n      this.layout.color.layout_version = 'light';\n\n      if (true) {\n        localStorage.setItem('layoutVersion', this.layout.color.layout_version);\n      }\n    },\n    setColorDarkScheme(payload) {\n      setColor(payload);\n      this.layout.color.layout_version = 'dark-only';\n      if (true) {\n        localStorage.setItem('layoutVersion', this.layout.color.layout_version);\n      }\n    },\n\n    setCustomizeSidebarType(payload) {\n      if (true) {\n        localStorage.setItem('SidebarType', payload);\n      }\n    },\n    setSvg(payload) {\n      this.svg = payload;\n      this.layout.settings.sidebar_setting = payload;\n    }\n  },\n  persist: true\n});\n\nfunction addStyle(primary, secondary) {\n  document.documentElement.style.setProperty('--theme-deafult', primary);\n  document.documentElement.style.setProperty('--theme-secondary', secondary);\n}\n\nfunction setColor(color) {\n  useLayoutStore().primaryColor = color.primary;\n  useLayoutStore().secondaryColor = color.secondary;\n  if (true) {\n    addStyle(color.primary, color.secondary);\n  }\n}\n",
+      "start": 1700848824681,
+      "end": 1700848824682,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824682,
+      "end": 1700848824682,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824682,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824684,
+      "end": 1700848824684,
+      "order": "normal"
+    }
+  ]
+}

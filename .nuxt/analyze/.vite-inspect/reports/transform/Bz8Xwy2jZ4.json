@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/header/search.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <form\n    class=\"form-inline search-full col\"\n    action=\"#\"\n    method=\"get\"\n    @submit.prevent=\"\"\n    :class=\"searchOpen ? 'open' : ''\"\n  >\n    <div class=\"form-group w-100\">\n      <div class=\"Typeahead Typeahead--twitterUsers\">\n        <div class=\"u-posRelative\">\n          <input\n            class=\"demo-input Typeahead-input form-control-plaintext w-100\"\n            type=\"text\"\n            v-model=\"terms\"\n            placeholder=\"Search Cuba ..\"\n            name=\"q\"\n            title=\"\"\n            autofocus\n          />\n          <div\n            class=\"spinner-border Typeahead-spinner\"\n            role=\"status\"\n          >\n            <span class=\"sr-only\">Loading...</span>\n          </div>\n          <vue-feather\n            class=\"close-search\"\n            type=\"x\"\n            @click=\"search_close()\"\n          ></vue-feather>\n        </div>\n        <div\n          :class=\"searchResult ? 'Typeahead-menu is-open' : 'Typeahead-menu'\"\n        >\n          <!-- <div\n            class=\"ProfileCard u-cf\"\n            v-for=\"(menuItem, index) in []\"\n            :key=\"index\"\n          >\n            <div class=\"ProfileCard-avatar header-search\">\n              <svg class=\"stroke-icon\">\n                <use\n                  :xlink:href=\"'/svg/icon-sprite.svg' + `#${menuItem.icon}`\"\n                ></use>\n              </svg>\n            </div>\n\n            <div class=\"ProfileCard-details\">\n              <div class=\"ProfileCard-realName\">\n                <span @click=\"removeFix()\">\n                  <nuxt-link\n                    :to=\"menuItem.path\"\n                    class=\"realname\"\n                  >\n                    {{ menuItem.title }}\n                  </nuxt-link></span\n                >\n              </div>\n            </div>\n          </div> -->\n        </div>\n        <div\n          :class=\"\n            searchResultEmpty ? 'Typeahead-menu is-open' : 'Typeahead-menu'\n          \"\n        >\n          <div class=\"tt-dataset tt-dataset-0\">\n            <div class=\"EmptyMessage\">\n              Your search turned up 0 results. Opps There are no result found.\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </form>\n</template>\n\n<script>\nimport { mapState } from 'pinia';\nimport { useMenuStore } from '~~/store/menu';\n\nexport default {\n  name: 'SearchBar',\n  data() {\n    return {\n      terms: '',\n      searchResult: false,\n      searchResultEmpty: false\n    };\n  },\n  computed: {\n    ...mapState(useMenuStore, {\n      searchOpen: 'searchOpen'\n    })\n  },\n  watch: {\n    terms: {\n      handler(value) {\n        console.log(value);\n      },\n      deep: true\n    }\n  },\n  methods: {\n    search_open() {\n      useMenuStore().searchOpen = true;\n    },\n    search_close() {\n      useMenuStore().searchOpen = false;\n    },\n    searchterm() {\n      useMenuStore().searchTerm(this.terms);\n    },\n    addFix() {\n      this.searchResult = true;\n    },\n    removeFix() {\n      this.searchResult = false;\n      this.terms = '';\n    }\n  }\n};\n</script>\n",
+      "start": 1700848825018,
+      "end": 1700848825253,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825254,
+      "end": 1700848825254,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { mapState } from 'pinia';\nimport { useMenuStore } from '~~/store/menu';\n\nconst _sfc_main = {\n  name: 'SearchBar',\n  data() {\n    return {\n      terms: '',\n      searchResult: false,\n      searchResultEmpty: false\n    };\n  },\n  computed: {\n    ...mapState(useMenuStore, {\n      searchOpen: 'searchOpen'\n    })\n  },\n  watch: {\n    terms: {\n      handler(value) {\n        console.log(value);\n      },\n      deep: true\n    }\n  },\n  methods: {\n    search_open() {\n      useMenuStore().searchOpen = true;\n    },\n    search_close() {\n      useMenuStore().searchOpen = false;\n    },\n    searchterm() {\n      useMenuStore().searchTerm(this.terms);\n    },\n    addFix() {\n      this.searchResult = true;\n    },\n    removeFix() {\n      this.searchResult = false;\n      this.terms = '';\n    }\n  }\n};\n\nimport { vModelText as _vModelText, createElementVNode as _createElementVNode, withDirectives as _withDirectives, resolveComponent as _resolveComponent, createVNode as _createVNode, normalizeClass as _normalizeClass, withModifiers as _withModifiers, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"form-group w-100\" }\nconst _hoisted_2 = { class: \"Typeahead Typeahead--twitterUsers\" }\nconst _hoisted_3 = { class: \"u-posRelative\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", {\n  class: \"spinner-border Typeahead-spinner\",\n  role: \"status\"\n}, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"sr-only\" }, \"Loading...\")\n], -1)\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"tt-dataset tt-dataset-0\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"EmptyMessage\" }, \" Your search turned up 0 results. Opps There are no result found. \")\n], -1)\nconst _hoisted_6 = [\n  _hoisted_5\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_vue_feather = _resolveComponent(\"vue-feather\")\n\n  return (_openBlock(), _createElementBlock(\"form\", {\n    class: _normalizeClass([\"form-inline search-full col\", _ctx.searchOpen ? 'open' : '']),\n    action: \"#\",\n    method: \"get\",\n    onSubmit: _cache[2] || (_cache[2] = _withModifiers(() => {}, [\"prevent\"]))\n  }, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        _createElementVNode(\"div\", _hoisted_3, [\n          _withDirectives(_createElementVNode(\"input\", {\n            class: \"demo-input Typeahead-input form-control-plaintext w-100\",\n            type: \"text\",\n            \"onUpdate:modelValue\": _cache[0] || (_cache[0] = $event => (($data.terms) = $event)),\n            placeholder: \"Search Cuba ..\",\n            name: \"q\",\n            title: \"\",\n            autofocus: \"\"\n          }, null, 512), [\n            [_vModelText, $data.terms]\n          ]),\n          _hoisted_4,\n          _createVNode(_component_vue_feather, {\n            class: \"close-search\",\n            type: \"x\",\n            onClick: _cache[1] || (_cache[1] = $event => ($options.search_close()))\n          })\n        ]),\n        _createElementVNode(\"div\", {\n          class: _normalizeClass($data.searchResult ? 'Typeahead-menu is-open' : 'Typeahead-menu')\n        }, null, 2),\n        _createElementVNode(\"div\", {\n          class: _normalizeClass(\n            $data.searchResultEmpty ? 'Typeahead-menu is-open' : 'Typeahead-menu'\n          )\n        }, _hoisted_6, 2)\n      ])\n    ])\n  ], 34))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825254,
+      "end": 1700848825258,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825258,
+      "end": 1700848825258,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825258,
+      "end": 1700848825258,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825258,
+      "end": 1700848825258,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825258,
+      "end": 1700848825258,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825258,
+      "end": 1700848825258,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825259,
+      "end": 1700848825259,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825259,
+      "end": 1700848825260,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825261,
+      "end": 1700848825261,
+      "order": "normal"
+    }
+  ]
+}

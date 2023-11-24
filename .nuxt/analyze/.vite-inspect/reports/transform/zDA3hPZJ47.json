@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/activityHoursCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xxl-4 col-ed-7 col-xl-7 col-md-6 box-col-7\">\n    <div class=\"card\">\n      <div class=\"card-header card-no-border\">\n        <div class=\"header-top\">\n          <h5>Activity Hours</h5>\n          <DropDown1 />\n        </div>\n      </div>\n      <div class=\"card-body pt-0\">\n        <div class=\"row m-0 overall-card\">\n          <div class=\"col-xl-8\">\n            <div class=\"chart-right\">\n              <div class=\"row\">\n                <div class=\"col-xl-12\">\n                  <div class=\"card-body p-0\">\n                    <div class=\"activity-wrap\">\n                      <div id=\"activity-chart\">\n                        <apexchart\n                          height=\"215\"\n                          type=\"bar\"\n                          :options=\"onlineDashboard.options2\"\n                          :series=\"onlineDashboard.series2\"\n                        ></apexchart>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-xl-4 p-0\">\n            <div class=\"row g-sm-3 g-2 mt-0\">\n              <div\n                class=\"col-xl-12 col-md-6 col-sm-4\"\n                v-for=\"activirtyhous in activirtyHours\"\n                :key=\"activirtyhous\"\n              >\n                <div class=\"light-card balance-card\">\n                  <div>\n                    <span class=\"f-light\">{{ activirtyhous.title }}</span>\n                    <h6 class=\"mt-1  m-b-0\">\n                      {{ activirtyhous.inNumber\n                      }}<span\n                        class=\"badge badge-light-success rounded-pill ms-1\"\n                        >{{ activirtyhous.inPercentage }}</span\n                      >\n                    </h6>\n                  </div>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport DropDown1 from '../base/dropDown1.vue';\nimport '@vuepic/vue-datepicker/dist/main.css';\nimport { onlineDashboard } from '@/data/comon';\nimport { activirtyHours } from '@/data/dashboard/online.json';\nexport default {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      date1: new Date(),\n      onlineDashboard: onlineDashboard,\n      activirtyHours: activirtyHours\n    };\n  }\n};\n</script>\n",
+      "start": 1700848825670,
+      "end": 1700848825873,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825873,
+      "end": 1700848825873,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825873,
+      "end": 1700848825873,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825873,
+      "end": 1700848825873,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825873,
+      "end": 1700848825873,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825874,
+      "end": 1700848825874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825874,
+      "end": 1700848825874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825874,
+      "end": 1700848825874,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport DropDown1 from '../base/dropDown1.vue';\nimport '@vuepic/vue-datepicker/dist/main.css';\nimport { onlineDashboard } from '@/data/comon';\nimport { activirtyHours } from '@/data/dashboard/online.json';\nconst _sfc_main = {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      date1: new Date(),\n      onlineDashboard: onlineDashboard,\n      activirtyHours: activirtyHours\n    };\n  }\n};\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-4 col-ed-7 col-xl-7 col-md-6 box-col-7\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = { class: \"card-header card-no-border\" }\nconst _hoisted_4 = { class: \"header-top\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"h5\", null, \"Activity Hours\", -1)\nconst _hoisted_6 = { class: \"card-body pt-0\" }\nconst _hoisted_7 = { class: \"row m-0 overall-card\" }\nconst _hoisted_8 = { class: \"col-xl-8\" }\nconst _hoisted_9 = { class: \"chart-right\" }\nconst _hoisted_10 = { class: \"row\" }\nconst _hoisted_11 = { class: \"col-xl-12\" }\nconst _hoisted_12 = { class: \"card-body p-0\" }\nconst _hoisted_13 = { class: \"activity-wrap\" }\nconst _hoisted_14 = { id: \"activity-chart\" }\nconst _hoisted_15 = { class: \"col-xl-4 p-0\" }\nconst _hoisted_16 = { class: \"row g-sm-3 g-2 mt-0\" }\nconst _hoisted_17 = { class: \"light-card balance-card\" }\nconst _hoisted_18 = { class: \"f-light\" }\nconst _hoisted_19 = { class: \"mt-1 m-b-0\" }\nconst _hoisted_20 = { class: \"badge badge-light-success rounded-pill ms-1\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _hoisted_5,\n          _createVNode(_component_DropDown1)\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_6, [\n        _createElementVNode(\"div\", _hoisted_7, [\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createElementVNode(\"div\", _hoisted_9, [\n              _createElementVNode(\"div\", _hoisted_10, [\n                _createElementVNode(\"div\", _hoisted_11, [\n                  _createElementVNode(\"div\", _hoisted_12, [\n                    _createElementVNode(\"div\", _hoisted_13, [\n                      _createElementVNode(\"div\", _hoisted_14, [\n                        _createVNode(_component_apexchart, {\n                          height: \"215\",\n                          type: \"bar\",\n                          options: $data.onlineDashboard.options2,\n                          series: $data.onlineDashboard.series2\n                        }, null, 8, [\"options\", \"series\"])\n                      ])\n                    ])\n                  ])\n                ])\n              ])\n            ])\n          ]),\n          _createElementVNode(\"div\", _hoisted_15, [\n            _createElementVNode(\"div\", _hoisted_16, [\n              (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.activirtyHours, (activirtyhous) => {\n                return (_openBlock(), _createElementBlock(\"div\", {\n                  class: \"col-xl-12 col-md-6 col-sm-4\",\n                  key: activirtyhous\n                }, [\n                  _createElementVNode(\"div\", _hoisted_17, [\n                    _createElementVNode(\"div\", null, [\n                      _createElementVNode(\"span\", _hoisted_18, _toDisplayString(activirtyhous.title), 1),\n                      _createElementVNode(\"h6\", _hoisted_19, [\n                        _createTextVNode(_toDisplayString(activirtyhous.inNumber), 1),\n                        _createElementVNode(\"span\", _hoisted_20, _toDisplayString(activirtyhous.inPercentage), 1)\n                      ])\n                    ])\n                  ])\n                ]))\n              }), 128))\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825874,
+      "end": 1700848825876,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825876,
+      "end": 1700848825876,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825876,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825877,
+      "end": 1700848825877,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825877,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825879,
+      "end": 1700848825879,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825879,
+      "end": 1700848825880,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825880,
+      "end": 1700848825880,
+      "order": "normal"
+    }
+  ]
+}

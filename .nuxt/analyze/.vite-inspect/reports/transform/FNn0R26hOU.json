@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/learningOverviewCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-5 col-ed-7 col-xl-7 box-col-7\">\n        <div class=\"card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">\n                        Learning Overview<span class=\"f-14 f-w-500 ms-1 f-light\">(75% activity growth)</span>\n                    </h5>\n                    <div class=\"card-header-right-icon\">\n                        <div class=\"dropdown icon-dropdown\">\n                            <button class=\"btn dropdown-toggle\" id=\"learningButton\" type=\"button\" data-bs-toggle=\"dropdown\"\n                                aria-expanded=\"false\">\n                                <i class=\"icon-more-alt\"></i>\n                            </button>\n                            <div class=\"dropdown-menu dropdown-menu-end\" aria-labelledby=\"learningButton\">\n                                <a class=\"dropdown-item\" href=\"#\">Today</a><a class=\"dropdown-item\" href=\"#\">Tomorrow</a><a\n                                    class=\"dropdown-item\" href=\"#\">Yesterday</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <div class=\"learning-wrap\">\n                    <div id=\"learning-chart\">\n                        <apexchart height=\"280\" type=\"line\" :options=\"onlineDashboard.options1\"\n                            :series=\"onlineDashboard.series1\"></apexchart>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nexport default {\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n</script>\n    ",
+      "start": 1700848825661,
+      "end": 1700848825858,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825858,
+      "end": 1700848825858,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825858,
+      "end": 1700848825859,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825859,
+      "end": 1700848825859,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825859,
+      "end": 1700848825859,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825859,
+      "end": 1700848825859,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825859,
+      "end": 1700848825859,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825859,
+      "end": 1700848825859,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nconst _sfc_main = {\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-5 col-ed-7 col-xl-7 box-col-7\" }\nconst _hoisted_2 = { class: \"card\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"card-header card-no-border\\\"><div class=\\\"header-top\\\"><h5 class=\\\"m-0\\\"> Learning Overview<span class=\\\"f-14 f-w-500 ms-1 f-light\\\">(75% activity growth)</span></h5><div class=\\\"card-header-right-icon\\\"><div class=\\\"dropdown icon-dropdown\\\"><button class=\\\"btn dropdown-toggle\\\" id=\\\"learningButton\\\" type=\\\"button\\\" data-bs-toggle=\\\"dropdown\\\" aria-expanded=\\\"false\\\"><i class=\\\"icon-more-alt\\\"></i></button><div class=\\\"dropdown-menu dropdown-menu-end\\\" aria-labelledby=\\\"learningButton\\\"><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Today</a><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Tomorrow</a><a class=\\\"dropdown-item\\\" href=\\\"#\\\">Yesterday</a></div></div></div></div></div>\", 1)\nconst _hoisted_4 = { class: \"card-body pt-0\" }\nconst _hoisted_5 = { class: \"learning-wrap\" }\nconst _hoisted_6 = { id: \"learning-chart\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createElementVNode(\"div\", _hoisted_6, [\n            _createVNode(_component_apexchart, {\n              height: \"280\",\n              type: \"line\",\n              options: $data.onlineDashboard.options1,\n              series: $data.onlineDashboard.series1\n            }, null, 8, [\"options\", \"series\"])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825859,
+      "end": 1700848825861,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825861,
+      "end": 1700848825861,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825861,
+      "end": 1700848825861,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825861,
+      "end": 1700848825861,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825861,
+      "end": 1700848825861,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825861,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825862,
+      "end": 1700848825862,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825862,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825863,
+      "end": 1700848825863,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825863,
+      "end": 1700848825864,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825864,
+      "end": 1700848825864,
+      "order": "normal"
+    }
+  ]
+}

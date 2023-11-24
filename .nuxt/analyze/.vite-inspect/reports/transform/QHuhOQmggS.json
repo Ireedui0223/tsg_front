@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/vue3-animate-onscroll/lib/scroll-animate.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "var __assign = (this && this.__assign) || function () {\r\n    __assign = Object.assign || function(t) {\r\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\r\n            s = arguments[i];\r\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\r\n                t[p] = s[p];\r\n        }\r\n        return t;\r\n    };\r\n    return __assign.apply(this, arguments);\r\n};\r\nexport default (function () {\r\n    var getClientHeight = function () { return document.documentElement.clientHeight; };\r\n    var isInScrollView = function (_a) {\r\n        var top = _a.top, bottom = _a.bottom;\r\n        return top < getClientHeight() && bottom > 0;\r\n    };\r\n    var isDirectionAgnostic = function (params) { return typeof params === \"string\"; };\r\n    var isBiDirectional = function (params) {\r\n        return params.down && params.up;\r\n    };\r\n    var hasBeenApplied = function (current, prev) {\r\n        if (current === void 0) { current = \"\"; }\r\n        if (prev === void 0) { prev = \"\"; }\r\n        return current.trim() !== prev.trim();\r\n    };\r\n    var shouldResetAnimation = function (_a) {\r\n        var params = _a.params, isUpwards = _a.isUpwards, repeat = _a.repeat;\r\n        return repeat && ((isUpwards && params.down) || (!isUpwards && params.up));\r\n    };\r\n    var applyAnimationClass = function (el, current, newClass) {\r\n        if (newClass === void 0) { newClass = \"\"; }\r\n        return (el.className = (current + \" \" + newClass).trim());\r\n    };\r\n    return {\r\n        isInView: isInScrollView,\r\n        run: function (el, _a, _b) {\r\n            var params = _a.value, modifiers = _a.modifiers;\r\n            var isUpwards = _b.isUpwards, _c = _b.previousClassName, previousClassName = _c === void 0 ? \"\" : _c;\r\n            if (!this.isInView(el.getBoundingClientRect())) {\r\n                if (modifiers.repeat && isDirectionAgnostic(params)) {\r\n                    return applyAnimationClass(el, previousClassName);\r\n                }\r\n                return;\r\n            }\r\n            if (isDirectionAgnostic(params)) {\r\n                return applyAnimationClass(el, previousClassName, params);\r\n            }\r\n            if (modifiers.repeat ||\r\n                isBiDirectional(params) ||\r\n                !hasBeenApplied(el.className, previousClassName)) {\r\n                var animationClass = isUpwards ? params.up : params.down;\r\n                return applyAnimationClass(el, previousClassName, animationClass);\r\n            }\r\n            if (shouldResetAnimation(__assign({ params: params, isUpwards: isUpwards }, modifiers))) {\r\n                return applyAnimationClass(el, previousClassName);\r\n            }\r\n        },\r\n    };\r\n});\r\n",
+      "start": 1700848824411,
+      "end": 1700848824907,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824908,
+      "end": 1700848824908,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824908,
+      "end": 1700848824909,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824909,
+      "end": 1700848824909,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824909,
+      "end": 1700848824910,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824910,
+      "end": 1700848824910,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824910,
+      "end": 1700848824910,
+      "order": "normal"
+    }
+  ]
+}

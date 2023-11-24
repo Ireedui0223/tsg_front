@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/nextDay/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import addDays from \"../addDays/index.js\";\nimport getDay from \"../getDay/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name nextDay\n * @category Weekday Helpers\n * @summary When is the next day of the week?\n *\n * @description\n * When is the next day of the week? 0-6 the day of the week, 0 represents Sunday.\n *\n * @param {Date | number} date - the date to check\n * @param {Day} day - day of the week\n * @returns {Date} - the date is the next day of week\n * @throws {TypeError} - 2 arguments required\n *\n * @example\n * // When is the next Monday after Mar, 20, 2020?\n * const result = nextDay(new Date(2020, 2, 20), 1)\n * //=> Mon Mar 23 2020 00:00:00\n *\n * @example\n * // When is the next Tuesday after Mar, 21, 2020?\n * const result = nextDay(new Date(2020, 2, 21), 2)\n * //=> Tue Mar 24 2020 00:00:00\n */\nexport default function nextDay(date, day) {\n  requiredArgs(2, arguments);\n  var delta = day - getDay(date);\n  if (delta <= 0) delta += 7;\n  return addDays(date, delta);\n}",
+      "start": 1700848830228,
+      "end": 1700848830315,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830315,
+      "end": 1700848830315,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848830315,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848830316,
+      "end": 1700848830316,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848830317,
+      "end": 1700848830317,
+      "order": "normal"
+    }
+  ]
+}

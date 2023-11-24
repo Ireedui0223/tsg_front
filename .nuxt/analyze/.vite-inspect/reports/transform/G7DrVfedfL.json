@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/default/purchasesaleCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-auto col-xl-3 col-sm-6 box-col-6\">\n        <div class=\"row\">\n            <div class=\"col-xl-12\" v-for=\"puechaseSales in puechaseSalesDetails1\" :key=\"puechaseSales\">\n                <div class=\"card widget-1\">\n                    <div class=\"card-body\">\n                        <div class=\"widget-content\">\n                            <div :class=\"puechaseSales.widgetClass\">\n                                <div class=\"bg-round\">\n                                    <svg class=\"svg-fill\">\n                                        <use :xlink:href=\"getImgURL(puechaseSales.svgIcon1)\"></use>\n                                    </svg>\n                                    <svg class=\"half-circle svg-fill\">\n                                        <use :xlink:href=\"getImgURL(puechaseSales.svgIcon2)\"></use>\n                                    </svg>\n                                </div>\n                            </div>\n                            <div>\n                                <h4>{{ puechaseSales.number }}</h4>\n                                <span class=\"f-light\">\n                                    {{ puechaseSales.title }}\n                                </span>\n                            </div>\n                        </div>\n                        <div :class=\"puechaseSales.growthClass\">\n                            <i :class=\"puechaseSales.iconClass\"></i><span>{{ puechaseSales.growthNumber }}</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"col-xxl-auto col-xl-3 col-sm-6 box-col-6\">\n        <div class=\"row\">\n            <div class=\"col-xl-12\" v-for=\"puechaseSales in puechaseSalesDetails2\" :key=\"puechaseSales\">\n                <div class=\"card widget-1\">\n                    <div class=\"card-body\">\n                        <div class=\"widget-content\">\n                            <div :class=\"puechaseSales.widgetClass\">\n                                <div class=\"bg-round\">\n                                    <svg class=\"svg-fill\">\n                                        <use :xlink:href=\"getImgURL(puechaseSales.svgIcon1)\"></use>\n                                    </svg>\n                                    <svg class=\"half-circle svg-fill\">\n                                        <use :xlink:href=\"getImgURL(puechaseSales.svgIcon2)\"></use>\n                                    </svg>\n                                </div>\n                            </div>\n                            <div>\n                                <h4>{{ puechaseSales.number }}</h4>\n                                <span class=\"f-light\">\n                                    {{ puechaseSales.title }}\n                                </span>\n                            </div>\n                        </div>\n                        <div :class=\"puechaseSales.growthClass\">\n                            <i :class=\"puechaseSales.iconClass\"></i><span>{{ puechaseSales.growthNumber }}</span>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport {\n    puechaseSalesDetails1,\n    puechaseSalesDetails2\n} from \"@/data/dashboard/default.json\"\nexport default {\n    data() {\n        return {\n            puechaseSalesDetails1: puechaseSalesDetails1,\n            puechaseSalesDetails2: puechaseSalesDetails2\n        }\n    },\n    methods: {\n        getImgURL(path) {\n            return '/svg/icon-sprite.svg/' + `#${path}`\n        }\n    },\n}\n</script>\n    ",
+      "start": 1700848825563,
+      "end": 1700848825741,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825741,
+      "end": 1700848825741,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825741,
+      "end": 1700848825742,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825742,
+      "end": 1700848825742,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825742,
+      "end": 1700848825742,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825742,
+      "end": 1700848825742,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825742,
+      "end": 1700848825742,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825742,
+      "end": 1700848825742,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport {\n    puechaseSalesDetails1,\n    puechaseSalesDetails2\n} from \"@/data/dashboard/default.json\"\nconst _sfc_main = {\n    data() {\n        return {\n            puechaseSalesDetails1: puechaseSalesDetails1,\n            puechaseSalesDetails2: puechaseSalesDetails2\n        }\n    },\n    methods: {\n        getImgURL(path) {\n            return '/svg/icon-sprite.svg/' + `#${path}`\n        }\n    },\n}\n\nimport { renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, toDisplayString as _toDisplayString } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-auto col-xl-3 col-sm-6 box-col-6\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"card widget-1\" }\nconst _hoisted_4 = { class: \"card-body\" }\nconst _hoisted_5 = { class: \"widget-content\" }\nconst _hoisted_6 = { class: \"bg-round\" }\nconst _hoisted_7 = { class: \"svg-fill\" }\nconst _hoisted_8 = [\"xlink:href\"]\nconst _hoisted_9 = { class: \"half-circle svg-fill\" }\nconst _hoisted_10 = [\"xlink:href\"]\nconst _hoisted_11 = { class: \"f-light\" }\nconst _hoisted_12 = { class: \"col-xxl-auto col-xl-3 col-sm-6 box-col-6\" }\nconst _hoisted_13 = { class: \"row\" }\nconst _hoisted_14 = { class: \"card widget-1\" }\nconst _hoisted_15 = { class: \"card-body\" }\nconst _hoisted_16 = { class: \"widget-content\" }\nconst _hoisted_17 = { class: \"bg-round\" }\nconst _hoisted_18 = { class: \"svg-fill\" }\nconst _hoisted_19 = [\"xlink:href\"]\nconst _hoisted_20 = { class: \"half-circle svg-fill\" }\nconst _hoisted_21 = [\"xlink:href\"]\nconst _hoisted_22 = { class: \"f-light\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(_Fragment, null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"div\", _hoisted_2, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.puechaseSalesDetails1, (puechaseSales) => {\n          return (_openBlock(), _createElementBlock(\"div\", {\n            class: \"col-xl-12\",\n            key: puechaseSales\n          }, [\n            _createElementVNode(\"div\", _hoisted_3, [\n              _createElementVNode(\"div\", _hoisted_4, [\n                _createElementVNode(\"div\", _hoisted_5, [\n                  _createElementVNode(\"div\", {\n                    class: _normalizeClass(puechaseSales.widgetClass)\n                  }, [\n                    _createElementVNode(\"div\", _hoisted_6, [\n                      (_openBlock(), _createElementBlock(\"svg\", _hoisted_7, [\n                        _createElementVNode(\"use\", {\n                          \"xlink:href\": $options.getImgURL(puechaseSales.svgIcon1)\n                        }, null, 8, _hoisted_8)\n                      ])),\n                      (_openBlock(), _createElementBlock(\"svg\", _hoisted_9, [\n                        _createElementVNode(\"use\", {\n                          \"xlink:href\": $options.getImgURL(puechaseSales.svgIcon2)\n                        }, null, 8, _hoisted_10)\n                      ]))\n                    ])\n                  ], 2),\n                  _createElementVNode(\"div\", null, [\n                    _createElementVNode(\"h4\", null, _toDisplayString(puechaseSales.number), 1),\n                    _createElementVNode(\"span\", _hoisted_11, _toDisplayString(puechaseSales.title), 1)\n                  ])\n                ]),\n                _createElementVNode(\"div\", {\n                  class: _normalizeClass(puechaseSales.growthClass)\n                }, [\n                  _createElementVNode(\"i\", {\n                    class: _normalizeClass(puechaseSales.iconClass)\n                  }, null, 2),\n                  _createElementVNode(\"span\", null, _toDisplayString(puechaseSales.growthNumber), 1)\n                ], 2)\n              ])\n            ])\n          ]))\n        }), 128))\n      ])\n    ]),\n    _createElementVNode(\"div\", _hoisted_12, [\n      _createElementVNode(\"div\", _hoisted_13, [\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.puechaseSalesDetails2, (puechaseSales) => {\n          return (_openBlock(), _createElementBlock(\"div\", {\n            class: \"col-xl-12\",\n            key: puechaseSales\n          }, [\n            _createElementVNode(\"div\", _hoisted_14, [\n              _createElementVNode(\"div\", _hoisted_15, [\n                _createElementVNode(\"div\", _hoisted_16, [\n                  _createElementVNode(\"div\", {\n                    class: _normalizeClass(puechaseSales.widgetClass)\n                  }, [\n                    _createElementVNode(\"div\", _hoisted_17, [\n                      (_openBlock(), _createElementBlock(\"svg\", _hoisted_18, [\n                        _createElementVNode(\"use\", {\n                          \"xlink:href\": $options.getImgURL(puechaseSales.svgIcon1)\n                        }, null, 8, _hoisted_19)\n                      ])),\n                      (_openBlock(), _createElementBlock(\"svg\", _hoisted_20, [\n                        _createElementVNode(\"use\", {\n                          \"xlink:href\": $options.getImgURL(puechaseSales.svgIcon2)\n                        }, null, 8, _hoisted_21)\n                      ]))\n                    ])\n                  ], 2),\n                  _createElementVNode(\"div\", null, [\n                    _createElementVNode(\"h4\", null, _toDisplayString(puechaseSales.number), 1),\n                    _createElementVNode(\"span\", _hoisted_22, _toDisplayString(puechaseSales.title), 1)\n                  ])\n                ]),\n                _createElementVNode(\"div\", {\n                  class: _normalizeClass(puechaseSales.growthClass)\n                }, [\n                  _createElementVNode(\"i\", {\n                    class: _normalizeClass(puechaseSales.iconClass)\n                  }, null, 2),\n                  _createElementVNode(\"span\", null, _toDisplayString(puechaseSales.growthNumber), 1)\n                ], 2)\n              ])\n            ])\n          ]))\n        }), 128))\n      ])\n    ])\n  ], 64))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825742,
+      "end": 1700848825746,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825746,
+      "end": 1700848825746,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825746,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825747,
+      "end": 1700848825747,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825747,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825750,
+      "end": 1700848825750,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825750,
+      "end": 1700848825751,
+      "order": "normal"
+    }
+  ]
+}

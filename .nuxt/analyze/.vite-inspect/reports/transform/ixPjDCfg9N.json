@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/differenceInCalendarWeeks/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import startOfWeek from \"../startOfWeek/index.js\";\nimport getTimezoneOffsetInMilliseconds from \"../_lib/getTimezoneOffsetInMilliseconds/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\nvar MILLISECONDS_IN_WEEK = 604800000;\n\n/**\n * @name differenceInCalendarWeeks\n * @category Week Helpers\n * @summary Get the number of calendar weeks between the given dates.\n *\n * @description\n * Get the number of calendar weeks between the given dates.\n *\n * @param {Date|Number} dateLeft - the later date\n * @param {Date|Number} dateRight - the earlier date\n * @param {Object} [options] - an object with options.\n * @param {Locale} [options.locale=defaultLocale] - the locale object. See [Locale]{@link https://date-fns.org/docs/Locale}\n * @param {0|1|2|3|4|5|6} [options.weekStartsOn=0] - the index of the first day of the week (0 - Sunday)\n * @returns {Number} the number of calendar weeks\n * @throws {TypeError} 2 arguments required\n * @throws {RangeError} `options.weekStartsOn` must be between 0 and 6\n *\n * @example\n * // How many calendar weeks are between 5 July 2014 and 20 July 2014?\n * const result = differenceInCalendarWeeks(\n *   new Date(2014, 6, 20),\n *   new Date(2014, 6, 5)\n * )\n * //=> 3\n *\n * @example\n * // If the week starts on Monday,\n * // how many calendar weeks are between 5 July 2014 and 20 July 2014?\n * const result = differenceInCalendarWeeks(\n *   new Date(2014, 6, 20),\n *   new Date(2014, 6, 5),\n *   { weekStartsOn: 1 }\n * )\n * //=> 2\n */\nexport default function differenceInCalendarWeeks(dirtyDateLeft, dirtyDateRight, options) {\n  requiredArgs(2, arguments);\n  var startOfWeekLeft = startOfWeek(dirtyDateLeft, options);\n  var startOfWeekRight = startOfWeek(dirtyDateRight, options);\n  var timestampLeft = startOfWeekLeft.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekLeft);\n  var timestampRight = startOfWeekRight.getTime() - getTimezoneOffsetInMilliseconds(startOfWeekRight);\n\n  // Round the number of days to the nearest integer\n  // because the number of milliseconds in a week is not constant\n  // (e.g. it's different in the week of the daylight saving time clock shift)\n  return Math.round((timestampLeft - timestampRight) / MILLISECONDS_IN_WEEK);\n}",
+      "start": 1700848829546,
+      "end": 1700848829649,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829650,
+      "end": 1700848829650,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829650,
+      "end": 1700848829651,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829651,
+      "end": 1700848829651,
+      "order": "normal"
+    }
+  ]
+}

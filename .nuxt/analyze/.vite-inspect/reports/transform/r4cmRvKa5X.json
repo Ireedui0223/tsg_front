@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/parse/_lib/parsers/ISOTimezoneParser.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import _classCallCheck from \"@babel/runtime/helpers/esm/classCallCheck\";\nimport _createClass from \"@babel/runtime/helpers/esm/createClass\";\nimport _assertThisInitialized from \"@babel/runtime/helpers/esm/assertThisInitialized\";\nimport _inherits from \"@babel/runtime/helpers/esm/inherits\";\nimport _createSuper from \"@babel/runtime/helpers/esm/createSuper\";\nimport _defineProperty from \"@babel/runtime/helpers/esm/defineProperty\";\nimport { Parser } from \"../Parser.js\";\nimport { timezonePatterns } from \"../constants.js\";\nimport { parseTimezonePattern } from \"../utils.js\"; // Timezone (ISO-8601)\nexport var ISOTimezoneParser = /*#__PURE__*/function (_Parser) {\n  _inherits(ISOTimezoneParser, _Parser);\n  var _super = _createSuper(ISOTimezoneParser);\n  function ISOTimezoneParser() {\n    var _this;\n    _classCallCheck(this, ISOTimezoneParser);\n    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {\n      args[_key] = arguments[_key];\n    }\n    _this = _super.call.apply(_super, [this].concat(args));\n    _defineProperty(_assertThisInitialized(_this), \"priority\", 10);\n    _defineProperty(_assertThisInitialized(_this), \"incompatibleTokens\", ['t', 'T', 'X']);\n    return _this;\n  }\n  _createClass(ISOTimezoneParser, [{\n    key: \"parse\",\n    value: function parse(dateString, token) {\n      switch (token) {\n        case 'x':\n          return parseTimezonePattern(timezonePatterns.basicOptionalMinutes, dateString);\n        case 'xx':\n          return parseTimezonePattern(timezonePatterns.basic, dateString);\n        case 'xxxx':\n          return parseTimezonePattern(timezonePatterns.basicOptionalSeconds, dateString);\n        case 'xxxxx':\n          return parseTimezonePattern(timezonePatterns.extendedOptionalSeconds, dateString);\n        case 'xxx':\n        default:\n          return parseTimezonePattern(timezonePatterns.extended, dateString);\n      }\n    }\n  }, {\n    key: \"set\",\n    value: function set(date, flags, value) {\n      if (flags.timestampIsSet) {\n        return date;\n      }\n      return new Date(date.getTime() - value);\n    }\n  }]);\n  return ISOTimezoneParser;\n}(Parser);",
+      "start": 1700848831397,
+      "end": 1700848831564,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848831564,
+      "end": 1700848831564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848831565,
+      "end": 1700848831565,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848831565,
+      "end": 1700848831566,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848831566,
+      "end": 1700848831566,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848831566,
+      "end": 1700848831567,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848831567,
+      "end": 1700848831567,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848831567,
+      "end": 1700848831567,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848831567,
+      "end": 1700848831567,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848831567,
+      "end": 1700848831567,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848831567,
+      "end": 1700848831567,
+      "order": "normal"
+    }
+  ]
+}

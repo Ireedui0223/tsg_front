@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/date-fns/esm/formatDistanceToNowStrict/index.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import formatDistanceStrict from \"../formatDistanceStrict/index.js\";\nimport requiredArgs from \"../_lib/requiredArgs/index.js\";\n/**\n * @name formatDistanceToNowStrict\n * @category Common Helpers\n * @summary Return the distance between the given date and now in words.\n * @pure false\n *\n * @description\n * Return the distance between the given dates in words, using strict units.\n * This is like `formatDistance`, but does not use helpers like 'almost', 'over',\n * 'less than' and the like.\n *\n * | Distance between dates | Result              |\n * |------------------------|---------------------|\n * | 0 ... 59 secs          | [0..59] seconds     |\n * | 1 ... 59 mins          | [1..59] minutes     |\n * | 1 ... 23 hrs           | [1..23] hours       |\n * | 1 ... 29 days          | [1..29] days        |\n * | 1 ... 11 months        | [1..11] months      |\n * | 1 ... N years          | [1..N]  years       |\n *\n * @param {Date|Number} date - the given date\n * @param {Object} [options] - an object with options.\n * @param {Boolean} [options.addSuffix=false] - result indicates if the second date is earlier or later than the first\n * @param {'second'|'minute'|'hour'|'day'|'month'|'year'} [options.unit] - if specified, will force a unit\n * @param {'floor'|'ceil'|'round'} [options.roundingMethod='round'] - which way to round partial units\n * @param {Locale} [options.locale=defaultLocale] - the locale object. See [Locale]{@link https://date-fns.org/docs/Locale}\n * @returns {String} the distance in words\n * @throws {TypeError} 1 argument required\n * @throws {RangeError} `date` must not be Invalid Date\n * @throws {RangeError} `options.locale` must contain `formatDistance` property\n *\n * @example\n * // If today is 1 January 2015, what is the distance to 2 July 2014?\n * const result = formatDistanceToNowStrict(\n *   new Date(2014, 6, 2)\n * )\n * //=> '6 months'\n *\n * @example\n * // If now is 1 January 2015 00:00:00,\n * // what is the distance to 1 January 2015 00:00:15, including seconds?\n * const result = formatDistanceToNowStrict(\n *   new Date(2015, 0, 1, 0, 0, 15)\n * )\n * //=> '15 seconds'\n *\n * @example\n * // If today is 1 January 2015,\n * // what is the distance to 1 January 2016, with a suffix?\n * const result = formatDistanceToNowStrict(\n *   new Date(2016, 0, 1),\n *   {addSuffix: true}\n * )\n * //=> 'in 1 year'\n *\n * @example\n * // If today is 28 January 2015,\n * // what is the distance to 1 January 2015, in months, rounded up??\n * const result = formatDistanceToNowStrict(new Date(2015, 0, 1), {\n *   unit: 'month',\n *   roundingMethod: 'ceil'\n * })\n * //=> '1 month'\n *\n * @example\n * // If today is 1 January 2015,\n * // what is the distance to 1 January 2016 in Esperanto?\n * const eoLocale = require('date-fns/locale/eo')\n * const result = formatDistanceToNowStrict(\n *   new Date(2016, 0, 1),\n *   {locale: eoLocale}\n * )\n * //=> '1 jaro'\n */\nexport default function formatDistanceToNowStrict(dirtyDate, options) {\n  requiredArgs(1, arguments);\n  return formatDistanceStrict(dirtyDate, Date.now(), options);\n}",
+      "start": 1700848829735,
+      "end": 1700848829835,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829835,
+      "end": 1700848829835,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829836,
+      "end": 1700848829836,
+      "order": "normal"
+    }
+  ]
+}

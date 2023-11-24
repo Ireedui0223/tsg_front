@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/online/upcomingScheduleCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-4 col-ed-6 col-md-7 box-col-7\">\n        <div class=\"card schedule-card\">\n            <div class=\"card-header card-no-border\">\n                <div class=\"header-top\">\n                    <h5 class=\"m-0\">Upcoming Schedule</h5>\n                    <div class=\"card-header-right-icon\">\n                        <a class=\"btn badge-light-primary\" href=\"#\">+ Create</a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"card-body pt-0\">\n                <ul class=\"schedule-list\">\n                    <li class=\"primary\">\n                        <img src=\"/images/dashboard/user/4.jpg\" alt=\"profile\" />\n                        <div>\n                            <h6 class=\"mb-1\">Web Design</h6>\n                            <ul>\n                                <li class=\"f-light\">\n                                    <svg class=\"fill-icon f-light\">\n                                        <use href=\"@/assets/svg/icon-sprite.svg#bag\"></use>\n                                    </svg><span>January 3, 2022</span>\n                                </li>\n                                <li class=\"f-light\">\n                                    <svg class=\"fill-icon f-success\">\n                                        <use href=\"@/assets/svg/icon-sprite.svg#clock\"></use>\n                                    </svg><span> 09.00 - 12.00 AM</span>\n                                </li>\n                            </ul>\n                        </div>\n                    </li>\n                    <li class=\"warning\">\n                        <img src=\"/images/dashboard/user/2.jpg\" alt=\"profile\" />\n                        <div>\n                            <h6 class=\"mb-1\">UI/UX Design</h6>\n                            <ul>\n                                <li class=\"f-light\">\n                                    <svg class=\"fill-icon f-light\">\n                                        <use href=\"@/assets/svg/icon-sprite.svg#bag\"></use>\n                                    </svg><span>Febuary 10, 2022</span>\n                                </li>\n                                <li class=\"f-light\">\n                                    <svg class=\"fill-icon f-success\">\n                                        <use href=\"@/assets/svg/icon-sprite.svg#clock\"></use>\n                                    </svg><span> 11.00 - 1.00 PM</span>\n                                </li>\n                            </ul>\n                        </div>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nexport default {\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n</script>\n    ",
+      "start": 1700848825702,
+      "end": 1700848825897,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825897,
+      "end": 1700848825897,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport \"@vuepic/vue-datepicker/dist/main.css\";\nimport {\n    onlineDashboard\n} from \"@/data/comon\";\n\nconst _sfc_main = {\n    data() {\n        return {\n            date1: new Date(),\n            onlineDashboard: onlineDashboard,\n        };\n    },\n};\n\nimport { createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/images/dashboard/user/4.jpg'\nimport _imports_1 from '@/assets/svg/icon-sprite.svg'\nimport _imports_2 from '/images/dashboard/user/2.jpg'\n\n\nconst _hoisted_1 = _imports_1 + '#bag'\nconst _hoisted_2 = _imports_1 + '#clock'\nconst _hoisted_3 = { class: \"col-xxl-4 col-ed-6 col-md-7 box-col-7\" }\nconst _hoisted_4 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"card schedule-card\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header card-no-border\" }, [\n    /*#__PURE__*/_createElementVNode(\"div\", { class: \"header-top\" }, [\n      /*#__PURE__*/_createElementVNode(\"h5\", { class: \"m-0\" }, \"Upcoming Schedule\"),\n      /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header-right-icon\" }, [\n        /*#__PURE__*/_createElementVNode(\"a\", {\n          class: \"btn badge-light-primary\",\n          href: \"#\"\n        }, \"+ Create\")\n      ])\n    ])\n  ]),\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-body pt-0\" }, [\n    /*#__PURE__*/_createElementVNode(\"ul\", { class: \"schedule-list\" }, [\n      /*#__PURE__*/_createElementVNode(\"li\", { class: \"primary\" }, [\n        /*#__PURE__*/_createElementVNode(\"img\", {\n          src: _imports_0,\n          alt: \"profile\"\n        }),\n        /*#__PURE__*/_createElementVNode(\"div\", null, [\n          /*#__PURE__*/_createElementVNode(\"h6\", { class: \"mb-1\" }, \"Web Design\"),\n          /*#__PURE__*/_createElementVNode(\"ul\", null, [\n            /*#__PURE__*/_createElementVNode(\"li\", { class: \"f-light\" }, [\n              /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n                /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n              ]),\n              /*#__PURE__*/_createElementVNode(\"span\", null, \"January 3, 2022\")\n            ]),\n            /*#__PURE__*/_createElementVNode(\"li\", { class: \"f-light\" }, [\n              /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-success\" }, [\n                /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n              ]),\n              /*#__PURE__*/_createElementVNode(\"span\", null, \" 09.00 - 12.00 AM\")\n            ])\n          ])\n        ])\n      ]),\n      /*#__PURE__*/_createElementVNode(\"li\", { class: \"warning\" }, [\n        /*#__PURE__*/_createElementVNode(\"img\", {\n          src: _imports_2,\n          alt: \"profile\"\n        }),\n        /*#__PURE__*/_createElementVNode(\"div\", null, [\n          /*#__PURE__*/_createElementVNode(\"h6\", { class: \"mb-1\" }, \"UI/UX Design\"),\n          /*#__PURE__*/_createElementVNode(\"ul\", null, [\n            /*#__PURE__*/_createElementVNode(\"li\", { class: \"f-light\" }, [\n              /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-light\" }, [\n                /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_1 })\n              ]),\n              /*#__PURE__*/_createElementVNode(\"span\", null, \"Febuary 10, 2022\")\n            ]),\n            /*#__PURE__*/_createElementVNode(\"li\", { class: \"f-light\" }, [\n              /*#__PURE__*/_createElementVNode(\"svg\", { class: \"fill-icon f-success\" }, [\n                /*#__PURE__*/_createElementVNode(\"use\", { href: _hoisted_2 })\n              ]),\n              /*#__PURE__*/_createElementVNode(\"span\", null, \" 11.00 - 1.00 PM\")\n            ])\n          ])\n        ])\n      ])\n    ])\n  ])\n], -1)\nconst _hoisted_5 = [\n  _hoisted_4\n]\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_3, _hoisted_5))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825897,
+      "end": 1700848825900,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825900,
+      "end": 1700848825900,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825901,
+      "end": 1700848825901,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825901,
+      "end": 1700848825901,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825901,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825902,
+      "end": 1700848825902,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825902,
+      "end": 1700848825903,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825903,
+      "end": 1700848825903,
+      "order": "normal"
+    }
+  ]
+}

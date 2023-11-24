@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/facebookCampaignCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-lg-12 col-sm-6\">\n        <div class=\"card follower-wrap\">\n            <div class=\"card-header card-no-border\">\n                <h5 class=\"mb-1\">Facebook Campaign</h5>\n                <div class=\"d-inline-block badge badge-light-success rounded-pill\">\n                    Active\n                </div>\n            </div>\n            <div class=\"card-body pt-0 papernote-wrap\">\n                <ul class=\"campaign-list\">\n                    <li>\n                        <div class=\"campaign-box\">\n                            <h5 class=\"mb-1\">1,897</h5>\n                            <span class=\"f-light\">Followers today</span>\n                        </div>\n                    </li>\n                    <li>\n                        <div class=\"campaign-box\">\n                            <h5 class=\"mb-1\">50,000</h5>\n                            <span class=\"f-light\">Followers goals</span>\n                        </div>\n                    </li>\n                </ul>\n                <div class=\"customers\">\n                    <ul>\n                        <li class=\"d-inline-block\" v-for=\"item in users\" :key=\"item\">\n                            <img class=\"img-40 rounded-circle\" :src=\"getImgURL(item.image)\" alt=\"user\" />\n                        </li>\n                        <li class=\"d-inline-block\">\n                            <div class=\"light-card\">\n                                <span class=\"f-w-500\">+5</span>\n                            </div>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n\n    \n    \n<script>\nimport {\n    socialDashboard\n} from \"@/data/comon\";\nimport {\n    users\n} from \"@/data/dashboard/social.json\"\n\nexport default {\n    data() {\n        return {\n            socialDashboard: socialDashboard,\n            users: users\n        };\n    },\n    methods: {\n        getImgURL(path) {\n            return '/images/dashboard/' + path\n        }\n    }\n};\n</script>\n",
+      "start": 1700848825807,
+      "end": 1700848825987,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825987,
+      "end": 1700848825987,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport {\n    socialDashboard\n} from \"@/data/comon\";\nimport {\n    users\n} from \"@/data/dashboard/social.json\"\n\nconst _sfc_main = {\n    data() {\n        return {\n            socialDashboard: socialDashboard,\n            users: users\n        };\n    },\n    methods: {\n        getImgURL(path) {\n            return '/images/dashboard/' + path\n        }\n    }\n};\n\nimport { createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-lg-12 col-sm-6\" }\nconst _hoisted_2 = { class: \"card follower-wrap\" }\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"div\", { class: \"card-header card-no-border\" }, [\n  /*#__PURE__*/_createElementVNode(\"h5\", { class: \"mb-1\" }, \"Facebook Campaign\"),\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"d-inline-block badge badge-light-success rounded-pill\" }, \" Active \")\n], -1)\nconst _hoisted_4 = { class: \"card-body pt-0 papernote-wrap\" }\nconst _hoisted_5 = /*#__PURE__*/_createStaticVNode(\"<ul class=\\\"campaign-list\\\"><li><div class=\\\"campaign-box\\\"><h5 class=\\\"mb-1\\\">1,897</h5><span class=\\\"f-light\\\">Followers today</span></div></li><li><div class=\\\"campaign-box\\\"><h5 class=\\\"mb-1\\\">50,000</h5><span class=\\\"f-light\\\">Followers goals</span></div></li></ul>\", 1)\nconst _hoisted_6 = { class: \"customers\" }\nconst _hoisted_7 = [\"src\"]\nconst _hoisted_8 = /*#__PURE__*/_createElementVNode(\"li\", { class: \"d-inline-block\" }, [\n  /*#__PURE__*/_createElementVNode(\"div\", { class: \"light-card\" }, [\n    /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-w-500\" }, \"+5\")\n  ])\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _hoisted_5,\n        _createElementVNode(\"div\", _hoisted_6, [\n          _createElementVNode(\"ul\", null, [\n            (_openBlock(true), _createElementBlock(_Fragment, null, _renderList($data.users, (item) => {\n              return (_openBlock(), _createElementBlock(\"li\", {\n                class: \"d-inline-block\",\n                key: item\n              }, [\n                _createElementVNode(\"img\", {\n                  class: \"img-40 rounded-circle\",\n                  src: $options.getImgURL(item.image),\n                  alt: \"user\"\n                }, null, 8, _hoisted_7)\n              ]))\n            }), 128)),\n            _hoisted_8\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825987,
+      "end": 1700848825990,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825990,
+      "end": 1700848825990,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825990,
+      "end": 1700848825990,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825990,
+      "end": 1700848825990,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825990,
+      "end": 1700848825990,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825990,
+      "end": 1700848825990,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825990,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825991,
+      "end": 1700848825991,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825991,
+      "end": 1700848825992,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825992,
+      "end": 1700848825992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825992,
+      "end": 1700848825992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825992,
+      "end": 1700848825992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825992,
+      "end": 1700848825992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825992,
+      "end": 1700848825993,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825993,
+      "end": 1700848825993,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825993,
+      "end": 1700848825993,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825993,
+      "end": 1700848825993,
+      "order": "normal"
+    }
+  ]
+}

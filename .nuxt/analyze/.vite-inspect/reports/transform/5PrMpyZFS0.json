@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/users/profile/tourProfile.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-sm-12\">\n    <div class=\"card hovercard text-center\">\n      <div\n        class=\"cardheader\"\n        style=\"background-size: cover; background-position: 10%; height: 470px\"\n        :style=\"{\n          backgroundImage: 'url(' + '/images/other-images/bg-profile.png' + ')'\n        }\"\n      ></div>\n      <div class=\"user-image\">\n        <div class=\"avatar\">\n          <img\n            id=\"profile-tour\"\n            alt=\"\"\n            src=\"https://cdn3.emoji.gg/emojis/7715-hello.png\"\n            data-intro=\"This is Profile image\"\n          />\n        </div>\n        <div class=\"icon-wrapper\">\n          <i\n            id=\"update-profile-tour\"\n            class=\"icofont icofont-pencil-alt-5\"\n            data-intro=\"Change Profile image here\"\n          ></i>\n        </div>\n      </div>\n      <div class=\"info\">\n        <div\n          class=\"row\"\n          data-intro=\"This is the your details\"\n          id=\"info-bar-tour\"\n        >\n          <div class=\"col-sm-6 col-lg-4 order-sm-1 order-xl-0\">\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <div class=\"ttl-info text-start\">\n                  <h6><i class=\"fa fa-envelope\"></i>   Email</h6>\n                  <span>Moogeeireedui@gmail.com</span>\n                </div>\n              </div>\n              <div class=\"col-md-6\">\n                <div class=\"ttl-info text-start ttl-sm-\">\n                  <h6><i class=\"fa fa-calendar\"></i>Төрсөн он сар өдөр</h6>\n                  <span>2002/02/23</span>\n                </div>\n              </div>\n            </div>\n          </div>\n          <div class=\"col-sm-12 col-lg-4 order-sm-0 order-xl-1\">\n            <div class=\"user-designation\">\n              <div class=\"title\">\n                <a\n                  target=\"_blank\"\n                  href=\"\"\n                >\n                  Мөнх-Ирээдүй\n                </a>\n              </div>\n              <div class=\"desc mt-2\">Програм хөгжүүлэгч</div>\n            </div>\n          </div>\n          <div class=\"col-sm-6 col-lg-4 order-sm-2 order-xl-2\">\n            <div class=\"row\">\n              <div class=\"col-md-6\">\n                <div class=\"ttl-info text-start ttl-xs-mt\">\n                  <h6><i class=\"fa fa-phone\"></i>Утасны дугаар</h6>\n                  <span>+975 91853040</span>\n                </div>\n              </div>\n              <div class=\"col-md-6\">\n                <div class=\"ttl-info text-start ttl-sm-\">\n                  <h6><i class=\"fa fa-location-arrow\"></i>Сургууль</h6>\n                  <span>МУИС</span>\n                </div>\n              </div>\n            </div>\n          </div>\n        </div>\n        <hr />\n        <div\n          class=\"social-media\"\n          data-intro=\"This is your Social details\"\n          id=\"social-bar-tour\"\n        >\n          <ul class=\"list-inline\">\n            <li class=\"list-inline-item\">\n              <a\n                href=\"https://www.facebook.com/\"\n                target=\"_blank\"\n                ><i class=\"fa fa-facebook\"></i\n              ></a>\n            </li>\n            <li class=\"list-inline-item\">\n              <a\n                href=\"https://accounts.google.com/\"\n                target=\"_blank\"\n                ><i class=\"fa fa-google-plus\"></i\n              ></a>\n            </li>\n            <li class=\"list-inline-item\">\n              <a\n                href=\"https://twitter.com/\"\n                target=\"_blank\"\n                ><i class=\"fa fa-twitter\"></i\n              ></a>\n            </li>\n            <li class=\"list-inline-item\">\n              <a\n                href=\"https://www.instagram.com/\"\n                target=\"_blank\"\n                ><i class=\"fa fa-instagram\"></i\n              ></a>\n            </li>\n            <li class=\"list-inline-item\">\n              <a\n                href=\"https://rss.app/\"\n                target=\"_blank\"\n                ><i class=\"fa fa-rss\"></i\n              ></a>\n            </li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n<script>\nexport default {};\n</script>\n",
+      "start": 1700848825877,
+      "end": 1700848826074,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848826074,
+      "end": 1700848826074,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nconst _sfc_main = {};\n\nimport { normalizeStyle as _normalizeStyle, createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createStaticVNode as _createStaticVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-sm-12\" }\nconst _hoisted_2 = { class: \"card hovercard text-center\" }\nconst _hoisted_3 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"user-image\\\"><div class=\\\"avatar\\\"><img id=\\\"profile-tour\\\" alt=\\\"\\\" src=\\\"https://cdn3.emoji.gg/emojis/7715-hello.png\\\" data-intro=\\\"This is Profile image\\\"></div><div class=\\\"icon-wrapper\\\"><i id=\\\"update-profile-tour\\\" class=\\\"icofont icofont-pencil-alt-5\\\" data-intro=\\\"Change Profile image here\\\"></i></div></div><div class=\\\"info\\\"><div class=\\\"row\\\" data-intro=\\\"This is the your details\\\" id=\\\"info-bar-tour\\\"><div class=\\\"col-sm-6 col-lg-4 order-sm-1 order-xl-0\\\"><div class=\\\"row\\\"><div class=\\\"col-md-6\\\"><div class=\\\"ttl-info text-start\\\"><h6><i class=\\\"fa fa-envelope\\\"></i>   Email</h6><span>Moogeeireedui@gmail.com</span></div></div><div class=\\\"col-md-6\\\"><div class=\\\"ttl-info text-start ttl-sm-\\\"><h6><i class=\\\"fa fa-calendar\\\"></i>Төрсөн он сар өдөр</h6><span>2002/02/23</span></div></div></div></div><div class=\\\"col-sm-12 col-lg-4 order-sm-0 order-xl-1\\\"><div class=\\\"user-designation\\\"><div class=\\\"title\\\"><a target=\\\"_blank\\\" href=\\\"\\\"> Мөнх-Ирээдүй </a></div><div class=\\\"desc mt-2\\\">Програм хөгжүүлэгч</div></div></div><div class=\\\"col-sm-6 col-lg-4 order-sm-2 order-xl-2\\\"><div class=\\\"row\\\"><div class=\\\"col-md-6\\\"><div class=\\\"ttl-info text-start ttl-xs-mt\\\"><h6><i class=\\\"fa fa-phone\\\"></i>Утасны дугаар</h6><span>+975 91853040</span></div></div><div class=\\\"col-md-6\\\"><div class=\\\"ttl-info text-start ttl-sm-\\\"><h6><i class=\\\"fa fa-location-arrow\\\"></i>Сургууль</h6><span>МУИС</span></div></div></div></div></div><hr><div class=\\\"social-media\\\" data-intro=\\\"This is your Social details\\\" id=\\\"social-bar-tour\\\"><ul class=\\\"list-inline\\\"><li class=\\\"list-inline-item\\\"><a href=\\\"https://www.facebook.com/\\\" target=\\\"_blank\\\"><i class=\\\"fa fa-facebook\\\"></i></a></li><li class=\\\"list-inline-item\\\"><a href=\\\"https://accounts.google.com/\\\" target=\\\"_blank\\\"><i class=\\\"fa fa-google-plus\\\"></i></a></li><li class=\\\"list-inline-item\\\"><a href=\\\"https://twitter.com/\\\" target=\\\"_blank\\\"><i class=\\\"fa fa-twitter\\\"></i></a></li><li class=\\\"list-inline-item\\\"><a href=\\\"https://www.instagram.com/\\\" target=\\\"_blank\\\"><i class=\\\"fa fa-instagram\\\"></i></a></li><li class=\\\"list-inline-item\\\"><a href=\\\"https://rss.app/\\\" target=\\\"_blank\\\"><i class=\\\"fa fa-rss\\\"></i></a></li></ul></div></div>\", 2)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", {\n        class: \"cardheader\",\n        style: _normalizeStyle([{\"background-size\":\"cover\",\"background-position\":\"10%\",\"height\":\"470px\"}, {\n          backgroundImage: 'url(' + '/images/other-images/bg-profile.png' + ')'\n        }])\n      }, null, 4),\n      _hoisted_3\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848826074,
+      "end": 1700848826077,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826077,
+      "end": 1700848826077,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826077,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826078,
+      "end": 1700848826078,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826078,
+      "end": 1700848826079,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826079,
+      "end": 1700848826079,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826079,
+      "end": 1700848826079,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826079,
+      "end": 1700848826080,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826080,
+      "end": 1700848826080,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826080,
+      "end": 1700848826080,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826080,
+      "end": 1700848826080,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826080,
+      "end": 1700848826080,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826080,
+      "end": 1700848826080,
+      "order": "normal"
+    }
+  ]
+}

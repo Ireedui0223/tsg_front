@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/apply/personal/birthdaySelect.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-form-label pt-0\">Birth Date</div>\n  <div class=\"col-sm-4 form-group mb-3\">\n    <select class=\"js-example-basic-single col-sm-12 job-select2 form-select\">\n      <optgroup label=\"Month\">\n        <option value=\"Jan\">January</option>\n        <option value=\"Feb\">February</option>\n        <option value=\"Mar\">March</option>\n        <option value=\"Apr\">April</option>\n        <option value=\"May\">May</option>\n        <option value=\"Jun\">June</option>\n        <option value=\"Jul\">July</option>\n        <option value=\"Aug\">August</option>\n        <option value=\"Sep\">September</option>\n        <option value=\"Oct\">October</option>\n        <option value=\"Nov\">November</option>\n        <option value=\"Dec\">December</option>\n      </optgroup>\n    </select>\n  </div>\n  <div class=\"col-sm-4 form-group mb-3\">\n    <select class=\"js-example-basic-single col-sm-12 job-select2 form-select\">\n      <optgroup label=\"Day\">\n        <option value=\"1\">1</option>\n        <option value=\"2\">2</option>\n        <option value=\"3\">3</option>\n        <option value=\"4\">4</option>\n        <option value=\"5\">5</option>\n        <option value=\"6\">6</option>\n        <option value=\"7\">7</option>\n        <option value=\"8\">8</option>\n        <option value=\"9\">9</option>\n        <option value=\"10\">10</option>\n        <option value=\"11\">11</option>\n        <option value=\"12\">12</option>\n        <option value=\"13\">13</option>\n        <option value=\"14\">14</option>\n        <option value=\"15\">15</option>\n        <option value=\"16\">16</option>\n        <option value=\"17\">17</option>\n        <option value=\"18\">18</option>\n        <option value=\"19\">19</option>\n        <option value=\"20\">20</option>\n        <option value=\"21\">21</option>\n        <option value=\"22\">22</option>\n        <option value=\"23\">23</option>\n        <option value=\"24\">24</option>\n        <option value=\"25\">25</option>\n        <option value=\"26\">26</option>\n        <option value=\"27\">27</option>\n        <option value=\"28\">28</option>\n        <option value=\"29\">29</option>\n        <option value=\"30\">30</option>\n        <option value=\"31\">31</option>\n      </optgroup>\n    </select>\n  </div>\n  <div class=\"col-sm-4 form-group mb-3\">\n    <select class=\"js-example-basic-single col-sm-12 job-select2 form-select\">\n      <optgroup label=\"Year\">\n        <option value=\"1985\">1985</option>\n        <option value=\"1986\">1986</option>\n        <option value=\"1987\">1987</option>\n        <option value=\"1988\">1988</option>\n        <option value=\"1989\">1989</option>\n        <option value=\"1990\">1990</option>\n        <option value=\"1991\">1991</option>\n        <option value=\"1992\">1992</option>\n        <option value=\"1993\">1993</option>\n        <option value=\"1994\">1994</option>\n        <option value=\"1995\">1995</option>\n        <option value=\"1996\">1996</option>\n        <option value=\"1997\">1997</option>\n        <option value=\"1998\">1998</option>\n        <option value=\"1999\">1999</option>\n        <option value=\"2000\">2000</option>\n        <option value=\"2001\">2001</option>\n        <option value=\"2002\">2002</option>\n        <option value=\"2003\">2003</option>\n        <option value=\"2004\">2004</option>\n        <option value=\"2005\">2005</option>\n        <option value=\"2006\">2006</option>\n        <option value=\"2007\">2007</option>\n        <option value=\"2008\">2008</option>\n        <option value=\"2009\">2009</option>\n        <option value=\"2010\">2010</option>\n        <option value=\"2011\">2011</option>\n        <option value=\"2012\">2012</option>\n        <option value=\"2013\">2013</option>\n        <option value=\"2014\">2014</option>\n        <option value=\"2015\">2015</option>\n      </optgroup>\n    </select>\n  </div>\n  <div class=\"row\">\n    <div class=\"col\">\n      <div class=\"form-group mb-3\">\n        <label class=\"form-label\" for=\"exampleFormControlInput4\">Phone Number:</label>\n        <input class=\"form-control\" id=\"exampleFormControlInput4\" type=\"email\" placeholder=\"Enter Phone no.\" />\n      </div>\n    </div>\n  </div>\n</template>",
+      "start": 1700848825854,
+      "end": 1700848826021,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848826021,
+      "end": 1700848826021,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848826021,
+      "end": 1700848826021,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848826022,
+      "end": 1700848826022,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848826022,
+      "end": 1700848826022,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848826022,
+      "end": 1700848826022,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848826022,
+      "end": 1700848826022,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848826022,
+      "end": 1700848826022,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { createElementVNode as _createElementVNode, createStaticVNode as _createStaticVNode } from \"vue\"\n\nconst _hoisted_1 = /*#__PURE__*/_createStaticVNode(\"<div class=\\\"col-form-label pt-0\\\">Birth Date</div><div class=\\\"col-sm-4 form-group mb-3\\\"><select class=\\\"js-example-basic-single col-sm-12 job-select2 form-select\\\"><optgroup label=\\\"Month\\\"><option value=\\\"Jan\\\">January</option><option value=\\\"Feb\\\">February</option><option value=\\\"Mar\\\">March</option><option value=\\\"Apr\\\">April</option><option value=\\\"May\\\">May</option><option value=\\\"Jun\\\">June</option><option value=\\\"Jul\\\">July</option><option value=\\\"Aug\\\">August</option><option value=\\\"Sep\\\">September</option><option value=\\\"Oct\\\">October</option><option value=\\\"Nov\\\">November</option><option value=\\\"Dec\\\">December</option></optgroup></select></div><div class=\\\"col-sm-4 form-group mb-3\\\"><select class=\\\"js-example-basic-single col-sm-12 job-select2 form-select\\\"><optgroup label=\\\"Day\\\"><option value=\\\"1\\\">1</option><option value=\\\"2\\\">2</option><option value=\\\"3\\\">3</option><option value=\\\"4\\\">4</option><option value=\\\"5\\\">5</option><option value=\\\"6\\\">6</option><option value=\\\"7\\\">7</option><option value=\\\"8\\\">8</option><option value=\\\"9\\\">9</option><option value=\\\"10\\\">10</option><option value=\\\"11\\\">11</option><option value=\\\"12\\\">12</option><option value=\\\"13\\\">13</option><option value=\\\"14\\\">14</option><option value=\\\"15\\\">15</option><option value=\\\"16\\\">16</option><option value=\\\"17\\\">17</option><option value=\\\"18\\\">18</option><option value=\\\"19\\\">19</option><option value=\\\"20\\\">20</option><option value=\\\"21\\\">21</option><option value=\\\"22\\\">22</option><option value=\\\"23\\\">23</option><option value=\\\"24\\\">24</option><option value=\\\"25\\\">25</option><option value=\\\"26\\\">26</option><option value=\\\"27\\\">27</option><option value=\\\"28\\\">28</option><option value=\\\"29\\\">29</option><option value=\\\"30\\\">30</option><option value=\\\"31\\\">31</option></optgroup></select></div><div class=\\\"col-sm-4 form-group mb-3\\\"><select class=\\\"js-example-basic-single col-sm-12 job-select2 form-select\\\"><optgroup label=\\\"Year\\\"><option value=\\\"1985\\\">1985</option><option value=\\\"1986\\\">1986</option><option value=\\\"1987\\\">1987</option><option value=\\\"1988\\\">1988</option><option value=\\\"1989\\\">1989</option><option value=\\\"1990\\\">1990</option><option value=\\\"1991\\\">1991</option><option value=\\\"1992\\\">1992</option><option value=\\\"1993\\\">1993</option><option value=\\\"1994\\\">1994</option><option value=\\\"1995\\\">1995</option><option value=\\\"1996\\\">1996</option><option value=\\\"1997\\\">1997</option><option value=\\\"1998\\\">1998</option><option value=\\\"1999\\\">1999</option><option value=\\\"2000\\\">2000</option><option value=\\\"2001\\\">2001</option><option value=\\\"2002\\\">2002</option><option value=\\\"2003\\\">2003</option><option value=\\\"2004\\\">2004</option><option value=\\\"2005\\\">2005</option><option value=\\\"2006\\\">2006</option><option value=\\\"2007\\\">2007</option><option value=\\\"2008\\\">2008</option><option value=\\\"2009\\\">2009</option><option value=\\\"2010\\\">2010</option><option value=\\\"2011\\\">2011</option><option value=\\\"2012\\\">2012</option><option value=\\\"2013\\\">2013</option><option value=\\\"2014\\\">2014</option><option value=\\\"2015\\\">2015</option></optgroup></select></div><div class=\\\"row\\\"><div class=\\\"col\\\"><div class=\\\"form-group mb-3\\\"><label class=\\\"form-label\\\" for=\\\"exampleFormControlInput4\\\">Phone Number:</label><input class=\\\"form-control\\\" id=\\\"exampleFormControlInput4\\\" type=\\\"email\\\" placeholder=\\\"Enter Phone no.\\\"></div></div></div>\", 5)\n\nfunction _sfc_render(_ctx, _cache) {\n  return _hoisted_1\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848826022,
+      "end": 1700848826027,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848826027,
+      "end": 1700848826027,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848826028,
+      "end": 1700848826028,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848826028,
+      "end": 1700848826029,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848826029,
+      "end": 1700848826029,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848826029,
+      "end": 1700848826029,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848826029,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848826030,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848826030,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848826030,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848826030,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848826030,
+      "end": 1700848826030,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848826031,
+      "end": 1700848826031,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848826031,
+      "end": 1700848826031,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848826031,
+      "end": 1700848826031,
+      "order": "normal"
+    }
+  ]
+}

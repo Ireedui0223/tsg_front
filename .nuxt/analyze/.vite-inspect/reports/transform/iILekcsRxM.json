@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/job/list/jobTab.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-xl-3 xl-40 box-col-12\">\n    <div class=\"md-sidebar\">\n      <div class=\"md-sidebar-aside job-sidebar\">\n        <div class=\"default-according style-1 faq-accordion job-accordion\">\n          <div\n            class=\"accordion\"\n            id=\"accordionExample\"\n          >\n            <jobfilter />\n            <!-- <jobtab2 /> -->\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n<script>\n// import jobtab2 from './jobTab2.vue';\nimport jobfilter from './jobfilter.vue';\nexport default {\n  components: {\n    // jobtab2,\n    jobfilter\n  },\n  data() {\n    return {};\n  }\n};\n</script>\n",
+      "start": 1700848823248,
+      "end": 1700848824698,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824698,
+      "end": 1700848824698,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\n// import jobtab2 from './jobTab2.vue';\nimport jobfilter from './jobfilter.vue';\nconst _sfc_main = {\n  components: {\n    // jobtab2,\n    jobfilter\n  },\n  data() {\n    return {};\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xl-3 xl-40 box-col-12\" }\nconst _hoisted_2 = { class: \"md-sidebar\" }\nconst _hoisted_3 = { class: \"md-sidebar-aside job-sidebar\" }\nconst _hoisted_4 = { class: \"default-according style-1 faq-accordion job-accordion\" }\nconst _hoisted_5 = {\n  class: \"accordion\",\n  id: \"accordionExample\"\n}\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_jobfilter = _resolveComponent(\"jobfilter\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createElementVNode(\"div\", _hoisted_5, [\n            _createVNode(_component_jobfilter)\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824698,
+      "end": 1700848824700,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824700,
+      "end": 1700848824700,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824700,
+      "end": 1700848824700,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824700,
+      "end": 1700848824700,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824700,
+      "end": 1700848824700,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824700,
+      "end": 1700848824700,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824701,
+      "end": 1700848824701,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824701,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824702,
+      "end": 1700848824702,
+      "order": "normal"
+    }
+  ]
+}

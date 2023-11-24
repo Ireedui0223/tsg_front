@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/core/update/updateSlidesClasses.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export default function updateSlidesClasses() {\n  const swiper = this;\n  const {\n    slides,\n    params,\n    $wrapperEl,\n    activeIndex,\n    realIndex\n  } = swiper;\n  const isVirtual = swiper.virtual && params.virtual.enabled;\n  slides.removeClass(`${params.slideActiveClass} ${params.slideNextClass} ${params.slidePrevClass} ${params.slideDuplicateActiveClass} ${params.slideDuplicateNextClass} ${params.slideDuplicatePrevClass}`);\n  let activeSlide;\n\n  if (isVirtual) {\n    activeSlide = swiper.$wrapperEl.find(`.${params.slideClass}[data-swiper-slide-index=\"${activeIndex}\"]`);\n  } else {\n    activeSlide = slides.eq(activeIndex);\n  } // Active classes\n\n\n  activeSlide.addClass(params.slideActiveClass);\n\n  if (params.loop) {\n    // Duplicate to all looped slides\n    if (activeSlide.hasClass(params.slideDuplicateClass)) {\n      $wrapperEl.children(`.${params.slideClass}:not(.${params.slideDuplicateClass})[data-swiper-slide-index=\"${realIndex}\"]`).addClass(params.slideDuplicateActiveClass);\n    } else {\n      $wrapperEl.children(`.${params.slideClass}.${params.slideDuplicateClass}[data-swiper-slide-index=\"${realIndex}\"]`).addClass(params.slideDuplicateActiveClass);\n    }\n  } // Next Slide\n\n\n  let nextSlide = activeSlide.nextAll(`.${params.slideClass}`).eq(0).addClass(params.slideNextClass);\n\n  if (params.loop && nextSlide.length === 0) {\n    nextSlide = slides.eq(0);\n    nextSlide.addClass(params.slideNextClass);\n  } // Prev Slide\n\n\n  let prevSlide = activeSlide.prevAll(`.${params.slideClass}`).eq(0).addClass(params.slidePrevClass);\n\n  if (params.loop && prevSlide.length === 0) {\n    prevSlide = slides.eq(-1);\n    prevSlide.addClass(params.slidePrevClass);\n  }\n\n  if (params.loop) {\n    // Duplicate to all looped slides\n    if (nextSlide.hasClass(params.slideDuplicateClass)) {\n      $wrapperEl.children(`.${params.slideClass}:not(.${params.slideDuplicateClass})[data-swiper-slide-index=\"${nextSlide.attr('data-swiper-slide-index')}\"]`).addClass(params.slideDuplicateNextClass);\n    } else {\n      $wrapperEl.children(`.${params.slideClass}.${params.slideDuplicateClass}[data-swiper-slide-index=\"${nextSlide.attr('data-swiper-slide-index')}\"]`).addClass(params.slideDuplicateNextClass);\n    }\n\n    if (prevSlide.hasClass(params.slideDuplicateClass)) {\n      $wrapperEl.children(`.${params.slideClass}:not(.${params.slideDuplicateClass})[data-swiper-slide-index=\"${prevSlide.attr('data-swiper-slide-index')}\"]`).addClass(params.slideDuplicatePrevClass);\n    } else {\n      $wrapperEl.children(`.${params.slideClass}.${params.slideDuplicateClass}[data-swiper-slide-index=\"${prevSlide.attr('data-swiper-slide-index')}\"]`).addClass(params.slideDuplicatePrevClass);\n    }\n  }\n\n  swiper.emitSlidesClasses();\n}",
+      "start": 1700848830813,
+      "end": 1700848830966,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848830966,
+      "end": 1700848830966,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848830967,
+      "end": 1700848830967,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848830967,
+      "end": 1700848830968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848830968,
+      "end": 1700848830968,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848830968,
+      "end": 1700848830969,
+      "order": "normal"
+    }
+  ]
+}

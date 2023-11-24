@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/default/orderprofitCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n    <div class=\"col-xxl-auto col-xl-12 col-sm-6 box-col-6\">\n        <div class=\"row\">\n            <div class=\"col-xxl-12 col-xl-6 box-col-12\">\n                <div class=\"card widget-1 widget-with-chart\">\n                    <div class=\"card-body\">\n                        <div>\n                            <h4 class=\"mb-1\">1,80k</h4>\n                            <span class=\"f-light\">Orders</span>\n                        </div>\n                        <div class=\"order-chart\">\n                            <apexchart height=\"125\" width=\"200\" type=\"bar\" :options=\"apexDashboard.options\"\n                                :series=\"apexDashboard.series\"></apexchart>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"col-xxl-12 col-xl-6 box-col-12\">\n                <div class=\"card widget-1 widget-with-chart\">\n                    <div class=\"card-body\">\n                        <div>\n                            <h4 class=\"mb-1\">6,90k</h4>\n                            <span class=\"f-light\">Profit</span>\n                        </div>\n                        <div class=\"profit-chart\">\n                            <apexchart height=\"146\" type=\"line\" :options=\"apexDashboard.options2\"\n                                :series=\"apexDashboard.series2\"></apexchart>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</template>\n    \n<script>\nimport {\n    apexDashboard\n} from \"@/data/comon\";\nexport default {\n    data() {\n        return {\n            apexDashboard: apexDashboard,\n        };\n    },\n}\n</script>\n    ",
+      "start": 1700848825567,
+      "end": 1700848825754,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825754,
+      "end": 1700848825754,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport {\n    apexDashboard\n} from \"@/data/comon\";\nconst _sfc_main = {\n    data() {\n        return {\n            apexDashboard: apexDashboard,\n        };\n    },\n}\n\nimport { createElementVNode as _createElementVNode, resolveComponent as _resolveComponent, createVNode as _createVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-xxl-auto col-xl-12 col-sm-6 box-col-6\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"col-xxl-12 col-xl-6 box-col-12\" }\nconst _hoisted_4 = { class: \"card widget-1 widget-with-chart\" }\nconst _hoisted_5 = { class: \"card-body\" }\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h4\", { class: \"mb-1\" }, \"1,80k\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Orders\")\n], -1)\nconst _hoisted_7 = { class: \"order-chart\" }\nconst _hoisted_8 = { class: \"col-xxl-12 col-xl-6 box-col-12\" }\nconst _hoisted_9 = { class: \"card widget-1 widget-with-chart\" }\nconst _hoisted_10 = { class: \"card-body\" }\nconst _hoisted_11 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h4\", { class: \"mb-1\" }, \"6,90k\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light\" }, \"Profit\")\n], -1)\nconst _hoisted_12 = { class: \"profit-chart\" }\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createElementVNode(\"div\", _hoisted_5, [\n            _hoisted_6,\n            _createElementVNode(\"div\", _hoisted_7, [\n              _createVNode(_component_apexchart, {\n                height: \"125\",\n                width: \"200\",\n                type: \"bar\",\n                options: $data.apexDashboard.options,\n                series: $data.apexDashboard.series\n              }, null, 8, [\"options\", \"series\"])\n            ])\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createElementVNode(\"div\", _hoisted_9, [\n          _createElementVNode(\"div\", _hoisted_10, [\n            _hoisted_11,\n            _createElementVNode(\"div\", _hoisted_12, [\n              _createVNode(_component_apexchart, {\n                height: \"146\",\n                type: \"line\",\n                options: $data.apexDashboard.options2,\n                series: $data.apexDashboard.series2\n              }, null, 8, [\"options\", \"series\"])\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825754,
+      "end": 1700848825757,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825757,
+      "end": 1700848825757,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825757,
+      "end": 1700848825758,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825758,
+      "end": 1700848825758,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825759,
+      "end": 1700848825759,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/swiper/modules/hash-navigation/hash-navigation.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { getWindow, getDocument } from 'ssr-window';\nimport $ from '../../shared/dom.js';\nexport default function HashNavigation({\n  swiper,\n  extendParams,\n  emit,\n  on\n}) {\n  let initialized = false;\n  const document = getDocument();\n  const window = getWindow();\n  extendParams({\n    hashNavigation: {\n      enabled: false,\n      replaceState: false,\n      watchState: false\n    }\n  });\n\n  const onHashChange = () => {\n    emit('hashChange');\n    const newHash = document.location.hash.replace('#', '');\n    const activeSlideHash = swiper.slides.eq(swiper.activeIndex).attr('data-hash');\n\n    if (newHash !== activeSlideHash) {\n      const newIndex = swiper.$wrapperEl.children(`.${swiper.params.slideClass}[data-hash=\"${newHash}\"]`).index();\n      if (typeof newIndex === 'undefined') return;\n      swiper.slideTo(newIndex);\n    }\n  };\n\n  const setHash = () => {\n    if (!initialized || !swiper.params.hashNavigation.enabled) return;\n\n    if (swiper.params.hashNavigation.replaceState && window.history && window.history.replaceState) {\n      window.history.replaceState(null, null, `#${swiper.slides.eq(swiper.activeIndex).attr('data-hash')}` || '');\n      emit('hashSet');\n    } else {\n      const slide = swiper.slides.eq(swiper.activeIndex);\n      const hash = slide.attr('data-hash') || slide.attr('data-history');\n      document.location.hash = hash || '';\n      emit('hashSet');\n    }\n  };\n\n  const init = () => {\n    if (!swiper.params.hashNavigation.enabled || swiper.params.history && swiper.params.history.enabled) return;\n    initialized = true;\n    const hash = document.location.hash.replace('#', '');\n\n    if (hash) {\n      const speed = 0;\n\n      for (let i = 0, length = swiper.slides.length; i < length; i += 1) {\n        const slide = swiper.slides.eq(i);\n        const slideHash = slide.attr('data-hash') || slide.attr('data-history');\n\n        if (slideHash === hash && !slide.hasClass(swiper.params.slideDuplicateClass)) {\n          const index = slide.index();\n          swiper.slideTo(index, speed, swiper.params.runCallbacksOnInit, true);\n        }\n      }\n    }\n\n    if (swiper.params.hashNavigation.watchState) {\n      $(window).on('hashchange', onHashChange);\n    }\n  };\n\n  const destroy = () => {\n    if (swiper.params.hashNavigation.watchState) {\n      $(window).off('hashchange', onHashChange);\n    }\n  };\n\n  on('init', () => {\n    if (swiper.params.hashNavigation.enabled) {\n      init();\n    }\n  });\n  on('destroy', () => {\n    if (swiper.params.hashNavigation.enabled) {\n      destroy();\n    }\n  });\n  on('transitionEnd _freeModeNoMomentumRelease', () => {\n    if (initialized) {\n      setHash();\n    }\n  });\n  on('slideChange', () => {\n    if (initialized && swiper.params.cssMode) {\n      setHash();\n    }\n  });\n}",
+      "start": 1700848829236,
+      "end": 1700848829421,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848829421,
+      "end": 1700848829421,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848829422,
+      "end": 1700848829422,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848829422,
+      "end": 1700848829423,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848829423,
+      "end": 1700848829423,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848829423,
+      "end": 1700848829424,
+      "order": "normal"
+    }
+  ]
+}

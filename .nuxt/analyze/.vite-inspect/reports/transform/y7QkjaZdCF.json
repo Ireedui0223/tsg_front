@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/dashboard/social/photoLinkClicksCard.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"col-md-4\">\n    <div class=\"row\">\n      <div class=\"col-md-12 col-sm-6\">\n        <div class=\"card click-widgets widget-hover\">\n          <div class=\"card-body\">\n            <div class=\"dropdown icon-dropdown text-end\">\n              <DropDown1 />\n            </div>\n            <div class=\"d-flex justify-content-around\">\n              <div class=\"click-chart\">\n                <apexchart\n                  height=\"165\"\n                  type=\"line\"\n                  :options=\"socialDashboard.options4\"\n                  :series=\"socialDashboard.series4\"\n                ></apexchart>\n              </div>\n              <div>\n                <h4 class=\" m-b-0\">%76</h4>\n                <span class=\"f-light d-block my-1\">Photo Clicks</span\n                ><span class=\"font-success\">+72.9%</span>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n      <div class=\"col-md-12 col-sm-6\">\n        <div class=\"card click-widgets widget-hover\">\n          <div class=\"card-body\">\n            <div class=\"dropdown icon-dropdown text-end\">\n              <DropDown1 />\n            </div>\n            <div class=\"d-flex justify-content-around\">\n              <div class=\"click-chart\">\n                <apexchart\n                  height=\"165\"\n                  type=\"line\"\n                  :options=\"socialDashboard.options5\"\n                  :series=\"socialDashboard.series5\"\n                ></apexchart>\n              </div>\n              <div>\n                <h4 class=\" m-b-0\">%89</h4>\n                <span class=\"f-light d-block my-1\">Link Clicks</span\n                ><span class=\"font-secondary\">79.9%</span>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n\n<script>\nimport DropDown1 from '../base/dropDown1.vue';\nimport { socialDashboard } from '@/data/comon';\nexport default {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      socialDashboard: socialDashboard\n    };\n  }\n};\n</script>\n",
+      "start": 1700848825792,
+      "end": 1700848825959,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848825959,
+      "end": 1700848825959,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport DropDown1 from '../base/dropDown1.vue';\nimport { socialDashboard } from '@/data/comon';\nconst _sfc_main = {\n  components: {\n    DropDown1\n  },\n  data() {\n    return {\n      socialDashboard: socialDashboard\n    };\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"col-md-4\" }\nconst _hoisted_2 = { class: \"row\" }\nconst _hoisted_3 = { class: \"col-md-12 col-sm-6\" }\nconst _hoisted_4 = { class: \"card click-widgets widget-hover\" }\nconst _hoisted_5 = { class: \"card-body\" }\nconst _hoisted_6 = { class: \"dropdown icon-dropdown text-end\" }\nconst _hoisted_7 = { class: \"d-flex justify-content-around\" }\nconst _hoisted_8 = { class: \"click-chart\" }\nconst _hoisted_9 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"%76\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light d-block my-1\" }, \"Photo Clicks\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-success\" }, \"+72.9%\")\n], -1)\nconst _hoisted_10 = { class: \"col-md-12 col-sm-6\" }\nconst _hoisted_11 = { class: \"card click-widgets widget-hover\" }\nconst _hoisted_12 = { class: \"card-body\" }\nconst _hoisted_13 = { class: \"dropdown icon-dropdown text-end\" }\nconst _hoisted_14 = { class: \"d-flex justify-content-around\" }\nconst _hoisted_15 = { class: \"click-chart\" }\nconst _hoisted_16 = /*#__PURE__*/_createElementVNode(\"div\", null, [\n  /*#__PURE__*/_createElementVNode(\"h4\", { class: \"m-b-0\" }, \"%89\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"f-light d-block my-1\" }, \"Link Clicks\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-secondary\" }, \"79.9%\")\n], -1)\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_DropDown1 = _resolveComponent(\"DropDown1\")\n  const _component_apexchart = _resolveComponent(\"apexchart\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"div\", _hoisted_4, [\n          _createElementVNode(\"div\", _hoisted_5, [\n            _createElementVNode(\"div\", _hoisted_6, [\n              _createVNode(_component_DropDown1)\n            ]),\n            _createElementVNode(\"div\", _hoisted_7, [\n              _createElementVNode(\"div\", _hoisted_8, [\n                _createVNode(_component_apexchart, {\n                  height: \"165\",\n                  type: \"line\",\n                  options: $data.socialDashboard.options4,\n                  series: $data.socialDashboard.series4\n                }, null, 8, [\"options\", \"series\"])\n              ]),\n              _hoisted_9\n            ])\n          ])\n        ])\n      ]),\n      _createElementVNode(\"div\", _hoisted_10, [\n        _createElementVNode(\"div\", _hoisted_11, [\n          _createElementVNode(\"div\", _hoisted_12, [\n            _createElementVNode(\"div\", _hoisted_13, [\n              _createVNode(_component_DropDown1)\n            ]),\n            _createElementVNode(\"div\", _hoisted_14, [\n              _createElementVNode(\"div\", _hoisted_15, [\n                _createVNode(_component_apexchart, {\n                  height: \"165\",\n                  type: \"line\",\n                  options: $data.socialDashboard.options5,\n                  series: $data.socialDashboard.series5\n                }, null, 8, [\"options\", \"series\"])\n              ]),\n              _hoisted_16\n            ])\n          ])\n        ])\n      ])\n    ])\n  ]))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848825959,
+      "end": 1700848825962,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848825962,
+      "end": 1700848825962,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848825962,
+      "end": 1700848825964,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848825964,
+      "end": 1700848825964,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848825964,
+      "end": 1700848825964,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848825964,
+      "end": 1700848825964,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848825964,
+      "end": 1700848825964,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848825964,
+      "end": 1700848825965,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848825965,
+      "end": 1700848825965,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848825965,
+      "end": 1700848825965,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848825965,
+      "end": 1700848825965,
+      "order": "normal"
+    }
+  ]
+}

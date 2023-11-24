@@ -1,0 +1,214 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/components/tapTop.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div\n    class=\"tap-top\"\n    :style=\"[display ? { display: 'block' } : { display: 'none' }]\"\n  >\n    <vue-feather\n      type=\"chevrons-up\"\n      @click=\"executeScroll()\"\n    ></vue-feather>\n  </div>\n</template>\n\n<script>\nimport { useWindowScroll } from '@vueuse/core';\nexport default {\n  name: 'TapTop',\n  data() {\n    return {\n      display: false,\n      scrolled: useWindowScroll().y\n    };\n  },\n  created() {},\n  unmounted() {},\n  watch: {\n    scrolled() {\n      this.handleScroll();\n    }\n  },\n  methods: {\n    executeScroll() {\n      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });\n    },\n    handleScroll() {\n      if (this.scrolled > 200) {\n        this.display = true;\n      } else {\n        this.display = false;\n      }\n    }\n  }\n};\n</script>\n\n<style></style>\n",
+      "start": 1700848821959,
+      "end": 1700848824286,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824286,
+      "end": 1700848824286,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { useWindowScroll } from '@vueuse/core';\nconst _sfc_main = {\n  name: 'TapTop',\n  data() {\n    return {\n      display: false,\n      scrolled: useWindowScroll().y\n    };\n  },\n  created() {},\n  unmounted() {},\n  watch: {\n    scrolled() {\n      this.handleScroll();\n    }\n  },\n  methods: {\n    executeScroll() {\n      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });\n    },\n    handleScroll() {\n      if (this.scrolled > 200) {\n        this.display = true;\n      } else {\n        this.display = false;\n      }\n    }\n  }\n};\n\nimport { resolveComponent as _resolveComponent, createVNode as _createVNode, normalizeStyle as _normalizeStyle, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_vue_feather = _resolveComponent(\"vue-feather\")\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: \"tap-top\",\n    style: _normalizeStyle([$data.display ? { display: 'block' } : { display: 'none' }])\n  }, [\n    _createVNode(_component_vue_feather, {\n      type: \"chevrons-up\",\n      onClick: _cache[0] || (_cache[0] = $event => ($options.executeScroll()))\n    })\n  ], 4))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824286,
+      "end": 1700848824291,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824291,
+      "end": 1700848824291,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824292,
+      "end": 1700848824292,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824292,
+      "end": 1700848824292,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824292,
+      "end": 1700848824292,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824292,
+      "end": 1700848824292,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824292,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824293,
+      "end": 1700848824293,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824293,
+      "end": 1700848824294,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824294,
+      "end": 1700848824294,
+      "order": "normal"
+    }
+  ]
+}

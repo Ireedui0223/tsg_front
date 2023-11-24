@@ -1,0 +1,215 @@
+{
+  "resolvedId": "C:/Users/Ireedui/Desktop/additional/tsg/front-latest/app.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <NuxtLayout>\n    <Head>\n      <Title>TSG</Title>\n    </Head>\n\n    <NuxtPage />\n  </NuxtLayout>\n</template>\n<script>\nimport { useStorage } from '@vueuse/core';\n\nimport Layout from '@/data/layout.json';\nexport default {\n  created() {},\n  mounted() {},\n  computed: {}\n};\n</script>\n",
+      "start": 1700848824667,
+      "end": 1700848824942,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1700848824942,
+      "end": 1700848824942,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1700848824943,
+      "end": 1700848824943,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "\nimport { useStorage } from '@vueuse/core';\n\nimport Layout from '@/data/layout.json';\nconst _sfc_main = {\n  created() {},\n  mounted() {},\n  computed: {}\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Title = _resolveComponent(\"Title\")\n  const _component_Head = _resolveComponent(\"Head\")\n  const _component_NuxtPage = _resolveComponent(\"NuxtPage\")\n  const _component_NuxtLayout = _resolveComponent(\"NuxtLayout\")\n\n  return (_openBlock(), _createBlock(_component_NuxtLayout, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_Head, null, {\n        default: _withCtx(() => [\n          _createVNode(_component_Title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\"TSG\")\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage)\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824943,
+      "end": 1700848824945,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1700848824945,
+      "end": 1700848824945,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1700848824945,
+      "end": 1700848824946,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1700848824946,
+      "end": 1700848824946,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1700848824946,
+      "end": 1700848824946,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1700848824946,
+      "end": 1700848824946,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1700848824946,
+      "end": 1700848824946,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { Title as __nuxt_component_0 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/head/runtime/components\";\nimport { Head as __nuxt_component_1 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/head/runtime/components\";\nimport { default as __nuxt_component_2 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/pages/runtime/page\";\nimport { default as __nuxt_component_3 } from \"C:/Users/Ireedui/Desktop/additional/tsg/front-latest/node_modules/nuxt/dist/app/components/nuxt-layout\";\n\nimport { useStorage } from '@vueuse/core';\n\nimport Layout from '@/data/layout.json';\nconst _sfc_main = {\n  created() {},\n  mounted() {},\n  computed: {}\n};\n\nimport { createTextVNode as _createTextVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock } from \"vue\"\n\nfunction _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {\n  const _component_Title = __nuxt_component_0\n  const _component_Head = __nuxt_component_1\n  const _component_NuxtPage = __nuxt_component_2\n  const _component_NuxtLayout = __nuxt_component_3\n\n  return (_openBlock(), _createBlock(_component_NuxtLayout, null, {\n    default: _withCtx(() => [\n      _createVNode(_component_Head, null, {\n        default: _withCtx(() => [\n          _createVNode(_component_Title, null, {\n            default: _withCtx(() => [\n              _createTextVNode(\"TSG\")\n            ]),\n            _: 1\n          })\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_NuxtPage)\n    ]),\n    _: 1\n  }))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1700848824946,
+      "end": 1700848824947,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1700848824947,
+      "end": 1700848824947,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1700848824947,
+      "end": 1700848824947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1700848824947,
+      "end": 1700848824947,
+      "order": "normal"
+    }
+  ]
+}
